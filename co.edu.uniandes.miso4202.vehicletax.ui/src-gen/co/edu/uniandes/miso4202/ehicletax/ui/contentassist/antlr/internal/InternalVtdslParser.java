@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalVtdslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_DECIMAL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'}'", "';'", "':'", "'='", "'List of Integer = {'", "','", "'List of String = {'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'}'", "':'", "';'", "'='", "'List of Integer'", "','", "'List of String'"
     };
     public static final int T__19=19;
     public static final int RULE_ID=4;
@@ -35,9 +35,9 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_INT=7;
+    public static final int RULE_INT=6;
     public static final int RULE_WS=10;
-    public static final int RULE_DECIMAL=6;
+    public static final int RULE_DECIMAL=7;
     public static final int RULE_SL_COMMENT=9;
     public static final int EOF=-1;
     public static final int RULE_ML_COMMENT=8;
@@ -79,21 +79,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
 
-    // $ANTLR start "entryRuleModel"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:60:1: entryRuleModel : ruleModel EOF ;
-    public final void entryRuleModel() throws RecognitionException {
+    // $ANTLR start "entryRuleModelo"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:60:1: entryRuleModelo : ruleModelo EOF ;
+    public final void entryRuleModelo() throws RecognitionException {
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:61:1: ( ruleModel EOF )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:62:1: ruleModel EOF
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:61:1: ( ruleModelo EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:62:1: ruleModelo EOF
             {
-             before(grammarAccess.getModelRule()); 
-            pushFollow(FOLLOW_ruleModel_in_entryRuleModel61);
-            ruleModel();
+             before(grammarAccess.getModeloRule()); 
+            pushFollow(FOLLOW_ruleModelo_in_entryRuleModelo61);
+            ruleModelo();
 
             state._fsp--;
 
-             after(grammarAccess.getModelRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleModel68); 
+             after(grammarAccess.getModeloRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleModelo68); 
 
             }
 
@@ -106,53 +106,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleModel"
+    // $ANTLR end "entryRuleModelo"
 
 
-    // $ANTLR start "ruleModel"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:69:1: ruleModel : ( ( rule__Model__ComponentesAssignment )* ) ;
-    public final void ruleModel() throws RecognitionException {
+    // $ANTLR start "ruleModelo"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:69:1: ruleModelo : ( ( rule__Modelo__Group__0 ) ) ;
+    public final void ruleModelo() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:73:2: ( ( ( rule__Model__ComponentesAssignment )* ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:74:1: ( ( rule__Model__ComponentesAssignment )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:73:2: ( ( ( rule__Modelo__Group__0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:74:1: ( ( rule__Modelo__Group__0 ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:74:1: ( ( rule__Model__ComponentesAssignment )* )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:75:1: ( rule__Model__ComponentesAssignment )*
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:74:1: ( ( rule__Modelo__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:75:1: ( rule__Modelo__Group__0 )
             {
-             before(grammarAccess.getModelAccess().getComponentesAssignment()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:76:1: ( rule__Model__ComponentesAssignment )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+             before(grammarAccess.getModeloAccess().getGroup()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:76:1: ( rule__Modelo__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:76:2: rule__Modelo__Group__0
+            {
+            pushFollow(FOLLOW_rule__Modelo__Group__0_in_ruleModelo94);
+            rule__Modelo__Group__0();
 
-                if ( (LA1_0==RULE_ID) ) {
-                    alt1=1;
-                }
+            state._fsp--;
 
 
-                switch (alt1) {
-            	case 1 :
-            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:76:2: rule__Model__ComponentesAssignment
-            	    {
-            	    pushFollow(FOLLOW_rule__Model__ComponentesAssignment_in_ruleModel94);
-            	    rule__Model__ComponentesAssignment();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop1;
-                }
-            } while (true);
-
-             after(grammarAccess.getModelAccess().getComponentesAssignment()); 
+             after(grammarAccess.getModeloAccess().getGroup()); 
 
             }
 
@@ -171,24 +153,24 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleModel"
+    // $ANTLR end "ruleModelo"
 
 
-    // $ANTLR start "entryRuleComponente"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:88:1: entryRuleComponente : ruleComponente EOF ;
-    public final void entryRuleComponente() throws RecognitionException {
+    // $ANTLR start "entryRuleObjeto"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:88:1: entryRuleObjeto : ruleObjeto EOF ;
+    public final void entryRuleObjeto() throws RecognitionException {
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:89:1: ( ruleComponente EOF )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:90:1: ruleComponente EOF
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:89:1: ( ruleObjeto EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:90:1: ruleObjeto EOF
             {
-             before(grammarAccess.getComponenteRule()); 
-            pushFollow(FOLLOW_ruleComponente_in_entryRuleComponente122);
-            ruleComponente();
+             before(grammarAccess.getObjetoRule()); 
+            pushFollow(FOLLOW_ruleObjeto_in_entryRuleObjeto121);
+            ruleObjeto();
 
             state._fsp--;
 
-             after(grammarAccess.getComponenteRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComponente129); 
+             after(grammarAccess.getObjetoRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleObjeto128); 
 
             }
 
@@ -201,35 +183,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleComponente"
+    // $ANTLR end "entryRuleObjeto"
 
 
-    // $ANTLR start "ruleComponente"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:97:1: ruleComponente : ( ( rule__Componente__Alternatives ) ) ;
-    public final void ruleComponente() throws RecognitionException {
+    // $ANTLR start "ruleObjeto"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:97:1: ruleObjeto : ( ( rule__Objeto__Group__0 ) ) ;
+    public final void ruleObjeto() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:101:2: ( ( ( rule__Componente__Alternatives ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:102:1: ( ( rule__Componente__Alternatives ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:101:2: ( ( ( rule__Objeto__Group__0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:102:1: ( ( rule__Objeto__Group__0 ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:102:1: ( ( rule__Componente__Alternatives ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:103:1: ( rule__Componente__Alternatives )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:102:1: ( ( rule__Objeto__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:103:1: ( rule__Objeto__Group__0 )
             {
-             before(grammarAccess.getComponenteAccess().getAlternatives()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:104:1: ( rule__Componente__Alternatives )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:104:2: rule__Componente__Alternatives
+             before(grammarAccess.getObjetoAccess().getGroup()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:104:1: ( rule__Objeto__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:104:2: rule__Objeto__Group__0
             {
-            pushFollow(FOLLOW_rule__Componente__Alternatives_in_ruleComponente155);
-            rule__Componente__Alternatives();
+            pushFollow(FOLLOW_rule__Objeto__Group__0_in_ruleObjeto154);
+            rule__Objeto__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getComponenteAccess().getAlternatives()); 
+             after(grammarAccess.getObjetoAccess().getGroup()); 
 
             }
 
@@ -248,24 +230,24 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleComponente"
+    // $ANTLR end "ruleObjeto"
 
 
-    // $ANTLR start "entryRuleObjetoSimple"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:116:1: entryRuleObjetoSimple : ruleObjetoSimple EOF ;
-    public final void entryRuleObjetoSimple() throws RecognitionException {
+    // $ANTLR start "entryRuleAtributoNormal"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:116:1: entryRuleAtributoNormal : ruleAtributoNormal EOF ;
+    public final void entryRuleAtributoNormal() throws RecognitionException {
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:117:1: ( ruleObjetoSimple EOF )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:118:1: ruleObjetoSimple EOF
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:117:1: ( ruleAtributoNormal EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:118:1: ruleAtributoNormal EOF
             {
-             before(grammarAccess.getObjetoSimpleRule()); 
-            pushFollow(FOLLOW_ruleObjetoSimple_in_entryRuleObjetoSimple182);
-            ruleObjetoSimple();
+             before(grammarAccess.getAtributoNormalRule()); 
+            pushFollow(FOLLOW_ruleAtributoNormal_in_entryRuleAtributoNormal181);
+            ruleAtributoNormal();
 
             state._fsp--;
 
-             after(grammarAccess.getObjetoSimpleRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleObjetoSimple189); 
+             after(grammarAccess.getAtributoNormalRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtributoNormal188); 
 
             }
 
@@ -278,35 +260,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleObjetoSimple"
+    // $ANTLR end "entryRuleAtributoNormal"
 
 
-    // $ANTLR start "ruleObjetoSimple"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:125:1: ruleObjetoSimple : ( ( rule__ObjetoSimple__Group__0 ) ) ;
-    public final void ruleObjetoSimple() throws RecognitionException {
+    // $ANTLR start "ruleAtributoNormal"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:125:1: ruleAtributoNormal : ( ( rule__AtributoNormal__Group__0 ) ) ;
+    public final void ruleAtributoNormal() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:129:2: ( ( ( rule__ObjetoSimple__Group__0 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:130:1: ( ( rule__ObjetoSimple__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:129:2: ( ( ( rule__AtributoNormal__Group__0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:130:1: ( ( rule__AtributoNormal__Group__0 ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:130:1: ( ( rule__ObjetoSimple__Group__0 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:131:1: ( rule__ObjetoSimple__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:130:1: ( ( rule__AtributoNormal__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:131:1: ( rule__AtributoNormal__Group__0 )
             {
-             before(grammarAccess.getObjetoSimpleAccess().getGroup()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:132:1: ( rule__ObjetoSimple__Group__0 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:132:2: rule__ObjetoSimple__Group__0
+             before(grammarAccess.getAtributoNormalAccess().getGroup()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:132:1: ( rule__AtributoNormal__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:132:2: rule__AtributoNormal__Group__0
             {
-            pushFollow(FOLLOW_rule__ObjetoSimple__Group__0_in_ruleObjetoSimple215);
-            rule__ObjetoSimple__Group__0();
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__0_in_ruleAtributoNormal214);
+            rule__AtributoNormal__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getObjetoSimpleAccess().getGroup()); 
+             after(grammarAccess.getAtributoNormalAccess().getGroup()); 
 
             }
 
@@ -325,24 +307,24 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleObjetoSimple"
+    // $ANTLR end "ruleAtributoNormal"
 
 
-    // $ANTLR start "entryRuleObjetoNombre"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:144:1: entryRuleObjetoNombre : ruleObjetoNombre EOF ;
-    public final void entryRuleObjetoNombre() throws RecognitionException {
+    // $ANTLR start "entryRuleAtributoObjeto"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:144:1: entryRuleAtributoObjeto : ruleAtributoObjeto EOF ;
+    public final void entryRuleAtributoObjeto() throws RecognitionException {
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:145:1: ( ruleObjetoNombre EOF )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:146:1: ruleObjetoNombre EOF
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:145:1: ( ruleAtributoObjeto EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:146:1: ruleAtributoObjeto EOF
             {
-             before(grammarAccess.getObjetoNombreRule()); 
-            pushFollow(FOLLOW_ruleObjetoNombre_in_entryRuleObjetoNombre242);
-            ruleObjetoNombre();
+             before(grammarAccess.getAtributoObjetoRule()); 
+            pushFollow(FOLLOW_ruleAtributoObjeto_in_entryRuleAtributoObjeto241);
+            ruleAtributoObjeto();
 
             state._fsp--;
 
-             after(grammarAccess.getObjetoNombreRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleObjetoNombre249); 
+             after(grammarAccess.getAtributoObjetoRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtributoObjeto248); 
 
             }
 
@@ -355,35 +337,29 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleObjetoNombre"
+    // $ANTLR end "entryRuleAtributoObjeto"
 
 
-    // $ANTLR start "ruleObjetoNombre"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:153:1: ruleObjetoNombre : ( ( rule__ObjetoNombre__Group__0 ) ) ;
-    public final void ruleObjetoNombre() throws RecognitionException {
+    // $ANTLR start "ruleAtributoObjeto"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:153:1: ruleAtributoObjeto : ( ruleObjeto ) ;
+    public final void ruleAtributoObjeto() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:157:2: ( ( ( rule__ObjetoNombre__Group__0 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:158:1: ( ( rule__ObjetoNombre__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:157:2: ( ( ruleObjeto ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:158:1: ( ruleObjeto )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:158:1: ( ( rule__ObjetoNombre__Group__0 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:159:1: ( rule__ObjetoNombre__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:158:1: ( ruleObjeto )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:159:1: ruleObjeto
             {
-             before(grammarAccess.getObjetoNombreAccess().getGroup()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:160:1: ( rule__ObjetoNombre__Group__0 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:160:2: rule__ObjetoNombre__Group__0
-            {
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__0_in_ruleObjetoNombre275);
-            rule__ObjetoNombre__Group__0();
+             before(grammarAccess.getAtributoObjetoAccess().getObjetoParserRuleCall()); 
+            pushFollow(FOLLOW_ruleObjeto_in_ruleAtributoObjeto274);
+            ruleObjeto();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getObjetoNombreAccess().getGroup()); 
+             after(grammarAccess.getAtributoObjetoAccess().getObjetoParserRuleCall()); 
 
             }
 
@@ -402,24 +378,24 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleObjetoNombre"
+    // $ANTLR end "ruleAtributoObjeto"
 
 
-    // $ANTLR start "entryRuleTipoSimple"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:174:1: entryRuleTipoSimple : ruleTipoSimple EOF ;
-    public final void entryRuleTipoSimple() throws RecognitionException {
+    // $ANTLR start "entryRuleAtributo"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:172:1: entryRuleAtributo : ruleAtributo EOF ;
+    public final void entryRuleAtributo() throws RecognitionException {
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:175:1: ( ruleTipoSimple EOF )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:176:1: ruleTipoSimple EOF
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:173:1: ( ruleAtributo EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:174:1: ruleAtributo EOF
             {
-             before(grammarAccess.getTipoSimpleRule()); 
-            pushFollow(FOLLOW_ruleTipoSimple_in_entryRuleTipoSimple304);
-            ruleTipoSimple();
+             before(grammarAccess.getAtributoRule()); 
+            pushFollow(FOLLOW_ruleAtributo_in_entryRuleAtributo300);
+            ruleAtributo();
 
             state._fsp--;
 
-             after(grammarAccess.getTipoSimpleRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTipoSimple311); 
+             after(grammarAccess.getAtributoRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtributo307); 
 
             }
 
@@ -432,35 +408,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleTipoSimple"
+    // $ANTLR end "entryRuleAtributo"
 
 
-    // $ANTLR start "ruleTipoSimple"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:183:1: ruleTipoSimple : ( ( rule__TipoSimple__Group__0 ) ) ;
-    public final void ruleTipoSimple() throws RecognitionException {
+    // $ANTLR start "ruleAtributo"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:181:1: ruleAtributo : ( ( rule__Atributo__Alternatives ) ) ;
+    public final void ruleAtributo() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:187:2: ( ( ( rule__TipoSimple__Group__0 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:188:1: ( ( rule__TipoSimple__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:185:2: ( ( ( rule__Atributo__Alternatives ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:186:1: ( ( rule__Atributo__Alternatives ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:188:1: ( ( rule__TipoSimple__Group__0 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:189:1: ( rule__TipoSimple__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:186:1: ( ( rule__Atributo__Alternatives ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:187:1: ( rule__Atributo__Alternatives )
             {
-             before(grammarAccess.getTipoSimpleAccess().getGroup()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:190:1: ( rule__TipoSimple__Group__0 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:190:2: rule__TipoSimple__Group__0
+             before(grammarAccess.getAtributoAccess().getAlternatives()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:188:1: ( rule__Atributo__Alternatives )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:188:2: rule__Atributo__Alternatives
             {
-            pushFollow(FOLLOW_rule__TipoSimple__Group__0_in_ruleTipoSimple337);
-            rule__TipoSimple__Group__0();
+            pushFollow(FOLLOW_rule__Atributo__Alternatives_in_ruleAtributo333);
+            rule__Atributo__Alternatives();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTipoSimpleAccess().getGroup()); 
+             after(grammarAccess.getAtributoAccess().getAlternatives()); 
 
             }
 
@@ -479,24 +455,24 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleTipoSimple"
+    // $ANTLR end "ruleAtributo"
 
 
-    // $ANTLR start "entryRuleTipoValor"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:202:1: entryRuleTipoValor : ruleTipoValor EOF ;
-    public final void entryRuleTipoValor() throws RecognitionException {
+    // $ANTLR start "entryRuleValorAtributo"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:200:1: entryRuleValorAtributo : ruleValorAtributo EOF ;
+    public final void entryRuleValorAtributo() throws RecognitionException {
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:203:1: ( ruleTipoValor EOF )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:204:1: ruleTipoValor EOF
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:201:1: ( ruleValorAtributo EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:202:1: ruleValorAtributo EOF
             {
-             before(grammarAccess.getTipoValorRule()); 
-            pushFollow(FOLLOW_ruleTipoValor_in_entryRuleTipoValor364);
-            ruleTipoValor();
+             before(grammarAccess.getValorAtributoRule()); 
+            pushFollow(FOLLOW_ruleValorAtributo_in_entryRuleValorAtributo360);
+            ruleValorAtributo();
 
             state._fsp--;
 
-             after(grammarAccess.getTipoValorRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTipoValor371); 
+             after(grammarAccess.getValorAtributoRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValorAtributo367); 
 
             }
 
@@ -509,35 +485,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleTipoValor"
+    // $ANTLR end "entryRuleValorAtributo"
 
 
-    // $ANTLR start "ruleTipoValor"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:211:1: ruleTipoValor : ( ( rule__TipoValor__Group__0 ) ) ;
-    public final void ruleTipoValor() throws RecognitionException {
+    // $ANTLR start "ruleValorAtributo"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:209:1: ruleValorAtributo : ( ( rule__ValorAtributo__Group__0 ) ) ;
+    public final void ruleValorAtributo() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:215:2: ( ( ( rule__TipoValor__Group__0 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:216:1: ( ( rule__TipoValor__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:213:2: ( ( ( rule__ValorAtributo__Group__0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:214:1: ( ( rule__ValorAtributo__Group__0 ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:216:1: ( ( rule__TipoValor__Group__0 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:217:1: ( rule__TipoValor__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:214:1: ( ( rule__ValorAtributo__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:215:1: ( rule__ValorAtributo__Group__0 )
             {
-             before(grammarAccess.getTipoValorAccess().getGroup()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:218:1: ( rule__TipoValor__Group__0 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:218:2: rule__TipoValor__Group__0
+             before(grammarAccess.getValorAtributoAccess().getGroup()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:216:1: ( rule__ValorAtributo__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:216:2: rule__ValorAtributo__Group__0
             {
-            pushFollow(FOLLOW_rule__TipoValor__Group__0_in_ruleTipoValor397);
-            rule__TipoValor__Group__0();
+            pushFollow(FOLLOW_rule__ValorAtributo__Group__0_in_ruleValorAtributo393);
+            rule__ValorAtributo__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTipoValorAccess().getGroup()); 
+             after(grammarAccess.getValorAtributoAccess().getGroup()); 
 
             }
 
@@ -556,24 +532,24 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleTipoValor"
+    // $ANTLR end "ruleValorAtributo"
 
 
-    // $ANTLR start "entryRuleLista"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:230:1: entryRuleLista : ruleLista EOF ;
-    public final void entryRuleLista() throws RecognitionException {
+    // $ANTLR start "entryRuleValorAtributoValor"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:230:1: entryRuleValorAtributoValor : ruleValorAtributoValor EOF ;
+    public final void entryRuleValorAtributoValor() throws RecognitionException {
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:231:1: ( ruleLista EOF )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:232:1: ruleLista EOF
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:231:1: ( ruleValorAtributoValor EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:232:1: ruleValorAtributoValor EOF
             {
-             before(grammarAccess.getListaRule()); 
-            pushFollow(FOLLOW_ruleLista_in_entryRuleLista424);
-            ruleLista();
+             before(grammarAccess.getValorAtributoValorRule()); 
+            pushFollow(FOLLOW_ruleValorAtributoValor_in_entryRuleValorAtributoValor422);
+            ruleValorAtributoValor();
 
             state._fsp--;
 
-             after(grammarAccess.getListaRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLista431); 
+             after(grammarAccess.getValorAtributoValorRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValorAtributoValor429); 
 
             }
 
@@ -586,35 +562,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleLista"
+    // $ANTLR end "entryRuleValorAtributoValor"
 
 
-    // $ANTLR start "ruleLista"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:239:1: ruleLista : ( ( rule__Lista__Alternatives ) ) ;
-    public final void ruleLista() throws RecognitionException {
+    // $ANTLR start "ruleValorAtributoValor"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:239:1: ruleValorAtributoValor : ( ( rule__ValorAtributoValor__Group__0 ) ) ;
+    public final void ruleValorAtributoValor() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:243:2: ( ( ( rule__Lista__Alternatives ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:244:1: ( ( rule__Lista__Alternatives ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:243:2: ( ( ( rule__ValorAtributoValor__Group__0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:244:1: ( ( rule__ValorAtributoValor__Group__0 ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:244:1: ( ( rule__Lista__Alternatives ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:245:1: ( rule__Lista__Alternatives )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:244:1: ( ( rule__ValorAtributoValor__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:245:1: ( rule__ValorAtributoValor__Group__0 )
             {
-             before(grammarAccess.getListaAccess().getAlternatives()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:246:1: ( rule__Lista__Alternatives )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:246:2: rule__Lista__Alternatives
+             before(grammarAccess.getValorAtributoValorAccess().getGroup()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:246:1: ( rule__ValorAtributoValor__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:246:2: rule__ValorAtributoValor__Group__0
             {
-            pushFollow(FOLLOW_rule__Lista__Alternatives_in_ruleLista457);
-            rule__Lista__Alternatives();
+            pushFollow(FOLLOW_rule__ValorAtributoValor__Group__0_in_ruleValorAtributoValor455);
+            rule__ValorAtributoValor__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getListaAccess().getAlternatives()); 
+             after(grammarAccess.getValorAtributoValorAccess().getGroup()); 
 
             }
 
@@ -633,24 +609,24 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleLista"
+    // $ANTLR end "ruleValorAtributoValor"
 
 
-    // $ANTLR start "entryRuleListaInt"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:258:1: entryRuleListaInt : ruleListaInt EOF ;
-    public final void entryRuleListaInt() throws RecognitionException {
+    // $ANTLR start "entryRuleListaInteger"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:258:1: entryRuleListaInteger : ruleListaInteger EOF ;
+    public final void entryRuleListaInteger() throws RecognitionException {
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:259:1: ( ruleListaInt EOF )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:260:1: ruleListaInt EOF
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:259:1: ( ruleListaInteger EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:260:1: ruleListaInteger EOF
             {
-             before(grammarAccess.getListaIntRule()); 
-            pushFollow(FOLLOW_ruleListaInt_in_entryRuleListaInt484);
-            ruleListaInt();
+             before(grammarAccess.getListaIntegerRule()); 
+            pushFollow(FOLLOW_ruleListaInteger_in_entryRuleListaInteger482);
+            ruleListaInteger();
 
             state._fsp--;
 
-             after(grammarAccess.getListaIntRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListaInt491); 
+             after(grammarAccess.getListaIntegerRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListaInteger489); 
 
             }
 
@@ -663,35 +639,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleListaInt"
+    // $ANTLR end "entryRuleListaInteger"
 
 
-    // $ANTLR start "ruleListaInt"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:267:1: ruleListaInt : ( ( rule__ListaInt__Group__0 ) ) ;
-    public final void ruleListaInt() throws RecognitionException {
+    // $ANTLR start "ruleListaInteger"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:267:1: ruleListaInteger : ( ( rule__ListaInteger__Group__0 ) ) ;
+    public final void ruleListaInteger() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:271:2: ( ( ( rule__ListaInt__Group__0 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:272:1: ( ( rule__ListaInt__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:271:2: ( ( ( rule__ListaInteger__Group__0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:272:1: ( ( rule__ListaInteger__Group__0 ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:272:1: ( ( rule__ListaInt__Group__0 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:273:1: ( rule__ListaInt__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:272:1: ( ( rule__ListaInteger__Group__0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:273:1: ( rule__ListaInteger__Group__0 )
             {
-             before(grammarAccess.getListaIntAccess().getGroup()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:274:1: ( rule__ListaInt__Group__0 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:274:2: rule__ListaInt__Group__0
+             before(grammarAccess.getListaIntegerAccess().getGroup()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:274:1: ( rule__ListaInteger__Group__0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:274:2: rule__ListaInteger__Group__0
             {
-            pushFollow(FOLLOW_rule__ListaInt__Group__0_in_ruleListaInt517);
-            rule__ListaInt__Group__0();
+            pushFollow(FOLLOW_rule__ListaInteger__Group__0_in_ruleListaInteger515);
+            rule__ListaInteger__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getListaIntAccess().getGroup()); 
+             after(grammarAccess.getListaIntegerAccess().getGroup()); 
 
             }
 
@@ -710,7 +686,7 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleListaInt"
+    // $ANTLR end "ruleListaInteger"
 
 
     // $ANTLR start "entryRuleListaString"
@@ -721,13 +697,13 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
             // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:288:1: ruleListaString EOF
             {
              before(grammarAccess.getListaStringRule()); 
-            pushFollow(FOLLOW_ruleListaString_in_entryRuleListaString544);
+            pushFollow(FOLLOW_ruleListaString_in_entryRuleListaString542);
             ruleListaString();
 
             state._fsp--;
 
              after(grammarAccess.getListaStringRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListaString551); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListaString549); 
 
             }
 
@@ -760,7 +736,7 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
             // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:302:1: ( rule__ListaString__Group__0 )
             // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:302:2: rule__ListaString__Group__0
             {
-            pushFollow(FOLLOW_rule__ListaString__Group__0_in_ruleListaString577);
+            pushFollow(FOLLOW_rule__ListaString__Group__0_in_ruleListaString575);
             rule__ListaString__Group__0();
 
             state._fsp--;
@@ -790,53 +766,116 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleListaString"
 
 
-    // $ANTLR start "rule__Componente__Alternatives"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:314:1: rule__Componente__Alternatives : ( ( ruleObjetoSimple ) | ( ruleObjetoNombre ) );
-    public final void rule__Componente__Alternatives() throws RecognitionException {
+    // $ANTLR start "entryRuleLista"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:314:1: entryRuleLista : ruleLista EOF ;
+    public final void entryRuleLista() throws RecognitionException {
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:315:1: ( ruleLista EOF )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:316:1: ruleLista EOF
+            {
+             before(grammarAccess.getListaRule()); 
+            pushFollow(FOLLOW_ruleLista_in_entryRuleLista602);
+            ruleLista();
+
+            state._fsp--;
+
+             after(grammarAccess.getListaRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLista609); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleLista"
+
+
+    // $ANTLR start "ruleLista"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:323:1: ruleLista : ( ( rule__Lista__Alternatives ) ) ;
+    public final void ruleLista() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:318:1: ( ( ruleObjetoSimple ) | ( ruleObjetoNombre ) )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:327:2: ( ( ( rule__Lista__Alternatives ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:328:1: ( ( rule__Lista__Alternatives ) )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:328:1: ( ( rule__Lista__Alternatives ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:329:1: ( rule__Lista__Alternatives )
+            {
+             before(grammarAccess.getListaAccess().getAlternatives()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:330:1: ( rule__Lista__Alternatives )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:330:2: rule__Lista__Alternatives
+            {
+            pushFollow(FOLLOW_rule__Lista__Alternatives_in_ruleLista635);
+            rule__Lista__Alternatives();
 
-            if ( (LA2_0==RULE_ID) ) {
-                int LA2_1 = input.LA(2);
+            state._fsp--;
 
-                if ( (LA2_1==12) ) {
-                    alt2=1;
-                }
-                else if ( (LA2_1==RULE_STRING) ) {
-                    alt2=2;
-                }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 2, 1, input);
 
-                    throw nvae;
-                }
+            }
+
+             after(grammarAccess.getListaAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleLista"
+
+
+    // $ANTLR start "rule__AtributoNormal__NombreAlternatives_1_0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:342:1: rule__AtributoNormal__NombreAlternatives_1_0 : ( ( RULE_ID ) | ( RULE_STRING ) );
+    public final void rule__AtributoNormal__NombreAlternatives_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:346:1: ( ( RULE_ID ) | ( RULE_STRING ) )
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0==RULE_ID) ) {
+                alt1=1;
+            }
+            else if ( (LA1_0==RULE_STRING) ) {
+                alt1=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
+                    new NoViableAltException("", 1, 0, input);
 
                 throw nvae;
             }
-            switch (alt2) {
+            switch (alt1) {
                 case 1 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:319:1: ( ruleObjetoSimple )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:347:1: ( RULE_ID )
                     {
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:319:1: ( ruleObjetoSimple )
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:320:1: ruleObjetoSimple
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:347:1: ( RULE_ID )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:348:1: RULE_ID
                     {
-                     before(grammarAccess.getComponenteAccess().getObjetoSimpleParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleObjetoSimple_in_rule__Componente__Alternatives613);
-                    ruleObjetoSimple();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getComponenteAccess().getObjetoSimpleParserRuleCall_0()); 
+                     before(grammarAccess.getAtributoNormalAccess().getNombreIDTerminalRuleCall_1_0_0()); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AtributoNormal__NombreAlternatives_1_0671); 
+                     after(grammarAccess.getAtributoNormalAccess().getNombreIDTerminalRuleCall_1_0_0()); 
 
                     }
 
@@ -844,18 +883,14 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:325:6: ( ruleObjetoNombre )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:353:6: ( RULE_STRING )
                     {
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:325:6: ( ruleObjetoNombre )
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:326:1: ruleObjetoNombre
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:353:6: ( RULE_STRING )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:354:1: RULE_STRING
                     {
-                     before(grammarAccess.getComponenteAccess().getObjetoNombreParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleObjetoNombre_in_rule__Componente__Alternatives630);
-                    ruleObjetoNombre();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getComponenteAccess().getObjetoNombreParserRuleCall_1()); 
+                     before(grammarAccess.getAtributoNormalAccess().getNombreSTRINGTerminalRuleCall_1_0_1()); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__AtributoNormal__NombreAlternatives_1_0688); 
+                     after(grammarAccess.getAtributoNormalAccess().getNombreSTRINGTerminalRuleCall_1_0_1()); 
 
                     }
 
@@ -876,25 +911,161 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Componente__Alternatives"
+    // $ANTLR end "rule__AtributoNormal__NombreAlternatives_1_0"
 
 
-    // $ANTLR start "rule__TipoSimple__Alternatives_1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:338:1: rule__TipoSimple__Alternatives_1 : ( ( RULE_ID ) | ( RULE_STRING ) );
-    public final void rule__TipoSimple__Alternatives_1() throws RecognitionException {
+    // $ANTLR start "rule__AtributoNormal__ValorAlternatives_3_0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:364:1: rule__AtributoNormal__ValorAlternatives_3_0 : ( ( ruleValorAtributo ) | ( ruleValorAtributoValor ) | ( ruleLista ) );
+    public final void rule__AtributoNormal__ValorAlternatives_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:342:1: ( ( RULE_ID ) | ( RULE_STRING ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:368:1: ( ( ruleValorAtributo ) | ( ruleValorAtributoValor ) | ( ruleLista ) )
+            int alt2=3;
+            switch ( input.LA(1) ) {
+            case RULE_ID:
+                {
+                int LA2_1 = input.LA(2);
+
+                if ( ((LA2_1>=RULE_ID && LA2_1<=RULE_DECIMAL)||LA2_1==15) ) {
+                    alt2=1;
+                }
+                else if ( (LA2_1==16) ) {
+                    alt2=2;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 2, 1, input);
+
+                    throw nvae;
+                }
+                }
+                break;
+            case RULE_STRING:
+            case RULE_INT:
+            case RULE_DECIMAL:
+                {
+                alt2=1;
+                }
+                break;
+            case 17:
+            case 19:
+                {
+                alt2=3;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 2, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt2) {
+                case 1 :
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:369:1: ( ruleValorAtributo )
+                    {
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:369:1: ( ruleValorAtributo )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:370:1: ruleValorAtributo
+                    {
+                     before(grammarAccess.getAtributoNormalAccess().getValorValorAtributoParserRuleCall_3_0_0()); 
+                    pushFollow(FOLLOW_ruleValorAtributo_in_rule__AtributoNormal__ValorAlternatives_3_0720);
+                    ruleValorAtributo();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getAtributoNormalAccess().getValorValorAtributoParserRuleCall_3_0_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:375:6: ( ruleValorAtributoValor )
+                    {
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:375:6: ( ruleValorAtributoValor )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:376:1: ruleValorAtributoValor
+                    {
+                     before(grammarAccess.getAtributoNormalAccess().getValorValorAtributoValorParserRuleCall_3_0_1()); 
+                    pushFollow(FOLLOW_ruleValorAtributoValor_in_rule__AtributoNormal__ValorAlternatives_3_0737);
+                    ruleValorAtributoValor();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getAtributoNormalAccess().getValorValorAtributoValorParserRuleCall_3_0_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:381:6: ( ruleLista )
+                    {
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:381:6: ( ruleLista )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:382:1: ruleLista
+                    {
+                     before(grammarAccess.getAtributoNormalAccess().getValorListaParserRuleCall_3_0_2()); 
+                    pushFollow(FOLLOW_ruleLista_in_rule__AtributoNormal__ValorAlternatives_3_0754);
+                    ruleLista();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getAtributoNormalAccess().getValorListaParserRuleCall_3_0_2()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__ValorAlternatives_3_0"
+
+
+    // $ANTLR start "rule__Atributo__Alternatives"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:392:1: rule__Atributo__Alternatives : ( ( ruleAtributoNormal ) | ( ruleAtributoObjeto ) );
+    public final void rule__Atributo__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:396:1: ( ( ruleAtributoNormal ) | ( ruleAtributoObjeto ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
             if ( (LA3_0==RULE_ID) ) {
-                alt3=1;
+                int LA3_1 = input.LA(2);
+
+                if ( (LA3_1==RULE_STRING||LA3_1==12) ) {
+                    alt3=2;
+                }
+                else if ( (LA3_1==14) ) {
+                    alt3=1;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 3, 1, input);
+
+                    throw nvae;
+                }
             }
             else if ( (LA3_0==RULE_STRING) ) {
-                alt3=2;
+                alt3=1;
             }
             else {
                 NoViableAltException nvae =
@@ -904,14 +1075,18 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:343:1: ( RULE_ID )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:397:1: ( ruleAtributoNormal )
                     {
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:343:1: ( RULE_ID )
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:344:1: RULE_ID
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:397:1: ( ruleAtributoNormal )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:398:1: ruleAtributoNormal
                     {
-                     before(grammarAccess.getTipoSimpleAccess().getIDTerminalRuleCall_1_0()); 
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TipoSimple__Alternatives_1664); 
-                     after(grammarAccess.getTipoSimpleAccess().getIDTerminalRuleCall_1_0()); 
+                     before(grammarAccess.getAtributoAccess().getAtributoNormalParserRuleCall_0()); 
+                    pushFollow(FOLLOW_ruleAtributoNormal_in_rule__Atributo__Alternatives786);
+                    ruleAtributoNormal();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getAtributoAccess().getAtributoNormalParserRuleCall_0()); 
 
                     }
 
@@ -919,14 +1094,18 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:349:6: ( RULE_STRING )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:403:6: ( ruleAtributoObjeto )
                     {
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:349:6: ( RULE_STRING )
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:350:1: RULE_STRING
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:403:6: ( ruleAtributoObjeto )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:404:1: ruleAtributoObjeto
                     {
-                     before(grammarAccess.getTipoSimpleAccess().getSTRINGTerminalRuleCall_1_1()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TipoSimple__Alternatives_1681); 
-                     after(grammarAccess.getTipoSimpleAccess().getSTRINGTerminalRuleCall_1_1()); 
+                     before(grammarAccess.getAtributoAccess().getAtributoObjetoParserRuleCall_1()); 
+                    pushFollow(FOLLOW_ruleAtributoObjeto_in_rule__Atributo__Alternatives803);
+                    ruleAtributoObjeto();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getAtributoAccess().getAtributoObjetoParserRuleCall_1()); 
 
                     }
 
@@ -947,46 +1126,56 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TipoSimple__Alternatives_1"
+    // $ANTLR end "rule__Atributo__Alternatives"
 
 
-    // $ANTLR start "rule__Lista__Alternatives"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:360:1: rule__Lista__Alternatives : ( ( ruleListaInt ) | ( ruleListaString ) );
-    public final void rule__Lista__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__ValorAtributo__Alternatives_1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:414:1: rule__ValorAtributo__Alternatives_1 : ( ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( RULE_DECIMAL ) );
+    public final void rule__ValorAtributo__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:364:1: ( ( ruleListaInt ) | ( ruleListaString ) )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( (LA4_0==17) ) {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:418:1: ( ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( RULE_DECIMAL ) )
+            int alt4=4;
+            switch ( input.LA(1) ) {
+            case RULE_ID:
+                {
                 alt4=1;
-            }
-            else if ( (LA4_0==19) ) {
+                }
+                break;
+            case RULE_STRING:
+                {
                 alt4=2;
-            }
-            else {
+                }
+                break;
+            case RULE_INT:
+                {
+                alt4=3;
+                }
+                break;
+            case RULE_DECIMAL:
+                {
+                alt4=4;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
+
             switch (alt4) {
                 case 1 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:365:1: ( ruleListaInt )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:419:1: ( RULE_ID )
                     {
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:365:1: ( ruleListaInt )
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:366:1: ruleListaInt
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:419:1: ( RULE_ID )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:420:1: RULE_ID
                     {
-                     before(grammarAccess.getListaAccess().getListaIntParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleListaInt_in_rule__Lista__Alternatives713);
-                    ruleListaInt();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getListaAccess().getListaIntParserRuleCall_0()); 
+                     before(grammarAccess.getValorAtributoAccess().getIDTerminalRuleCall_1_0()); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ValorAtributo__Alternatives_1835); 
+                     after(grammarAccess.getValorAtributoAccess().getIDTerminalRuleCall_1_0()); 
 
                     }
 
@@ -994,13 +1183,118 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:371:6: ( ruleListaString )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:425:6: ( RULE_STRING )
                     {
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:371:6: ( ruleListaString )
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:372:1: ruleListaString
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:425:6: ( RULE_STRING )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:426:1: RULE_STRING
+                    {
+                     before(grammarAccess.getValorAtributoAccess().getSTRINGTerminalRuleCall_1_1()); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ValorAtributo__Alternatives_1852); 
+                     after(grammarAccess.getValorAtributoAccess().getSTRINGTerminalRuleCall_1_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:431:6: ( RULE_INT )
+                    {
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:431:6: ( RULE_INT )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:432:1: RULE_INT
+                    {
+                     before(grammarAccess.getValorAtributoAccess().getINTTerminalRuleCall_1_2()); 
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ValorAtributo__Alternatives_1869); 
+                     after(grammarAccess.getValorAtributoAccess().getINTTerminalRuleCall_1_2()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:437:6: ( RULE_DECIMAL )
+                    {
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:437:6: ( RULE_DECIMAL )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:438:1: RULE_DECIMAL
+                    {
+                     before(grammarAccess.getValorAtributoAccess().getDECIMALTerminalRuleCall_1_3()); 
+                    match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ValorAtributo__Alternatives_1886); 
+                     after(grammarAccess.getValorAtributoAccess().getDECIMALTerminalRuleCall_1_3()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributo__Alternatives_1"
+
+
+    // $ANTLR start "rule__Lista__Alternatives"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:449:1: rule__Lista__Alternatives : ( ( ruleListaInteger ) | ( ruleListaString ) );
+    public final void rule__Lista__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:453:1: ( ( ruleListaInteger ) | ( ruleListaString ) )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==17) ) {
+                alt5=1;
+            }
+            else if ( (LA5_0==19) ) {
+                alt5=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 5, 0, input);
+
+                throw nvae;
+            }
+            switch (alt5) {
+                case 1 :
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:454:1: ( ruleListaInteger )
+                    {
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:454:1: ( ruleListaInteger )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:455:1: ruleListaInteger
+                    {
+                     before(grammarAccess.getListaAccess().getListaIntegerParserRuleCall_0()); 
+                    pushFollow(FOLLOW_ruleListaInteger_in_rule__Lista__Alternatives919);
+                    ruleListaInteger();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getListaAccess().getListaIntegerParserRuleCall_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:460:6: ( ruleListaString )
+                    {
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:460:6: ( ruleListaString )
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:461:1: ruleListaString
                     {
                      before(grammarAccess.getListaAccess().getListaStringParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleListaString_in_rule__Lista__Alternatives730);
+                    pushFollow(FOLLOW_ruleListaString_in_rule__Lista__Alternatives936);
                     ruleListaString();
 
                     state._fsp--;
@@ -1029,23 +1323,23 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Lista__Alternatives"
 
 
-    // $ANTLR start "rule__ObjetoSimple__Group__0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:384:1: rule__ObjetoSimple__Group__0 : rule__ObjetoSimple__Group__0__Impl rule__ObjetoSimple__Group__1 ;
-    public final void rule__ObjetoSimple__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:473:1: rule__Modelo__Group__0 : rule__Modelo__Group__0__Impl rule__Modelo__Group__1 ;
+    public final void rule__Modelo__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:388:1: ( rule__ObjetoSimple__Group__0__Impl rule__ObjetoSimple__Group__1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:389:2: rule__ObjetoSimple__Group__0__Impl rule__ObjetoSimple__Group__1
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:477:1: ( rule__Modelo__Group__0__Impl rule__Modelo__Group__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:478:2: rule__Modelo__Group__0__Impl rule__Modelo__Group__1
             {
-            pushFollow(FOLLOW_rule__ObjetoSimple__Group__0__Impl_in_rule__ObjetoSimple__Group__0760);
-            rule__ObjetoSimple__Group__0__Impl();
+            pushFollow(FOLLOW_rule__Modelo__Group__0__Impl_in_rule__Modelo__Group__0966);
+            rule__Modelo__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ObjetoSimple__Group__1_in_rule__ObjetoSimple__Group__0763);
-            rule__ObjetoSimple__Group__1();
+            pushFollow(FOLLOW_rule__Modelo__Group__1_in_rule__Modelo__Group__0969);
+            rule__Modelo__Group__1();
 
             state._fsp--;
 
@@ -1064,45 +1358,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoSimple__Group__0"
+    // $ANTLR end "rule__Modelo__Group__0"
 
 
-    // $ANTLR start "rule__ObjetoSimple__Group__0__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:396:1: rule__ObjetoSimple__Group__0__Impl : ( ( rule__ObjetoSimple__NameAssignment_0 ) ) ;
-    public final void rule__ObjetoSimple__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__0__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:485:1: rule__Modelo__Group__0__Impl : ( () ) ;
+    public final void rule__Modelo__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:400:1: ( ( ( rule__ObjetoSimple__NameAssignment_0 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:401:1: ( ( rule__ObjetoSimple__NameAssignment_0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:489:1: ( ( () ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:490:1: ( () )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:401:1: ( ( rule__ObjetoSimple__NameAssignment_0 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:402:1: ( rule__ObjetoSimple__NameAssignment_0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:490:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:491:1: ()
             {
-             before(grammarAccess.getObjetoSimpleAccess().getNameAssignment_0()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:403:1: ( rule__ObjetoSimple__NameAssignment_0 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:403:2: rule__ObjetoSimple__NameAssignment_0
+             before(grammarAccess.getModeloAccess().getModeloAction_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:492:1: ()
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:494:1: 
             {
-            pushFollow(FOLLOW_rule__ObjetoSimple__NameAssignment_0_in_rule__ObjetoSimple__Group__0__Impl790);
-            rule__ObjetoSimple__NameAssignment_0();
-
-            state._fsp--;
-
-
             }
 
-             after(grammarAccess.getObjetoSimpleAccess().getNameAssignment_0()); 
+             after(grammarAccess.getModeloAccess().getModeloAction_0()); 
 
             }
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
         }
         finally {
 
@@ -1111,101 +1395,26 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoSimple__Group__0__Impl"
+    // $ANTLR end "rule__Modelo__Group__0__Impl"
 
 
-    // $ANTLR start "rule__ObjetoSimple__Group__1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:413:1: rule__ObjetoSimple__Group__1 : rule__ObjetoSimple__Group__1__Impl rule__ObjetoSimple__Group__2 ;
-    public final void rule__ObjetoSimple__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:417:1: ( rule__ObjetoSimple__Group__1__Impl rule__ObjetoSimple__Group__2 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:418:2: rule__ObjetoSimple__Group__1__Impl rule__ObjetoSimple__Group__2
-            {
-            pushFollow(FOLLOW_rule__ObjetoSimple__Group__1__Impl_in_rule__ObjetoSimple__Group__1820);
-            rule__ObjetoSimple__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ObjetoSimple__Group__2_in_rule__ObjetoSimple__Group__1823);
-            rule__ObjetoSimple__Group__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoSimple__Group__1"
-
-
-    // $ANTLR start "rule__ObjetoSimple__Group__1__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:425:1: rule__ObjetoSimple__Group__1__Impl : ( '{' ) ;
-    public final void rule__ObjetoSimple__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:504:1: rule__Modelo__Group__1 : rule__Modelo__Group__1__Impl rule__Modelo__Group__2 ;
+    public final void rule__Modelo__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:429:1: ( ( '{' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:430:1: ( '{' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:508:1: ( rule__Modelo__Group__1__Impl rule__Modelo__Group__2 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:509:2: rule__Modelo__Group__1__Impl rule__Modelo__Group__2
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:430:1: ( '{' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:431:1: '{'
-            {
-             before(grammarAccess.getObjetoSimpleAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,12,FOLLOW_12_in_rule__ObjetoSimple__Group__1__Impl851); 
-             after(grammarAccess.getObjetoSimpleAccess().getLeftCurlyBracketKeyword_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoSimple__Group__1__Impl"
-
-
-    // $ANTLR start "rule__ObjetoSimple__Group__2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:444:1: rule__ObjetoSimple__Group__2 : rule__ObjetoSimple__Group__2__Impl rule__ObjetoSimple__Group__3 ;
-    public final void rule__ObjetoSimple__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:448:1: ( rule__ObjetoSimple__Group__2__Impl rule__ObjetoSimple__Group__3 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:449:2: rule__ObjetoSimple__Group__2__Impl rule__ObjetoSimple__Group__3
-            {
-            pushFollow(FOLLOW_rule__ObjetoSimple__Group__2__Impl_in_rule__ObjetoSimple__Group__2882);
-            rule__ObjetoSimple__Group__2__Impl();
+            pushFollow(FOLLOW_rule__Modelo__Group__1__Impl_in_rule__Modelo__Group__11027);
+            rule__Modelo__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ObjetoSimple__Group__3_in_rule__ObjetoSimple__Group__2885);
-            rule__ObjetoSimple__Group__3();
+            pushFollow(FOLLOW_rule__Modelo__Group__2_in_rule__Modelo__Group__11030);
+            rule__Modelo__Group__2();
 
             state._fsp--;
 
@@ -1224,53 +1433,25 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoSimple__Group__2"
+    // $ANTLR end "rule__Modelo__Group__1"
 
 
-    // $ANTLR start "rule__ObjetoSimple__Group__2__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:456:1: rule__ObjetoSimple__Group__2__Impl : ( ( rule__ObjetoSimple__ComponentesAssignment_2 )* ) ;
-    public final void rule__ObjetoSimple__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__1__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:516:1: rule__Modelo__Group__1__Impl : ( RULE_ID ) ;
+    public final void rule__Modelo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:460:1: ( ( ( rule__ObjetoSimple__ComponentesAssignment_2 )* ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:461:1: ( ( rule__ObjetoSimple__ComponentesAssignment_2 )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:520:1: ( ( RULE_ID ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:521:1: ( RULE_ID )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:461:1: ( ( rule__ObjetoSimple__ComponentesAssignment_2 )* )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:462:1: ( rule__ObjetoSimple__ComponentesAssignment_2 )*
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:521:1: ( RULE_ID )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:522:1: RULE_ID
             {
-             before(grammarAccess.getObjetoSimpleAccess().getComponentesAssignment_2()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:463:1: ( rule__ObjetoSimple__ComponentesAssignment_2 )*
-            loop5:
-            do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
-
-                if ( (LA5_0==RULE_ID) ) {
-                    alt5=1;
-                }
-
-
-                switch (alt5) {
-            	case 1 :
-            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:463:2: rule__ObjetoSimple__ComponentesAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_rule__ObjetoSimple__ComponentesAssignment_2_in_rule__ObjetoSimple__Group__2__Impl912);
-            	    rule__ObjetoSimple__ComponentesAssignment_2();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop5;
-                }
-            } while (true);
-
-             after(grammarAccess.getObjetoSimpleAccess().getComponentesAssignment_2()); 
+             before(grammarAccess.getModeloAccess().getIDTerminalRuleCall_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Modelo__Group__1__Impl1057); 
+             after(grammarAccess.getModeloAccess().getIDTerminalRuleCall_1()); 
 
             }
 
@@ -1289,21 +1470,26 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoSimple__Group__2__Impl"
+    // $ANTLR end "rule__Modelo__Group__1__Impl"
 
 
-    // $ANTLR start "rule__ObjetoSimple__Group__3"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:473:1: rule__ObjetoSimple__Group__3 : rule__ObjetoSimple__Group__3__Impl ;
-    public final void rule__ObjetoSimple__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__2"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:533:1: rule__Modelo__Group__2 : rule__Modelo__Group__2__Impl rule__Modelo__Group__3 ;
+    public final void rule__Modelo__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:477:1: ( rule__ObjetoSimple__Group__3__Impl )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:478:2: rule__ObjetoSimple__Group__3__Impl
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:537:1: ( rule__Modelo__Group__2__Impl rule__Modelo__Group__3 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:538:2: rule__Modelo__Group__2__Impl rule__Modelo__Group__3
             {
-            pushFollow(FOLLOW_rule__ObjetoSimple__Group__3__Impl_in_rule__ObjetoSimple__Group__3943);
-            rule__ObjetoSimple__Group__3__Impl();
+            pushFollow(FOLLOW_rule__Modelo__Group__2__Impl_in_rule__Modelo__Group__21086);
+            rule__Modelo__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Modelo__Group__3_in_rule__Modelo__Group__21089);
+            rule__Modelo__Group__3();
 
             state._fsp--;
 
@@ -1322,25 +1508,25 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoSimple__Group__3"
+    // $ANTLR end "rule__Modelo__Group__2"
 
 
-    // $ANTLR start "rule__ObjetoSimple__Group__3__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:484:1: rule__ObjetoSimple__Group__3__Impl : ( '}' ) ;
-    public final void rule__ObjetoSimple__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__2__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:545:1: rule__Modelo__Group__2__Impl : ( '{' ) ;
+    public final void rule__Modelo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:488:1: ( ( '}' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:489:1: ( '}' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:549:1: ( ( '{' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:550:1: ( '{' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:489:1: ( '}' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:490:1: '}'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:550:1: ( '{' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:551:1: '{'
             {
-             before(grammarAccess.getObjetoSimpleAccess().getRightCurlyBracketKeyword_3()); 
-            match(input,13,FOLLOW_13_in_rule__ObjetoSimple__Group__3__Impl971); 
-             after(grammarAccess.getObjetoSimpleAccess().getRightCurlyBracketKeyword_3()); 
+             before(grammarAccess.getModeloAccess().getLeftCurlyBracketKeyword_2()); 
+            match(input,12,FOLLOW_12_in_rule__Modelo__Group__2__Impl1117); 
+             after(grammarAccess.getModeloAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
 
@@ -1359,26 +1545,26 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoSimple__Group__3__Impl"
+    // $ANTLR end "rule__Modelo__Group__2__Impl"
 
 
-    // $ANTLR start "rule__ObjetoNombre__Group__0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:511:1: rule__ObjetoNombre__Group__0 : rule__ObjetoNombre__Group__0__Impl rule__ObjetoNombre__Group__1 ;
-    public final void rule__ObjetoNombre__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__3"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:564:1: rule__Modelo__Group__3 : rule__Modelo__Group__3__Impl rule__Modelo__Group__4 ;
+    public final void rule__Modelo__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:515:1: ( rule__ObjetoNombre__Group__0__Impl rule__ObjetoNombre__Group__1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:516:2: rule__ObjetoNombre__Group__0__Impl rule__ObjetoNombre__Group__1
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:568:1: ( rule__Modelo__Group__3__Impl rule__Modelo__Group__4 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:569:2: rule__Modelo__Group__3__Impl rule__Modelo__Group__4
             {
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__0__Impl_in_rule__ObjetoNombre__Group__01010);
-            rule__ObjetoNombre__Group__0__Impl();
+            pushFollow(FOLLOW_rule__Modelo__Group__3__Impl_in_rule__Modelo__Group__31148);
+            rule__Modelo__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__1_in_rule__ObjetoNombre__Group__01013);
-            rule__ObjetoNombre__Group__1();
+            pushFollow(FOLLOW_rule__Modelo__Group__4_in_rule__Modelo__Group__31151);
+            rule__Modelo__Group__4();
 
             state._fsp--;
 
@@ -1397,269 +1583,24 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoNombre__Group__0"
+    // $ANTLR end "rule__Modelo__Group__3"
 
 
-    // $ANTLR start "rule__ObjetoNombre__Group__0__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:523:1: rule__ObjetoNombre__Group__0__Impl : ( ( rule__ObjetoNombre__NameAssignment_0 ) ) ;
-    public final void rule__ObjetoNombre__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:527:1: ( ( ( rule__ObjetoNombre__NameAssignment_0 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:528:1: ( ( rule__ObjetoNombre__NameAssignment_0 ) )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:528:1: ( ( rule__ObjetoNombre__NameAssignment_0 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:529:1: ( rule__ObjetoNombre__NameAssignment_0 )
-            {
-             before(grammarAccess.getObjetoNombreAccess().getNameAssignment_0()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:530:1: ( rule__ObjetoNombre__NameAssignment_0 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:530:2: rule__ObjetoNombre__NameAssignment_0
-            {
-            pushFollow(FOLLOW_rule__ObjetoNombre__NameAssignment_0_in_rule__ObjetoNombre__Group__0__Impl1040);
-            rule__ObjetoNombre__NameAssignment_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getObjetoNombreAccess().getNameAssignment_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoNombre__Group__0__Impl"
-
-
-    // $ANTLR start "rule__ObjetoNombre__Group__1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:540:1: rule__ObjetoNombre__Group__1 : rule__ObjetoNombre__Group__1__Impl rule__ObjetoNombre__Group__2 ;
-    public final void rule__ObjetoNombre__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__3__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:576:1: rule__Modelo__Group__3__Impl : ( ( rule__Modelo__ObjetosAssignment_3 )* ) ;
+    public final void rule__Modelo__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:544:1: ( rule__ObjetoNombre__Group__1__Impl rule__ObjetoNombre__Group__2 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:545:2: rule__ObjetoNombre__Group__1__Impl rule__ObjetoNombre__Group__2
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:580:1: ( ( ( rule__Modelo__ObjetosAssignment_3 )* ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:581:1: ( ( rule__Modelo__ObjetosAssignment_3 )* )
             {
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__1__Impl_in_rule__ObjetoNombre__Group__11070);
-            rule__ObjetoNombre__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__2_in_rule__ObjetoNombre__Group__11073);
-            rule__ObjetoNombre__Group__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoNombre__Group__1"
-
-
-    // $ANTLR start "rule__ObjetoNombre__Group__1__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:552:1: rule__ObjetoNombre__Group__1__Impl : ( ( rule__ObjetoNombre__DescripcionAssignment_1 ) ) ;
-    public final void rule__ObjetoNombre__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:556:1: ( ( ( rule__ObjetoNombre__DescripcionAssignment_1 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:557:1: ( ( rule__ObjetoNombre__DescripcionAssignment_1 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:581:1: ( ( rule__Modelo__ObjetosAssignment_3 )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:582:1: ( rule__Modelo__ObjetosAssignment_3 )*
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:557:1: ( ( rule__ObjetoNombre__DescripcionAssignment_1 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:558:1: ( rule__ObjetoNombre__DescripcionAssignment_1 )
-            {
-             before(grammarAccess.getObjetoNombreAccess().getDescripcionAssignment_1()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:559:1: ( rule__ObjetoNombre__DescripcionAssignment_1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:559:2: rule__ObjetoNombre__DescripcionAssignment_1
-            {
-            pushFollow(FOLLOW_rule__ObjetoNombre__DescripcionAssignment_1_in_rule__ObjetoNombre__Group__1__Impl1100);
-            rule__ObjetoNombre__DescripcionAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getObjetoNombreAccess().getDescripcionAssignment_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoNombre__Group__1__Impl"
-
-
-    // $ANTLR start "rule__ObjetoNombre__Group__2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:569:1: rule__ObjetoNombre__Group__2 : rule__ObjetoNombre__Group__2__Impl rule__ObjetoNombre__Group__3 ;
-    public final void rule__ObjetoNombre__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:573:1: ( rule__ObjetoNombre__Group__2__Impl rule__ObjetoNombre__Group__3 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:574:2: rule__ObjetoNombre__Group__2__Impl rule__ObjetoNombre__Group__3
-            {
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__2__Impl_in_rule__ObjetoNombre__Group__21130);
-            rule__ObjetoNombre__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__3_in_rule__ObjetoNombre__Group__21133);
-            rule__ObjetoNombre__Group__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoNombre__Group__2"
-
-
-    // $ANTLR start "rule__ObjetoNombre__Group__2__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:581:1: rule__ObjetoNombre__Group__2__Impl : ( '{' ) ;
-    public final void rule__ObjetoNombre__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:585:1: ( ( '{' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:586:1: ( '{' )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:586:1: ( '{' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:587:1: '{'
-            {
-             before(grammarAccess.getObjetoNombreAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,12,FOLLOW_12_in_rule__ObjetoNombre__Group__2__Impl1161); 
-             after(grammarAccess.getObjetoNombreAccess().getLeftCurlyBracketKeyword_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoNombre__Group__2__Impl"
-
-
-    // $ANTLR start "rule__ObjetoNombre__Group__3"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:600:1: rule__ObjetoNombre__Group__3 : rule__ObjetoNombre__Group__3__Impl rule__ObjetoNombre__Group__4 ;
-    public final void rule__ObjetoNombre__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:604:1: ( rule__ObjetoNombre__Group__3__Impl rule__ObjetoNombre__Group__4 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:605:2: rule__ObjetoNombre__Group__3__Impl rule__ObjetoNombre__Group__4
-            {
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__3__Impl_in_rule__ObjetoNombre__Group__31192);
-            rule__ObjetoNombre__Group__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__4_in_rule__ObjetoNombre__Group__31195);
-            rule__ObjetoNombre__Group__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoNombre__Group__3"
-
-
-    // $ANTLR start "rule__ObjetoNombre__Group__3__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:612:1: rule__ObjetoNombre__Group__3__Impl : ( ( rule__ObjetoNombre__ComponentesAssignment_3 )* ) ;
-    public final void rule__ObjetoNombre__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:616:1: ( ( ( rule__ObjetoNombre__ComponentesAssignment_3 )* ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:617:1: ( ( rule__ObjetoNombre__ComponentesAssignment_3 )* )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:617:1: ( ( rule__ObjetoNombre__ComponentesAssignment_3 )* )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:618:1: ( rule__ObjetoNombre__ComponentesAssignment_3 )*
-            {
-             before(grammarAccess.getObjetoNombreAccess().getComponentesAssignment_3()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:619:1: ( rule__ObjetoNombre__ComponentesAssignment_3 )*
+             before(grammarAccess.getModeloAccess().getObjetosAssignment_3()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:583:1: ( rule__Modelo__ObjetosAssignment_3 )*
             loop6:
             do {
                 int alt6=2;
@@ -1672,10 +1613,10 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:619:2: rule__ObjetoNombre__ComponentesAssignment_3
+            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:583:2: rule__Modelo__ObjetosAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__ObjetoNombre__ComponentesAssignment_3_in_rule__ObjetoNombre__Group__3__Impl1222);
-            	    rule__ObjetoNombre__ComponentesAssignment_3();
+            	    pushFollow(FOLLOW_rule__Modelo__ObjetosAssignment_3_in_rule__Modelo__Group__3__Impl1178);
+            	    rule__Modelo__ObjetosAssignment_3();
 
             	    state._fsp--;
 
@@ -1688,7 +1629,7 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getObjetoNombreAccess().getComponentesAssignment_3()); 
+             after(grammarAccess.getModeloAccess().getObjetosAssignment_3()); 
 
             }
 
@@ -1707,21 +1648,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoNombre__Group__3__Impl"
+    // $ANTLR end "rule__Modelo__Group__3__Impl"
 
 
-    // $ANTLR start "rule__ObjetoNombre__Group__4"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:629:1: rule__ObjetoNombre__Group__4 : rule__ObjetoNombre__Group__4__Impl ;
-    public final void rule__ObjetoNombre__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__4"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:593:1: rule__Modelo__Group__4 : rule__Modelo__Group__4__Impl ;
+    public final void rule__Modelo__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:633:1: ( rule__ObjetoNombre__Group__4__Impl )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:634:2: rule__ObjetoNombre__Group__4__Impl
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:597:1: ( rule__Modelo__Group__4__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:598:2: rule__Modelo__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__ObjetoNombre__Group__4__Impl_in_rule__ObjetoNombre__Group__41253);
-            rule__ObjetoNombre__Group__4__Impl();
+            pushFollow(FOLLOW_rule__Modelo__Group__4__Impl_in_rule__Modelo__Group__41209);
+            rule__Modelo__Group__4__Impl();
 
             state._fsp--;
 
@@ -1740,25 +1681,25 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoNombre__Group__4"
+    // $ANTLR end "rule__Modelo__Group__4"
 
 
-    // $ANTLR start "rule__ObjetoNombre__Group__4__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:640:1: rule__ObjetoNombre__Group__4__Impl : ( '}' ) ;
-    public final void rule__ObjetoNombre__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Modelo__Group__4__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:604:1: rule__Modelo__Group__4__Impl : ( '}' ) ;
+    public final void rule__Modelo__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:644:1: ( ( '}' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:645:1: ( '}' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:608:1: ( ( '}' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:609:1: ( '}' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:645:1: ( '}' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:646:1: '}'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:609:1: ( '}' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:610:1: '}'
             {
-             before(grammarAccess.getObjetoNombreAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,13,FOLLOW_13_in_rule__ObjetoNombre__Group__4__Impl1281); 
-             after(grammarAccess.getObjetoNombreAccess().getRightCurlyBracketKeyword_4()); 
+             before(grammarAccess.getModeloAccess().getRightCurlyBracketKeyword_4()); 
+            match(input,13,FOLLOW_13_in_rule__Modelo__Group__4__Impl1237); 
+             after(grammarAccess.getModeloAccess().getRightCurlyBracketKeyword_4()); 
 
             }
 
@@ -1777,101 +1718,26 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoNombre__Group__4__Impl"
+    // $ANTLR end "rule__Modelo__Group__4__Impl"
 
 
-    // $ANTLR start "rule__TipoSimple__Group__0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:671:1: rule__TipoSimple__Group__0 : rule__TipoSimple__Group__0__Impl rule__TipoSimple__Group__1 ;
-    public final void rule__TipoSimple__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:675:1: ( rule__TipoSimple__Group__0__Impl rule__TipoSimple__Group__1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:676:2: rule__TipoSimple__Group__0__Impl rule__TipoSimple__Group__1
-            {
-            pushFollow(FOLLOW_rule__TipoSimple__Group__0__Impl_in_rule__TipoSimple__Group__01324);
-            rule__TipoSimple__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__TipoSimple__Group__1_in_rule__TipoSimple__Group__01327);
-            rule__TipoSimple__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoSimple__Group__0"
-
-
-    // $ANTLR start "rule__TipoSimple__Group__0__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:683:1: rule__TipoSimple__Group__0__Impl : ( () ) ;
-    public final void rule__TipoSimple__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:633:1: rule__Objeto__Group__0 : rule__Objeto__Group__0__Impl rule__Objeto__Group__1 ;
+    public final void rule__Objeto__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:687:1: ( ( () ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:688:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:637:1: ( rule__Objeto__Group__0__Impl rule__Objeto__Group__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:638:2: rule__Objeto__Group__0__Impl rule__Objeto__Group__1
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:688:1: ( () )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:689:1: ()
-            {
-             before(grammarAccess.getTipoSimpleAccess().getTipoSimpleAction_0()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:690:1: ()
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:692:1: 
-            {
-            }
-
-             after(grammarAccess.getTipoSimpleAccess().getTipoSimpleAction_0()); 
-
-            }
-
-
-            }
-
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoSimple__Group__0__Impl"
-
-
-    // $ANTLR start "rule__TipoSimple__Group__1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:702:1: rule__TipoSimple__Group__1 : rule__TipoSimple__Group__1__Impl rule__TipoSimple__Group__2 ;
-    public final void rule__TipoSimple__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:706:1: ( rule__TipoSimple__Group__1__Impl rule__TipoSimple__Group__2 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:707:2: rule__TipoSimple__Group__1__Impl rule__TipoSimple__Group__2
-            {
-            pushFollow(FOLLOW_rule__TipoSimple__Group__1__Impl_in_rule__TipoSimple__Group__11385);
-            rule__TipoSimple__Group__1__Impl();
+            pushFollow(FOLLOW_rule__Objeto__Group__0__Impl_in_rule__Objeto__Group__01278);
+            rule__Objeto__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TipoSimple__Group__2_in_rule__TipoSimple__Group__11388);
-            rule__TipoSimple__Group__2();
+            pushFollow(FOLLOW_rule__Objeto__Group__1_in_rule__Objeto__Group__01281);
+            rule__Objeto__Group__1();
 
             state._fsp--;
 
@@ -1890,35 +1756,35 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TipoSimple__Group__1"
+    // $ANTLR end "rule__Objeto__Group__0"
 
 
-    // $ANTLR start "rule__TipoSimple__Group__1__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:714:1: rule__TipoSimple__Group__1__Impl : ( ( rule__TipoSimple__Alternatives_1 ) ) ;
-    public final void rule__TipoSimple__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__0__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:645:1: rule__Objeto__Group__0__Impl : ( ( rule__Objeto__NameAssignment_0 ) ) ;
+    public final void rule__Objeto__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:718:1: ( ( ( rule__TipoSimple__Alternatives_1 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:719:1: ( ( rule__TipoSimple__Alternatives_1 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:649:1: ( ( ( rule__Objeto__NameAssignment_0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:650:1: ( ( rule__Objeto__NameAssignment_0 ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:719:1: ( ( rule__TipoSimple__Alternatives_1 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:720:1: ( rule__TipoSimple__Alternatives_1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:650:1: ( ( rule__Objeto__NameAssignment_0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:651:1: ( rule__Objeto__NameAssignment_0 )
             {
-             before(grammarAccess.getTipoSimpleAccess().getAlternatives_1()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:721:1: ( rule__TipoSimple__Alternatives_1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:721:2: rule__TipoSimple__Alternatives_1
+             before(grammarAccess.getObjetoAccess().getNameAssignment_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:652:1: ( rule__Objeto__NameAssignment_0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:652:2: rule__Objeto__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__TipoSimple__Alternatives_1_in_rule__TipoSimple__Group__1__Impl1415);
-            rule__TipoSimple__Alternatives_1();
+            pushFollow(FOLLOW_rule__Objeto__NameAssignment_0_in_rule__Objeto__Group__0__Impl1308);
+            rule__Objeto__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTipoSimpleAccess().getAlternatives_1()); 
+             after(grammarAccess.getObjetoAccess().getNameAssignment_0()); 
 
             }
 
@@ -1937,21 +1803,26 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TipoSimple__Group__1__Impl"
+    // $ANTLR end "rule__Objeto__Group__0__Impl"
 
 
-    // $ANTLR start "rule__TipoSimple__Group__2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:731:1: rule__TipoSimple__Group__2 : rule__TipoSimple__Group__2__Impl ;
-    public final void rule__TipoSimple__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:662:1: rule__Objeto__Group__1 : rule__Objeto__Group__1__Impl rule__Objeto__Group__2 ;
+    public final void rule__Objeto__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:735:1: ( rule__TipoSimple__Group__2__Impl )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:736:2: rule__TipoSimple__Group__2__Impl
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:666:1: ( rule__Objeto__Group__1__Impl rule__Objeto__Group__2 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:667:2: rule__Objeto__Group__1__Impl rule__Objeto__Group__2
             {
-            pushFollow(FOLLOW_rule__TipoSimple__Group__2__Impl_in_rule__TipoSimple__Group__21445);
-            rule__TipoSimple__Group__2__Impl();
+            pushFollow(FOLLOW_rule__Objeto__Group__1__Impl_in_rule__Objeto__Group__11338);
+            rule__Objeto__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Objeto__Group__2_in_rule__Objeto__Group__11341);
+            rule__Objeto__Group__2();
 
             state._fsp--;
 
@@ -1970,25 +1841,46 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TipoSimple__Group__2"
+    // $ANTLR end "rule__Objeto__Group__1"
 
 
-    // $ANTLR start "rule__TipoSimple__Group__2__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:742:1: rule__TipoSimple__Group__2__Impl : ( ';' ) ;
-    public final void rule__TipoSimple__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__1__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:674:1: rule__Objeto__Group__1__Impl : ( ( rule__Objeto__DescripcionAssignment_1 )? ) ;
+    public final void rule__Objeto__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:746:1: ( ( ';' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:747:1: ( ';' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:678:1: ( ( ( rule__Objeto__DescripcionAssignment_1 )? ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:679:1: ( ( rule__Objeto__DescripcionAssignment_1 )? )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:747:1: ( ';' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:748:1: ';'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:679:1: ( ( rule__Objeto__DescripcionAssignment_1 )? )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:680:1: ( rule__Objeto__DescripcionAssignment_1 )?
             {
-             before(grammarAccess.getTipoSimpleAccess().getSemicolonKeyword_2()); 
-            match(input,14,FOLLOW_14_in_rule__TipoSimple__Group__2__Impl1473); 
-             after(grammarAccess.getTipoSimpleAccess().getSemicolonKeyword_2()); 
+             before(grammarAccess.getObjetoAccess().getDescripcionAssignment_1()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:681:1: ( rule__Objeto__DescripcionAssignment_1 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==RULE_STRING) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:681:2: rule__Objeto__DescripcionAssignment_1
+                    {
+                    pushFollow(FOLLOW_rule__Objeto__DescripcionAssignment_1_in_rule__Objeto__Group__1__Impl1368);
+                    rule__Objeto__DescripcionAssignment_1();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getObjetoAccess().getDescripcionAssignment_1()); 
 
             }
 
@@ -2007,101 +1899,26 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TipoSimple__Group__2__Impl"
+    // $ANTLR end "rule__Objeto__Group__1__Impl"
 
 
-    // $ANTLR start "rule__TipoValor__Group__0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:767:1: rule__TipoValor__Group__0 : rule__TipoValor__Group__0__Impl rule__TipoValor__Group__1 ;
-    public final void rule__TipoValor__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:771:1: ( rule__TipoValor__Group__0__Impl rule__TipoValor__Group__1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:772:2: rule__TipoValor__Group__0__Impl rule__TipoValor__Group__1
-            {
-            pushFollow(FOLLOW_rule__TipoValor__Group__0__Impl_in_rule__TipoValor__Group__01510);
-            rule__TipoValor__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__TipoValor__Group__1_in_rule__TipoValor__Group__01513);
-            rule__TipoValor__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__0"
-
-
-    // $ANTLR start "rule__TipoValor__Group__0__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:779:1: rule__TipoValor__Group__0__Impl : ( () ) ;
-    public final void rule__TipoValor__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__2"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:691:1: rule__Objeto__Group__2 : rule__Objeto__Group__2__Impl rule__Objeto__Group__3 ;
+    public final void rule__Objeto__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:783:1: ( ( () ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:784:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:695:1: ( rule__Objeto__Group__2__Impl rule__Objeto__Group__3 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:696:2: rule__Objeto__Group__2__Impl rule__Objeto__Group__3
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:784:1: ( () )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:785:1: ()
-            {
-             before(grammarAccess.getTipoValorAccess().getTipoValorAction_0()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:786:1: ()
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:788:1: 
-            {
-            }
-
-             after(grammarAccess.getTipoValorAccess().getTipoValorAction_0()); 
-
-            }
-
-
-            }
-
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__0__Impl"
-
-
-    // $ANTLR start "rule__TipoValor__Group__1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:798:1: rule__TipoValor__Group__1 : rule__TipoValor__Group__1__Impl rule__TipoValor__Group__2 ;
-    public final void rule__TipoValor__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:802:1: ( rule__TipoValor__Group__1__Impl rule__TipoValor__Group__2 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:803:2: rule__TipoValor__Group__1__Impl rule__TipoValor__Group__2
-            {
-            pushFollow(FOLLOW_rule__TipoValor__Group__1__Impl_in_rule__TipoValor__Group__11571);
-            rule__TipoValor__Group__1__Impl();
+            pushFollow(FOLLOW_rule__Objeto__Group__2__Impl_in_rule__Objeto__Group__21399);
+            rule__Objeto__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TipoValor__Group__2_in_rule__TipoValor__Group__11574);
-            rule__TipoValor__Group__2();
+            pushFollow(FOLLOW_rule__Objeto__Group__3_in_rule__Objeto__Group__21402);
+            rule__Objeto__Group__3();
 
             state._fsp--;
 
@@ -2120,25 +1937,25 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TipoValor__Group__1"
+    // $ANTLR end "rule__Objeto__Group__2"
 
 
-    // $ANTLR start "rule__TipoValor__Group__1__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:810:1: rule__TipoValor__Group__1__Impl : ( RULE_ID ) ;
-    public final void rule__TipoValor__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__2__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:703:1: rule__Objeto__Group__2__Impl : ( '{' ) ;
+    public final void rule__Objeto__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:814:1: ( ( RULE_ID ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:815:1: ( RULE_ID )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:707:1: ( ( '{' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:708:1: ( '{' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:815:1: ( RULE_ID )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:816:1: RULE_ID
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:708:1: ( '{' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:709:1: '{'
             {
-             before(grammarAccess.getTipoValorAccess().getIDTerminalRuleCall_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TipoValor__Group__1__Impl1601); 
-             after(grammarAccess.getTipoValorAccess().getIDTerminalRuleCall_1()); 
+             before(grammarAccess.getObjetoAccess().getLeftCurlyBracketKeyword_2()); 
+            match(input,12,FOLLOW_12_in_rule__Objeto__Group__2__Impl1430); 
+             after(grammarAccess.getObjetoAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
 
@@ -2157,101 +1974,26 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TipoValor__Group__1__Impl"
+    // $ANTLR end "rule__Objeto__Group__2__Impl"
 
 
-    // $ANTLR start "rule__TipoValor__Group__2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:827:1: rule__TipoValor__Group__2 : rule__TipoValor__Group__2__Impl rule__TipoValor__Group__3 ;
-    public final void rule__TipoValor__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:831:1: ( rule__TipoValor__Group__2__Impl rule__TipoValor__Group__3 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:832:2: rule__TipoValor__Group__2__Impl rule__TipoValor__Group__3
-            {
-            pushFollow(FOLLOW_rule__TipoValor__Group__2__Impl_in_rule__TipoValor__Group__21630);
-            rule__TipoValor__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__TipoValor__Group__3_in_rule__TipoValor__Group__21633);
-            rule__TipoValor__Group__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__2"
-
-
-    // $ANTLR start "rule__TipoValor__Group__2__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:839:1: rule__TipoValor__Group__2__Impl : ( ':' ) ;
-    public final void rule__TipoValor__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__3"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:722:1: rule__Objeto__Group__3 : rule__Objeto__Group__3__Impl rule__Objeto__Group__4 ;
+    public final void rule__Objeto__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:843:1: ( ( ':' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:844:1: ( ':' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:726:1: ( rule__Objeto__Group__3__Impl rule__Objeto__Group__4 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:727:2: rule__Objeto__Group__3__Impl rule__Objeto__Group__4
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:844:1: ( ':' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:845:1: ':'
-            {
-             before(grammarAccess.getTipoValorAccess().getColonKeyword_2()); 
-            match(input,15,FOLLOW_15_in_rule__TipoValor__Group__2__Impl1661); 
-             after(grammarAccess.getTipoValorAccess().getColonKeyword_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__2__Impl"
-
-
-    // $ANTLR start "rule__TipoValor__Group__3"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:858:1: rule__TipoValor__Group__3 : rule__TipoValor__Group__3__Impl rule__TipoValor__Group__4 ;
-    public final void rule__TipoValor__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:862:1: ( rule__TipoValor__Group__3__Impl rule__TipoValor__Group__4 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:863:2: rule__TipoValor__Group__3__Impl rule__TipoValor__Group__4
-            {
-            pushFollow(FOLLOW_rule__TipoValor__Group__3__Impl_in_rule__TipoValor__Group__31692);
-            rule__TipoValor__Group__3__Impl();
+            pushFollow(FOLLOW_rule__Objeto__Group__3__Impl_in_rule__Objeto__Group__31461);
+            rule__Objeto__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TipoValor__Group__4_in_rule__TipoValor__Group__31695);
-            rule__TipoValor__Group__4();
+            pushFollow(FOLLOW_rule__Objeto__Group__4_in_rule__Objeto__Group__31464);
+            rule__Objeto__Group__4();
 
             state._fsp--;
 
@@ -2270,570 +2012,40 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TipoValor__Group__3"
+    // $ANTLR end "rule__Objeto__Group__3"
 
 
-    // $ANTLR start "rule__TipoValor__Group__3__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:870:1: rule__TipoValor__Group__3__Impl : ( RULE_ID ) ;
-    public final void rule__TipoValor__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:874:1: ( ( RULE_ID ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:875:1: ( RULE_ID )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:875:1: ( RULE_ID )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:876:1: RULE_ID
-            {
-             before(grammarAccess.getTipoValorAccess().getIDTerminalRuleCall_3()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TipoValor__Group__3__Impl1722); 
-             after(grammarAccess.getTipoValorAccess().getIDTerminalRuleCall_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__3__Impl"
-
-
-    // $ANTLR start "rule__TipoValor__Group__4"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:887:1: rule__TipoValor__Group__4 : rule__TipoValor__Group__4__Impl rule__TipoValor__Group__5 ;
-    public final void rule__TipoValor__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__3__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:734:1: rule__Objeto__Group__3__Impl : ( ( rule__Objeto__AtributosAssignment_3 )* ) ;
+    public final void rule__Objeto__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:891:1: ( rule__TipoValor__Group__4__Impl rule__TipoValor__Group__5 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:892:2: rule__TipoValor__Group__4__Impl rule__TipoValor__Group__5
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:738:1: ( ( ( rule__Objeto__AtributosAssignment_3 )* ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:739:1: ( ( rule__Objeto__AtributosAssignment_3 )* )
             {
-            pushFollow(FOLLOW_rule__TipoValor__Group__4__Impl_in_rule__TipoValor__Group__41751);
-            rule__TipoValor__Group__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__TipoValor__Group__5_in_rule__TipoValor__Group__41754);
-            rule__TipoValor__Group__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__4"
-
-
-    // $ANTLR start "rule__TipoValor__Group__4__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:899:1: rule__TipoValor__Group__4__Impl : ( '=' ) ;
-    public final void rule__TipoValor__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:903:1: ( ( '=' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:904:1: ( '=' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:739:1: ( ( rule__Objeto__AtributosAssignment_3 )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:740:1: ( rule__Objeto__AtributosAssignment_3 )*
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:904:1: ( '=' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:905:1: '='
-            {
-             before(grammarAccess.getTipoValorAccess().getEqualsSignKeyword_4()); 
-            match(input,16,FOLLOW_16_in_rule__TipoValor__Group__4__Impl1782); 
-             after(grammarAccess.getTipoValorAccess().getEqualsSignKeyword_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__4__Impl"
-
-
-    // $ANTLR start "rule__TipoValor__Group__5"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:918:1: rule__TipoValor__Group__5 : rule__TipoValor__Group__5__Impl rule__TipoValor__Group__6 ;
-    public final void rule__TipoValor__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:922:1: ( rule__TipoValor__Group__5__Impl rule__TipoValor__Group__6 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:923:2: rule__TipoValor__Group__5__Impl rule__TipoValor__Group__6
-            {
-            pushFollow(FOLLOW_rule__TipoValor__Group__5__Impl_in_rule__TipoValor__Group__51813);
-            rule__TipoValor__Group__5__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__TipoValor__Group__6_in_rule__TipoValor__Group__51816);
-            rule__TipoValor__Group__6();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__5"
-
-
-    // $ANTLR start "rule__TipoValor__Group__5__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:930:1: rule__TipoValor__Group__5__Impl : ( RULE_DECIMAL ) ;
-    public final void rule__TipoValor__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:934:1: ( ( RULE_DECIMAL ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:935:1: ( RULE_DECIMAL )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:935:1: ( RULE_DECIMAL )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:936:1: RULE_DECIMAL
-            {
-             before(grammarAccess.getTipoValorAccess().getDECIMALTerminalRuleCall_5()); 
-            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__TipoValor__Group__5__Impl1843); 
-             after(grammarAccess.getTipoValorAccess().getDECIMALTerminalRuleCall_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__5__Impl"
-
-
-    // $ANTLR start "rule__TipoValor__Group__6"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:947:1: rule__TipoValor__Group__6 : rule__TipoValor__Group__6__Impl ;
-    public final void rule__TipoValor__Group__6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:951:1: ( rule__TipoValor__Group__6__Impl )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:952:2: rule__TipoValor__Group__6__Impl
-            {
-            pushFollow(FOLLOW_rule__TipoValor__Group__6__Impl_in_rule__TipoValor__Group__61872);
-            rule__TipoValor__Group__6__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__6"
-
-
-    // $ANTLR start "rule__TipoValor__Group__6__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:958:1: rule__TipoValor__Group__6__Impl : ( ';' ) ;
-    public final void rule__TipoValor__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:962:1: ( ( ';' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:963:1: ( ';' )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:963:1: ( ';' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:964:1: ';'
-            {
-             before(grammarAccess.getTipoValorAccess().getSemicolonKeyword_6()); 
-            match(input,14,FOLLOW_14_in_rule__TipoValor__Group__6__Impl1900); 
-             after(grammarAccess.getTipoValorAccess().getSemicolonKeyword_6()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TipoValor__Group__6__Impl"
-
-
-    // $ANTLR start "rule__ListaInt__Group__0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:991:1: rule__ListaInt__Group__0 : rule__ListaInt__Group__0__Impl rule__ListaInt__Group__1 ;
-    public final void rule__ListaInt__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:995:1: ( rule__ListaInt__Group__0__Impl rule__ListaInt__Group__1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:996:2: rule__ListaInt__Group__0__Impl rule__ListaInt__Group__1
-            {
-            pushFollow(FOLLOW_rule__ListaInt__Group__0__Impl_in_rule__ListaInt__Group__01945);
-            rule__ListaInt__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ListaInt__Group__1_in_rule__ListaInt__Group__01948);
-            rule__ListaInt__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group__0"
-
-
-    // $ANTLR start "rule__ListaInt__Group__0__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1003:1: rule__ListaInt__Group__0__Impl : ( () ) ;
-    public final void rule__ListaInt__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1007:1: ( ( () ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1008:1: ( () )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1008:1: ( () )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1009:1: ()
-            {
-             before(grammarAccess.getListaIntAccess().getListaIntAction_0()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1010:1: ()
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1012:1: 
-            {
-            }
-
-             after(grammarAccess.getListaIntAccess().getListaIntAction_0()); 
-
-            }
-
-
-            }
-
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group__0__Impl"
-
-
-    // $ANTLR start "rule__ListaInt__Group__1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1022:1: rule__ListaInt__Group__1 : rule__ListaInt__Group__1__Impl rule__ListaInt__Group__2 ;
-    public final void rule__ListaInt__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1026:1: ( rule__ListaInt__Group__1__Impl rule__ListaInt__Group__2 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1027:2: rule__ListaInt__Group__1__Impl rule__ListaInt__Group__2
-            {
-            pushFollow(FOLLOW_rule__ListaInt__Group__1__Impl_in_rule__ListaInt__Group__12006);
-            rule__ListaInt__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ListaInt__Group__2_in_rule__ListaInt__Group__12009);
-            rule__ListaInt__Group__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group__1"
-
-
-    // $ANTLR start "rule__ListaInt__Group__1__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1034:1: rule__ListaInt__Group__1__Impl : ( 'List of Integer = {' ) ;
-    public final void rule__ListaInt__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1038:1: ( ( 'List of Integer = {' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1039:1: ( 'List of Integer = {' )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1039:1: ( 'List of Integer = {' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1040:1: 'List of Integer = {'
-            {
-             before(grammarAccess.getListaIntAccess().getListOfIntegerKeyword_1()); 
-            match(input,17,FOLLOW_17_in_rule__ListaInt__Group__1__Impl2037); 
-             after(grammarAccess.getListaIntAccess().getListOfIntegerKeyword_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group__1__Impl"
-
-
-    // $ANTLR start "rule__ListaInt__Group__2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1053:1: rule__ListaInt__Group__2 : rule__ListaInt__Group__2__Impl rule__ListaInt__Group__3 ;
-    public final void rule__ListaInt__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1057:1: ( rule__ListaInt__Group__2__Impl rule__ListaInt__Group__3 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1058:2: rule__ListaInt__Group__2__Impl rule__ListaInt__Group__3
-            {
-            pushFollow(FOLLOW_rule__ListaInt__Group__2__Impl_in_rule__ListaInt__Group__22068);
-            rule__ListaInt__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ListaInt__Group__3_in_rule__ListaInt__Group__22071);
-            rule__ListaInt__Group__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group__2"
-
-
-    // $ANTLR start "rule__ListaInt__Group__2__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1065:1: rule__ListaInt__Group__2__Impl : ( ( rule__ListaInt__ValoresAssignment_2 ) ) ;
-    public final void rule__ListaInt__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1069:1: ( ( ( rule__ListaInt__ValoresAssignment_2 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1070:1: ( ( rule__ListaInt__ValoresAssignment_2 ) )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1070:1: ( ( rule__ListaInt__ValoresAssignment_2 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1071:1: ( rule__ListaInt__ValoresAssignment_2 )
-            {
-             before(grammarAccess.getListaIntAccess().getValoresAssignment_2()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1072:1: ( rule__ListaInt__ValoresAssignment_2 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1072:2: rule__ListaInt__ValoresAssignment_2
-            {
-            pushFollow(FOLLOW_rule__ListaInt__ValoresAssignment_2_in_rule__ListaInt__Group__2__Impl2098);
-            rule__ListaInt__ValoresAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getListaIntAccess().getValoresAssignment_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group__2__Impl"
-
-
-    // $ANTLR start "rule__ListaInt__Group__3"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1082:1: rule__ListaInt__Group__3 : rule__ListaInt__Group__3__Impl rule__ListaInt__Group__4 ;
-    public final void rule__ListaInt__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1086:1: ( rule__ListaInt__Group__3__Impl rule__ListaInt__Group__4 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1087:2: rule__ListaInt__Group__3__Impl rule__ListaInt__Group__4
-            {
-            pushFollow(FOLLOW_rule__ListaInt__Group__3__Impl_in_rule__ListaInt__Group__32128);
-            rule__ListaInt__Group__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ListaInt__Group__4_in_rule__ListaInt__Group__32131);
-            rule__ListaInt__Group__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group__3"
-
-
-    // $ANTLR start "rule__ListaInt__Group__3__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1094:1: rule__ListaInt__Group__3__Impl : ( ( rule__ListaInt__Group_3__0 )* ) ;
-    public final void rule__ListaInt__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1098:1: ( ( ( rule__ListaInt__Group_3__0 )* ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1099:1: ( ( rule__ListaInt__Group_3__0 )* )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1099:1: ( ( rule__ListaInt__Group_3__0 )* )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1100:1: ( rule__ListaInt__Group_3__0 )*
-            {
-             before(grammarAccess.getListaIntAccess().getGroup_3()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1101:1: ( rule__ListaInt__Group_3__0 )*
-            loop7:
+             before(grammarAccess.getObjetoAccess().getAtributosAssignment_3()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:741:1: ( rule__Objeto__AtributosAssignment_3 )*
+            loop8:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA7_0==18) ) {
-                    alt7=1;
+                if ( ((LA8_0>=RULE_ID && LA8_0<=RULE_STRING)) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt8) {
             	case 1 :
-            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1101:2: rule__ListaInt__Group_3__0
+            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:741:2: rule__Objeto__AtributosAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__ListaInt__Group_3__0_in_rule__ListaInt__Group__3__Impl2158);
-            	    rule__ListaInt__Group_3__0();
+            	    pushFollow(FOLLOW_rule__Objeto__AtributosAssignment_3_in_rule__Objeto__Group__3__Impl1491);
+            	    rule__Objeto__AtributosAssignment_3();
 
             	    state._fsp--;
 
@@ -2842,11 +2054,11 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop8;
                 }
             } while (true);
 
-             after(grammarAccess.getListaIntAccess().getGroup_3()); 
+             after(grammarAccess.getObjetoAccess().getAtributosAssignment_3()); 
 
             }
 
@@ -2865,21 +2077,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaInt__Group__3__Impl"
+    // $ANTLR end "rule__Objeto__Group__3__Impl"
 
 
-    // $ANTLR start "rule__ListaInt__Group__4"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1111:1: rule__ListaInt__Group__4 : rule__ListaInt__Group__4__Impl ;
-    public final void rule__ListaInt__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__4"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:751:1: rule__Objeto__Group__4 : rule__Objeto__Group__4__Impl ;
+    public final void rule__Objeto__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1115:1: ( rule__ListaInt__Group__4__Impl )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1116:2: rule__ListaInt__Group__4__Impl
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:755:1: ( rule__Objeto__Group__4__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:756:2: rule__Objeto__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__ListaInt__Group__4__Impl_in_rule__ListaInt__Group__42189);
-            rule__ListaInt__Group__4__Impl();
+            pushFollow(FOLLOW_rule__Objeto__Group__4__Impl_in_rule__Objeto__Group__41522);
+            rule__Objeto__Group__4__Impl();
 
             state._fsp--;
 
@@ -2898,25 +2110,25 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaInt__Group__4"
+    // $ANTLR end "rule__Objeto__Group__4"
 
 
-    // $ANTLR start "rule__ListaInt__Group__4__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1122:1: rule__ListaInt__Group__4__Impl : ( '}' ) ;
-    public final void rule__ListaInt__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Objeto__Group__4__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:762:1: rule__Objeto__Group__4__Impl : ( '}' ) ;
+    public final void rule__Objeto__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1126:1: ( ( '}' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1127:1: ( '}' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:766:1: ( ( '}' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:767:1: ( '}' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1127:1: ( '}' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1128:1: '}'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:767:1: ( '}' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:768:1: '}'
             {
-             before(grammarAccess.getListaIntAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,13,FOLLOW_13_in_rule__ListaInt__Group__4__Impl2217); 
-             after(grammarAccess.getListaIntAccess().getRightCurlyBracketKeyword_4()); 
+             before(grammarAccess.getObjetoAccess().getRightCurlyBracketKeyword_4()); 
+            match(input,13,FOLLOW_13_in_rule__Objeto__Group__4__Impl1550); 
+             after(grammarAccess.getObjetoAccess().getRightCurlyBracketKeyword_4()); 
 
             }
 
@@ -2935,96 +2147,26 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaInt__Group__4__Impl"
+    // $ANTLR end "rule__Objeto__Group__4__Impl"
 
 
-    // $ANTLR start "rule__ListaInt__Group_3__0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1151:1: rule__ListaInt__Group_3__0 : rule__ListaInt__Group_3__0__Impl rule__ListaInt__Group_3__1 ;
-    public final void rule__ListaInt__Group_3__0() throws RecognitionException {
+    // $ANTLR start "rule__AtributoNormal__Group__0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:791:1: rule__AtributoNormal__Group__0 : rule__AtributoNormal__Group__0__Impl rule__AtributoNormal__Group__1 ;
+    public final void rule__AtributoNormal__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1155:1: ( rule__ListaInt__Group_3__0__Impl rule__ListaInt__Group_3__1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1156:2: rule__ListaInt__Group_3__0__Impl rule__ListaInt__Group_3__1
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:795:1: ( rule__AtributoNormal__Group__0__Impl rule__AtributoNormal__Group__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:796:2: rule__AtributoNormal__Group__0__Impl rule__AtributoNormal__Group__1
             {
-            pushFollow(FOLLOW_rule__ListaInt__Group_3__0__Impl_in_rule__ListaInt__Group_3__02258);
-            rule__ListaInt__Group_3__0__Impl();
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__0__Impl_in_rule__AtributoNormal__Group__01591);
+            rule__AtributoNormal__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ListaInt__Group_3__1_in_rule__ListaInt__Group_3__02261);
-            rule__ListaInt__Group_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group_3__0"
-
-
-    // $ANTLR start "rule__ListaInt__Group_3__0__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1163:1: rule__ListaInt__Group_3__0__Impl : ( ',' ) ;
-    public final void rule__ListaInt__Group_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1167:1: ( ( ',' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1168:1: ( ',' )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1168:1: ( ',' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1169:1: ','
-            {
-             before(grammarAccess.getListaIntAccess().getCommaKeyword_3_0()); 
-            match(input,18,FOLLOW_18_in_rule__ListaInt__Group_3__0__Impl2289); 
-             after(grammarAccess.getListaIntAccess().getCommaKeyword_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaInt__Group_3__0__Impl"
-
-
-    // $ANTLR start "rule__ListaInt__Group_3__1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1182:1: rule__ListaInt__Group_3__1 : rule__ListaInt__Group_3__1__Impl ;
-    public final void rule__ListaInt__Group_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1186:1: ( rule__ListaInt__Group_3__1__Impl )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1187:2: rule__ListaInt__Group_3__1__Impl
-            {
-            pushFollow(FOLLOW_rule__ListaInt__Group_3__1__Impl_in_rule__ListaInt__Group_3__12320);
-            rule__ListaInt__Group_3__1__Impl();
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__1_in_rule__AtributoNormal__Group__01594);
+            rule__AtributoNormal__Group__1();
 
             state._fsp--;
 
@@ -3043,25 +2185,110 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaInt__Group_3__1"
+    // $ANTLR end "rule__AtributoNormal__Group__0"
 
 
-    // $ANTLR start "rule__ListaInt__Group_3__1__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1193:1: rule__ListaInt__Group_3__1__Impl : ( RULE_INT ) ;
-    public final void rule__ListaInt__Group_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__AtributoNormal__Group__0__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:803:1: rule__AtributoNormal__Group__0__Impl : ( () ) ;
+    public final void rule__AtributoNormal__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1197:1: ( ( RULE_INT ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1198:1: ( RULE_INT )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:807:1: ( ( () ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:808:1: ( () )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1198:1: ( RULE_INT )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1199:1: RULE_INT
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:808:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:809:1: ()
             {
-             before(grammarAccess.getListaIntAccess().getINTTerminalRuleCall_3_1()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ListaInt__Group_3__1__Impl2347); 
-             after(grammarAccess.getListaIntAccess().getINTTerminalRuleCall_3_1()); 
+             before(grammarAccess.getAtributoNormalAccess().getAtributoNormalAction_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:810:1: ()
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:812:1: 
+            {
+            }
+
+             after(grammarAccess.getAtributoNormalAccess().getAtributoNormalAction_0()); 
+
+            }
+
+
+            }
+
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__Group__0__Impl"
+
+
+    // $ANTLR start "rule__AtributoNormal__Group__1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:822:1: rule__AtributoNormal__Group__1 : rule__AtributoNormal__Group__1__Impl rule__AtributoNormal__Group__2 ;
+    public final void rule__AtributoNormal__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:826:1: ( rule__AtributoNormal__Group__1__Impl rule__AtributoNormal__Group__2 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:827:2: rule__AtributoNormal__Group__1__Impl rule__AtributoNormal__Group__2
+            {
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__1__Impl_in_rule__AtributoNormal__Group__11652);
+            rule__AtributoNormal__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__2_in_rule__AtributoNormal__Group__11655);
+            rule__AtributoNormal__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__Group__1"
+
+
+    // $ANTLR start "rule__AtributoNormal__Group__1__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:834:1: rule__AtributoNormal__Group__1__Impl : ( ( rule__AtributoNormal__NombreAssignment_1 ) ) ;
+    public final void rule__AtributoNormal__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:838:1: ( ( ( rule__AtributoNormal__NombreAssignment_1 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:839:1: ( ( rule__AtributoNormal__NombreAssignment_1 ) )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:839:1: ( ( rule__AtributoNormal__NombreAssignment_1 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:840:1: ( rule__AtributoNormal__NombreAssignment_1 )
+            {
+             before(grammarAccess.getAtributoNormalAccess().getNombreAssignment_1()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:841:1: ( rule__AtributoNormal__NombreAssignment_1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:841:2: rule__AtributoNormal__NombreAssignment_1
+            {
+            pushFollow(FOLLOW_rule__AtributoNormal__NombreAssignment_1_in_rule__AtributoNormal__Group__1__Impl1682);
+            rule__AtributoNormal__NombreAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAtributoNormalAccess().getNombreAssignment_1()); 
 
             }
 
@@ -3080,25 +2307,1451 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaInt__Group_3__1__Impl"
+    // $ANTLR end "rule__AtributoNormal__Group__1__Impl"
+
+
+    // $ANTLR start "rule__AtributoNormal__Group__2"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:851:1: rule__AtributoNormal__Group__2 : rule__AtributoNormal__Group__2__Impl rule__AtributoNormal__Group__3 ;
+    public final void rule__AtributoNormal__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:855:1: ( rule__AtributoNormal__Group__2__Impl rule__AtributoNormal__Group__3 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:856:2: rule__AtributoNormal__Group__2__Impl rule__AtributoNormal__Group__3
+            {
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__2__Impl_in_rule__AtributoNormal__Group__21712);
+            rule__AtributoNormal__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__3_in_rule__AtributoNormal__Group__21715);
+            rule__AtributoNormal__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__Group__2"
+
+
+    // $ANTLR start "rule__AtributoNormal__Group__2__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:863:1: rule__AtributoNormal__Group__2__Impl : ( ':' ) ;
+    public final void rule__AtributoNormal__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:867:1: ( ( ':' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:868:1: ( ':' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:868:1: ( ':' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:869:1: ':'
+            {
+             before(grammarAccess.getAtributoNormalAccess().getColonKeyword_2()); 
+            match(input,14,FOLLOW_14_in_rule__AtributoNormal__Group__2__Impl1743); 
+             after(grammarAccess.getAtributoNormalAccess().getColonKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__Group__2__Impl"
+
+
+    // $ANTLR start "rule__AtributoNormal__Group__3"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:882:1: rule__AtributoNormal__Group__3 : rule__AtributoNormal__Group__3__Impl rule__AtributoNormal__Group__4 ;
+    public final void rule__AtributoNormal__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:886:1: ( rule__AtributoNormal__Group__3__Impl rule__AtributoNormal__Group__4 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:887:2: rule__AtributoNormal__Group__3__Impl rule__AtributoNormal__Group__4
+            {
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__3__Impl_in_rule__AtributoNormal__Group__31774);
+            rule__AtributoNormal__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__4_in_rule__AtributoNormal__Group__31777);
+            rule__AtributoNormal__Group__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__Group__3"
+
+
+    // $ANTLR start "rule__AtributoNormal__Group__3__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:894:1: rule__AtributoNormal__Group__3__Impl : ( ( rule__AtributoNormal__ValorAssignment_3 ) ) ;
+    public final void rule__AtributoNormal__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:898:1: ( ( ( rule__AtributoNormal__ValorAssignment_3 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:899:1: ( ( rule__AtributoNormal__ValorAssignment_3 ) )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:899:1: ( ( rule__AtributoNormal__ValorAssignment_3 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:900:1: ( rule__AtributoNormal__ValorAssignment_3 )
+            {
+             before(grammarAccess.getAtributoNormalAccess().getValorAssignment_3()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:901:1: ( rule__AtributoNormal__ValorAssignment_3 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:901:2: rule__AtributoNormal__ValorAssignment_3
+            {
+            pushFollow(FOLLOW_rule__AtributoNormal__ValorAssignment_3_in_rule__AtributoNormal__Group__3__Impl1804);
+            rule__AtributoNormal__ValorAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAtributoNormalAccess().getValorAssignment_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__Group__3__Impl"
+
+
+    // $ANTLR start "rule__AtributoNormal__Group__4"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:911:1: rule__AtributoNormal__Group__4 : rule__AtributoNormal__Group__4__Impl ;
+    public final void rule__AtributoNormal__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:915:1: ( rule__AtributoNormal__Group__4__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:916:2: rule__AtributoNormal__Group__4__Impl
+            {
+            pushFollow(FOLLOW_rule__AtributoNormal__Group__4__Impl_in_rule__AtributoNormal__Group__41834);
+            rule__AtributoNormal__Group__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__Group__4"
+
+
+    // $ANTLR start "rule__AtributoNormal__Group__4__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:922:1: rule__AtributoNormal__Group__4__Impl : ( ';' ) ;
+    public final void rule__AtributoNormal__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:926:1: ( ( ';' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:927:1: ( ';' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:927:1: ( ';' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:928:1: ';'
+            {
+             before(grammarAccess.getAtributoNormalAccess().getSemicolonKeyword_4()); 
+            match(input,15,FOLLOW_15_in_rule__AtributoNormal__Group__4__Impl1862); 
+             after(grammarAccess.getAtributoNormalAccess().getSemicolonKeyword_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__Group__4__Impl"
+
+
+    // $ANTLR start "rule__ValorAtributo__Group__0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:951:1: rule__ValorAtributo__Group__0 : rule__ValorAtributo__Group__0__Impl rule__ValorAtributo__Group__1 ;
+    public final void rule__ValorAtributo__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:955:1: ( rule__ValorAtributo__Group__0__Impl rule__ValorAtributo__Group__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:956:2: rule__ValorAtributo__Group__0__Impl rule__ValorAtributo__Group__1
+            {
+            pushFollow(FOLLOW_rule__ValorAtributo__Group__0__Impl_in_rule__ValorAtributo__Group__01903);
+            rule__ValorAtributo__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ValorAtributo__Group__1_in_rule__ValorAtributo__Group__01906);
+            rule__ValorAtributo__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributo__Group__0"
+
+
+    // $ANTLR start "rule__ValorAtributo__Group__0__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:963:1: rule__ValorAtributo__Group__0__Impl : ( () ) ;
+    public final void rule__ValorAtributo__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:967:1: ( ( () ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:968:1: ( () )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:968:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:969:1: ()
+            {
+             before(grammarAccess.getValorAtributoAccess().getValorAtributoAction_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:970:1: ()
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:972:1: 
+            {
+            }
+
+             after(grammarAccess.getValorAtributoAccess().getValorAtributoAction_0()); 
+
+            }
+
+
+            }
+
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributo__Group__0__Impl"
+
+
+    // $ANTLR start "rule__ValorAtributo__Group__1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:982:1: rule__ValorAtributo__Group__1 : rule__ValorAtributo__Group__1__Impl ;
+    public final void rule__ValorAtributo__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:986:1: ( rule__ValorAtributo__Group__1__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:987:2: rule__ValorAtributo__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__ValorAtributo__Group__1__Impl_in_rule__ValorAtributo__Group__11964);
+            rule__ValorAtributo__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributo__Group__1"
+
+
+    // $ANTLR start "rule__ValorAtributo__Group__1__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:993:1: rule__ValorAtributo__Group__1__Impl : ( ( ( rule__ValorAtributo__Alternatives_1 ) ) ( ( rule__ValorAtributo__Alternatives_1 )* ) ) ;
+    public final void rule__ValorAtributo__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:997:1: ( ( ( ( rule__ValorAtributo__Alternatives_1 ) ) ( ( rule__ValorAtributo__Alternatives_1 )* ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:998:1: ( ( ( rule__ValorAtributo__Alternatives_1 ) ) ( ( rule__ValorAtributo__Alternatives_1 )* ) )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:998:1: ( ( ( rule__ValorAtributo__Alternatives_1 ) ) ( ( rule__ValorAtributo__Alternatives_1 )* ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:999:1: ( ( rule__ValorAtributo__Alternatives_1 ) ) ( ( rule__ValorAtributo__Alternatives_1 )* )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:999:1: ( ( rule__ValorAtributo__Alternatives_1 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1000:1: ( rule__ValorAtributo__Alternatives_1 )
+            {
+             before(grammarAccess.getValorAtributoAccess().getAlternatives_1()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1001:1: ( rule__ValorAtributo__Alternatives_1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1001:2: rule__ValorAtributo__Alternatives_1
+            {
+            pushFollow(FOLLOW_rule__ValorAtributo__Alternatives_1_in_rule__ValorAtributo__Group__1__Impl1993);
+            rule__ValorAtributo__Alternatives_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getValorAtributoAccess().getAlternatives_1()); 
+
+            }
+
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1004:1: ( ( rule__ValorAtributo__Alternatives_1 )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1005:1: ( rule__ValorAtributo__Alternatives_1 )*
+            {
+             before(grammarAccess.getValorAtributoAccess().getAlternatives_1()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1006:1: ( rule__ValorAtributo__Alternatives_1 )*
+            loop9:
+            do {
+                int alt9=2;
+                int LA9_0 = input.LA(1);
+
+                if ( ((LA9_0>=RULE_ID && LA9_0<=RULE_DECIMAL)) ) {
+                    alt9=1;
+                }
+
+
+                switch (alt9) {
+            	case 1 :
+            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1006:2: rule__ValorAtributo__Alternatives_1
+            	    {
+            	    pushFollow(FOLLOW_rule__ValorAtributo__Alternatives_1_in_rule__ValorAtributo__Group__1__Impl2005);
+            	    rule__ValorAtributo__Alternatives_1();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop9;
+                }
+            } while (true);
+
+             after(grammarAccess.getValorAtributoAccess().getAlternatives_1()); 
+
+            }
+
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributo__Group__1__Impl"
+
+
+    // $ANTLR start "rule__ValorAtributoValor__Group__0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1021:1: rule__ValorAtributoValor__Group__0 : rule__ValorAtributoValor__Group__0__Impl rule__ValorAtributoValor__Group__1 ;
+    public final void rule__ValorAtributoValor__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1025:1: ( rule__ValorAtributoValor__Group__0__Impl rule__ValorAtributoValor__Group__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1026:2: rule__ValorAtributoValor__Group__0__Impl rule__ValorAtributoValor__Group__1
+            {
+            pushFollow(FOLLOW_rule__ValorAtributoValor__Group__0__Impl_in_rule__ValorAtributoValor__Group__02042);
+            rule__ValorAtributoValor__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ValorAtributoValor__Group__1_in_rule__ValorAtributoValor__Group__02045);
+            rule__ValorAtributoValor__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributoValor__Group__0"
+
+
+    // $ANTLR start "rule__ValorAtributoValor__Group__0__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1033:1: rule__ValorAtributoValor__Group__0__Impl : ( () ) ;
+    public final void rule__ValorAtributoValor__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1037:1: ( ( () ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1038:1: ( () )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1038:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1039:1: ()
+            {
+             before(grammarAccess.getValorAtributoValorAccess().getValorAtributoValorAction_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1040:1: ()
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1042:1: 
+            {
+            }
+
+             after(grammarAccess.getValorAtributoValorAccess().getValorAtributoValorAction_0()); 
+
+            }
+
+
+            }
+
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributoValor__Group__0__Impl"
+
+
+    // $ANTLR start "rule__ValorAtributoValor__Group__1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1052:1: rule__ValorAtributoValor__Group__1 : rule__ValorAtributoValor__Group__1__Impl rule__ValorAtributoValor__Group__2 ;
+    public final void rule__ValorAtributoValor__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1056:1: ( rule__ValorAtributoValor__Group__1__Impl rule__ValorAtributoValor__Group__2 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1057:2: rule__ValorAtributoValor__Group__1__Impl rule__ValorAtributoValor__Group__2
+            {
+            pushFollow(FOLLOW_rule__ValorAtributoValor__Group__1__Impl_in_rule__ValorAtributoValor__Group__12103);
+            rule__ValorAtributoValor__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ValorAtributoValor__Group__2_in_rule__ValorAtributoValor__Group__12106);
+            rule__ValorAtributoValor__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributoValor__Group__1"
+
+
+    // $ANTLR start "rule__ValorAtributoValor__Group__1__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1064:1: rule__ValorAtributoValor__Group__1__Impl : ( RULE_ID ) ;
+    public final void rule__ValorAtributoValor__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1068:1: ( ( RULE_ID ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1069:1: ( RULE_ID )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1069:1: ( RULE_ID )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1070:1: RULE_ID
+            {
+             before(grammarAccess.getValorAtributoValorAccess().getIDTerminalRuleCall_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ValorAtributoValor__Group__1__Impl2133); 
+             after(grammarAccess.getValorAtributoValorAccess().getIDTerminalRuleCall_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributoValor__Group__1__Impl"
+
+
+    // $ANTLR start "rule__ValorAtributoValor__Group__2"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1081:1: rule__ValorAtributoValor__Group__2 : rule__ValorAtributoValor__Group__2__Impl rule__ValorAtributoValor__Group__3 ;
+    public final void rule__ValorAtributoValor__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1085:1: ( rule__ValorAtributoValor__Group__2__Impl rule__ValorAtributoValor__Group__3 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1086:2: rule__ValorAtributoValor__Group__2__Impl rule__ValorAtributoValor__Group__3
+            {
+            pushFollow(FOLLOW_rule__ValorAtributoValor__Group__2__Impl_in_rule__ValorAtributoValor__Group__22162);
+            rule__ValorAtributoValor__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ValorAtributoValor__Group__3_in_rule__ValorAtributoValor__Group__22165);
+            rule__ValorAtributoValor__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributoValor__Group__2"
+
+
+    // $ANTLR start "rule__ValorAtributoValor__Group__2__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1093:1: rule__ValorAtributoValor__Group__2__Impl : ( '=' ) ;
+    public final void rule__ValorAtributoValor__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1097:1: ( ( '=' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1098:1: ( '=' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1098:1: ( '=' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1099:1: '='
+            {
+             before(grammarAccess.getValorAtributoValorAccess().getEqualsSignKeyword_2()); 
+            match(input,16,FOLLOW_16_in_rule__ValorAtributoValor__Group__2__Impl2193); 
+             after(grammarAccess.getValorAtributoValorAccess().getEqualsSignKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributoValor__Group__2__Impl"
+
+
+    // $ANTLR start "rule__ValorAtributoValor__Group__3"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1112:1: rule__ValorAtributoValor__Group__3 : rule__ValorAtributoValor__Group__3__Impl ;
+    public final void rule__ValorAtributoValor__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1116:1: ( rule__ValorAtributoValor__Group__3__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1117:2: rule__ValorAtributoValor__Group__3__Impl
+            {
+            pushFollow(FOLLOW_rule__ValorAtributoValor__Group__3__Impl_in_rule__ValorAtributoValor__Group__32224);
+            rule__ValorAtributoValor__Group__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributoValor__Group__3"
+
+
+    // $ANTLR start "rule__ValorAtributoValor__Group__3__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1123:1: rule__ValorAtributoValor__Group__3__Impl : ( RULE_DECIMAL ) ;
+    public final void rule__ValorAtributoValor__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1127:1: ( ( RULE_DECIMAL ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1128:1: ( RULE_DECIMAL )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1128:1: ( RULE_DECIMAL )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1129:1: RULE_DECIMAL
+            {
+             before(grammarAccess.getValorAtributoValorAccess().getDECIMALTerminalRuleCall_3()); 
+            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ValorAtributoValor__Group__3__Impl2251); 
+             after(grammarAccess.getValorAtributoValorAccess().getDECIMALTerminalRuleCall_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ValorAtributoValor__Group__3__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1148:1: rule__ListaInteger__Group__0 : rule__ListaInteger__Group__0__Impl rule__ListaInteger__Group__1 ;
+    public final void rule__ListaInteger__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1152:1: ( rule__ListaInteger__Group__0__Impl rule__ListaInteger__Group__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1153:2: rule__ListaInteger__Group__0__Impl rule__ListaInteger__Group__1
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group__0__Impl_in_rule__ListaInteger__Group__02288);
+            rule__ListaInteger__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ListaInteger__Group__1_in_rule__ListaInteger__Group__02291);
+            rule__ListaInteger__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__0"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__0__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1160:1: rule__ListaInteger__Group__0__Impl : ( () ) ;
+    public final void rule__ListaInteger__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1164:1: ( ( () ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1165:1: ( () )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1165:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1166:1: ()
+            {
+             before(grammarAccess.getListaIntegerAccess().getListaIntegerAction_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1167:1: ()
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1169:1: 
+            {
+            }
+
+             after(grammarAccess.getListaIntegerAccess().getListaIntegerAction_0()); 
+
+            }
+
+
+            }
+
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__0__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1179:1: rule__ListaInteger__Group__1 : rule__ListaInteger__Group__1__Impl rule__ListaInteger__Group__2 ;
+    public final void rule__ListaInteger__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1183:1: ( rule__ListaInteger__Group__1__Impl rule__ListaInteger__Group__2 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1184:2: rule__ListaInteger__Group__1__Impl rule__ListaInteger__Group__2
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group__1__Impl_in_rule__ListaInteger__Group__12349);
+            rule__ListaInteger__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ListaInteger__Group__2_in_rule__ListaInteger__Group__12352);
+            rule__ListaInteger__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__1"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__1__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1191:1: rule__ListaInteger__Group__1__Impl : ( 'List of Integer' ) ;
+    public final void rule__ListaInteger__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1195:1: ( ( 'List of Integer' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1196:1: ( 'List of Integer' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1196:1: ( 'List of Integer' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1197:1: 'List of Integer'
+            {
+             before(grammarAccess.getListaIntegerAccess().getListOfIntegerKeyword_1()); 
+            match(input,17,FOLLOW_17_in_rule__ListaInteger__Group__1__Impl2380); 
+             after(grammarAccess.getListaIntegerAccess().getListOfIntegerKeyword_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__1__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__2"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1210:1: rule__ListaInteger__Group__2 : rule__ListaInteger__Group__2__Impl rule__ListaInteger__Group__3 ;
+    public final void rule__ListaInteger__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1214:1: ( rule__ListaInteger__Group__2__Impl rule__ListaInteger__Group__3 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1215:2: rule__ListaInteger__Group__2__Impl rule__ListaInteger__Group__3
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group__2__Impl_in_rule__ListaInteger__Group__22411);
+            rule__ListaInteger__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ListaInteger__Group__3_in_rule__ListaInteger__Group__22414);
+            rule__ListaInteger__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__2"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__2__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1222:1: rule__ListaInteger__Group__2__Impl : ( '=' ) ;
+    public final void rule__ListaInteger__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1226:1: ( ( '=' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1227:1: ( '=' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1227:1: ( '=' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1228:1: '='
+            {
+             before(grammarAccess.getListaIntegerAccess().getEqualsSignKeyword_2()); 
+            match(input,16,FOLLOW_16_in_rule__ListaInteger__Group__2__Impl2442); 
+             after(grammarAccess.getListaIntegerAccess().getEqualsSignKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__2__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__3"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1241:1: rule__ListaInteger__Group__3 : rule__ListaInteger__Group__3__Impl rule__ListaInteger__Group__4 ;
+    public final void rule__ListaInteger__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1245:1: ( rule__ListaInteger__Group__3__Impl rule__ListaInteger__Group__4 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1246:2: rule__ListaInteger__Group__3__Impl rule__ListaInteger__Group__4
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group__3__Impl_in_rule__ListaInteger__Group__32473);
+            rule__ListaInteger__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ListaInteger__Group__4_in_rule__ListaInteger__Group__32476);
+            rule__ListaInteger__Group__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__3"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__3__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1253:1: rule__ListaInteger__Group__3__Impl : ( '{' ) ;
+    public final void rule__ListaInteger__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1257:1: ( ( '{' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1258:1: ( '{' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1258:1: ( '{' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1259:1: '{'
+            {
+             before(grammarAccess.getListaIntegerAccess().getLeftCurlyBracketKeyword_3()); 
+            match(input,12,FOLLOW_12_in_rule__ListaInteger__Group__3__Impl2504); 
+             after(grammarAccess.getListaIntegerAccess().getLeftCurlyBracketKeyword_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__3__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__4"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1272:1: rule__ListaInteger__Group__4 : rule__ListaInteger__Group__4__Impl rule__ListaInteger__Group__5 ;
+    public final void rule__ListaInteger__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1276:1: ( rule__ListaInteger__Group__4__Impl rule__ListaInteger__Group__5 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1277:2: rule__ListaInteger__Group__4__Impl rule__ListaInteger__Group__5
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group__4__Impl_in_rule__ListaInteger__Group__42535);
+            rule__ListaInteger__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ListaInteger__Group__5_in_rule__ListaInteger__Group__42538);
+            rule__ListaInteger__Group__5();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__4"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__4__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1284:1: rule__ListaInteger__Group__4__Impl : ( ( rule__ListaInteger__ValoresAssignment_4 ) ) ;
+    public final void rule__ListaInteger__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1288:1: ( ( ( rule__ListaInteger__ValoresAssignment_4 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1289:1: ( ( rule__ListaInteger__ValoresAssignment_4 ) )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1289:1: ( ( rule__ListaInteger__ValoresAssignment_4 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1290:1: ( rule__ListaInteger__ValoresAssignment_4 )
+            {
+             before(grammarAccess.getListaIntegerAccess().getValoresAssignment_4()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1291:1: ( rule__ListaInteger__ValoresAssignment_4 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1291:2: rule__ListaInteger__ValoresAssignment_4
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__ValoresAssignment_4_in_rule__ListaInteger__Group__4__Impl2565);
+            rule__ListaInteger__ValoresAssignment_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getListaIntegerAccess().getValoresAssignment_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__4__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__5"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1301:1: rule__ListaInteger__Group__5 : rule__ListaInteger__Group__5__Impl rule__ListaInteger__Group__6 ;
+    public final void rule__ListaInteger__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1305:1: ( rule__ListaInteger__Group__5__Impl rule__ListaInteger__Group__6 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1306:2: rule__ListaInteger__Group__5__Impl rule__ListaInteger__Group__6
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group__5__Impl_in_rule__ListaInteger__Group__52595);
+            rule__ListaInteger__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ListaInteger__Group__6_in_rule__ListaInteger__Group__52598);
+            rule__ListaInteger__Group__6();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__5"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__5__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1313:1: rule__ListaInteger__Group__5__Impl : ( ( rule__ListaInteger__Group_5__0 )* ) ;
+    public final void rule__ListaInteger__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1317:1: ( ( ( rule__ListaInteger__Group_5__0 )* ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1318:1: ( ( rule__ListaInteger__Group_5__0 )* )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1318:1: ( ( rule__ListaInteger__Group_5__0 )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1319:1: ( rule__ListaInteger__Group_5__0 )*
+            {
+             before(grammarAccess.getListaIntegerAccess().getGroup_5()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1320:1: ( rule__ListaInteger__Group_5__0 )*
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0==18) ) {
+                    alt10=1;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1320:2: rule__ListaInteger__Group_5__0
+            	    {
+            	    pushFollow(FOLLOW_rule__ListaInteger__Group_5__0_in_rule__ListaInteger__Group__5__Impl2625);
+            	    rule__ListaInteger__Group_5__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop10;
+                }
+            } while (true);
+
+             after(grammarAccess.getListaIntegerAccess().getGroup_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__5__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__6"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1330:1: rule__ListaInteger__Group__6 : rule__ListaInteger__Group__6__Impl ;
+    public final void rule__ListaInteger__Group__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1334:1: ( rule__ListaInteger__Group__6__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1335:2: rule__ListaInteger__Group__6__Impl
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group__6__Impl_in_rule__ListaInteger__Group__62656);
+            rule__ListaInteger__Group__6__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__6"
+
+
+    // $ANTLR start "rule__ListaInteger__Group__6__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1341:1: rule__ListaInteger__Group__6__Impl : ( '}' ) ;
+    public final void rule__ListaInteger__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1345:1: ( ( '}' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1346:1: ( '}' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1346:1: ( '}' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1347:1: '}'
+            {
+             before(grammarAccess.getListaIntegerAccess().getRightCurlyBracketKeyword_6()); 
+            match(input,13,FOLLOW_13_in_rule__ListaInteger__Group__6__Impl2684); 
+             after(grammarAccess.getListaIntegerAccess().getRightCurlyBracketKeyword_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group__6__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group_5__0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1374:1: rule__ListaInteger__Group_5__0 : rule__ListaInteger__Group_5__0__Impl rule__ListaInteger__Group_5__1 ;
+    public final void rule__ListaInteger__Group_5__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1378:1: ( rule__ListaInteger__Group_5__0__Impl rule__ListaInteger__Group_5__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1379:2: rule__ListaInteger__Group_5__0__Impl rule__ListaInteger__Group_5__1
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group_5__0__Impl_in_rule__ListaInteger__Group_5__02729);
+            rule__ListaInteger__Group_5__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ListaInteger__Group_5__1_in_rule__ListaInteger__Group_5__02732);
+            rule__ListaInteger__Group_5__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group_5__0"
+
+
+    // $ANTLR start "rule__ListaInteger__Group_5__0__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1386:1: rule__ListaInteger__Group_5__0__Impl : ( ',' ) ;
+    public final void rule__ListaInteger__Group_5__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1390:1: ( ( ',' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1391:1: ( ',' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1391:1: ( ',' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1392:1: ','
+            {
+             before(grammarAccess.getListaIntegerAccess().getCommaKeyword_5_0()); 
+            match(input,18,FOLLOW_18_in_rule__ListaInteger__Group_5__0__Impl2760); 
+             after(grammarAccess.getListaIntegerAccess().getCommaKeyword_5_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group_5__0__Impl"
+
+
+    // $ANTLR start "rule__ListaInteger__Group_5__1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1405:1: rule__ListaInteger__Group_5__1 : rule__ListaInteger__Group_5__1__Impl ;
+    public final void rule__ListaInteger__Group_5__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1409:1: ( rule__ListaInteger__Group_5__1__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1410:2: rule__ListaInteger__Group_5__1__Impl
+            {
+            pushFollow(FOLLOW_rule__ListaInteger__Group_5__1__Impl_in_rule__ListaInteger__Group_5__12791);
+            rule__ListaInteger__Group_5__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group_5__1"
+
+
+    // $ANTLR start "rule__ListaInteger__Group_5__1__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1416:1: rule__ListaInteger__Group_5__1__Impl : ( RULE_INT ) ;
+    public final void rule__ListaInteger__Group_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1420:1: ( ( RULE_INT ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1421:1: ( RULE_INT )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1421:1: ( RULE_INT )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1422:1: RULE_INT
+            {
+             before(grammarAccess.getListaIntegerAccess().getINTTerminalRuleCall_5_1()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ListaInteger__Group_5__1__Impl2818); 
+             after(grammarAccess.getListaIntegerAccess().getINTTerminalRuleCall_5_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__Group_5__1__Impl"
 
 
     // $ANTLR start "rule__ListaString__Group__0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1214:1: rule__ListaString__Group__0 : rule__ListaString__Group__0__Impl rule__ListaString__Group__1 ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1437:1: rule__ListaString__Group__0 : rule__ListaString__Group__0__Impl rule__ListaString__Group__1 ;
     public final void rule__ListaString__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1218:1: ( rule__ListaString__Group__0__Impl rule__ListaString__Group__1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1219:2: rule__ListaString__Group__0__Impl rule__ListaString__Group__1
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1441:1: ( rule__ListaString__Group__0__Impl rule__ListaString__Group__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1442:2: rule__ListaString__Group__0__Impl rule__ListaString__Group__1
             {
-            pushFollow(FOLLOW_rule__ListaString__Group__0__Impl_in_rule__ListaString__Group__02380);
+            pushFollow(FOLLOW_rule__ListaString__Group__0__Impl_in_rule__ListaString__Group__02851);
             rule__ListaString__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ListaString__Group__1_in_rule__ListaString__Group__02383);
+            pushFollow(FOLLOW_rule__ListaString__Group__1_in_rule__ListaString__Group__02854);
             rule__ListaString__Group__1();
 
             state._fsp--;
@@ -3122,21 +3775,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__0__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1226:1: rule__ListaString__Group__0__Impl : ( () ) ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1449:1: rule__ListaString__Group__0__Impl : ( () ) ;
     public final void rule__ListaString__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1230:1: ( ( () ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1231:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1453:1: ( ( () ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1454:1: ( () )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1231:1: ( () )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1232:1: ()
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1454:1: ( () )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1455:1: ()
             {
              before(grammarAccess.getListaStringAccess().getListaStringAction_0()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1233:1: ()
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1235:1: 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1456:1: ()
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1458:1: 
             {
             }
 
@@ -3159,21 +3812,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1245:1: rule__ListaString__Group__1 : rule__ListaString__Group__1__Impl rule__ListaString__Group__2 ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1468:1: rule__ListaString__Group__1 : rule__ListaString__Group__1__Impl rule__ListaString__Group__2 ;
     public final void rule__ListaString__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1249:1: ( rule__ListaString__Group__1__Impl rule__ListaString__Group__2 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1250:2: rule__ListaString__Group__1__Impl rule__ListaString__Group__2
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1472:1: ( rule__ListaString__Group__1__Impl rule__ListaString__Group__2 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1473:2: rule__ListaString__Group__1__Impl rule__ListaString__Group__2
             {
-            pushFollow(FOLLOW_rule__ListaString__Group__1__Impl_in_rule__ListaString__Group__12441);
+            pushFollow(FOLLOW_rule__ListaString__Group__1__Impl_in_rule__ListaString__Group__12912);
             rule__ListaString__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ListaString__Group__2_in_rule__ListaString__Group__12444);
+            pushFollow(FOLLOW_rule__ListaString__Group__2_in_rule__ListaString__Group__12915);
             rule__ListaString__Group__2();
 
             state._fsp--;
@@ -3197,20 +3850,20 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__1__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1257:1: rule__ListaString__Group__1__Impl : ( 'List of String = {' ) ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1480:1: rule__ListaString__Group__1__Impl : ( 'List of String' ) ;
     public final void rule__ListaString__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1261:1: ( ( 'List of String = {' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1262:1: ( 'List of String = {' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1484:1: ( ( 'List of String' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1485:1: ( 'List of String' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1262:1: ( 'List of String = {' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1263:1: 'List of String = {'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1485:1: ( 'List of String' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1486:1: 'List of String'
             {
              before(grammarAccess.getListaStringAccess().getListOfStringKeyword_1()); 
-            match(input,19,FOLLOW_19_in_rule__ListaString__Group__1__Impl2472); 
+            match(input,19,FOLLOW_19_in_rule__ListaString__Group__1__Impl2943); 
              after(grammarAccess.getListaStringAccess().getListOfStringKeyword_1()); 
 
             }
@@ -3234,21 +3887,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1276:1: rule__ListaString__Group__2 : rule__ListaString__Group__2__Impl rule__ListaString__Group__3 ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1499:1: rule__ListaString__Group__2 : rule__ListaString__Group__2__Impl rule__ListaString__Group__3 ;
     public final void rule__ListaString__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1280:1: ( rule__ListaString__Group__2__Impl rule__ListaString__Group__3 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1281:2: rule__ListaString__Group__2__Impl rule__ListaString__Group__3
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1503:1: ( rule__ListaString__Group__2__Impl rule__ListaString__Group__3 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1504:2: rule__ListaString__Group__2__Impl rule__ListaString__Group__3
             {
-            pushFollow(FOLLOW_rule__ListaString__Group__2__Impl_in_rule__ListaString__Group__22503);
+            pushFollow(FOLLOW_rule__ListaString__Group__2__Impl_in_rule__ListaString__Group__22974);
             rule__ListaString__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ListaString__Group__3_in_rule__ListaString__Group__22506);
+            pushFollow(FOLLOW_rule__ListaString__Group__3_in_rule__ListaString__Group__22977);
             rule__ListaString__Group__3();
 
             state._fsp--;
@@ -3272,31 +3925,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__2__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1288:1: rule__ListaString__Group__2__Impl : ( ( rule__ListaString__ValoresAssignment_2 ) ) ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1511:1: rule__ListaString__Group__2__Impl : ( '=' ) ;
     public final void rule__ListaString__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1292:1: ( ( ( rule__ListaString__ValoresAssignment_2 ) ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1293:1: ( ( rule__ListaString__ValoresAssignment_2 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1515:1: ( ( '=' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1516:1: ( '=' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1293:1: ( ( rule__ListaString__ValoresAssignment_2 ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1294:1: ( rule__ListaString__ValoresAssignment_2 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1516:1: ( '=' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1517:1: '='
             {
-             before(grammarAccess.getListaStringAccess().getValoresAssignment_2()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1295:1: ( rule__ListaString__ValoresAssignment_2 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1295:2: rule__ListaString__ValoresAssignment_2
-            {
-            pushFollow(FOLLOW_rule__ListaString__ValoresAssignment_2_in_rule__ListaString__Group__2__Impl2533);
-            rule__ListaString__ValoresAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getListaStringAccess().getValoresAssignment_2()); 
+             before(grammarAccess.getListaStringAccess().getEqualsSignKeyword_2()); 
+            match(input,16,FOLLOW_16_in_rule__ListaString__Group__2__Impl3005); 
+             after(grammarAccess.getListaStringAccess().getEqualsSignKeyword_2()); 
 
             }
 
@@ -3319,21 +3962,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__3"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1305:1: rule__ListaString__Group__3 : rule__ListaString__Group__3__Impl rule__ListaString__Group__4 ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1530:1: rule__ListaString__Group__3 : rule__ListaString__Group__3__Impl rule__ListaString__Group__4 ;
     public final void rule__ListaString__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1309:1: ( rule__ListaString__Group__3__Impl rule__ListaString__Group__4 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1310:2: rule__ListaString__Group__3__Impl rule__ListaString__Group__4
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1534:1: ( rule__ListaString__Group__3__Impl rule__ListaString__Group__4 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1535:2: rule__ListaString__Group__3__Impl rule__ListaString__Group__4
             {
-            pushFollow(FOLLOW_rule__ListaString__Group__3__Impl_in_rule__ListaString__Group__32563);
+            pushFollow(FOLLOW_rule__ListaString__Group__3__Impl_in_rule__ListaString__Group__33036);
             rule__ListaString__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ListaString__Group__4_in_rule__ListaString__Group__32566);
+            pushFollow(FOLLOW_rule__ListaString__Group__4_in_rule__ListaString__Group__33039);
             rule__ListaString__Group__4();
 
             state._fsp--;
@@ -3357,49 +4000,21 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__3__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1317:1: rule__ListaString__Group__3__Impl : ( ( rule__ListaString__Group_3__0 )* ) ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1542:1: rule__ListaString__Group__3__Impl : ( '{' ) ;
     public final void rule__ListaString__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1321:1: ( ( ( rule__ListaString__Group_3__0 )* ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1322:1: ( ( rule__ListaString__Group_3__0 )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1546:1: ( ( '{' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1547:1: ( '{' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1322:1: ( ( rule__ListaString__Group_3__0 )* )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1323:1: ( rule__ListaString__Group_3__0 )*
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1547:1: ( '{' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1548:1: '{'
             {
-             before(grammarAccess.getListaStringAccess().getGroup_3()); 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1324:1: ( rule__ListaString__Group_3__0 )*
-            loop8:
-            do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
-
-                if ( (LA8_0==18) ) {
-                    alt8=1;
-                }
-
-
-                switch (alt8) {
-            	case 1 :
-            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1324:2: rule__ListaString__Group_3__0
-            	    {
-            	    pushFollow(FOLLOW_rule__ListaString__Group_3__0_in_rule__ListaString__Group__3__Impl2593);
-            	    rule__ListaString__Group_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop8;
-                }
-            } while (true);
-
-             after(grammarAccess.getListaStringAccess().getGroup_3()); 
+             before(grammarAccess.getListaStringAccess().getLeftCurlyBracketKeyword_3()); 
+            match(input,12,FOLLOW_12_in_rule__ListaString__Group__3__Impl3067); 
+             after(grammarAccess.getListaStringAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
 
@@ -3422,17 +4037,22 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__4"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1334:1: rule__ListaString__Group__4 : rule__ListaString__Group__4__Impl ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1561:1: rule__ListaString__Group__4 : rule__ListaString__Group__4__Impl rule__ListaString__Group__5 ;
     public final void rule__ListaString__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1338:1: ( rule__ListaString__Group__4__Impl )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1339:2: rule__ListaString__Group__4__Impl
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1565:1: ( rule__ListaString__Group__4__Impl rule__ListaString__Group__5 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1566:2: rule__ListaString__Group__4__Impl rule__ListaString__Group__5
             {
-            pushFollow(FOLLOW_rule__ListaString__Group__4__Impl_in_rule__ListaString__Group__42624);
+            pushFollow(FOLLOW_rule__ListaString__Group__4__Impl_in_rule__ListaString__Group__43098);
             rule__ListaString__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ListaString__Group__5_in_rule__ListaString__Group__43101);
+            rule__ListaString__Group__5();
 
             state._fsp--;
 
@@ -3455,21 +4075,31 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListaString__Group__4__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1345:1: rule__ListaString__Group__4__Impl : ( '}' ) ;
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1573:1: rule__ListaString__Group__4__Impl : ( ( rule__ListaString__ValoresAssignment_4 ) ) ;
     public final void rule__ListaString__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1349:1: ( ( '}' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1350:1: ( '}' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1577:1: ( ( ( rule__ListaString__ValoresAssignment_4 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1578:1: ( ( rule__ListaString__ValoresAssignment_4 ) )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1350:1: ( '}' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1351:1: '}'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1578:1: ( ( rule__ListaString__ValoresAssignment_4 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1579:1: ( rule__ListaString__ValoresAssignment_4 )
             {
-             before(grammarAccess.getListaStringAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,13,FOLLOW_13_in_rule__ListaString__Group__4__Impl2652); 
-             after(grammarAccess.getListaStringAccess().getRightCurlyBracketKeyword_4()); 
+             before(grammarAccess.getListaStringAccess().getValoresAssignment_4()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1580:1: ( rule__ListaString__ValoresAssignment_4 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1580:2: rule__ListaString__ValoresAssignment_4
+            {
+            pushFollow(FOLLOW_rule__ListaString__ValoresAssignment_4_in_rule__ListaString__Group__4__Impl3128);
+            rule__ListaString__ValoresAssignment_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getListaStringAccess().getValoresAssignment_4()); 
 
             }
 
@@ -3491,93 +4121,23 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ListaString__Group__4__Impl"
 
 
-    // $ANTLR start "rule__ListaString__Group_3__0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1374:1: rule__ListaString__Group_3__0 : rule__ListaString__Group_3__0__Impl rule__ListaString__Group_3__1 ;
-    public final void rule__ListaString__Group_3__0() throws RecognitionException {
+    // $ANTLR start "rule__ListaString__Group__5"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1590:1: rule__ListaString__Group__5 : rule__ListaString__Group__5__Impl rule__ListaString__Group__6 ;
+    public final void rule__ListaString__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1378:1: ( rule__ListaString__Group_3__0__Impl rule__ListaString__Group_3__1 )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1379:2: rule__ListaString__Group_3__0__Impl rule__ListaString__Group_3__1
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1594:1: ( rule__ListaString__Group__5__Impl rule__ListaString__Group__6 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1595:2: rule__ListaString__Group__5__Impl rule__ListaString__Group__6
             {
-            pushFollow(FOLLOW_rule__ListaString__Group_3__0__Impl_in_rule__ListaString__Group_3__02693);
-            rule__ListaString__Group_3__0__Impl();
+            pushFollow(FOLLOW_rule__ListaString__Group__5__Impl_in_rule__ListaString__Group__53158);
+            rule__ListaString__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ListaString__Group_3__1_in_rule__ListaString__Group_3__02696);
-            rule__ListaString__Group_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaString__Group_3__0"
-
-
-    // $ANTLR start "rule__ListaString__Group_3__0__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1386:1: rule__ListaString__Group_3__0__Impl : ( ',' ) ;
-    public final void rule__ListaString__Group_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1390:1: ( ( ',' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1391:1: ( ',' )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1391:1: ( ',' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1392:1: ','
-            {
-             before(grammarAccess.getListaStringAccess().getCommaKeyword_3_0()); 
-            match(input,18,FOLLOW_18_in_rule__ListaString__Group_3__0__Impl2724); 
-             after(grammarAccess.getListaStringAccess().getCommaKeyword_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ListaString__Group_3__0__Impl"
-
-
-    // $ANTLR start "rule__ListaString__Group_3__1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1405:1: rule__ListaString__Group_3__1 : rule__ListaString__Group_3__1__Impl ;
-    public final void rule__ListaString__Group_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1409:1: ( rule__ListaString__Group_3__1__Impl )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1410:2: rule__ListaString__Group_3__1__Impl
-            {
-            pushFollow(FOLLOW_rule__ListaString__Group_3__1__Impl_in_rule__ListaString__Group_3__12755);
-            rule__ListaString__Group_3__1__Impl();
+            pushFollow(FOLLOW_rule__ListaString__Group__6_in_rule__ListaString__Group__53161);
+            rule__ListaString__Group__6();
 
             state._fsp--;
 
@@ -3596,25 +4156,53 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaString__Group_3__1"
+    // $ANTLR end "rule__ListaString__Group__5"
 
 
-    // $ANTLR start "rule__ListaString__Group_3__1__Impl"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1416:1: rule__ListaString__Group_3__1__Impl : ( RULE_STRING ) ;
-    public final void rule__ListaString__Group_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ListaString__Group__5__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1602:1: rule__ListaString__Group__5__Impl : ( ( rule__ListaString__Group_5__0 )* ) ;
+    public final void rule__ListaString__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1420:1: ( ( RULE_STRING ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1421:1: ( RULE_STRING )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1606:1: ( ( ( rule__ListaString__Group_5__0 )* ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1607:1: ( ( rule__ListaString__Group_5__0 )* )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1421:1: ( RULE_STRING )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1422:1: RULE_STRING
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1607:1: ( ( rule__ListaString__Group_5__0 )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1608:1: ( rule__ListaString__Group_5__0 )*
             {
-             before(grammarAccess.getListaStringAccess().getSTRINGTerminalRuleCall_3_1()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ListaString__Group_3__1__Impl2782); 
-             after(grammarAccess.getListaStringAccess().getSTRINGTerminalRuleCall_3_1()); 
+             before(grammarAccess.getListaStringAccess().getGroup_5()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1609:1: ( rule__ListaString__Group_5__0 )*
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
+
+                if ( (LA11_0==18) ) {
+                    alt11=1;
+                }
+
+
+                switch (alt11) {
+            	case 1 :
+            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1609:2: rule__ListaString__Group_5__0
+            	    {
+            	    pushFollow(FOLLOW_rule__ListaString__Group_5__0_in_rule__ListaString__Group__5__Impl3188);
+            	    rule__ListaString__Group_5__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop11;
+                }
+            } while (true);
+
+             after(grammarAccess.getListaStringAccess().getGroup_5()); 
 
             }
 
@@ -3633,29 +4221,58 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaString__Group_3__1__Impl"
+    // $ANTLR end "rule__ListaString__Group__5__Impl"
 
 
-    // $ANTLR start "rule__Model__ComponentesAssignment"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1438:1: rule__Model__ComponentesAssignment : ( ruleComponente ) ;
-    public final void rule__Model__ComponentesAssignment() throws RecognitionException {
+    // $ANTLR start "rule__ListaString__Group__6"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1619:1: rule__ListaString__Group__6 : rule__ListaString__Group__6__Impl ;
+    public final void rule__ListaString__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1442:1: ( ( ruleComponente ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1443:1: ( ruleComponente )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1623:1: ( rule__ListaString__Group__6__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1624:2: rule__ListaString__Group__6__Impl
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1443:1: ( ruleComponente )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1444:1: ruleComponente
-            {
-             before(grammarAccess.getModelAccess().getComponentesComponenteParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleComponente_in_rule__Model__ComponentesAssignment2820);
-            ruleComponente();
+            pushFollow(FOLLOW_rule__ListaString__Group__6__Impl_in_rule__ListaString__Group__63219);
+            rule__ListaString__Group__6__Impl();
 
             state._fsp--;
 
-             after(grammarAccess.getModelAccess().getComponentesComponenteParserRuleCall_0()); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaString__Group__6"
+
+
+    // $ANTLR start "rule__ListaString__Group__6__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1630:1: rule__ListaString__Group__6__Impl : ( '}' ) ;
+    public final void rule__ListaString__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1634:1: ( ( '}' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1635:1: ( '}' )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1635:1: ( '}' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1636:1: '}'
+            {
+             before(grammarAccess.getListaStringAccess().getRightCurlyBracketKeyword_6()); 
+            match(input,13,FOLLOW_13_in_rule__ListaString__Group__6__Impl3247); 
+             after(grammarAccess.getListaStringAccess().getRightCurlyBracketKeyword_6()); 
 
             }
 
@@ -3674,184 +4291,29 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Model__ComponentesAssignment"
+    // $ANTLR end "rule__ListaString__Group__6__Impl"
 
 
-    // $ANTLR start "rule__ObjetoSimple__NameAssignment_0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1453:1: rule__ObjetoSimple__NameAssignment_0 : ( RULE_ID ) ;
-    public final void rule__ObjetoSimple__NameAssignment_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1457:1: ( ( RULE_ID ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1458:1: ( RULE_ID )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1458:1: ( RULE_ID )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1459:1: RULE_ID
-            {
-             before(grammarAccess.getObjetoSimpleAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ObjetoSimple__NameAssignment_02851); 
-             after(grammarAccess.getObjetoSimpleAccess().getNameIDTerminalRuleCall_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoSimple__NameAssignment_0"
-
-
-    // $ANTLR start "rule__ObjetoSimple__ComponentesAssignment_2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1468:1: rule__ObjetoSimple__ComponentesAssignment_2 : ( ruleComponente ) ;
-    public final void rule__ObjetoSimple__ComponentesAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ListaString__Group_5__0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1663:1: rule__ListaString__Group_5__0 : rule__ListaString__Group_5__0__Impl rule__ListaString__Group_5__1 ;
+    public final void rule__ListaString__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1472:1: ( ( ruleComponente ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1473:1: ( ruleComponente )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1667:1: ( rule__ListaString__Group_5__0__Impl rule__ListaString__Group_5__1 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1668:2: rule__ListaString__Group_5__0__Impl rule__ListaString__Group_5__1
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1473:1: ( ruleComponente )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1474:1: ruleComponente
-            {
-             before(grammarAccess.getObjetoSimpleAccess().getComponentesComponenteParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleComponente_in_rule__ObjetoSimple__ComponentesAssignment_22882);
-            ruleComponente();
+            pushFollow(FOLLOW_rule__ListaString__Group_5__0__Impl_in_rule__ListaString__Group_5__03292);
+            rule__ListaString__Group_5__0__Impl();
 
             state._fsp--;
 
-             after(grammarAccess.getObjetoSimpleAccess().getComponentesComponenteParserRuleCall_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoSimple__ComponentesAssignment_2"
-
-
-    // $ANTLR start "rule__ObjetoNombre__NameAssignment_0"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1483:1: rule__ObjetoNombre__NameAssignment_0 : ( RULE_ID ) ;
-    public final void rule__ObjetoNombre__NameAssignment_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1487:1: ( ( RULE_ID ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1488:1: ( RULE_ID )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1488:1: ( RULE_ID )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1489:1: RULE_ID
-            {
-             before(grammarAccess.getObjetoNombreAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ObjetoNombre__NameAssignment_02913); 
-             after(grammarAccess.getObjetoNombreAccess().getNameIDTerminalRuleCall_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoNombre__NameAssignment_0"
-
-
-    // $ANTLR start "rule__ObjetoNombre__DescripcionAssignment_1"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1498:1: rule__ObjetoNombre__DescripcionAssignment_1 : ( RULE_STRING ) ;
-    public final void rule__ObjetoNombre__DescripcionAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1502:1: ( ( RULE_STRING ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1503:1: ( RULE_STRING )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1503:1: ( RULE_STRING )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1504:1: RULE_STRING
-            {
-             before(grammarAccess.getObjetoNombreAccess().getDescripcionSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ObjetoNombre__DescripcionAssignment_12944); 
-             after(grammarAccess.getObjetoNombreAccess().getDescripcionSTRINGTerminalRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ObjetoNombre__DescripcionAssignment_1"
-
-
-    // $ANTLR start "rule__ObjetoNombre__ComponentesAssignment_3"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1513:1: rule__ObjetoNombre__ComponentesAssignment_3 : ( ruleComponente ) ;
-    public final void rule__ObjetoNombre__ComponentesAssignment_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1517:1: ( ( ruleComponente ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1518:1: ( ruleComponente )
-            {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1518:1: ( ruleComponente )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1519:1: ruleComponente
-            {
-             before(grammarAccess.getObjetoNombreAccess().getComponentesComponenteParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleComponente_in_rule__ObjetoNombre__ComponentesAssignment_32975);
-            ruleComponente();
+            pushFollow(FOLLOW_rule__ListaString__Group_5__1_in_rule__ListaString__Group_5__03295);
+            rule__ListaString__Group_5__1();
 
             state._fsp--;
 
-             after(grammarAccess.getObjetoNombreAccess().getComponentesComponenteParserRuleCall_3_0()); 
-
-            }
-
 
             }
 
@@ -3867,25 +4329,25 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ObjetoNombre__ComponentesAssignment_3"
+    // $ANTLR end "rule__ListaString__Group_5__0"
 
 
-    // $ANTLR start "rule__ListaInt__ValoresAssignment_2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1528:1: rule__ListaInt__ValoresAssignment_2 : ( RULE_INT ) ;
-    public final void rule__ListaInt__ValoresAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ListaString__Group_5__0__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1675:1: rule__ListaString__Group_5__0__Impl : ( ',' ) ;
+    public final void rule__ListaString__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1532:1: ( ( RULE_INT ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1533:1: ( RULE_INT )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1679:1: ( ( ',' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1680:1: ( ',' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1533:1: ( RULE_INT )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1534:1: RULE_INT
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1680:1: ( ',' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1681:1: ','
             {
-             before(grammarAccess.getListaIntAccess().getValoresINTTerminalRuleCall_2_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ListaInt__ValoresAssignment_23006); 
-             after(grammarAccess.getListaIntAccess().getValoresINTTerminalRuleCall_2_0()); 
+             before(grammarAccess.getListaStringAccess().getCommaKeyword_5_0()); 
+            match(input,18,FOLLOW_18_in_rule__ListaString__Group_5__0__Impl3323); 
+             after(grammarAccess.getListaStringAccess().getCommaKeyword_5_0()); 
 
             }
 
@@ -3904,25 +4366,58 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaInt__ValoresAssignment_2"
+    // $ANTLR end "rule__ListaString__Group_5__0__Impl"
 
 
-    // $ANTLR start "rule__ListaString__ValoresAssignment_2"
-    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1543:1: rule__ListaString__ValoresAssignment_2 : ( RULE_STRING ) ;
-    public final void rule__ListaString__ValoresAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ListaString__Group_5__1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1694:1: rule__ListaString__Group_5__1 : rule__ListaString__Group_5__1__Impl ;
+    public final void rule__ListaString__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1547:1: ( ( RULE_STRING ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1548:1: ( RULE_STRING )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1698:1: ( rule__ListaString__Group_5__1__Impl )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1699:2: rule__ListaString__Group_5__1__Impl
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1548:1: ( RULE_STRING )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1549:1: RULE_STRING
+            pushFollow(FOLLOW_rule__ListaString__Group_5__1__Impl_in_rule__ListaString__Group_5__13354);
+            rule__ListaString__Group_5__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaString__Group_5__1"
+
+
+    // $ANTLR start "rule__ListaString__Group_5__1__Impl"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1705:1: rule__ListaString__Group_5__1__Impl : ( RULE_STRING ) ;
+    public final void rule__ListaString__Group_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1709:1: ( ( RULE_STRING ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1710:1: ( RULE_STRING )
             {
-             before(grammarAccess.getListaStringAccess().getValoresSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ListaString__ValoresAssignment_23037); 
-             after(grammarAccess.getListaStringAccess().getValoresSTRINGTerminalRuleCall_2_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1710:1: ( RULE_STRING )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1711:1: RULE_STRING
+            {
+             before(grammarAccess.getListaStringAccess().getSTRINGTerminalRuleCall_5_1()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ListaString__Group_5__1__Impl3381); 
+             after(grammarAccess.getListaStringAccess().getSTRINGTerminalRuleCall_5_1()); 
 
             }
 
@@ -3941,140 +4436,490 @@ public class InternalVtdslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ListaString__ValoresAssignment_2"
+    // $ANTLR end "rule__ListaString__Group_5__1__Impl"
+
+
+    // $ANTLR start "rule__Modelo__ObjetosAssignment_3"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1727:1: rule__Modelo__ObjetosAssignment_3 : ( ruleObjeto ) ;
+    public final void rule__Modelo__ObjetosAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1731:1: ( ( ruleObjeto ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1732:1: ( ruleObjeto )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1732:1: ( ruleObjeto )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1733:1: ruleObjeto
+            {
+             before(grammarAccess.getModeloAccess().getObjetosObjetoParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleObjeto_in_rule__Modelo__ObjetosAssignment_33419);
+            ruleObjeto();
+
+            state._fsp--;
+
+             after(grammarAccess.getModeloAccess().getObjetosObjetoParserRuleCall_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Modelo__ObjetosAssignment_3"
+
+
+    // $ANTLR start "rule__Objeto__NameAssignment_0"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1742:1: rule__Objeto__NameAssignment_0 : ( RULE_ID ) ;
+    public final void rule__Objeto__NameAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1746:1: ( ( RULE_ID ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1747:1: ( RULE_ID )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1747:1: ( RULE_ID )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1748:1: RULE_ID
+            {
+             before(grammarAccess.getObjetoAccess().getNameIDTerminalRuleCall_0_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Objeto__NameAssignment_03450); 
+             after(grammarAccess.getObjetoAccess().getNameIDTerminalRuleCall_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Objeto__NameAssignment_0"
+
+
+    // $ANTLR start "rule__Objeto__DescripcionAssignment_1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1757:1: rule__Objeto__DescripcionAssignment_1 : ( RULE_STRING ) ;
+    public final void rule__Objeto__DescripcionAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1761:1: ( ( RULE_STRING ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1762:1: ( RULE_STRING )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1762:1: ( RULE_STRING )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1763:1: RULE_STRING
+            {
+             before(grammarAccess.getObjetoAccess().getDescripcionSTRINGTerminalRuleCall_1_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Objeto__DescripcionAssignment_13481); 
+             after(grammarAccess.getObjetoAccess().getDescripcionSTRINGTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Objeto__DescripcionAssignment_1"
+
+
+    // $ANTLR start "rule__Objeto__AtributosAssignment_3"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1772:1: rule__Objeto__AtributosAssignment_3 : ( ruleAtributo ) ;
+    public final void rule__Objeto__AtributosAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1776:1: ( ( ruleAtributo ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1777:1: ( ruleAtributo )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1777:1: ( ruleAtributo )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1778:1: ruleAtributo
+            {
+             before(grammarAccess.getObjetoAccess().getAtributosAtributoParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleAtributo_in_rule__Objeto__AtributosAssignment_33512);
+            ruleAtributo();
+
+            state._fsp--;
+
+             after(grammarAccess.getObjetoAccess().getAtributosAtributoParserRuleCall_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Objeto__AtributosAssignment_3"
+
+
+    // $ANTLR start "rule__AtributoNormal__NombreAssignment_1"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1787:1: rule__AtributoNormal__NombreAssignment_1 : ( ( rule__AtributoNormal__NombreAlternatives_1_0 ) ) ;
+    public final void rule__AtributoNormal__NombreAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1791:1: ( ( ( rule__AtributoNormal__NombreAlternatives_1_0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1792:1: ( ( rule__AtributoNormal__NombreAlternatives_1_0 ) )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1792:1: ( ( rule__AtributoNormal__NombreAlternatives_1_0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1793:1: ( rule__AtributoNormal__NombreAlternatives_1_0 )
+            {
+             before(grammarAccess.getAtributoNormalAccess().getNombreAlternatives_1_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1794:1: ( rule__AtributoNormal__NombreAlternatives_1_0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1794:2: rule__AtributoNormal__NombreAlternatives_1_0
+            {
+            pushFollow(FOLLOW_rule__AtributoNormal__NombreAlternatives_1_0_in_rule__AtributoNormal__NombreAssignment_13543);
+            rule__AtributoNormal__NombreAlternatives_1_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAtributoNormalAccess().getNombreAlternatives_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__NombreAssignment_1"
+
+
+    // $ANTLR start "rule__AtributoNormal__ValorAssignment_3"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1803:1: rule__AtributoNormal__ValorAssignment_3 : ( ( rule__AtributoNormal__ValorAlternatives_3_0 ) ) ;
+    public final void rule__AtributoNormal__ValorAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1807:1: ( ( ( rule__AtributoNormal__ValorAlternatives_3_0 ) ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1808:1: ( ( rule__AtributoNormal__ValorAlternatives_3_0 ) )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1808:1: ( ( rule__AtributoNormal__ValorAlternatives_3_0 ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1809:1: ( rule__AtributoNormal__ValorAlternatives_3_0 )
+            {
+             before(grammarAccess.getAtributoNormalAccess().getValorAlternatives_3_0()); 
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1810:1: ( rule__AtributoNormal__ValorAlternatives_3_0 )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1810:2: rule__AtributoNormal__ValorAlternatives_3_0
+            {
+            pushFollow(FOLLOW_rule__AtributoNormal__ValorAlternatives_3_0_in_rule__AtributoNormal__ValorAssignment_33576);
+            rule__AtributoNormal__ValorAlternatives_3_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAtributoNormalAccess().getValorAlternatives_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AtributoNormal__ValorAssignment_3"
+
+
+    // $ANTLR start "rule__ListaInteger__ValoresAssignment_4"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1819:1: rule__ListaInteger__ValoresAssignment_4 : ( RULE_INT ) ;
+    public final void rule__ListaInteger__ValoresAssignment_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1823:1: ( ( RULE_INT ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1824:1: ( RULE_INT )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1824:1: ( RULE_INT )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1825:1: RULE_INT
+            {
+             before(grammarAccess.getListaIntegerAccess().getValoresINTTerminalRuleCall_4_0()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ListaInteger__ValoresAssignment_43609); 
+             after(grammarAccess.getListaIntegerAccess().getValoresINTTerminalRuleCall_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaInteger__ValoresAssignment_4"
+
+
+    // $ANTLR start "rule__ListaString__ValoresAssignment_4"
+    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1834:1: rule__ListaString__ValoresAssignment_4 : ( RULE_STRING ) ;
+    public final void rule__ListaString__ValoresAssignment_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1838:1: ( ( RULE_STRING ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1839:1: ( RULE_STRING )
+            {
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1839:1: ( RULE_STRING )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1840:1: RULE_STRING
+            {
+             before(grammarAccess.getListaStringAccess().getValoresSTRINGTerminalRuleCall_4_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ListaString__ValoresAssignment_43640); 
+             after(grammarAccess.getListaStringAccess().getValoresSTRINGTerminalRuleCall_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ListaString__ValoresAssignment_4"
 
     // Delegated rules
 
 
  
 
-    public static final BitSet FOLLOW_ruleModel_in_entryRuleModel61 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleModel68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__ComponentesAssignment_in_ruleModel94 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleComponente_in_entryRuleComponente122 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComponente129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Componente__Alternatives_in_ruleComponente155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObjetoSimple_in_entryRuleObjetoSimple182 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleObjetoSimple189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__Group__0_in_ruleObjetoSimple215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObjetoNombre_in_entryRuleObjetoNombre242 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleObjetoNombre249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__0_in_ruleObjetoNombre275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTipoSimple_in_entryRuleTipoSimple304 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTipoSimple311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoSimple__Group__0_in_ruleTipoSimple337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTipoValor_in_entryRuleTipoValor364 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTipoValor371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__0_in_ruleTipoValor397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLista_in_entryRuleLista424 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLista431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Lista__Alternatives_in_ruleLista457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListaInt_in_entryRuleListaInt484 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListaInt491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__0_in_ruleListaInt517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListaString_in_entryRuleListaString544 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListaString551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__0_in_ruleListaString577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObjetoSimple_in_rule__Componente__Alternatives613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObjetoNombre_in_rule__Componente__Alternatives630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__TipoSimple__Alternatives_1664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TipoSimple__Alternatives_1681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListaInt_in_rule__Lista__Alternatives713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListaString_in_rule__Lista__Alternatives730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__Group__0__Impl_in_rule__ObjetoSimple__Group__0760 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__Group__1_in_rule__ObjetoSimple__Group__0763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__NameAssignment_0_in_rule__ObjetoSimple__Group__0__Impl790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__Group__1__Impl_in_rule__ObjetoSimple__Group__1820 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__Group__2_in_rule__ObjetoSimple__Group__1823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__ObjetoSimple__Group__1__Impl851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__Group__2__Impl_in_rule__ObjetoSimple__Group__2882 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__Group__3_in_rule__ObjetoSimple__Group__2885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__ComponentesAssignment_2_in_rule__ObjetoSimple__Group__2__Impl912 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__ObjetoSimple__Group__3__Impl_in_rule__ObjetoSimple__Group__3943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__ObjetoSimple__Group__3__Impl971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__0__Impl_in_rule__ObjetoNombre__Group__01010 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__1_in_rule__ObjetoNombre__Group__01013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__NameAssignment_0_in_rule__ObjetoNombre__Group__0__Impl1040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__1__Impl_in_rule__ObjetoNombre__Group__11070 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__2_in_rule__ObjetoNombre__Group__11073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__DescripcionAssignment_1_in_rule__ObjetoNombre__Group__1__Impl1100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__2__Impl_in_rule__ObjetoNombre__Group__21130 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__3_in_rule__ObjetoNombre__Group__21133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__ObjetoNombre__Group__2__Impl1161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__3__Impl_in_rule__ObjetoNombre__Group__31192 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__4_in_rule__ObjetoNombre__Group__31195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__ComponentesAssignment_3_in_rule__ObjetoNombre__Group__3__Impl1222 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__ObjetoNombre__Group__4__Impl_in_rule__ObjetoNombre__Group__41253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__ObjetoNombre__Group__4__Impl1281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoSimple__Group__0__Impl_in_rule__TipoSimple__Group__01324 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__TipoSimple__Group__1_in_rule__TipoSimple__Group__01327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoSimple__Group__1__Impl_in_rule__TipoSimple__Group__11385 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__TipoSimple__Group__2_in_rule__TipoSimple__Group__11388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoSimple__Alternatives_1_in_rule__TipoSimple__Group__1__Impl1415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoSimple__Group__2__Impl_in_rule__TipoSimple__Group__21445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__TipoSimple__Group__2__Impl1473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__0__Impl_in_rule__TipoValor__Group__01510 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__1_in_rule__TipoValor__Group__01513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__1__Impl_in_rule__TipoValor__Group__11571 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__2_in_rule__TipoValor__Group__11574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__TipoValor__Group__1__Impl1601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__2__Impl_in_rule__TipoValor__Group__21630 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__3_in_rule__TipoValor__Group__21633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__TipoValor__Group__2__Impl1661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__3__Impl_in_rule__TipoValor__Group__31692 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__4_in_rule__TipoValor__Group__31695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__TipoValor__Group__3__Impl1722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__4__Impl_in_rule__TipoValor__Group__41751 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__5_in_rule__TipoValor__Group__41754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__TipoValor__Group__4__Impl1782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__5__Impl_in_rule__TipoValor__Group__51813 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__6_in_rule__TipoValor__Group__51816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__TipoValor__Group__5__Impl1843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TipoValor__Group__6__Impl_in_rule__TipoValor__Group__61872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__TipoValor__Group__6__Impl1900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__0__Impl_in_rule__ListaInt__Group__01945 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__1_in_rule__ListaInt__Group__01948 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__1__Impl_in_rule__ListaInt__Group__12006 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__2_in_rule__ListaInt__Group__12009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__ListaInt__Group__1__Impl2037 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__2__Impl_in_rule__ListaInt__Group__22068 = new BitSet(new long[]{0x0000000000042000L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__3_in_rule__ListaInt__Group__22071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__ValoresAssignment_2_in_rule__ListaInt__Group__2__Impl2098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__3__Impl_in_rule__ListaInt__Group__32128 = new BitSet(new long[]{0x0000000000042000L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__4_in_rule__ListaInt__Group__32131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group_3__0_in_rule__ListaInt__Group__3__Impl2158 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group__4__Impl_in_rule__ListaInt__Group__42189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__ListaInt__Group__4__Impl2217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group_3__0__Impl_in_rule__ListaInt__Group_3__02258 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group_3__1_in_rule__ListaInt__Group_3__02261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__ListaInt__Group_3__0__Impl2289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaInt__Group_3__1__Impl_in_rule__ListaInt__Group_3__12320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__ListaInt__Group_3__1__Impl2347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__0__Impl_in_rule__ListaString__Group__02380 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__1_in_rule__ListaString__Group__02383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__1__Impl_in_rule__ListaString__Group__12441 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__2_in_rule__ListaString__Group__12444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__ListaString__Group__1__Impl2472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__2__Impl_in_rule__ListaString__Group__22503 = new BitSet(new long[]{0x0000000000042000L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__3_in_rule__ListaString__Group__22506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__ValoresAssignment_2_in_rule__ListaString__Group__2__Impl2533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__3__Impl_in_rule__ListaString__Group__32563 = new BitSet(new long[]{0x0000000000042000L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__4_in_rule__ListaString__Group__32566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group_3__0_in_rule__ListaString__Group__3__Impl2593 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group__4__Impl_in_rule__ListaString__Group__42624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__ListaString__Group__4__Impl2652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group_3__0__Impl_in_rule__ListaString__Group_3__02693 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__ListaString__Group_3__1_in_rule__ListaString__Group_3__02696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__ListaString__Group_3__0__Impl2724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListaString__Group_3__1__Impl_in_rule__ListaString__Group_3__12755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ListaString__Group_3__1__Impl2782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponente_in_rule__Model__ComponentesAssignment2820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ObjetoSimple__NameAssignment_02851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponente_in_rule__ObjetoSimple__ComponentesAssignment_22882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ObjetoNombre__NameAssignment_02913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ObjetoNombre__DescripcionAssignment_12944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponente_in_rule__ObjetoNombre__ComponentesAssignment_32975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__ListaInt__ValoresAssignment_23006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ListaString__ValoresAssignment_23037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModelo_in_entryRuleModelo61 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleModelo68 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__0_in_ruleModelo94 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObjeto_in_entryRuleObjeto121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleObjeto128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__0_in_ruleObjeto154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtributoNormal_in_entryRuleAtributoNormal181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtributoNormal188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__0_in_ruleAtributoNormal214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtributoObjeto_in_entryRuleAtributoObjeto241 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtributoObjeto248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObjeto_in_ruleAtributoObjeto274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtributo_in_entryRuleAtributo300 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtributo307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Atributo__Alternatives_in_ruleAtributo333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValorAtributo_in_entryRuleValorAtributo360 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValorAtributo367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValorAtributo__Group__0_in_ruleValorAtributo393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValorAtributoValor_in_entryRuleValorAtributoValor422 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValorAtributoValor429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValorAtributoValor__Group__0_in_ruleValorAtributoValor455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListaInteger_in_entryRuleListaInteger482 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListaInteger489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__0_in_ruleListaInteger515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListaString_in_entryRuleListaString542 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListaString549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__0_in_ruleListaString575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLista_in_entryRuleLista602 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLista609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Lista__Alternatives_in_ruleLista635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__AtributoNormal__NombreAlternatives_1_0671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__AtributoNormal__NombreAlternatives_1_0688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValorAtributo_in_rule__AtributoNormal__ValorAlternatives_3_0720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValorAtributoValor_in_rule__AtributoNormal__ValorAlternatives_3_0737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLista_in_rule__AtributoNormal__ValorAlternatives_3_0754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtributoNormal_in_rule__Atributo__Alternatives786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtributoObjeto_in_rule__Atributo__Alternatives803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ValorAtributo__Alternatives_1835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ValorAtributo__Alternatives_1852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ValorAtributo__Alternatives_1869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ValorAtributo__Alternatives_1886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListaInteger_in_rule__Lista__Alternatives919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListaString_in_rule__Lista__Alternatives936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__0__Impl_in_rule__Modelo__Group__0966 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__1_in_rule__Modelo__Group__0969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__1__Impl_in_rule__Modelo__Group__11027 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__2_in_rule__Modelo__Group__11030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Modelo__Group__1__Impl1057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__2__Impl_in_rule__Modelo__Group__21086 = new BitSet(new long[]{0x0000000000002010L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__3_in_rule__Modelo__Group__21089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Modelo__Group__2__Impl1117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__3__Impl_in_rule__Modelo__Group__31148 = new BitSet(new long[]{0x0000000000002010L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__4_in_rule__Modelo__Group__31151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Modelo__ObjetosAssignment_3_in_rule__Modelo__Group__3__Impl1178 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Modelo__Group__4__Impl_in_rule__Modelo__Group__41209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Modelo__Group__4__Impl1237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__0__Impl_in_rule__Objeto__Group__01278 = new BitSet(new long[]{0x0000000000001020L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__1_in_rule__Objeto__Group__01281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Objeto__NameAssignment_0_in_rule__Objeto__Group__0__Impl1308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__1__Impl_in_rule__Objeto__Group__11338 = new BitSet(new long[]{0x0000000000001020L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__2_in_rule__Objeto__Group__11341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Objeto__DescripcionAssignment_1_in_rule__Objeto__Group__1__Impl1368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__2__Impl_in_rule__Objeto__Group__21399 = new BitSet(new long[]{0x0000000000002030L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__3_in_rule__Objeto__Group__21402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Objeto__Group__2__Impl1430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__3__Impl_in_rule__Objeto__Group__31461 = new BitSet(new long[]{0x0000000000002030L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__4_in_rule__Objeto__Group__31464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Objeto__AtributosAssignment_3_in_rule__Objeto__Group__3__Impl1491 = new BitSet(new long[]{0x0000000000000032L});
+    public static final BitSet FOLLOW_rule__Objeto__Group__4__Impl_in_rule__Objeto__Group__41522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Objeto__Group__4__Impl1550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__0__Impl_in_rule__AtributoNormal__Group__01591 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__1_in_rule__AtributoNormal__Group__01594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__1__Impl_in_rule__AtributoNormal__Group__11652 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__2_in_rule__AtributoNormal__Group__11655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__NombreAssignment_1_in_rule__AtributoNormal__Group__1__Impl1682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__2__Impl_in_rule__AtributoNormal__Group__21712 = new BitSet(new long[]{0x00000000000A00F0L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__3_in_rule__AtributoNormal__Group__21715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__AtributoNormal__Group__2__Impl1743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__3__Impl_in_rule__AtributoNormal__Group__31774 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__4_in_rule__AtributoNormal__Group__31777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__ValorAssignment_3_in_rule__AtributoNormal__Group__3__Impl1804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__Group__4__Impl_in_rule__AtributoNormal__Group__41834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__AtributoNormal__Group__4__Impl1862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValorAtributo__Group__0__Impl_in_rule__ValorAtributo__Group__01903 = new BitSet(new long[]{0x00000000000000F0L});
+    public static final BitSet FOLLOW_rule__ValorAtributo__Group__1_in_rule__ValorAtributo__Group__01906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValorAtributo__Group__1__Impl_in_rule__ValorAtributo__Group__11964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValorAtributo__Alternatives_1_in_rule__ValorAtributo__Group__1__Impl1993 = new BitSet(new long[]{0x00000000000000F2L});
+    public static final BitSet FOLLOW_rule__ValorAtributo__Alternatives_1_in_rule__ValorAtributo__Group__1__Impl2005 = new BitSet(new long[]{0x00000000000000F2L});
+    public static final BitSet FOLLOW_rule__ValorAtributoValor__Group__0__Impl_in_rule__ValorAtributoValor__Group__02042 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ValorAtributoValor__Group__1_in_rule__ValorAtributoValor__Group__02045 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValorAtributoValor__Group__1__Impl_in_rule__ValorAtributoValor__Group__12103 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__ValorAtributoValor__Group__2_in_rule__ValorAtributoValor__Group__12106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ValorAtributoValor__Group__1__Impl2133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValorAtributoValor__Group__2__Impl_in_rule__ValorAtributoValor__Group__22162 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__ValorAtributoValor__Group__3_in_rule__ValorAtributoValor__Group__22165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__ValorAtributoValor__Group__2__Impl2193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ValorAtributoValor__Group__3__Impl_in_rule__ValorAtributoValor__Group__32224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ValorAtributoValor__Group__3__Impl2251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__0__Impl_in_rule__ListaInteger__Group__02288 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__1_in_rule__ListaInteger__Group__02291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__1__Impl_in_rule__ListaInteger__Group__12349 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__2_in_rule__ListaInteger__Group__12352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__ListaInteger__Group__1__Impl2380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__2__Impl_in_rule__ListaInteger__Group__22411 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__3_in_rule__ListaInteger__Group__22414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__ListaInteger__Group__2__Impl2442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__3__Impl_in_rule__ListaInteger__Group__32473 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__4_in_rule__ListaInteger__Group__32476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__ListaInteger__Group__3__Impl2504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__4__Impl_in_rule__ListaInteger__Group__42535 = new BitSet(new long[]{0x0000000000042000L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__5_in_rule__ListaInteger__Group__42538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__ValoresAssignment_4_in_rule__ListaInteger__Group__4__Impl2565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__5__Impl_in_rule__ListaInteger__Group__52595 = new BitSet(new long[]{0x0000000000042000L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__6_in_rule__ListaInteger__Group__52598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group_5__0_in_rule__ListaInteger__Group__5__Impl2625 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group__6__Impl_in_rule__ListaInteger__Group__62656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__ListaInteger__Group__6__Impl2684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group_5__0__Impl_in_rule__ListaInteger__Group_5__02729 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group_5__1_in_rule__ListaInteger__Group_5__02732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__ListaInteger__Group_5__0__Impl2760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaInteger__Group_5__1__Impl_in_rule__ListaInteger__Group_5__12791 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ListaInteger__Group_5__1__Impl2818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__0__Impl_in_rule__ListaString__Group__02851 = new BitSet(new long[]{0x00000000000A00F0L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__1_in_rule__ListaString__Group__02854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__1__Impl_in_rule__ListaString__Group__12912 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__2_in_rule__ListaString__Group__12915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__ListaString__Group__1__Impl2943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__2__Impl_in_rule__ListaString__Group__22974 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__3_in_rule__ListaString__Group__22977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__ListaString__Group__2__Impl3005 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__3__Impl_in_rule__ListaString__Group__33036 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__4_in_rule__ListaString__Group__33039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__ListaString__Group__3__Impl3067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__4__Impl_in_rule__ListaString__Group__43098 = new BitSet(new long[]{0x0000000000042000L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__5_in_rule__ListaString__Group__43101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__ValoresAssignment_4_in_rule__ListaString__Group__4__Impl3128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__5__Impl_in_rule__ListaString__Group__53158 = new BitSet(new long[]{0x0000000000042000L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__6_in_rule__ListaString__Group__53161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group_5__0_in_rule__ListaString__Group__5__Impl3188 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group__6__Impl_in_rule__ListaString__Group__63219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__ListaString__Group__6__Impl3247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group_5__0__Impl_in_rule__ListaString__Group_5__03292 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__ListaString__Group_5__1_in_rule__ListaString__Group_5__03295 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__ListaString__Group_5__0__Impl3323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListaString__Group_5__1__Impl_in_rule__ListaString__Group_5__13354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ListaString__Group_5__1__Impl3381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObjeto_in_rule__Modelo__ObjetosAssignment_33419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Objeto__NameAssignment_03450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Objeto__DescripcionAssignment_13481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtributo_in_rule__Objeto__AtributosAssignment_33512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__NombreAlternatives_1_0_in_rule__AtributoNormal__NombreAssignment_13543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AtributoNormal__ValorAlternatives_3_0_in_rule__AtributoNormal__ValorAssignment_33576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ListaInteger__ValoresAssignment_43609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ListaString__ValoresAssignment_43640 = new BitSet(new long[]{0x0000000000000002L});
 
 }

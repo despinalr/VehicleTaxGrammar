@@ -9,16 +9,16 @@ T__12=12
 T__14=14
 T__13=13
 RULE_ANY_OTHER=11
-RULE_INT=7
+RULE_INT=6
 RULE_WS=10
-RULE_DECIMAL=6
+RULE_DECIMAL=7
 RULE_SL_COMMENT=9
 RULE_ML_COMMENT=8
-';'=14
+';'=15
+'List of String'=19
 '}'=13
+'List of Integer'=17
 '='=16
-'List of Integer = {'=17
-':'=15
+':'=14
 ','=18
 '{'=12
-'List of String = {'=19

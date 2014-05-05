@@ -1,60 +1,69 @@
 grammar co.edu.uniandes.miso4202.ehicletax.Vtdsl with org.eclipse.xtext.common.Terminals
 
-
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate vtdsl "http://www.edu.co/uniandes/miso4202/ehicletax/Vtdsl"
 
-Model:	
-	(componentes += Componente)*
-;
-	
-	
-Componente:
-	ObjetoSimple | ObjetoNombre
-;
-ObjetoSimple:
-	name = ID '{'
-	(componentes += Componente)*
+Modelo:
+	{Modelo}
+	ID '{'
+		(objetos += Objeto)*
 	'}'
 ;
 
-ObjetoNombre:
-	name = ID descripcion = STRING '{'
-	(componentes += Componente)*
-	'}'
-;	
 
-Atributo: 	
-	{Atributo}
-	ID | STRING ':' (TipoSimple | TipoValor | Lista) ';'
-;
 
-TipoSimple:
-	{TipoSimple}	
-	(ID | STRING) ';'
-;
-
-TipoValor:
-	{TipoValor}
-	ID ':' ID '=' DECIMAL ';'
-;
-
-Lista:
-	ListaInt | ListaString
-;
-
-ListaInt:
-	{ListaInt}
-	'List of Integer = {'
-		valores += INT (',' INT)*		
+Objeto:
+	name = ID (descripcion = STRING)? '{'		
+		(atributos += Atributo)*
 	'}'
 ;
+
+AtributoNormal:
+	{AtributoNormal}
+	nombre = (ID | STRING) ':' valor = (ValorAtributo | ValorAtributoValor | Lista) ';'
+;
+
+AtributoObjeto:
+	Objeto
+;
+
+Atributo:
+	AtributoNormal | AtributoObjeto
+;
+
+ValorAtributo:
+	{ValorAtributo}
+	(ID | STRING | INT | DECIMAL)+
+;
+
+Contenido returns Contenido:
+	Atributo | Objeto
+;
+
+ValorAtributoValor:
+	{ValorAtributoValor}
+	ID '=' DECIMAL
+;
+
+
+ListaInteger:
+	{ListaInteger}
+	'List of Integer' '=' '{' valores += INT (',' INT)* '}'
+;
+
 ListaString:
 	{ListaString}
-	'List of String = {'
-		valores += STRING (',' STRING)*
-	'}'
+	'List of String' '=' '{' valores += STRING (',' STRING)* '}'
 ;
+
+Lista:	
+	ListaInteger | ListaString
+;
+
+
+
 
 terminal DECIMAL:
 	INT '.' INT
 ;
+

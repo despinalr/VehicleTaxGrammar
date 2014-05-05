@@ -64,16 +64,17 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     switch (eClass.getClassifierID())
     {
-      case VtdslPackage.MODEL: return createModel();
-      case VtdslPackage.COMPONENTE: return createComponente();
-      case VtdslPackage.OBJETO_SIMPLE: return createObjetoSimple();
-      case VtdslPackage.OBJETO_NOMBRE: return createObjetoNombre();
+      case VtdslPackage.MODELO: return createModelo();
+      case VtdslPackage.OBJETO: return createObjeto();
+      case VtdslPackage.ATRIBUTO_NORMAL: return createAtributoNormal();
+      case VtdslPackage.ATRIBUTO_OBJETO: return createAtributoObjeto();
       case VtdslPackage.ATRIBUTO: return createAtributo();
-      case VtdslPackage.TIPO_SIMPLE: return createTipoSimple();
-      case VtdslPackage.TIPO_VALOR: return createTipoValor();
-      case VtdslPackage.LISTA: return createLista();
-      case VtdslPackage.LISTA_INT: return createListaInt();
+      case VtdslPackage.VALOR_ATRIBUTO: return createValorAtributo();
+      case VtdslPackage.CONTENIDO: return createContenido();
+      case VtdslPackage.VALOR_ATRIBUTO_VALOR: return createValorAtributoValor();
+      case VtdslPackage.LISTA_INTEGER: return createListaInteger();
       case VtdslPackage.LISTA_STRING: return createListaString();
+      case VtdslPackage.LISTA: return createLista();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -84,10 +85,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public Modelo createModelo()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    ModeloImpl modelo = new ModeloImpl();
+    return modelo;
   }
 
   /**
@@ -95,10 +96,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Componente createComponente()
+  public Objeto createObjeto()
   {
-    ComponenteImpl componente = new ComponenteImpl();
-    return componente;
+    ObjetoImpl objeto = new ObjetoImpl();
+    return objeto;
   }
 
   /**
@@ -106,10 +107,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ObjetoSimple createObjetoSimple()
+  public AtributoNormal createAtributoNormal()
   {
-    ObjetoSimpleImpl objetoSimple = new ObjetoSimpleImpl();
-    return objetoSimple;
+    AtributoNormalImpl atributoNormal = new AtributoNormalImpl();
+    return atributoNormal;
   }
 
   /**
@@ -117,10 +118,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ObjetoNombre createObjetoNombre()
+  public AtributoObjeto createAtributoObjeto()
   {
-    ObjetoNombreImpl objetoNombre = new ObjetoNombreImpl();
-    return objetoNombre;
+    AtributoObjetoImpl atributoObjeto = new AtributoObjetoImpl();
+    return atributoObjeto;
   }
 
   /**
@@ -139,10 +140,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TipoSimple createTipoSimple()
+  public ValorAtributo createValorAtributo()
   {
-    TipoSimpleImpl tipoSimple = new TipoSimpleImpl();
-    return tipoSimple;
+    ValorAtributoImpl valorAtributo = new ValorAtributoImpl();
+    return valorAtributo;
   }
 
   /**
@@ -150,10 +151,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TipoValor createTipoValor()
+  public Contenido createContenido()
   {
-    TipoValorImpl tipoValor = new TipoValorImpl();
-    return tipoValor;
+    ContenidoImpl contenido = new ContenidoImpl();
+    return contenido;
   }
 
   /**
@@ -161,10 +162,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Lista createLista()
+  public ValorAtributoValor createValorAtributoValor()
   {
-    ListaImpl lista = new ListaImpl();
-    return lista;
+    ValorAtributoValorImpl valorAtributoValor = new ValorAtributoValorImpl();
+    return valorAtributoValor;
   }
 
   /**
@@ -172,10 +173,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ListaInt createListaInt()
+  public ListaInteger createListaInteger()
   {
-    ListaIntImpl listaInt = new ListaIntImpl();
-    return listaInt;
+    ListaIntegerImpl listaInteger = new ListaIntegerImpl();
+    return listaInteger;
   }
 
   /**
@@ -187,6 +188,17 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     ListaStringImpl listaString = new ListaStringImpl();
     return listaString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Lista createLista()
+  {
+    ListaImpl lista = new ListaImpl();
+    return lista;
   }
 
   /**

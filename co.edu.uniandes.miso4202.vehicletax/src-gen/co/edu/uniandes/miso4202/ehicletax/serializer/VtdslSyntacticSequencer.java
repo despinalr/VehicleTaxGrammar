@@ -19,16 +19,16 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class VtdslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VtdslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_ListaInt___CommaKeyword_3_0_INTTerminalRuleCall_3_1__a;
-	protected AbstractElementAlias match_ListaString___CommaKeyword_3_0_STRINGTerminalRuleCall_3_1__a;
-	protected AbstractElementAlias match_TipoSimple_IDTerminalRuleCall_1_0_or_STRINGTerminalRuleCall_1_1;
+	protected AbstractElementAlias match_ListaInteger___CommaKeyword_5_0_INTTerminalRuleCall_5_1__a;
+	protected AbstractElementAlias match_ListaString___CommaKeyword_5_0_STRINGTerminalRuleCall_5_1__a;
+	protected AbstractElementAlias match_ValorAtributo___DECIMALTerminalRuleCall_1_3_or_IDTerminalRuleCall_1_0_or_INTTerminalRuleCall_1_2_or_STRINGTerminalRuleCall_1_1__p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (VtdslGrammarAccess) access;
-		match_ListaInt___CommaKeyword_3_0_INTTerminalRuleCall_3_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getListaIntAccess().getCommaKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getListaIntAccess().getINTTerminalRuleCall_3_1()));
-		match_ListaString___CommaKeyword_3_0_STRINGTerminalRuleCall_3_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getListaStringAccess().getCommaKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getListaStringAccess().getSTRINGTerminalRuleCall_3_1()));
-		match_TipoSimple_IDTerminalRuleCall_1_0_or_STRINGTerminalRuleCall_1_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getTipoSimpleAccess().getIDTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getTipoSimpleAccess().getSTRINGTerminalRuleCall_1_1()));
+		match_ListaInteger___CommaKeyword_5_0_INTTerminalRuleCall_5_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getListaIntegerAccess().getCommaKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getListaIntegerAccess().getINTTerminalRuleCall_5_1()));
+		match_ListaString___CommaKeyword_5_0_STRINGTerminalRuleCall_5_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getListaStringAccess().getCommaKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getListaStringAccess().getSTRINGTerminalRuleCall_5_1()));
+		match_ValorAtributo___DECIMALTerminalRuleCall_1_3_or_IDTerminalRuleCall_1_0_or_INTTerminalRuleCall_1_2_or_STRINGTerminalRuleCall_1_1__p = new AlternativeAlias(true, false, new TokenAlias(false, false, grammarAccess.getValorAtributoAccess().getDECIMALTerminalRuleCall_1_3()), new TokenAlias(false, false, grammarAccess.getValorAtributoAccess().getIDTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getValorAtributoAccess().getINTTerminalRuleCall_1_2()), new TokenAlias(false, false, grammarAccess.getValorAtributoAccess().getSTRINGTerminalRuleCall_1_1()));
 	}
 	
 	@Override
@@ -91,12 +91,12 @@ public class VtdslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_ListaInt___CommaKeyword_3_0_INTTerminalRuleCall_3_1__a.equals(syntax))
-				emit_ListaInt___CommaKeyword_3_0_INTTerminalRuleCall_3_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ListaString___CommaKeyword_3_0_STRINGTerminalRuleCall_3_1__a.equals(syntax))
-				emit_ListaString___CommaKeyword_3_0_STRINGTerminalRuleCall_3_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_TipoSimple_IDTerminalRuleCall_1_0_or_STRINGTerminalRuleCall_1_1.equals(syntax))
-				emit_TipoSimple_IDTerminalRuleCall_1_0_or_STRINGTerminalRuleCall_1_1(semanticObject, getLastNavigableState(), syntaxNodes);
+			if(match_ListaInteger___CommaKeyword_5_0_INTTerminalRuleCall_5_1__a.equals(syntax))
+				emit_ListaInteger___CommaKeyword_5_0_INTTerminalRuleCall_5_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ListaString___CommaKeyword_5_0_STRINGTerminalRuleCall_5_1__a.equals(syntax))
+				emit_ListaString___CommaKeyword_5_0_STRINGTerminalRuleCall_5_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ValorAtributo___DECIMALTerminalRuleCall_1_3_or_IDTerminalRuleCall_1_0_or_INTTerminalRuleCall_1_2_or_STRINGTerminalRuleCall_1_1__p.equals(syntax))
+				emit_ValorAtributo___DECIMALTerminalRuleCall_1_3_or_IDTerminalRuleCall_1_0_or_INTTerminalRuleCall_1_2_or_STRINGTerminalRuleCall_1_1__p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -105,7 +105,7 @@ public class VtdslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     (',' INT)*
 	 */
-	protected void emit_ListaInt___CommaKeyword_3_0_INTTerminalRuleCall_3_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ListaInteger___CommaKeyword_5_0_INTTerminalRuleCall_5_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -113,15 +113,15 @@ public class VtdslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     (',' STRING)*
 	 */
-	protected void emit_ListaString___CommaKeyword_3_0_STRINGTerminalRuleCall_3_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ListaString___CommaKeyword_5_0_STRINGTerminalRuleCall_5_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Syntax:
-	 *     STRING | ID
+	 *     (DECIMAL | INT | ID | STRING)+
 	 */
-	protected void emit_TipoSimple_IDTerminalRuleCall_1_0_or_STRINGTerminalRuleCall_1_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ValorAtributo___DECIMALTerminalRuleCall_1_3_or_IDTerminalRuleCall_1_0_or_INTTerminalRuleCall_1_2_or_STRINGTerminalRuleCall_1_1__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

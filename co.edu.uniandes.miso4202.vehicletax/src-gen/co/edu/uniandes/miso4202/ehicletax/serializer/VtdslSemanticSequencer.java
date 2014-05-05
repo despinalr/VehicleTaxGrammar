@@ -1,14 +1,13 @@
 package co.edu.uniandes.miso4202.ehicletax.serializer;
 
 import co.edu.uniandes.miso4202.ehicletax.services.VtdslGrammarAccess;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Atributo;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInt;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoNormal;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Model;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ObjetoNombre;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ObjetoSimple;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.TipoSimple;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.TipoValor;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Modelo;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributo;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributoValor;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -29,59 +28,52 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == VtdslPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case VtdslPackage.ATRIBUTO:
-				if(context == grammarAccess.getAtributoRule()) {
-					sequence_Atributo(context, (Atributo) semanticObject); 
+			case VtdslPackage.ATRIBUTO_NORMAL:
+				if(context == grammarAccess.getAtributoRule() ||
+				   context == grammarAccess.getAtributoNormalRule() ||
+				   context == grammarAccess.getContenidoRule()) {
+					sequence_AtributoNormal(context, (AtributoNormal) semanticObject); 
 					return; 
 				}
 				else break;
-			case VtdslPackage.LISTA_INT:
-				if(context == grammarAccess.getAtributoRule() ||
-				   context == grammarAccess.getListaRule() ||
-				   context == grammarAccess.getListaIntRule()) {
-					sequence_ListaInt(context, (ListaInt) semanticObject); 
+			case VtdslPackage.LISTA_INTEGER:
+				if(context == grammarAccess.getListaRule() ||
+				   context == grammarAccess.getListaIntegerRule()) {
+					sequence_ListaInteger(context, (ListaInteger) semanticObject); 
 					return; 
 				}
 				else break;
 			case VtdslPackage.LISTA_STRING:
-				if(context == grammarAccess.getAtributoRule() ||
-				   context == grammarAccess.getListaRule() ||
+				if(context == grammarAccess.getListaRule() ||
 				   context == grammarAccess.getListaStringRule()) {
 					sequence_ListaString(context, (ListaString) semanticObject); 
 					return; 
 				}
 				else break;
-			case VtdslPackage.MODEL:
-				if(context == grammarAccess.getModelRule()) {
-					sequence_Model(context, (Model) semanticObject); 
+			case VtdslPackage.MODELO:
+				if(context == grammarAccess.getModeloRule()) {
+					sequence_Modelo(context, (Modelo) semanticObject); 
 					return; 
 				}
 				else break;
-			case VtdslPackage.OBJETO_NOMBRE:
-				if(context == grammarAccess.getComponenteRule() ||
-				   context == grammarAccess.getObjetoNombreRule()) {
-					sequence_ObjetoNombre(context, (ObjetoNombre) semanticObject); 
-					return; 
-				}
-				else break;
-			case VtdslPackage.OBJETO_SIMPLE:
-				if(context == grammarAccess.getComponenteRule() ||
-				   context == grammarAccess.getObjetoSimpleRule()) {
-					sequence_ObjetoSimple(context, (ObjetoSimple) semanticObject); 
-					return; 
-				}
-				else break;
-			case VtdslPackage.TIPO_SIMPLE:
+			case VtdslPackage.OBJETO:
 				if(context == grammarAccess.getAtributoRule() ||
-				   context == grammarAccess.getTipoSimpleRule()) {
-					sequence_TipoSimple(context, (TipoSimple) semanticObject); 
+				   context == grammarAccess.getAtributoObjetoRule() ||
+				   context == grammarAccess.getContenidoRule() ||
+				   context == grammarAccess.getObjetoRule()) {
+					sequence_Objeto(context, (Objeto) semanticObject); 
 					return; 
 				}
 				else break;
-			case VtdslPackage.TIPO_VALOR:
-				if(context == grammarAccess.getAtributoRule() ||
-				   context == grammarAccess.getTipoValorRule()) {
-					sequence_TipoValor(context, (TipoValor) semanticObject); 
+			case VtdslPackage.VALOR_ATRIBUTO:
+				if(context == grammarAccess.getValorAtributoRule()) {
+					sequence_ValorAtributo(context, (ValorAtributo) semanticObject); 
+					return; 
+				}
+				else break;
+			case VtdslPackage.VALOR_ATRIBUTO_VALOR:
+				if(context == grammarAccess.getValorAtributoValorRule()) {
+					sequence_ValorAtributoValor(context, (ValorAtributoValor) semanticObject); 
 					return; 
 				}
 				else break;
@@ -91,9 +83,9 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     {Atributo}
+	 *     ((nombre=ID | nombre=STRING) (valor=ValorAtributo | valor=ValorAtributoValor | valor=Lista))
 	 */
-	protected void sequence_Atributo(EObject context, Atributo semanticObject) {
+	protected void sequence_AtributoNormal(EObject context, AtributoNormal semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -102,7 +94,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     valores+=INT
 	 */
-	protected void sequence_ListaInt(EObject context, ListaInt semanticObject) {
+	protected void sequence_ListaInteger(EObject context, ListaInteger semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -118,45 +110,36 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     componentes+=Componente*
+	 *     (objetos+=Objeto*)
 	 */
-	protected void sequence_Model(EObject context, Model semanticObject) {
+	protected void sequence_Modelo(EObject context, Modelo semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID descripcion=STRING componentes+=Componente*)
+	 *     (name=ID descripcion=STRING? atributos+=Atributo*)
 	 */
-	protected void sequence_ObjetoNombre(EObject context, ObjetoNombre semanticObject) {
+	protected void sequence_Objeto(EObject context, Objeto semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID componentes+=Componente*)
+	 *     {ValorAtributoValor}
 	 */
-	protected void sequence_ObjetoSimple(EObject context, ObjetoSimple semanticObject) {
+	protected void sequence_ValorAtributoValor(EObject context, ValorAtributoValor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     {TipoSimple}
+	 *     {ValorAtributo}
 	 */
-	protected void sequence_TipoSimple(EObject context, TipoSimple semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     {TipoValor}
-	 */
-	protected void sequence_TipoValor(EObject context, TipoValor semanticObject) {
+	protected void sequence_ValorAtributo(EObject context, ValorAtributo semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

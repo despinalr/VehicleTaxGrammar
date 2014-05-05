@@ -7,26 +7,29 @@
     editorPluginID="co.edu.uniandes.miso4202.vehicletax.editor" runtimeVersion="2.9">
   <genPackages prefix="Vtdsl" basePackage="co.edu.uniandes.miso4202.ehicletax" disposableProviderFactory="true"
       fileExtensions="vtdsl" ecorePackage="Vtdsl.ecore#/">
-    <genClasses ecoreClass="Vtdsl.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Model/componentes"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//Modelo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Modelo/objetos"/>
     </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//Componente">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Componente/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Componente/componentes"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//Objeto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Objeto/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Objeto/descripcion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Objeto/atributos"/>
     </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//ObjetoSimple"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//ObjetoNombre">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//ObjetoNombre/descripcion"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//AtributoNormal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoNormal/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//AtributoNormal/valor"/>
     </genClasses>
+    <genClasses ecoreClass="Vtdsl.ecore#//AtributoObjeto"/>
     <genClasses ecoreClass="Vtdsl.ecore#//Atributo"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//TipoSimple"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//TipoValor"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//Lista"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//ListaInt">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//ListaInt/valores"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//ValorAtributo"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//Contenido"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//ValorAtributoValor"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//ListaInteger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//ListaInteger/valores"/>
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//ListaString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//ListaString/valores"/>
     </genClasses>
+    <genClasses ecoreClass="Vtdsl.ecore#//Lista"/>
   </genPackages>
 </genmodel:GenModel>
