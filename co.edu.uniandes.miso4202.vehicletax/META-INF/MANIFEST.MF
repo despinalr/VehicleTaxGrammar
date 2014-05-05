@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: co.edu.uniandes.miso4202.vehicletax
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: co.edu.uniandes.miso4202.vehicletax; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: co.edu.uniandes.miso4202.ehicletax,
+ co.edu.uniandes.miso4202.ehicletax.validation,
+ co.edu.uniandes.miso4202.ehicletax.scoping,
+ co.edu.uniandes.miso4202.ehicletax.generator,
+ co.edu.uniandes.miso4202.ehicletax.formatting,
+ co.edu.uniandes.miso4202.ehicletax.services,
+ co.edu.uniandes.miso4202.ehicletax.vtdsl,
+ co.edu.uniandes.miso4202.ehicletax.vtdsl.impl,
+ co.edu.uniandes.miso4202.ehicletax.vtdsl.util,
+ co.edu.uniandes.miso4202.ehicletax.serializer,
+ co.edu.uniandes.miso4202.ehicletax.parser.antlr,
+ co.edu.uniandes.miso4202.ehicletax.parser.antlr.internal
+

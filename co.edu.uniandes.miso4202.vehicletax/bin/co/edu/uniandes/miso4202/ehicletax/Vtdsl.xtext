@@ -1,0 +1,60 @@
+grammar co.edu.uniandes.miso4202.ehicletax.Vtdsl with org.eclipse.xtext.common.Terminals
+
+
+generate vtdsl "http://www.edu.co/uniandes/miso4202/ehicletax/Vtdsl"
+
+Model:	
+	(componentes += Componente)*
+;
+	
+	
+Componente:
+	ObjetoSimple | ObjetoNombre
+;
+ObjetoSimple:
+	name = ID '{'
+	(componentes += Componente)*
+	'}'
+;
+
+ObjetoNombre:
+	name = ID descripcion = STRING '{'
+	(componentes += Componente)*
+	'}'
+;	
+
+Atributo: 	
+	{Atributo}
+	ID | STRING ':' (TipoSimple | TipoValor | Lista) ';'
+;
+
+TipoSimple:
+	{TipoSimple}	
+	(ID | STRING) ';'
+;
+
+TipoValor:
+	{TipoValor}
+	ID ':' ID '=' DECIMAL ';'
+;
+
+Lista:
+	ListaInt | ListaString
+;
+
+ListaInt:
+	{ListaInt}
+	'List of Integer = {'
+		valores += INT (',' INT)*		
+	'}'
+;
+ListaString:
+	{ListaString}
+	'List of String = {'
+		valores += STRING (',' STRING)*
+	'}'
+;
+
+terminal DECIMAL:
+	INT '.' INT
+;
