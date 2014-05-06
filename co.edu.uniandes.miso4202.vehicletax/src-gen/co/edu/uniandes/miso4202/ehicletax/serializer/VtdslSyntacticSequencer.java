@@ -119,7 +119,7 @@ public class VtdslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     STRING | ID
+	 *     ID | STRING
 	 */
 	protected void emit_TipoSimple_IDTerminalRuleCall_1_0_or_STRINGTerminalRuleCall_1_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
