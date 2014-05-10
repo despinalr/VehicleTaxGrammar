@@ -64,16 +64,30 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     switch (eClass.getClassifierID())
     {
-      case VtdslPackage.MODEL: return createModel();
-      case VtdslPackage.COMPONENTE: return createComponente();
-      case VtdslPackage.OBJETO_SIMPLE: return createObjetoSimple();
-      case VtdslPackage.OBJETO_NOMBRE: return createObjetoNombre();
+      case VtdslPackage.MODELO: return createModelo();
+      case VtdslPackage.OBJETO: return createObjeto();
+      case VtdslPackage.ATRIBUTO_NORMAL: return createAtributoNormal();
+      case VtdslPackage.ATRIBUTO_ASIGNACION: return createAtributoAsignacion();
+      case VtdslPackage.ATRIBUTO_OBJETO: return createAtributoObjeto();
       case VtdslPackage.ATRIBUTO: return createAtributo();
-      case VtdslPackage.TIPO_SIMPLE: return createTipoSimple();
-      case VtdslPackage.TIPO_VALOR: return createTipoValor();
-      case VtdslPackage.LISTA: return createLista();
-      case VtdslPackage.LISTA_INT: return createListaInt();
+      case VtdslPackage.VALOR_ATRIBUTO: return createValorAtributo();
+      case VtdslPackage.CONTENIDO: return createContenido();
+      case VtdslPackage.VALOR_ATRIBUTO_VALOR: return createValorAtributoValor();
+      case VtdslPackage.LISTA_INTEGER: return createListaInteger();
       case VtdslPackage.LISTA_STRING: return createListaString();
+      case VtdslPackage.LISTA: return createLista();
+      case VtdslPackage.MODULE: return createModule();
+      case VtdslPackage.STATEMENT: return createStatement();
+      case VtdslPackage.DEFINITION: return createDefinition();
+      case VtdslPackage.EVALUATION: return createEvaluation();
+      case VtdslPackage.EXPRESSION: return createExpression();
+      case VtdslPackage.PLUS: return createPlus();
+      case VtdslPackage.MINUS: return createMinus();
+      case VtdslPackage.MULTI: return createMulti();
+      case VtdslPackage.DIV: return createDiv();
+      case VtdslPackage.NUMBER_LITERAL: return createNumberLiteral();
+      case VtdslPackage.STRING: return createSTRING();
+      case VtdslPackage.ID: return createID();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -84,10 +98,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public Modelo createModelo()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    ModeloImpl modelo = new ModeloImpl();
+    return modelo;
   }
 
   /**
@@ -95,10 +109,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Componente createComponente()
+  public Objeto createObjeto()
   {
-    ComponenteImpl componente = new ComponenteImpl();
-    return componente;
+    ObjetoImpl objeto = new ObjetoImpl();
+    return objeto;
   }
 
   /**
@@ -106,10 +120,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ObjetoSimple createObjetoSimple()
+  public AtributoNormal createAtributoNormal()
   {
-    ObjetoSimpleImpl objetoSimple = new ObjetoSimpleImpl();
-    return objetoSimple;
+    AtributoNormalImpl atributoNormal = new AtributoNormalImpl();
+    return atributoNormal;
   }
 
   /**
@@ -117,10 +131,21 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ObjetoNombre createObjetoNombre()
+  public AtributoAsignacion createAtributoAsignacion()
   {
-    ObjetoNombreImpl objetoNombre = new ObjetoNombreImpl();
-    return objetoNombre;
+    AtributoAsignacionImpl atributoAsignacion = new AtributoAsignacionImpl();
+    return atributoAsignacion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtributoObjeto createAtributoObjeto()
+  {
+    AtributoObjetoImpl atributoObjeto = new AtributoObjetoImpl();
+    return atributoObjeto;
   }
 
   /**
@@ -139,10 +164,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TipoSimple createTipoSimple()
+  public ValorAtributo createValorAtributo()
   {
-    TipoSimpleImpl tipoSimple = new TipoSimpleImpl();
-    return tipoSimple;
+    ValorAtributoImpl valorAtributo = new ValorAtributoImpl();
+    return valorAtributo;
   }
 
   /**
@@ -150,10 +175,43 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TipoValor createTipoValor()
+  public Contenido createContenido()
   {
-    TipoValorImpl tipoValor = new TipoValorImpl();
-    return tipoValor;
+    ContenidoImpl contenido = new ContenidoImpl();
+    return contenido;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ValorAtributoValor createValorAtributoValor()
+  {
+    ValorAtributoValorImpl valorAtributoValor = new ValorAtributoValorImpl();
+    return valorAtributoValor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListaInteger createListaInteger()
+  {
+    ListaIntegerImpl listaInteger = new ListaIntegerImpl();
+    return listaInteger;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListaString createListaString()
+  {
+    ListaStringImpl listaString = new ListaStringImpl();
+    return listaString;
   }
 
   /**
@@ -172,10 +230,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ListaInt createListaInt()
+  public Module createModule()
   {
-    ListaIntImpl listaInt = new ListaIntImpl();
-    return listaInt;
+    ModuleImpl module = new ModuleImpl();
+    return module;
   }
 
   /**
@@ -183,10 +241,120 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ListaString createListaString()
+  public Statement createStatement()
   {
-    ListaStringImpl listaString = new ListaStringImpl();
-    return listaString;
+    StatementImpl statement = new StatementImpl();
+    return statement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Definition createDefinition()
+  {
+    DefinitionImpl definition = new DefinitionImpl();
+    return definition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Evaluation createEvaluation()
+  {
+    EvaluationImpl evaluation = new EvaluationImpl();
+    return evaluation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Plus createPlus()
+  {
+    PlusImpl plus = new PlusImpl();
+    return plus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Minus createMinus()
+  {
+    MinusImpl minus = new MinusImpl();
+    return minus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Multi createMulti()
+  {
+    MultiImpl multi = new MultiImpl();
+    return multi;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Div createDiv()
+  {
+    DivImpl div = new DivImpl();
+    return div;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NumberLiteral createNumberLiteral()
+  {
+    NumberLiteralImpl numberLiteral = new NumberLiteralImpl();
+    return numberLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public STRING createSTRING()
+  {
+    STRINGImpl string = new STRINGImpl();
+    return string;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ID createID()
+  {
+    IDImpl id = new IDImpl();
+    return id;
   }
 
   /**

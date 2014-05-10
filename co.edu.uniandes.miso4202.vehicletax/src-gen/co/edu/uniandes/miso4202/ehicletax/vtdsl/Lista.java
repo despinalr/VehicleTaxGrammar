@@ -2,6 +2,7 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,6 @@ package co.edu.uniandes.miso4202.ehicletax.vtdsl;
  * @model
  * @generated
  */
-public interface Lista extends Atributo
+public interface Lista extends EObject
 {
 } // Lista

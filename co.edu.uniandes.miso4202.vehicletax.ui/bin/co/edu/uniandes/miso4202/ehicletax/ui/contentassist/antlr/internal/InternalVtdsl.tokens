@@ -1,24 +1,38 @@
-T__19=19
 RULE_ID=4
+T__26=26
+T__25=25
+T__24=24
+T__23=23
+T__22=22
+RULE_ANY_OTHER=11
+T__21=21
+T__20=20
+RULE_SL_COMMENT=9
+RULE_ML_COMMENT=8
+T__19=19
 RULE_STRING=5
 T__16=16
 T__15=15
 T__18=18
 T__17=17
+RULE_NUMBER=6
 T__12=12
 T__14=14
 T__13=13
-RULE_ANY_OTHER=11
 RULE_INT=7
 RULE_WS=10
-RULE_DECIMAL=6
-RULE_SL_COMMENT=9
-RULE_ML_COMMENT=8
-';'=14
 '}'=13
-'='=16
-'List of Integer = {'=17
-':'=15
-','=18
+'List of Integer'=17
+'/'=24
 '{'=12
-'List of String = {'=19
+'def'=20
+';'=15
+'List of String'=19
+'='=16
+'('=25
+':'=14
+'-'=22
+'*'=23
+'+'=21
+','=18
+')'=26
