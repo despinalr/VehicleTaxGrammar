@@ -2,33 +2,33 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoNormal;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Statement;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Atributo Normal</b></em>'.
+ * An implementation of the model object '<em><b>Atributo Asignado</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoNormalImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoNormalImpl#getValor <em>Valor</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoAsignadoImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoAsignadoImpl#getValor <em>Valor</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
+public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsignado
 {
   /**
    * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -58,14 +58,14 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
    * @generated
    * @ordered
    */
-  protected EObject valor;
+  protected Statement valor;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AtributoNormalImpl()
+  protected AtributoAsignadoImpl()
   {
     super();
   }
@@ -78,7 +78,7 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
   @Override
   protected EClass eStaticClass()
   {
-    return VtdslPackage.Literals.ATRIBUTO_NORMAL;
+    return VtdslPackage.Literals.ATRIBUTO_ASIGNADO;
   }
 
   /**
@@ -101,7 +101,7 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
     String oldNombre = nombre;
     nombre = newNombre;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_NORMAL__NOMBRE, oldNombre, nombre));
+      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_ASIGNADO__NOMBRE, oldNombre, nombre));
   }
 
   /**
@@ -109,7 +109,7 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getValor()
+  public Statement getValor()
   {
     return valor;
   }
@@ -119,13 +119,13 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValor(EObject newValor, NotificationChain msgs)
+  public NotificationChain basicSetValor(Statement newValor, NotificationChain msgs)
   {
-    EObject oldValor = valor;
+    Statement oldValor = valor;
     valor = newValor;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_NORMAL__VALOR, oldValor, newValor);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_ASIGNADO__VALOR, oldValor, newValor);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -136,20 +136,20 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValor(EObject newValor)
+  public void setValor(Statement newValor)
   {
     if (newValor != valor)
     {
       NotificationChain msgs = null;
       if (valor != null)
-        msgs = ((InternalEObject)valor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_NORMAL__VALOR, null, msgs);
+        msgs = ((InternalEObject)valor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_ASIGNADO__VALOR, null, msgs);
       if (newValor != null)
-        msgs = ((InternalEObject)newValor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_NORMAL__VALOR, null, msgs);
+        msgs = ((InternalEObject)newValor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_ASIGNADO__VALOR, null, msgs);
       msgs = basicSetValor(newValor, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_NORMAL__VALOR, newValor, newValor));
+      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_ASIGNADO__VALOR, newValor, newValor));
   }
 
   /**
@@ -162,7 +162,7 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_NORMAL__VALOR:
+      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
         return basicSetValor(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -178,9 +178,9 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_NORMAL__NOMBRE:
+      case VtdslPackage.ATRIBUTO_ASIGNADO__NOMBRE:
         return getNombre();
-      case VtdslPackage.ATRIBUTO_NORMAL__VALOR:
+      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
         return getValor();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -196,11 +196,11 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_NORMAL__NOMBRE:
+      case VtdslPackage.ATRIBUTO_ASIGNADO__NOMBRE:
         setNombre((String)newValue);
         return;
-      case VtdslPackage.ATRIBUTO_NORMAL__VALOR:
-        setValor((EObject)newValue);
+      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
+        setValor((Statement)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -216,11 +216,11 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_NORMAL__NOMBRE:
+      case VtdslPackage.ATRIBUTO_ASIGNADO__NOMBRE:
         setNombre(NOMBRE_EDEFAULT);
         return;
-      case VtdslPackage.ATRIBUTO_NORMAL__VALOR:
-        setValor((EObject)null);
+      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
+        setValor((Statement)null);
         return;
     }
     super.eUnset(featureID);
@@ -236,9 +236,9 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_NORMAL__NOMBRE:
+      case VtdslPackage.ATRIBUTO_ASIGNADO__NOMBRE:
         return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-      case VtdslPackage.ATRIBUTO_NORMAL__VALOR:
+      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
         return valor != null;
     }
     return super.eIsSet(featureID);
@@ -261,4 +261,4 @@ public class AtributoNormalImpl extends AtributoImpl implements AtributoNormal
     return result.toString();
   }
 
-} //AtributoNormalImpl
+} //AtributoAsignadoImpl

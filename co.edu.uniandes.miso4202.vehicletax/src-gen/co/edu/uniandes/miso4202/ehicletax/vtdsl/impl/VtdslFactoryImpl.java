@@ -66,13 +66,12 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
     {
       case VtdslPackage.MODELO: return createModelo();
       case VtdslPackage.OBJETO: return createObjeto();
-      case VtdslPackage.ATRIBUTO_NORMAL: return createAtributoNormal();
-      case VtdslPackage.ATRIBUTO_ASIGNACION: return createAtributoAsignacion();
-      case VtdslPackage.ATRIBUTO_OBJETO: return createAtributoObjeto();
+      case VtdslPackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
+      case VtdslPackage.ATRIBUTO_ASIGNADO: return createAtributoAsignado();
       case VtdslPackage.ATRIBUTO: return createAtributo();
       case VtdslPackage.VALOR_ATRIBUTO: return createValorAtributo();
+      case VtdslPackage.VALOR_COMPLETO: return createValorCompleto();
       case VtdslPackage.CONTENIDO: return createContenido();
-      case VtdslPackage.VALOR_ATRIBUTO_VALOR: return createValorAtributoValor();
       case VtdslPackage.LISTA_INTEGER: return createListaInteger();
       case VtdslPackage.LISTA_STRING: return createListaString();
       case VtdslPackage.LISTA: return createLista();
@@ -81,6 +80,7 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
       case VtdslPackage.DEFINITION: return createDefinition();
       case VtdslPackage.EVALUATION: return createEvaluation();
       case VtdslPackage.EXPRESSION: return createExpression();
+      case VtdslPackage.ATRIBUTO_TIPADO: return createAtributoTipado();
       case VtdslPackage.PLUS: return createPlus();
       case VtdslPackage.MINUS: return createMinus();
       case VtdslPackage.MULTI: return createMulti();
@@ -120,10 +120,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AtributoNormal createAtributoNormal()
+  public AtributoSimple createAtributoSimple()
   {
-    AtributoNormalImpl atributoNormal = new AtributoNormalImpl();
-    return atributoNormal;
+    AtributoSimpleImpl atributoSimple = new AtributoSimpleImpl();
+    return atributoSimple;
   }
 
   /**
@@ -131,21 +131,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AtributoAsignacion createAtributoAsignacion()
+  public AtributoAsignado createAtributoAsignado()
   {
-    AtributoAsignacionImpl atributoAsignacion = new AtributoAsignacionImpl();
-    return atributoAsignacion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AtributoObjeto createAtributoObjeto()
-  {
-    AtributoObjetoImpl atributoObjeto = new AtributoObjetoImpl();
-    return atributoObjeto;
+    AtributoAsignadoImpl atributoAsignado = new AtributoAsignadoImpl();
+    return atributoAsignado;
   }
 
   /**
@@ -175,10 +164,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Contenido createContenido()
+  public ValorCompleto createValorCompleto()
   {
-    ContenidoImpl contenido = new ContenidoImpl();
-    return contenido;
+    ValorCompletoImpl valorCompleto = new ValorCompletoImpl();
+    return valorCompleto;
   }
 
   /**
@@ -186,10 +175,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ValorAtributoValor createValorAtributoValor()
+  public Contenido createContenido()
   {
-    ValorAtributoValorImpl valorAtributoValor = new ValorAtributoValorImpl();
-    return valorAtributoValor;
+    ContenidoImpl contenido = new ContenidoImpl();
+    return contenido;
   }
 
   /**
@@ -278,6 +267,17 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtributoTipado createAtributoTipado()
+  {
+    AtributoTipadoImpl atributoTipado = new AtributoTipadoImpl();
+    return atributoTipado;
   }
 
   /**

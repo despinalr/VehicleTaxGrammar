@@ -41,31 +41,22 @@ public interface VtdslFactory extends EFactory
   Objeto createObjeto();
 
   /**
-   * Returns a new object of class '<em>Atributo Normal</em>'.
+   * Returns a new object of class '<em>Atributo Simple</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atributo Normal</em>'.
+   * @return a new object of class '<em>Atributo Simple</em>'.
    * @generated
    */
-  AtributoNormal createAtributoNormal();
+  AtributoSimple createAtributoSimple();
 
   /**
-   * Returns a new object of class '<em>Atributo Asignacion</em>'.
+   * Returns a new object of class '<em>Atributo Asignado</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atributo Asignacion</em>'.
+   * @return a new object of class '<em>Atributo Asignado</em>'.
    * @generated
    */
-  AtributoAsignacion createAtributoAsignacion();
-
-  /**
-   * Returns a new object of class '<em>Atributo Objeto</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atributo Objeto</em>'.
-   * @generated
-   */
-  AtributoObjeto createAtributoObjeto();
+  AtributoAsignado createAtributoAsignado();
 
   /**
    * Returns a new object of class '<em>Atributo</em>'.
@@ -86,6 +77,15 @@ public interface VtdslFactory extends EFactory
   ValorAtributo createValorAtributo();
 
   /**
+   * Returns a new object of class '<em>Valor Completo</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Valor Completo</em>'.
+   * @generated
+   */
+  ValorCompleto createValorCompleto();
+
+  /**
    * Returns a new object of class '<em>Contenido</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -93,15 +93,6 @@ public interface VtdslFactory extends EFactory
    * @generated
    */
   Contenido createContenido();
-
-  /**
-   * Returns a new object of class '<em>Valor Atributo Valor</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Valor Atributo Valor</em>'.
-   * @generated
-   */
-  ValorAtributoValor createValorAtributoValor();
 
   /**
    * Returns a new object of class '<em>Lista Integer</em>'.
@@ -174,6 +165,15 @@ public interface VtdslFactory extends EFactory
    * @generated
    */
   Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Atributo Tipado</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atributo Tipado</em>'.
+   * @generated
+   */
+  AtributoTipado createAtributoTipado();
 
   /**
    * Returns a new object of class '<em>Plus</em>'.

@@ -85,19 +85,14 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
         return createObjetoAdapter();
       }
       @Override
-      public Adapter caseAtributoNormal(AtributoNormal object)
+      public Adapter caseAtributoSimple(AtributoSimple object)
       {
-        return createAtributoNormalAdapter();
+        return createAtributoSimpleAdapter();
       }
       @Override
-      public Adapter caseAtributoAsignacion(AtributoAsignacion object)
+      public Adapter caseAtributoAsignado(AtributoAsignado object)
       {
-        return createAtributoAsignacionAdapter();
-      }
-      @Override
-      public Adapter caseAtributoObjeto(AtributoObjeto object)
-      {
-        return createAtributoObjetoAdapter();
+        return createAtributoAsignadoAdapter();
       }
       @Override
       public Adapter caseAtributo(Atributo object)
@@ -110,14 +105,14 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
         return createValorAtributoAdapter();
       }
       @Override
+      public Adapter caseValorCompleto(ValorCompleto object)
+      {
+        return createValorCompletoAdapter();
+      }
+      @Override
       public Adapter caseContenido(Contenido object)
       {
         return createContenidoAdapter();
-      }
-      @Override
-      public Adapter caseValorAtributoValor(ValorAtributoValor object)
-      {
-        return createValorAtributoValorAdapter();
       }
       @Override
       public Adapter caseListaInteger(ListaInteger object)
@@ -158,6 +153,11 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseExpression(Expression object)
       {
         return createExpressionAdapter();
+      }
+      @Override
+      public Adapter caseAtributoTipado(AtributoTipado object)
+      {
+        return createAtributoTipadoAdapter();
       }
       @Override
       public Adapter casePlus(Plus object)
@@ -247,46 +247,31 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoNormal <em>Atributo Normal</em>}'.
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoSimple <em>Atributo Simple</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoNormal
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoSimple
    * @generated
    */
-  public Adapter createAtributoNormalAdapter()
+  public Adapter createAtributoSimpleAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignacion <em>Atributo Asignacion</em>}'.
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado <em>Atributo Asignado</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignacion
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado
    * @generated
    */
-  public Adapter createAtributoAsignacionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoObjeto <em>Atributo Objeto</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoObjeto
-   * @generated
-   */
-  public Adapter createAtributoObjetoAdapter()
+  public Adapter createAtributoAsignadoAdapter()
   {
     return null;
   }
@@ -322,6 +307,21 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto <em>Valor Completo</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto
+   * @generated
+   */
+  public Adapter createValorCompletoAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Contenido <em>Contenido</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -332,21 +332,6 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createContenidoAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributoValor <em>Valor Atributo Valor</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributoValor
-   * @generated
-   */
-  public Adapter createValorAtributoValorAdapter()
   {
     return null;
   }
@@ -467,6 +452,21 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoTipado <em>Atributo Tipado</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoTipado
+   * @generated
+   */
+  public Adapter createAtributoTipadoAdapter()
   {
     return null;
   }

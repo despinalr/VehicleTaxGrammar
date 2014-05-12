@@ -2,26 +2,25 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Atributo Normal</b></em>'.
+ * A representation of the model object '<em><b>Atributo Asignado</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoNormal#getNombre <em>Nombre</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoNormal#getValor <em>Valor</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado#getValor <em>Valor</em>}</li>
  * </ul>
  * </p>
  *
- * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getAtributoNormal()
+ * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getAtributoAsignado()
  * @model
  * @generated
  */
-public interface AtributoNormal extends Atributo
+public interface AtributoAsignado extends Atributo
 {
   /**
    * Returns the value of the '<em><b>Nombre</b></em>' attribute.
@@ -33,14 +32,14 @@ public interface AtributoNormal extends Atributo
    * <!-- end-user-doc -->
    * @return the value of the '<em>Nombre</em>' attribute.
    * @see #setNombre(String)
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getAtributoNormal_Nombre()
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getAtributoAsignado_Nombre()
    * @model
    * @generated
    */
   String getNombre();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoNormal#getNombre <em>Nombre</em>}' attribute.
+   * Sets the value of the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado#getNombre <em>Nombre</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Nombre</em>' attribute.
@@ -58,21 +57,21 @@ public interface AtributoNormal extends Atributo
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Valor</em>' containment reference.
-   * @see #setValor(EObject)
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getAtributoNormal_Valor()
+   * @see #setValor(Statement)
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getAtributoAsignado_Valor()
    * @model containment="true"
    * @generated
    */
-  EObject getValor();
+  Statement getValor();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoNormal#getValor <em>Valor</em>}' containment reference.
+   * Sets the value of the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado#getValor <em>Valor</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Valor</em>' containment reference.
    * @see #getValor()
    * @generated
    */
-  void setValor(EObject value);
+  void setValor(Statement value);
 
-} // AtributoNormal
+} // AtributoAsignado

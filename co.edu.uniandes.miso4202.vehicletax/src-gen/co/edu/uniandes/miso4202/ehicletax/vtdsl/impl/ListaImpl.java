@@ -7,8 +7,6 @@ import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lista</b></em>'.
@@ -18,7 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ListaImpl extends MinimalEObjectImpl.Container implements Lista
+public class ListaImpl extends ValorCompletoImpl implements Lista
 {
   /**
    * <!-- begin-user-doc -->

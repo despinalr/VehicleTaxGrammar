@@ -2,7 +2,6 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ValorAtributo extends EObject
+public interface ValorAtributo extends ValorCompleto
 {
 } // ValorAtributo

@@ -6,27 +6,24 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="objetos" upperBound="-1"
         eType="#//Objeto" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Objeto" eSuperTypes="#//AtributoObjeto">
+  <eClassifiers xsi:type="ecore:EClass" name="Objeto" eSuperTypes="#//Contenido">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//Atributo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objetos" upperBound="-1"
+        eType="#//Objeto" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AtributoNormal" eSuperTypes="#//Atributo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="valor" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AtributoAsignacion" eSuperTypes="#//Atributo">
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoSimple" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoAsignado" eSuperTypes="#//Atributo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valor" eType="#//Statement"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AtributoObjeto" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo" eSuperTypes="#//Contenido"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ValorAtributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ValorAtributo" eSuperTypes="#//ValorCompleto"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ValorCompleto"/>
   <eClassifiers xsi:type="ecore:EClass" name="Contenido"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ValorAtributoValor"/>
   <eClassifiers xsi:type="ecore:EClass" name="ListaInteger" eSuperTypes="#//Lista">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
@@ -35,7 +32,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Lista"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lista" eSuperTypes="#//ValorCompleto"/>
   <eClassifiers xsi:type="ecore:EClass" name="Module">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
@@ -50,6 +47,12 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoTipado" eSuperTypes="#//AtributoSimple">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valor" eType="#//ValorCompleto"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Plus" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expression"
         containment="true"/>

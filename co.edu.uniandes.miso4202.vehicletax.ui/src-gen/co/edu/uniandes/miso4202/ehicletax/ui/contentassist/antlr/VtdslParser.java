@@ -37,10 +37,10 @@ public class VtdslParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getAtributoNormalAccess().getNombreAlternatives_1_0(), "rule__AtributoNormal__NombreAlternatives_1_0");
-					put(grammarAccess.getAtributoNormalAccess().getValorAlternatives_3_0(), "rule__AtributoNormal__ValorAlternatives_3_0");
+					put(grammarAccess.getAtributoSimpleAccess().getNombreAlternatives_1_0(), "rule__AtributoSimple__NombreAlternatives_1_0");
 					put(grammarAccess.getAtributoAccess().getAlternatives(), "rule__Atributo__Alternatives");
 					put(grammarAccess.getValorAtributoAccess().getAlternatives_1(), "rule__ValorAtributo__Alternatives_1");
+					put(grammarAccess.getValorCompletoAccess().getAlternatives(), "rule__ValorCompleto__Alternatives");
 					put(grammarAccess.getContenidoAccess().getAlternatives(), "rule__Contenido__Alternatives");
 					put(grammarAccess.getListaAccess().getAlternatives(), "rule__Lista__Alternatives");
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
@@ -49,14 +49,14 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryExpressionAccess().getAlternatives(), "rule__PrimaryExpression__Alternatives");
 					put(grammarAccess.getModeloAccess().getGroup(), "rule__Modelo__Group__0");
 					put(grammarAccess.getObjetoAccess().getGroup(), "rule__Objeto__Group__0");
-					put(grammarAccess.getAtributoNormalAccess().getGroup(), "rule__AtributoNormal__Group__0");
-					put(grammarAccess.getAtributoAsignacionAccess().getGroup(), "rule__AtributoAsignacion__Group__0");
+					put(grammarAccess.getAtributoSimpleAccess().getGroup(), "rule__AtributoSimple__Group__0");
+					put(grammarAccess.getAtributoSimpleAccess().getGroup_4(), "rule__AtributoSimple__Group_4__0");
+					put(grammarAccess.getAtributoAsignadoAccess().getGroup(), "rule__AtributoAsignado__Group__0");
 					put(grammarAccess.getValorAtributoAccess().getGroup(), "rule__ValorAtributo__Group__0");
-					put(grammarAccess.getValorAtributoValorAccess().getGroup(), "rule__ValorAtributoValor__Group__0");
 					put(grammarAccess.getListaIntegerAccess().getGroup(), "rule__ListaInteger__Group__0");
-					put(grammarAccess.getListaIntegerAccess().getGroup_5(), "rule__ListaInteger__Group_5__0");
+					put(grammarAccess.getListaIntegerAccess().getGroup_3(), "rule__ListaInteger__Group_3__0");
 					put(grammarAccess.getListaStringAccess().getGroup(), "rule__ListaString__Group__0");
-					put(grammarAccess.getListaStringAccess().getGroup_5(), "rule__ListaString__Group_5__0");
+					put(grammarAccess.getListaStringAccess().getGroup_3(), "rule__ListaString__Group_3__0");
 					put(grammarAccess.getModuleAccess().getGroup(), "rule__Module__Group__0");
 					put(grammarAccess.getDefinitionAccess().getGroup(), "rule__Definition__Group__0");
 					put(grammarAccess.getEvaluationAccess().getGroup(), "rule__Evaluation__Group__0");
@@ -76,12 +76,16 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getObjetoAccess().getNameAssignment_0(), "rule__Objeto__NameAssignment_0");
 					put(grammarAccess.getObjetoAccess().getDescripcionAssignment_1(), "rule__Objeto__DescripcionAssignment_1");
 					put(grammarAccess.getObjetoAccess().getAtributosAssignment_3(), "rule__Objeto__AtributosAssignment_3");
-					put(grammarAccess.getAtributoNormalAccess().getNombreAssignment_1(), "rule__AtributoNormal__NombreAssignment_1");
-					put(grammarAccess.getAtributoNormalAccess().getValorAssignment_3(), "rule__AtributoNormal__ValorAssignment_3");
-					put(grammarAccess.getAtributoAsignacionAccess().getNombreAssignment_1(), "rule__AtributoAsignacion__NombreAssignment_1");
-					put(grammarAccess.getAtributoAsignacionAccess().getValorAssignment_3(), "rule__AtributoAsignacion__ValorAssignment_3");
-					put(grammarAccess.getListaIntegerAccess().getValoresAssignment_4(), "rule__ListaInteger__ValoresAssignment_4");
-					put(grammarAccess.getListaStringAccess().getValoresAssignment_4(), "rule__ListaString__ValoresAssignment_4");
+					put(grammarAccess.getObjetoAccess().getObjetosAssignment_4(), "rule__Objeto__ObjetosAssignment_4");
+					put(grammarAccess.getAtributoSimpleAccess().getNombreAssignment_1(), "rule__AtributoSimple__NombreAssignment_1");
+					put(grammarAccess.getAtributoSimpleAccess().getTipoAssignment_3(), "rule__AtributoSimple__TipoAssignment_3");
+					put(grammarAccess.getAtributoSimpleAccess().getValorAssignment_4_1(), "rule__AtributoSimple__ValorAssignment_4_1");
+					put(grammarAccess.getAtributoAsignadoAccess().getNombreAssignment_0(), "rule__AtributoAsignado__NombreAssignment_0");
+					put(grammarAccess.getAtributoAsignadoAccess().getValorAssignment_2(), "rule__AtributoAsignado__ValorAssignment_2");
+					put(grammarAccess.getListaIntegerAccess().getValoresAssignment_2(), "rule__ListaInteger__ValoresAssignment_2");
+					put(grammarAccess.getListaIntegerAccess().getValoresAssignment_3_1(), "rule__ListaInteger__ValoresAssignment_3_1");
+					put(grammarAccess.getListaStringAccess().getValoresAssignment_2(), "rule__ListaString__ValoresAssignment_2");
+					put(grammarAccess.getListaStringAccess().getValoresAssignment_3_1(), "rule__ListaString__ValoresAssignment_3_1");
 					put(grammarAccess.getModuleAccess().getNameAssignment_1(), "rule__Module__NameAssignment_1");
 					put(grammarAccess.getModuleAccess().getStatementsAssignment_2(), "rule__Module__StatementsAssignment_2");
 					put(grammarAccess.getDefinitionAccess().getNameAssignment_1(), "rule__Definition__NameAssignment_1");

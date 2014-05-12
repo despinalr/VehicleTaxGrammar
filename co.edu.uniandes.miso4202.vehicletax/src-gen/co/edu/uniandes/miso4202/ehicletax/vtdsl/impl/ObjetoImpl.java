@@ -31,12 +31,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getName <em>Name</em>}</li>
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getDescripcion <em>Descripcion</em>}</li>
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getAtributos <em>Atributos</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getObjetos <em>Objetos</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ObjetoImpl extends AtributoObjetoImpl implements Objeto
+public class ObjetoImpl extends ContenidoImpl implements Objeto
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -87,6 +88,16 @@ public class ObjetoImpl extends AtributoObjetoImpl implements Objeto
    * @ordered
    */
   protected EList<Atributo> atributos;
+
+  /**
+   * The cached value of the '{@link #getObjetos() <em>Objetos</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getObjetos()
+   * @generated
+   * @ordered
+   */
+  protected EList<Objeto> objetos;
 
   /**
    * <!-- begin-user-doc -->
@@ -174,6 +185,20 @@ public class ObjetoImpl extends AtributoObjetoImpl implements Objeto
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Objeto> getObjetos()
+  {
+    if (objetos == null)
+    {
+      objetos = new EObjectContainmentEList<Objeto>(Objeto.class, this, VtdslPackage.OBJETO__OBJETOS);
+    }
+    return objetos;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -181,6 +206,8 @@ public class ObjetoImpl extends AtributoObjetoImpl implements Objeto
     {
       case VtdslPackage.OBJETO__ATRIBUTOS:
         return ((InternalEList<?>)getAtributos()).basicRemove(otherEnd, msgs);
+      case VtdslPackage.OBJETO__OBJETOS:
+        return ((InternalEList<?>)getObjetos()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -201,6 +228,8 @@ public class ObjetoImpl extends AtributoObjetoImpl implements Objeto
         return getDescripcion();
       case VtdslPackage.OBJETO__ATRIBUTOS:
         return getAtributos();
+      case VtdslPackage.OBJETO__OBJETOS:
+        return getObjetos();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -226,6 +255,10 @@ public class ObjetoImpl extends AtributoObjetoImpl implements Objeto
         getAtributos().clear();
         getAtributos().addAll((Collection<? extends Atributo>)newValue);
         return;
+      case VtdslPackage.OBJETO__OBJETOS:
+        getObjetos().clear();
+        getObjetos().addAll((Collection<? extends Objeto>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -249,6 +282,9 @@ public class ObjetoImpl extends AtributoObjetoImpl implements Objeto
       case VtdslPackage.OBJETO__ATRIBUTOS:
         getAtributos().clear();
         return;
+      case VtdslPackage.OBJETO__OBJETOS:
+        getObjetos().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -269,6 +305,8 @@ public class ObjetoImpl extends AtributoObjetoImpl implements Objeto
         return DESCRIPCION_EDEFAULT == null ? descripcion != null : !DESCRIPCION_EDEFAULT.equals(descripcion);
       case VtdslPackage.OBJETO__ATRIBUTOS:
         return atributos != null && !atributos.isEmpty();
+      case VtdslPackage.OBJETO__OBJETOS:
+        return objetos != null && !objetos.isEmpty();
     }
     return super.eIsSet(featureID);
   }

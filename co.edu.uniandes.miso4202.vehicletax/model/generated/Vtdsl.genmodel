@@ -14,20 +14,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Objeto/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Objeto/descripcion"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Objeto/atributos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Objeto/objetos"/>
     </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//AtributoNormal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoNormal/nombre"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//AtributoNormal/valor"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//AtributoSimple"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//AtributoAsignado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoAsignado/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//AtributoAsignado/valor"/>
     </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//AtributoAsignacion">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoAsignacion/nombre"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//AtributoAsignacion/valor"/>
-    </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//AtributoObjeto"/>
     <genClasses ecoreClass="Vtdsl.ecore#//Atributo"/>
     <genClasses ecoreClass="Vtdsl.ecore#//ValorAtributo"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//ValorCompleto"/>
     <genClasses ecoreClass="Vtdsl.ecore#//Contenido"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//ValorAtributoValor"/>
     <genClasses ecoreClass="Vtdsl.ecore#//ListaInteger">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//ListaInteger/valores"/>
     </genClasses>
@@ -47,6 +44,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Evaluation/expression"/>
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//Expression"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//AtributoTipado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoTipado/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoTipado/tipo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//AtributoTipado/valor"/>
+    </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//Plus">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Plus/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Plus/right"/>

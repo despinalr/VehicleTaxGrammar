@@ -15,56 +15,56 @@ Modelo:
 Objeto:
 	name = ID (descripcion = STRING)? '{'		
 		(atributos += Atributo)*
+		(objetos += Objeto)*
 	'}'
 ;
 
-AtributoNormal:
-	{AtributoNormal}
-	nombre = (ID | STRING) ':' valor = (ValorAtributo | ValorAtributoValor | Lista) ';'
+AtributoSimple:
+	{AtributoTipado}
+	nombre=(ID | STRING) ':' tipo=DATATYPE ('=' valor=ValorCompleto)? ';'
 ;
 
-AtributoAsignacion:
-	{AtributoAsignacion}
-	nombre = ID '=' valor = Statement
-;
-
-AtributoObjeto:
-	Objeto
+AtributoAsignado:
+	nombre=ID '=' valor=Statement
 ;
 
 Atributo:
-	AtributoNormal | 
-	AtributoObjeto |
-	AtributoAsignacion
+	AtributoSimple | AtributoAsignado
 ;
+
 
 ValorAtributo:
 	{ValorAtributo}
-	(ID | STRING | NUMBER)+
+	(ID | STRING | NUMBER)
+;
+
+ValorCompleto:
+	ValorAtributo | Lista
 ;
 
 Contenido returns Contenido:
 	Atributo | Objeto
 ;
 
-ValorAtributoValor:
-	{ValorAtributoValor}
-	ID '=' NUMBER
-;
 
 
 ListaInteger:
 	{ListaInteger}
-	'List of Integer' '=' '{' valores += NUMBER (',' NUMBER)* '}'
+	'{'
+	  	valores+=NUMBER (',' valores+=NUMBER)*
+	'}'
 ;
 
 ListaString:
 	{ListaString}
-	'List of String' '=' '{' valores += STRING (',' STRING)* '}'
+	'{' 
+		valores+=STRING (',' valores+=STRING)* 
+	'}'
 ;
 
-Lista:	
-	ListaInteger | ListaString
+Lista:		
+	ListaInteger | 
+	ListaString
 ;
 
 
@@ -105,3 +105,7 @@ terminal NUMBER returns ecore::EBigDecimal:
 
 terminal INT returns ecore::EInt:
 	'this one has been deactivated';
+	
+terminal DATATYPE:
+	'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String'
+;
