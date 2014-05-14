@@ -4,8 +4,8 @@ package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Atributo;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoSimple;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoTipado;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Contenido;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Definition;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Div;
@@ -15,7 +15,7 @@ import co.edu.uniandes.miso4202.ehicletax.vtdsl.Lista;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Minus;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Modelo;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Model;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Module;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Multi;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.NumberLiteral;
@@ -47,7 +47,7 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass modeloEClass = null;
+  private EClass modelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -62,6 +62,13 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * @generated
    */
   private EClass atributoSimpleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atributoInicializadoEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -153,13 +160,6 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * @generated
    */
   private EClass expressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass atributoTipadoEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -278,9 +278,9 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModelo()
+  public EClass getModel()
   {
-    return modeloEClass;
+    return modelEClass;
   }
 
   /**
@@ -288,9 +288,19 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModelo_Objetos()
+  public EAttribute getModel_Nombre()
   {
-    return (EReference)modeloEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)modelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getModel_Objetos()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -358,6 +368,46 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getAtributoSimple_Tipo()
+  {
+    return (EAttribute)atributoSimpleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAtributoInicializado()
+  {
+    return atributoInicializadoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtributoInicializado_Tipo()
+  {
+    return (EAttribute)atributoInicializadoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAtributoInicializado_Valor()
+  {
+    return (EReference)atributoInicializadoEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getAtributoAsignado()
   {
     return atributoAsignadoEClass;
@@ -368,19 +418,9 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAtributoAsignado_Nombre()
-  {
-    return (EAttribute)atributoAsignadoEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getAtributoAsignado_Valor()
   {
-    return (EReference)atributoAsignadoEClass.getEStructuralFeatures().get(1);
+    return (EReference)atributoAsignadoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -391,6 +431,16 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
   public EClass getAtributo()
   {
     return atributoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtributo_Nombre()
+  {
+    return (EAttribute)atributoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -561,46 +611,6 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
   public EClass getExpression()
   {
     return expressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAtributoTipado()
-  {
-    return atributoTipadoEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAtributoTipado_Nombre()
-  {
-    return (EAttribute)atributoTipadoEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAtributoTipado_Tipo()
-  {
-    return (EAttribute)atributoTipadoEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAtributoTipado_Valor()
-  {
-    return (EReference)atributoTipadoEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -793,8 +803,9 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     isCreated = true;
 
     // Create classes and their features
-    modeloEClass = createEClass(MODELO);
-    createEReference(modeloEClass, MODELO__OBJETOS);
+    modelEClass = createEClass(MODEL);
+    createEAttribute(modelEClass, MODEL__NOMBRE);
+    createEReference(modelEClass, MODEL__OBJETOS);
 
     objetoEClass = createEClass(OBJETO);
     createEAttribute(objetoEClass, OBJETO__NAME);
@@ -803,12 +814,17 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     createEReference(objetoEClass, OBJETO__OBJETOS);
 
     atributoSimpleEClass = createEClass(ATRIBUTO_SIMPLE);
+    createEAttribute(atributoSimpleEClass, ATRIBUTO_SIMPLE__TIPO);
+
+    atributoInicializadoEClass = createEClass(ATRIBUTO_INICIALIZADO);
+    createEAttribute(atributoInicializadoEClass, ATRIBUTO_INICIALIZADO__TIPO);
+    createEReference(atributoInicializadoEClass, ATRIBUTO_INICIALIZADO__VALOR);
 
     atributoAsignadoEClass = createEClass(ATRIBUTO_ASIGNADO);
-    createEAttribute(atributoAsignadoEClass, ATRIBUTO_ASIGNADO__NOMBRE);
     createEReference(atributoAsignadoEClass, ATRIBUTO_ASIGNADO__VALOR);
 
     atributoEClass = createEClass(ATRIBUTO);
+    createEAttribute(atributoEClass, ATRIBUTO__NOMBRE);
 
     valorAtributoEClass = createEClass(VALOR_ATRIBUTO);
 
@@ -837,11 +853,6 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     createEReference(evaluationEClass, EVALUATION__EXPRESSION);
 
     expressionEClass = createEClass(EXPRESSION);
-
-    atributoTipadoEClass = createEClass(ATRIBUTO_TIPADO);
-    createEAttribute(atributoTipadoEClass, ATRIBUTO_TIPADO__NOMBRE);
-    createEAttribute(atributoTipadoEClass, ATRIBUTO_TIPADO__TIPO);
-    createEReference(atributoTipadoEClass, ATRIBUTO_TIPADO__VALOR);
 
     plusEClass = createEClass(PLUS);
     createEReference(plusEClass, PLUS__LEFT);
@@ -898,6 +909,7 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     // Add supertypes to classes
     objetoEClass.getESuperTypes().add(this.getContenido());
     atributoSimpleEClass.getESuperTypes().add(this.getAtributo());
+    atributoInicializadoEClass.getESuperTypes().add(this.getAtributo());
     atributoAsignadoEClass.getESuperTypes().add(this.getAtributo());
     atributoEClass.getESuperTypes().add(this.getContenido());
     valorAtributoEClass.getESuperTypes().add(this.getValorCompleto());
@@ -906,7 +918,6 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     listaEClass.getESuperTypes().add(this.getValorCompleto());
     definitionEClass.getESuperTypes().add(this.getStatement());
     evaluationEClass.getESuperTypes().add(this.getStatement());
-    atributoTipadoEClass.getESuperTypes().add(this.getAtributoSimple());
     plusEClass.getESuperTypes().add(this.getExpression());
     minusEClass.getESuperTypes().add(this.getExpression());
     multiEClass.getESuperTypes().add(this.getExpression());
@@ -916,8 +927,9 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     idEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(modeloEClass, Modelo.class, "Modelo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModelo_Objetos(), this.getObjeto(), null, "objetos", null, 0, -1, Modelo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getModel_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Objetos(), this.getObjeto(), null, "objetos", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(objetoEClass, Objeto.class, "Objeto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getObjeto_Name(), ecorePackage.getEString(), "name", null, 0, 1, Objeto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -926,12 +938,17 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     initEReference(getObjeto_Objetos(), this.getObjeto(), null, "objetos", null, 0, -1, Objeto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atributoSimpleEClass, AtributoSimple.class, "AtributoSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtributoSimple_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, AtributoSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atributoInicializadoEClass, AtributoInicializado.class, "AtributoInicializado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtributoInicializado_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, AtributoInicializado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAtributoInicializado_Valor(), this.getValorCompleto(), null, "valor", null, 0, 1, AtributoInicializado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atributoAsignadoEClass, AtributoAsignado.class, "AtributoAsignado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAtributoAsignado_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, AtributoAsignado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAtributoAsignado_Valor(), this.getStatement(), null, "valor", null, 0, 1, AtributoAsignado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAtributoAsignado_Valor(), this.getStatement(), null, "valor", null, 0, -1, AtributoAsignado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atributoEClass, Atributo.class, "Atributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(valorAtributoEClass, ValorAtributo.class, "ValorAtributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -960,11 +977,6 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     initEReference(getEvaluation_Expression(), this.getExpression(), null, "expression", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(atributoTipadoEClass, AtributoTipado.class, "AtributoTipado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAtributoTipado_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, AtributoTipado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAtributoTipado_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, AtributoTipado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAtributoTipado_Valor(), this.getValorCompleto(), null, "valor", null, 0, 1, AtributoTipado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(plusEClass, Plus.class, "Plus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPlus_Left(), this.getExpression(), null, "left", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -23,13 +23,13 @@ public interface VtdslFactory extends EFactory
   VtdslFactory eINSTANCE = co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Modelo</em>'.
+   * Returns a new object of class '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Modelo</em>'.
+   * @return a new object of class '<em>Model</em>'.
    * @generated
    */
-  Modelo createModelo();
+  Model createModel();
 
   /**
    * Returns a new object of class '<em>Objeto</em>'.
@@ -48,6 +48,15 @@ public interface VtdslFactory extends EFactory
    * @generated
    */
   AtributoSimple createAtributoSimple();
+
+  /**
+   * Returns a new object of class '<em>Atributo Inicializado</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atributo Inicializado</em>'.
+   * @generated
+   */
+  AtributoInicializado createAtributoInicializado();
 
   /**
    * Returns a new object of class '<em>Atributo Asignado</em>'.
@@ -165,15 +174,6 @@ public interface VtdslFactory extends EFactory
    * @generated
    */
   Expression createExpression();
-
-  /**
-   * Returns a new object of class '<em>Atributo Tipado</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atributo Tipado</em>'.
-   * @generated
-   */
-  AtributoTipado createAtributoTipado();
 
   /**
    * Returns a new object of class '<em>Plus</em>'.

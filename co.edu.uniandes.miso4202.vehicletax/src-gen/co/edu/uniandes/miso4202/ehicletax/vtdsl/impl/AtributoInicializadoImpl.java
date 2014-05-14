@@ -2,7 +2,7 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoTipado;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
@@ -16,41 +16,20 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Atributo Tipado</b></em>'.
+ * An implementation of the model object '<em><b>Atributo Inicializado</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoTipadoImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoTipadoImpl#getTipo <em>Tipo</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoTipadoImpl#getValor <em>Valor</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoInicializadoImpl#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoInicializadoImpl#getValor <em>Valor</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTipado
+public class AtributoInicializadoImpl extends AtributoImpl implements AtributoInicializado
 {
-  /**
-   * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNombre()
-   * @generated
-   * @ordered
-   */
-  protected static final String NOMBRE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNombre()
-   * @generated
-   * @ordered
-   */
-  protected String nombre = NOMBRE_EDEFAULT;
-
   /**
    * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -86,7 +65,7 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AtributoTipadoImpl()
+  protected AtributoInicializadoImpl()
   {
     super();
   }
@@ -99,30 +78,7 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
   @Override
   protected EClass eStaticClass()
   {
-    return VtdslPackage.Literals.ATRIBUTO_TIPADO;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getNombre()
-  {
-    return nombre;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNombre(String newNombre)
-  {
-    String oldNombre = nombre;
-    nombre = newNombre;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_TIPADO__NOMBRE, oldNombre, nombre));
+    return VtdslPackage.Literals.ATRIBUTO_INICIALIZADO;
   }
 
   /**
@@ -145,7 +101,7 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
     String oldTipo = tipo;
     tipo = newTipo;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_TIPADO__TIPO, oldTipo, tipo));
+      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_INICIALIZADO__TIPO, oldTipo, tipo));
   }
 
   /**
@@ -169,7 +125,7 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
     valor = newValor;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_TIPADO__VALOR, oldValor, newValor);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, oldValor, newValor);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -186,14 +142,14 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
     {
       NotificationChain msgs = null;
       if (valor != null)
-        msgs = ((InternalEObject)valor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_TIPADO__VALOR, null, msgs);
+        msgs = ((InternalEObject)valor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, null, msgs);
       if (newValor != null)
-        msgs = ((InternalEObject)newValor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_TIPADO__VALOR, null, msgs);
+        msgs = ((InternalEObject)newValor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, null, msgs);
       msgs = basicSetValor(newValor, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_TIPADO__VALOR, newValor, newValor));
+      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, newValor, newValor));
   }
 
   /**
@@ -206,7 +162,7 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_TIPADO__VALOR:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
         return basicSetValor(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -222,11 +178,9 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_TIPADO__NOMBRE:
-        return getNombre();
-      case VtdslPackage.ATRIBUTO_TIPADO__TIPO:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__TIPO:
         return getTipo();
-      case VtdslPackage.ATRIBUTO_TIPADO__VALOR:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
         return getValor();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -242,13 +196,10 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_TIPADO__NOMBRE:
-        setNombre((String)newValue);
-        return;
-      case VtdslPackage.ATRIBUTO_TIPADO__TIPO:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__TIPO:
         setTipo((String)newValue);
         return;
-      case VtdslPackage.ATRIBUTO_TIPADO__VALOR:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
         setValor((ValorCompleto)newValue);
         return;
     }
@@ -265,13 +216,10 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_TIPADO__NOMBRE:
-        setNombre(NOMBRE_EDEFAULT);
-        return;
-      case VtdslPackage.ATRIBUTO_TIPADO__TIPO:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__TIPO:
         setTipo(TIPO_EDEFAULT);
         return;
-      case VtdslPackage.ATRIBUTO_TIPADO__VALOR:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
         setValor((ValorCompleto)null);
         return;
     }
@@ -288,11 +236,9 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_TIPADO__NOMBRE:
-        return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-      case VtdslPackage.ATRIBUTO_TIPADO__TIPO:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__TIPO:
         return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
-      case VtdslPackage.ATRIBUTO_TIPADO__VALOR:
+      case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
         return valor != null;
     }
     return super.eIsSet(featureID);
@@ -309,12 +255,10 @@ public class AtributoTipadoImpl extends AtributoSimpleImpl implements AtributoTi
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nombre: ");
-    result.append(nombre);
-    result.append(", tipo: ");
+    result.append(" (tipo: ");
     result.append(tipo);
     result.append(')');
     return result.toString();
   }
 
-} //AtributoTipadoImpl
+} //AtributoInicializadoImpl

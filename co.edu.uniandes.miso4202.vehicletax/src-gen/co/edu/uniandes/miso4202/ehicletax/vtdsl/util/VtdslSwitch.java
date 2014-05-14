@@ -72,10 +72,10 @@ public class VtdslSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case VtdslPackage.MODELO:
+      case VtdslPackage.MODEL:
       {
-        Modelo modelo = (Modelo)theEObject;
-        T result = caseModelo(modelo);
+        Model model = (Model)theEObject;
+        T result = caseModel(model);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -93,6 +93,15 @@ public class VtdslSwitch<T> extends Switch<T>
         T result = caseAtributoSimple(atributoSimple);
         if (result == null) result = caseAtributo(atributoSimple);
         if (result == null) result = caseContenido(atributoSimple);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VtdslPackage.ATRIBUTO_INICIALIZADO:
+      {
+        AtributoInicializado atributoInicializado = (AtributoInicializado)theEObject;
+        T result = caseAtributoInicializado(atributoInicializado);
+        if (result == null) result = caseAtributo(atributoInicializado);
+        if (result == null) result = caseContenido(atributoInicializado);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -198,16 +207,6 @@ public class VtdslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case VtdslPackage.ATRIBUTO_TIPADO:
-      {
-        AtributoTipado atributoTipado = (AtributoTipado)theEObject;
-        T result = caseAtributoTipado(atributoTipado);
-        if (result == null) result = caseAtributoSimple(atributoTipado);
-        if (result == null) result = caseAtributo(atributoTipado);
-        if (result == null) result = caseContenido(atributoTipado);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case VtdslPackage.PLUS:
       {
         Plus plus = (Plus)theEObject;
@@ -269,17 +268,17 @@ public class VtdslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Modelo</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Modelo</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModelo(Modelo object)
+  public T caseModel(Model object)
   {
     return null;
   }
@@ -312,6 +311,22 @@ public class VtdslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAtributoSimple(AtributoSimple object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Atributo Inicializado</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atributo Inicializado</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtributoInicializado(AtributoInicializado object)
   {
     return null;
   }
@@ -520,22 +535,6 @@ public class VtdslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExpression(Expression object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Atributo Tipado</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Atributo Tipado</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAtributoTipado(AtributoTipado object)
   {
     return null;
   }

@@ -18,28 +18,32 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class ModeloElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Modelo");
+	public class ModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cModeloAction_0 = (Action)cGroup.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Action cModelAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cNombreAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNombreIDTerminalRuleCall_1_0 = (RuleCall)cNombreAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cObjetosAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cObjetosObjetoParserRuleCall_3_0 = (RuleCall)cObjetosAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//Modelo:
-		//	{Modelo} ID "{" objetos+=Objeto* "}";
+		//Model:
+		//	{Model} nombre=ID "{" objetos+=Objeto* "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Modelo} ID "{" objetos+=Objeto* "}"
+		//{Model} nombre=ID "{" objetos+=Objeto* "}"
 		public Group getGroup() { return cGroup; }
 
-		//{Modelo}
-		public Action getModeloAction_0() { return cModeloAction_0; }
+		//{Model}
+		public Action getModelAction_0() { return cModelAction_0; }
+
+		//nombre=ID
+		public Assignment getNombreAssignment_1() { return cNombreAssignment_1; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+		public RuleCall getNombreIDTerminalRuleCall_1_0() { return cNombreIDTerminalRuleCall_1_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -109,7 +113,7 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	public class AtributoSimpleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AtributoSimple");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cAtributoTipadoAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cAtributoSimpleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cNombreAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final Alternatives cNombreAlternatives_1_0 = (Alternatives)cNombreAssignment_1.eContents().get(0);
 		private final RuleCall cNombreIDTerminalRuleCall_1_0_0 = (RuleCall)cNombreAlternatives_1_0.eContents().get(0);
@@ -117,21 +121,17 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cTipoAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cTipoDATATYPETerminalRuleCall_3_0 = (RuleCall)cTipoAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cValorAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cValorValorCompletoParserRuleCall_4_1_0 = (RuleCall)cValorAssignment_4_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//AtributoSimple:
-		//	{AtributoTipado} nombre=(ID | STRING) ":" tipo=DATATYPE ("=" valor=ValorCompleto)? ";";
+		//	{AtributoSimple} nombre=(ID | STRING) ":" tipo=DATATYPE ";";
 		public ParserRule getRule() { return rule; }
 
-		//{AtributoTipado} nombre=(ID | STRING) ":" tipo=DATATYPE ("=" valor=ValorCompleto)? ";"
+		//{AtributoSimple} nombre=(ID | STRING) ":" tipo=DATATYPE ";"
 		public Group getGroup() { return cGroup; }
 
-		//{AtributoTipado}
-		public Action getAtributoTipadoAction_0() { return cAtributoTipadoAction_0; }
+		//{AtributoSimple}
+		public Action getAtributoSimpleAction_0() { return cAtributoSimpleAction_0; }
 
 		//nombre=(ID | STRING)
 		public Assignment getNombreAssignment_1() { return cNombreAssignment_1; }
@@ -154,20 +154,68 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		//DATATYPE
 		public RuleCall getTipoDATATYPETerminalRuleCall_3_0() { return cTipoDATATYPETerminalRuleCall_3_0; }
 
-		//("=" valor=ValorCompleto)?
-		public Group getGroup_4() { return cGroup_4; }
+		//";"
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+	}
+
+	public class AtributoInicializadoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AtributoInicializado");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cAtributoInicializadoAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cNombreAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cNombreAlternatives_1_0 = (Alternatives)cNombreAssignment_1.eContents().get(0);
+		private final RuleCall cNombreIDTerminalRuleCall_1_0_0 = (RuleCall)cNombreAlternatives_1_0.eContents().get(0);
+		private final RuleCall cNombreSTRINGTerminalRuleCall_1_0_1 = (RuleCall)cNombreAlternatives_1_0.eContents().get(1);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTipoAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTipoDATATYPETerminalRuleCall_3_0 = (RuleCall)cTipoAssignment_3.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cValorAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cValorValorCompletoParserRuleCall_5_0 = (RuleCall)cValorAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//AtributoInicializado:
+		//	{AtributoInicializado} nombre=(ID | STRING) ":" tipo=DATATYPE "=" valor=ValorCompleto ";";
+		public ParserRule getRule() { return rule; }
+
+		//{AtributoInicializado} nombre=(ID | STRING) ":" tipo=DATATYPE "=" valor=ValorCompleto ";"
+		public Group getGroup() { return cGroup; }
+
+		//{AtributoInicializado}
+		public Action getAtributoInicializadoAction_0() { return cAtributoInicializadoAction_0; }
+
+		//nombre=(ID | STRING)
+		public Assignment getNombreAssignment_1() { return cNombreAssignment_1; }
+
+		//ID | STRING
+		public Alternatives getNombreAlternatives_1_0() { return cNombreAlternatives_1_0; }
+
+		//ID
+		public RuleCall getNombreIDTerminalRuleCall_1_0_0() { return cNombreIDTerminalRuleCall_1_0_0; }
+
+		//STRING
+		public RuleCall getNombreSTRINGTerminalRuleCall_1_0_1() { return cNombreSTRINGTerminalRuleCall_1_0_1; }
+
+		//":"
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+
+		//tipo=DATATYPE
+		public Assignment getTipoAssignment_3() { return cTipoAssignment_3; }
+
+		//DATATYPE
+		public RuleCall getTipoDATATYPETerminalRuleCall_3_0() { return cTipoDATATYPETerminalRuleCall_3_0; }
 
 		//"="
-		public Keyword getEqualsSignKeyword_4_0() { return cEqualsSignKeyword_4_0; }
+		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
 
 		//valor=ValorCompleto
-		public Assignment getValorAssignment_4_1() { return cValorAssignment_4_1; }
+		public Assignment getValorAssignment_5() { return cValorAssignment_5; }
 
 		//ValorCompleto
-		public RuleCall getValorValorCompletoParserRuleCall_4_1_0() { return cValorValorCompletoParserRuleCall_4_1_0; }
+		public RuleCall getValorValorCompletoParserRuleCall_5_0() { return cValorValorCompletoParserRuleCall_5_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
 	public class AtributoAsignadoElements extends AbstractParserRuleElementFinder {
@@ -180,10 +228,10 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValorStatementParserRuleCall_2_0 = (RuleCall)cValorAssignment_2.eContents().get(0);
 		
 		//AtributoAsignado:
-		//	nombre=ID "=" valor=Statement;
+		//	nombre=ID "=" valor+=Statement*;
 		public ParserRule getRule() { return rule; }
 
-		//nombre=ID "=" valor=Statement
+		//nombre=ID "=" valor+=Statement*
 		public Group getGroup() { return cGroup; }
 
 		//nombre=ID
@@ -195,7 +243,7 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
-		//valor=Statement
+		//valor+=Statement*
 		public Assignment getValorAssignment_2() { return cValorAssignment_2; }
 
 		//Statement
@@ -206,20 +254,24 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Atributo");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cAtributoSimpleParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cAtributoAsignadoParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cAtributoInicializadoParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cAtributoAsignadoParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Atributo:
-		//	AtributoSimple | AtributoAsignado;
+		//	AtributoSimple | AtributoInicializado | AtributoAsignado;
 		public ParserRule getRule() { return rule; }
 
-		//AtributoSimple | AtributoAsignado
+		//AtributoSimple | AtributoInicializado | AtributoAsignado
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//AtributoSimple
 		public RuleCall getAtributoSimpleParserRuleCall_0() { return cAtributoSimpleParserRuleCall_0; }
 
+		//AtributoInicializado
+		public RuleCall getAtributoInicializadoParserRuleCall_1() { return cAtributoInicializadoParserRuleCall_1; }
+
 		//AtributoAsignado
-		public RuleCall getAtributoAsignadoParserRuleCall_1() { return cAtributoAsignadoParserRuleCall_1; }
+		public RuleCall getAtributoAsignadoParserRuleCall_2() { return cAtributoAsignadoParserRuleCall_2; }
 	}
 
 	public class ValorAtributoElements extends AbstractParserRuleElementFinder {
@@ -704,9 +756,10 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	private ModeloElements pModelo;
+	private ModelElements pModel;
 	private ObjetoElements pObjeto;
 	private AtributoSimpleElements pAtributoSimple;
+	private AtributoInicializadoElements pAtributoInicializado;
 	private AtributoAsignadoElements pAtributoAsignado;
 	private AtributoElements pAtributo;
 	private ValorAtributoElements pValorAtributo;
@@ -765,14 +818,14 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Modelo:
-	//	{Modelo} ID "{" objetos+=Objeto* "}";
-	public ModeloElements getModeloAccess() {
-		return (pModelo != null) ? pModelo : (pModelo = new ModeloElements());
+	//Model:
+	//	{Model} nombre=ID "{" objetos+=Objeto* "}";
+	public ModelElements getModelAccess() {
+		return (pModel != null) ? pModel : (pModel = new ModelElements());
 	}
 	
-	public ParserRule getModeloRule() {
-		return getModeloAccess().getRule();
+	public ParserRule getModelRule() {
+		return getModelAccess().getRule();
 	}
 
 	//Objeto:
@@ -786,7 +839,7 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AtributoSimple:
-	//	{AtributoTipado} nombre=(ID | STRING) ":" tipo=DATATYPE ("=" valor=ValorCompleto)? ";";
+	//	{AtributoSimple} nombre=(ID | STRING) ":" tipo=DATATYPE ";";
 	public AtributoSimpleElements getAtributoSimpleAccess() {
 		return (pAtributoSimple != null) ? pAtributoSimple : (pAtributoSimple = new AtributoSimpleElements());
 	}
@@ -795,8 +848,18 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		return getAtributoSimpleAccess().getRule();
 	}
 
+	//AtributoInicializado:
+	//	{AtributoInicializado} nombre=(ID | STRING) ":" tipo=DATATYPE "=" valor=ValorCompleto ";";
+	public AtributoInicializadoElements getAtributoInicializadoAccess() {
+		return (pAtributoInicializado != null) ? pAtributoInicializado : (pAtributoInicializado = new AtributoInicializadoElements());
+	}
+	
+	public ParserRule getAtributoInicializadoRule() {
+		return getAtributoInicializadoAccess().getRule();
+	}
+
 	//AtributoAsignado:
-	//	nombre=ID "=" valor=Statement;
+	//	nombre=ID "=" valor+=Statement*;
 	public AtributoAsignadoElements getAtributoAsignadoAccess() {
 		return (pAtributoAsignado != null) ? pAtributoAsignado : (pAtributoAsignado = new AtributoAsignadoElements());
 	}
@@ -806,7 +869,7 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Atributo:
-	//	AtributoSimple | AtributoAsignado;
+	//	AtributoSimple | AtributoInicializado | AtributoAsignado;
 	public AtributoElements getAtributoAccess() {
 		return (pAtributo != null) ? pAtributo : (pAtributo = new AtributoElements());
 	}

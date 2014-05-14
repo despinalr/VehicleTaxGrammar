@@ -25,7 +25,7 @@ public class VtdslParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrPar
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Modelo";
+		return "Model";
 	}
 	
 	public VtdslGrammarAccess getGrammarAccess() {

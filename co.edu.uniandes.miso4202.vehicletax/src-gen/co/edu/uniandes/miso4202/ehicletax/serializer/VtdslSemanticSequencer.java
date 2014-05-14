@@ -2,7 +2,8 @@ package co.edu.uniandes.miso4202.ehicletax.serializer;
 
 import co.edu.uniandes.miso4202.ehicletax.services.VtdslGrammarAccess;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoTipado;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoSimple;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Definition;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Div;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Evaluation;
@@ -10,7 +11,7 @@ import co.edu.uniandes.miso4202.ehicletax.vtdsl.ID;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Minus;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Modelo;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Model;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Module;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Multi;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.NumberLiteral;
@@ -49,11 +50,19 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
-			case VtdslPackage.ATRIBUTO_TIPADO:
+			case VtdslPackage.ATRIBUTO_INICIALIZADO:
+				if(context == grammarAccess.getAtributoRule() ||
+				   context == grammarAccess.getAtributoInicializadoRule() ||
+				   context == grammarAccess.getContenidoRule()) {
+					sequence_AtributoInicializado(context, (AtributoInicializado) semanticObject); 
+					return; 
+				}
+				else break;
+			case VtdslPackage.ATRIBUTO_SIMPLE:
 				if(context == grammarAccess.getAtributoRule() ||
 				   context == grammarAccess.getAtributoSimpleRule() ||
 				   context == grammarAccess.getContenidoRule()) {
-					sequence_AtributoSimple(context, (AtributoTipado) semanticObject); 
+					sequence_AtributoSimple(context, (AtributoSimple) semanticObject); 
 					return; 
 				}
 				else break;
@@ -126,9 +135,9 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
-			case VtdslPackage.MODELO:
-				if(context == grammarAccess.getModeloRule()) {
-					sequence_Modelo(context, (Modelo) semanticObject); 
+			case VtdslPackage.MODEL:
+				if(context == grammarAccess.getModelRule()) {
+					sequence_Model(context, (Model) semanticObject); 
 					return; 
 				}
 				else break;
@@ -248,28 +257,27 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (nombre=ID valor=Statement)
+	 *     (nombre=ID valor+=Statement*)
 	 */
 	protected void sequence_AtributoAsignado(EObject context, AtributoAsignado semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, VtdslPackage.Literals.ATRIBUTO_ASIGNADO__NOMBRE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VtdslPackage.Literals.ATRIBUTO_ASIGNADO__NOMBRE));
-			if(transientValues.isValueTransient(semanticObject, VtdslPackage.Literals.ATRIBUTO_ASIGNADO__VALOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VtdslPackage.Literals.ATRIBUTO_ASIGNADO__VALOR));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAtributoAsignadoAccess().getNombreIDTerminalRuleCall_0_0(), semanticObject.getNombre());
-		feeder.accept(grammarAccess.getAtributoAsignadoAccess().getValorStatementParserRuleCall_2_0(), semanticObject.getValor());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((nombre=ID | nombre=STRING) tipo=DATATYPE valor=ValorCompleto?)
+	 *     ((nombre=ID | nombre=STRING) tipo=DATATYPE valor=ValorCompleto)
 	 */
-	protected void sequence_AtributoSimple(EObject context, AtributoTipado semanticObject) {
+	protected void sequence_AtributoInicializado(EObject context, AtributoInicializado semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((nombre=ID | nombre=STRING) tipo=DATATYPE)
+	 */
+	protected void sequence_AtributoSimple(EObject context, AtributoSimple semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -326,9 +334,9 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (objetos+=Objeto*)
+	 *     (nombre=ID objetos+=Objeto*)
 	 */
-	protected void sequence_Modelo(EObject context, Modelo semanticObject) {
+	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

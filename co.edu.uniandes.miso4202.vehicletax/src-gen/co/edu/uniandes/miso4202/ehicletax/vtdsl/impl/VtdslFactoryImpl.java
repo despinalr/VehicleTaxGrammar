@@ -64,9 +64,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     switch (eClass.getClassifierID())
     {
-      case VtdslPackage.MODELO: return createModelo();
+      case VtdslPackage.MODEL: return createModel();
       case VtdslPackage.OBJETO: return createObjeto();
       case VtdslPackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
+      case VtdslPackage.ATRIBUTO_INICIALIZADO: return createAtributoInicializado();
       case VtdslPackage.ATRIBUTO_ASIGNADO: return createAtributoAsignado();
       case VtdslPackage.ATRIBUTO: return createAtributo();
       case VtdslPackage.VALOR_ATRIBUTO: return createValorAtributo();
@@ -80,7 +81,6 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
       case VtdslPackage.DEFINITION: return createDefinition();
       case VtdslPackage.EVALUATION: return createEvaluation();
       case VtdslPackage.EXPRESSION: return createExpression();
-      case VtdslPackage.ATRIBUTO_TIPADO: return createAtributoTipado();
       case VtdslPackage.PLUS: return createPlus();
       case VtdslPackage.MINUS: return createMinus();
       case VtdslPackage.MULTI: return createMulti();
@@ -98,10 +98,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Modelo createModelo()
+  public Model createModel()
   {
-    ModeloImpl modelo = new ModeloImpl();
-    return modelo;
+    ModelImpl model = new ModelImpl();
+    return model;
   }
 
   /**
@@ -124,6 +124,17 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     AtributoSimpleImpl atributoSimple = new AtributoSimpleImpl();
     return atributoSimple;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtributoInicializado createAtributoInicializado()
+  {
+    AtributoInicializadoImpl atributoInicializado = new AtributoInicializadoImpl();
+    return atributoInicializado;
   }
 
   /**
@@ -267,17 +278,6 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AtributoTipado createAtributoTipado()
-  {
-    AtributoTipadoImpl atributoTipado = new AtributoTipadoImpl();
-    return atributoTipado;
   }
 
   /**

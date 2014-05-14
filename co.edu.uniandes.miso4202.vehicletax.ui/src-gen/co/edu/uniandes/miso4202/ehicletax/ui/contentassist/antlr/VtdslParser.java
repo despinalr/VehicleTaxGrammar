@@ -38,6 +38,7 @@ public class VtdslParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getAtributoSimpleAccess().getNombreAlternatives_1_0(), "rule__AtributoSimple__NombreAlternatives_1_0");
+					put(grammarAccess.getAtributoInicializadoAccess().getNombreAlternatives_1_0(), "rule__AtributoInicializado__NombreAlternatives_1_0");
 					put(grammarAccess.getAtributoAccess().getAlternatives(), "rule__Atributo__Alternatives");
 					put(grammarAccess.getValorAtributoAccess().getAlternatives_1(), "rule__ValorAtributo__Alternatives_1");
 					put(grammarAccess.getValorCompletoAccess().getAlternatives(), "rule__ValorCompleto__Alternatives");
@@ -47,10 +48,10 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAdditionAccess().getAlternatives_1_0(), "rule__Addition__Alternatives_1_0");
 					put(grammarAccess.getMultiplicationAccess().getAlternatives_1_0(), "rule__Multiplication__Alternatives_1_0");
 					put(grammarAccess.getPrimaryExpressionAccess().getAlternatives(), "rule__PrimaryExpression__Alternatives");
-					put(grammarAccess.getModeloAccess().getGroup(), "rule__Modelo__Group__0");
+					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
 					put(grammarAccess.getObjetoAccess().getGroup(), "rule__Objeto__Group__0");
 					put(grammarAccess.getAtributoSimpleAccess().getGroup(), "rule__AtributoSimple__Group__0");
-					put(grammarAccess.getAtributoSimpleAccess().getGroup_4(), "rule__AtributoSimple__Group_4__0");
+					put(grammarAccess.getAtributoInicializadoAccess().getGroup(), "rule__AtributoInicializado__Group__0");
 					put(grammarAccess.getAtributoAsignadoAccess().getGroup(), "rule__AtributoAsignado__Group__0");
 					put(grammarAccess.getValorAtributoAccess().getGroup(), "rule__ValorAtributo__Group__0");
 					put(grammarAccess.getListaIntegerAccess().getGroup(), "rule__ListaInteger__Group__0");
@@ -72,14 +73,17 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryExpressionAccess().getGroup_1(), "rule__PrimaryExpression__Group_1__0");
 					put(grammarAccess.getPrimaryExpressionAccess().getGroup_2(), "rule__PrimaryExpression__Group_2__0");
 					put(grammarAccess.getPrimaryExpressionAccess().getGroup_3(), "rule__PrimaryExpression__Group_3__0");
-					put(grammarAccess.getModeloAccess().getObjetosAssignment_3(), "rule__Modelo__ObjetosAssignment_3");
+					put(grammarAccess.getModelAccess().getNombreAssignment_1(), "rule__Model__NombreAssignment_1");
+					put(grammarAccess.getModelAccess().getObjetosAssignment_3(), "rule__Model__ObjetosAssignment_3");
 					put(grammarAccess.getObjetoAccess().getNameAssignment_0(), "rule__Objeto__NameAssignment_0");
 					put(grammarAccess.getObjetoAccess().getDescripcionAssignment_1(), "rule__Objeto__DescripcionAssignment_1");
 					put(grammarAccess.getObjetoAccess().getAtributosAssignment_3(), "rule__Objeto__AtributosAssignment_3");
 					put(grammarAccess.getObjetoAccess().getObjetosAssignment_4(), "rule__Objeto__ObjetosAssignment_4");
 					put(grammarAccess.getAtributoSimpleAccess().getNombreAssignment_1(), "rule__AtributoSimple__NombreAssignment_1");
 					put(grammarAccess.getAtributoSimpleAccess().getTipoAssignment_3(), "rule__AtributoSimple__TipoAssignment_3");
-					put(grammarAccess.getAtributoSimpleAccess().getValorAssignment_4_1(), "rule__AtributoSimple__ValorAssignment_4_1");
+					put(grammarAccess.getAtributoInicializadoAccess().getNombreAssignment_1(), "rule__AtributoInicializado__NombreAssignment_1");
+					put(grammarAccess.getAtributoInicializadoAccess().getTipoAssignment_3(), "rule__AtributoInicializado__TipoAssignment_3");
+					put(grammarAccess.getAtributoInicializadoAccess().getValorAssignment_5(), "rule__AtributoInicializado__ValorAssignment_5");
 					put(grammarAccess.getAtributoAsignadoAccess().getNombreAssignment_0(), "rule__AtributoAsignado__NombreAssignment_0");
 					put(grammarAccess.getAtributoAsignadoAccess().getValorAssignment_2(), "rule__AtributoAsignado__ValorAssignment_2");
 					put(grammarAccess.getListaIntegerAccess().getValoresAssignment_2(), "rule__ListaInteger__ValoresAssignment_2");
@@ -103,7 +107,7 @@ public class VtdslParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			co.edu.uniandes.miso4202.ehicletax.ui.contentassist.antlr.internal.InternalVtdslParser typedParser = (co.edu.uniandes.miso4202.ehicletax.ui.contentassist.antlr.internal.InternalVtdslParser) parser;
-			typedParser.entryRuleModelo();
+			typedParser.entryRuleModel();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);
