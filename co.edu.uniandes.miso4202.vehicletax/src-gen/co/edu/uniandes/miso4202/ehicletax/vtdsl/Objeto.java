@@ -14,8 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getName <em>Name</em>}</li>
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getDescripcion <em>Descripcion</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getAtributos <em>Atributos</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getObjetos <em>Objetos</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getPropieades <em>Propieades</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Objeto extends Contenido
+public interface Objeto extends Propiedad
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -78,35 +77,19 @@ public interface Objeto extends Contenido
   void setDescripcion(String value);
 
   /**
-   * Returns the value of the '<em><b>Atributos</b></em>' containment reference list.
-   * The list contents are of type {@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Atributo}.
+   * Returns the value of the '<em><b>Propieades</b></em>' containment reference list.
+   * The list contents are of type {@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Propiedad}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Atributos</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Propieades</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Atributos</em>' containment reference list.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getObjeto_Atributos()
+   * @return the value of the '<em>Propieades</em>' containment reference list.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getObjeto_Propieades()
    * @model containment="true"
    * @generated
    */
-  EList<Atributo> getAtributos();
-
-  /**
-   * Returns the value of the '<em><b>Objetos</b></em>' containment reference list.
-   * The list contents are of type {@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Objetos</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Objetos</em>' containment reference list.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getObjeto_Objetos()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Objeto> getObjetos();
+  EList<Propiedad> getPropieades();
 
 } // Objeto

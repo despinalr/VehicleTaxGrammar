@@ -79,11 +79,25 @@ public class VtdslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VtdslPackage.ENTIDAD:
+      {
+        Entidad entidad = (Entidad)theEObject;
+        T result = caseEntidad(entidad);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VtdslPackage.PROPIEDAD:
+      {
+        Propiedad propiedad = (Propiedad)theEObject;
+        T result = casePropiedad(propiedad);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VtdslPackage.OBJETO:
       {
         Objeto objeto = (Objeto)theEObject;
         T result = caseObjeto(objeto);
-        if (result == null) result = caseContenido(objeto);
+        if (result == null) result = casePropiedad(objeto);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -92,7 +106,7 @@ public class VtdslSwitch<T> extends Switch<T>
         AtributoSimple atributoSimple = (AtributoSimple)theEObject;
         T result = caseAtributoSimple(atributoSimple);
         if (result == null) result = caseAtributo(atributoSimple);
-        if (result == null) result = caseContenido(atributoSimple);
+        if (result == null) result = casePropiedad(atributoSimple);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -101,7 +115,7 @@ public class VtdslSwitch<T> extends Switch<T>
         AtributoInicializado atributoInicializado = (AtributoInicializado)theEObject;
         T result = caseAtributoInicializado(atributoInicializado);
         if (result == null) result = caseAtributo(atributoInicializado);
-        if (result == null) result = caseContenido(atributoInicializado);
+        if (result == null) result = casePropiedad(atributoInicializado);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -110,7 +124,7 @@ public class VtdslSwitch<T> extends Switch<T>
         AtributoListaString atributoListaString = (AtributoListaString)theEObject;
         T result = caseAtributoListaString(atributoListaString);
         if (result == null) result = caseAtributo(atributoListaString);
-        if (result == null) result = caseContenido(atributoListaString);
+        if (result == null) result = casePropiedad(atributoListaString);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -119,7 +133,7 @@ public class VtdslSwitch<T> extends Switch<T>
         AtributoListaInteger atributoListaInteger = (AtributoListaInteger)theEObject;
         T result = caseAtributoListaInteger(atributoListaInteger);
         if (result == null) result = caseAtributo(atributoListaInteger);
-        if (result == null) result = caseContenido(atributoListaInteger);
+        if (result == null) result = casePropiedad(atributoListaInteger);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -128,7 +142,7 @@ public class VtdslSwitch<T> extends Switch<T>
         Formula formula = (Formula)theEObject;
         T result = caseFormula(formula);
         if (result == null) result = caseAtributo(formula);
-        if (result == null) result = caseContenido(formula);
+        if (result == null) result = casePropiedad(formula);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -136,14 +150,7 @@ public class VtdslSwitch<T> extends Switch<T>
       {
         Atributo atributo = (Atributo)theEObject;
         T result = caseAtributo(atributo);
-        if (result == null) result = caseContenido(atributo);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case VtdslPackage.CONTENIDO:
-      {
-        Contenido contenido = (Contenido)theEObject;
-        T result = caseContenido(contenido);
+        if (result == null) result = casePropiedad(atributo);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -261,6 +268,38 @@ public class VtdslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Entidad</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Entidad</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEntidad(Entidad object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Propiedad</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Propiedad</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePropiedad(Propiedad object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Objeto</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -368,22 +407,6 @@ public class VtdslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAtributo(Atributo object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Contenido</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Contenido</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseContenido(Contenido object)
   {
     return null;
   }

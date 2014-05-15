@@ -2,7 +2,7 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Contenido;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Propiedad;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -11,21 +11,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Contenido</b></em>'.
+ * An implementation of the model object '<em><b>Propiedad</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class ContenidoImpl extends MinimalEObjectImpl.Container implements Contenido
+public class PropiedadImpl extends MinimalEObjectImpl.Container implements Propiedad
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ContenidoImpl()
+  protected PropiedadImpl()
   {
     super();
   }
@@ -38,7 +38,7 @@ public class ContenidoImpl extends MinimalEObjectImpl.Container implements Conte
   @Override
   protected EClass eStaticClass()
   {
-    return VtdslPackage.Literals.CONTENIDO;
+    return VtdslPackage.Literals.PROPIEDAD;
   }
 
-} //ContenidoImpl
+} //PropiedadImpl

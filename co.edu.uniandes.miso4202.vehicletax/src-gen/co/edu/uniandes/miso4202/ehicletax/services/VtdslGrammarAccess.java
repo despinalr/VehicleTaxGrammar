@@ -21,23 +21,61 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cModelAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNombreAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNombreIDTerminalRuleCall_1_0 = (RuleCall)cNombreAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cObjetosAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cObjetosObjetoParserRuleCall_3_0 = (RuleCall)cObjetosAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cNombreAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNombreIDTerminalRuleCall_0_0 = (RuleCall)cNombreAssignment_0.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cEntidadesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEntidadesEntidadParserRuleCall_2_0 = (RuleCall)cEntidadesAssignment_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Model:
-		//	{Model} nombre=ID "{" objetos+=Objeto* "}";
+		//	nombre=ID "{" entidades+=Entidad* "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Model} nombre=ID "{" objetos+=Objeto* "}"
+		//nombre=ID "{" entidades+=Entidad* "}"
 		public Group getGroup() { return cGroup; }
 
-		//{Model}
-		public Action getModelAction_0() { return cModelAction_0; }
+		//nombre=ID
+		public Assignment getNombreAssignment_0() { return cNombreAssignment_0; }
+
+		//ID
+		public RuleCall getNombreIDTerminalRuleCall_0_0() { return cNombreIDTerminalRuleCall_0_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//entidades+=Entidad*
+		public Assignment getEntidadesAssignment_2() { return cEntidadesAssignment_2; }
+
+		//Entidad
+		public RuleCall getEntidadesEntidadParserRuleCall_2_0() { return cEntidadesEntidadParserRuleCall_2_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+	}
+
+	public class EntidadElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Entidad");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cEntidadAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cNombreAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNombreIDTerminalRuleCall_1_0 = (RuleCall)cNombreAssignment_1.eContents().get(0);
+		private final Assignment cDescripcionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cDescripcionSTRINGTerminalRuleCall_2_0 = (RuleCall)cDescripcionAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cPropiedadesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPropiedadesPropiedadParserRuleCall_4_0 = (RuleCall)cPropiedadesAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//Entidad:
+		//	{Entidad} nombre=ID descripcion=STRING "{" propiedades+=Propiedad* "}";
+		public ParserRule getRule() { return rule; }
+
+		//{Entidad} nombre=ID descripcion=STRING "{" propiedades+=Propiedad* "}"
+		public Group getGroup() { return cGroup; }
+
+		//{Entidad}
+		public Action getEntidadAction_0() { return cEntidadAction_0; }
 
 		//nombre=ID
 		public Assignment getNombreAssignment_1() { return cNombreAssignment_1; }
@@ -45,17 +83,43 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNombreIDTerminalRuleCall_1_0() { return cNombreIDTerminalRuleCall_1_0; }
 
+		//descripcion=STRING
+		public Assignment getDescripcionAssignment_2() { return cDescripcionAssignment_2; }
+
+		//STRING
+		public RuleCall getDescripcionSTRINGTerminalRuleCall_2_0() { return cDescripcionSTRINGTerminalRuleCall_2_0; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//objetos+=Objeto*
-		public Assignment getObjetosAssignment_3() { return cObjetosAssignment_3; }
+		//propiedades+=Propiedad*
+		public Assignment getPropiedadesAssignment_4() { return cPropiedadesAssignment_4; }
 
-		//Objeto
-		public RuleCall getObjetosObjetoParserRuleCall_3_0() { return cObjetosObjetoParserRuleCall_3_0; }
+		//Propiedad
+		public RuleCall getPropiedadesPropiedadParserRuleCall_4_0() { return cPropiedadesPropiedadParserRuleCall_4_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class PropiedadElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Propiedad");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cObjetoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cAtributoParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Propiedad:
+		//	Objeto | Atributo;
+		public ParserRule getRule() { return rule; }
+
+		//Objeto | Atributo
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Objeto
+		public RuleCall getObjetoParserRuleCall_0() { return cObjetoParserRuleCall_0; }
+
+		//Atributo
+		public RuleCall getAtributoParserRuleCall_1() { return cAtributoParserRuleCall_1; }
 	}
 
 	public class ObjetoElements extends AbstractParserRuleElementFinder {
@@ -66,17 +130,15 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDescripcionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cDescripcionSTRINGTerminalRuleCall_1_0 = (RuleCall)cDescripcionAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cAtributosAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cAtributosAtributoParserRuleCall_3_0 = (RuleCall)cAtributosAssignment_3.eContents().get(0);
-		private final Assignment cObjetosAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cObjetosObjetoParserRuleCall_4_0 = (RuleCall)cObjetosAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cPropieadesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPropieadesPropiedadParserRuleCall_3_0 = (RuleCall)cPropieadesAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Objeto:
-		//	name=ID descripcion=STRING? "{" atributos+=Atributo* objetos+=Objeto* "}";
+		//	name=ID descripcion=STRING? "{" propieades+=Propiedad* "}";
 		public ParserRule getRule() { return rule; }
 
-		//name=ID descripcion=STRING? "{" atributos+=Atributo* objetos+=Objeto* "}"
+		//name=ID descripcion=STRING? "{" propieades+=Propiedad* "}"
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -94,20 +156,14 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//atributos+=Atributo*
-		public Assignment getAtributosAssignment_3() { return cAtributosAssignment_3; }
+		//propieades+=Propiedad*
+		public Assignment getPropieadesAssignment_3() { return cPropieadesAssignment_3; }
 
-		//Atributo
-		public RuleCall getAtributosAtributoParserRuleCall_3_0() { return cAtributosAtributoParserRuleCall_3_0; }
-
-		//objetos+=Objeto*
-		public Assignment getObjetosAssignment_4() { return cObjetosAssignment_4; }
-
-		//Objeto
-		public RuleCall getObjetosObjetoParserRuleCall_4_0() { return cObjetosObjetoParserRuleCall_4_0; }
+		//Propiedad
+		public RuleCall getPropieadesPropiedadParserRuleCall_3_0() { return cPropieadesPropiedadParserRuleCall_3_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class AtributoSimpleElements extends AbstractParserRuleElementFinder {
@@ -391,9 +447,7 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cExpresionesExpressionParserRuleCall_3_0 = (RuleCall)cExpresionesAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		/// *AtributoAsignado:
-		//	nombre=ID '=' (valor+=Statement)*
-		//;* / Formula:
+		//Formula:
 		//	{Formula} nombre=ID "=" expresiones+=Expression* ";";
 		public ParserRule getRule() { return rule; }
 
@@ -432,12 +486,10 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAtributoListaIntegerParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
 		//Atributo:
-		//	AtributoSimple | AtributoInicializado | //AtributoAsignado |
-		//	Formula | AtributoListaString | AtributoListaInteger;
+		//	AtributoSimple | AtributoInicializado | Formula | AtributoListaString | AtributoListaInteger;
 		public ParserRule getRule() { return rule; }
 
-		//AtributoSimple | AtributoInicializado | //AtributoAsignado |
-		//Formula | AtributoListaString | AtributoListaInteger
+		//AtributoSimple | AtributoInicializado | Formula | AtributoListaString | AtributoListaInteger
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//AtributoSimple
@@ -446,7 +498,6 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		//AtributoInicializado
 		public RuleCall getAtributoInicializadoParserRuleCall_1() { return cAtributoInicializadoParserRuleCall_1; }
 
-		////AtributoAsignado |
 		//Formula
 		public RuleCall getFormulaParserRuleCall_2() { return cFormulaParserRuleCall_2; }
 
@@ -455,26 +506,6 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//AtributoListaInteger
 		public RuleCall getAtributoListaIntegerParserRuleCall_4() { return cAtributoListaIntegerParserRuleCall_4; }
-	}
-
-	public class ContenidoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Contenido");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAtributoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cObjetoParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//Contenido:
-		//	Atributo | Objeto;
-		public ParserRule getRule() { return rule; }
-
-		//Atributo | Objeto
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//Atributo
-		public RuleCall getAtributoParserRuleCall_0() { return cAtributoParserRuleCall_0; }
-
-		//Objeto
-		public RuleCall getObjetoParserRuleCall_1() { return cObjetoParserRuleCall_1; }
 	}
 
 	public class ModuleElements extends AbstractParserRuleElementFinder {
@@ -781,6 +812,8 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private ModelElements pModel;
+	private EntidadElements pEntidad;
+	private PropiedadElements pPropiedad;
 	private ObjetoElements pObjeto;
 	private AtributoSimpleElements pAtributoSimple;
 	private AtributoInicializadoElements pAtributoInicializado;
@@ -788,7 +821,6 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	private AtributoListaIntegerElements pAtributoListaInteger;
 	private FormulaElements pFormula;
 	private AtributoElements pAtributo;
-	private ContenidoElements pContenido;
 	private ModuleElements pModule;
 	private StatementElements pStatement;
 	private DefinitionElements pDefinition;
@@ -840,7 +872,7 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	{Model} nombre=ID "{" objetos+=Objeto* "}";
+	//	nombre=ID "{" entidades+=Entidad* "}";
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
 	}
@@ -849,8 +881,28 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 
+	//Entidad:
+	//	{Entidad} nombre=ID descripcion=STRING "{" propiedades+=Propiedad* "}";
+	public EntidadElements getEntidadAccess() {
+		return (pEntidad != null) ? pEntidad : (pEntidad = new EntidadElements());
+	}
+	
+	public ParserRule getEntidadRule() {
+		return getEntidadAccess().getRule();
+	}
+
+	//Propiedad:
+	//	Objeto | Atributo;
+	public PropiedadElements getPropiedadAccess() {
+		return (pPropiedad != null) ? pPropiedad : (pPropiedad = new PropiedadElements());
+	}
+	
+	public ParserRule getPropiedadRule() {
+		return getPropiedadAccess().getRule();
+	}
+
 	//Objeto:
-	//	name=ID descripcion=STRING? "{" atributos+=Atributo* objetos+=Objeto* "}";
+	//	name=ID descripcion=STRING? "{" propieades+=Propiedad* "}";
 	public ObjetoElements getObjetoAccess() {
 		return (pObjeto != null) ? pObjeto : (pObjeto = new ObjetoElements());
 	}
@@ -901,9 +953,7 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 		return getAtributoListaIntegerAccess().getRule();
 	}
 
-	/// *AtributoAsignado:
-	//	nombre=ID '=' (valor+=Statement)*
-	//;* / Formula:
+	//Formula:
 	//	{Formula} nombre=ID "=" expresiones+=Expression* ";";
 	public FormulaElements getFormulaAccess() {
 		return (pFormula != null) ? pFormula : (pFormula = new FormulaElements());
@@ -914,24 +964,13 @@ public class VtdslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Atributo:
-	//	AtributoSimple | AtributoInicializado | //AtributoAsignado |
-	//	Formula | AtributoListaString | AtributoListaInteger;
+	//	AtributoSimple | AtributoInicializado | Formula | AtributoListaString | AtributoListaInteger;
 	public AtributoElements getAtributoAccess() {
 		return (pAtributo != null) ? pAtributo : (pAtributo = new AtributoElements());
 	}
 	
 	public ParserRule getAtributoRule() {
 		return getAtributoAccess().getRule();
-	}
-
-	//Contenido:
-	//	Atributo | Objeto;
-	public ContenidoElements getContenidoAccess() {
-		return (pContenido != null) ? pContenido : (pContenido = new ContenidoElements());
-	}
-	
-	public ParserRule getContenidoRule() {
-		return getContenidoAccess().getRule();
 	}
 
 	/// * ##################### Gramatica de expresiones ##################### * / Module:

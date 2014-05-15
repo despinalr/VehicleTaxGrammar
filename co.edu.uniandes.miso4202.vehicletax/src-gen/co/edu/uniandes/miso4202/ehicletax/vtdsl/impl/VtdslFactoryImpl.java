@@ -65,6 +65,8 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
     switch (eClass.getClassifierID())
     {
       case VtdslPackage.MODEL: return createModel();
+      case VtdslPackage.ENTIDAD: return createEntidad();
+      case VtdslPackage.PROPIEDAD: return createPropiedad();
       case VtdslPackage.OBJETO: return createObjeto();
       case VtdslPackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
       case VtdslPackage.ATRIBUTO_INICIALIZADO: return createAtributoInicializado();
@@ -72,7 +74,6 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
       case VtdslPackage.ATRIBUTO_LISTA_INTEGER: return createAtributoListaInteger();
       case VtdslPackage.FORMULA: return createFormula();
       case VtdslPackage.ATRIBUTO: return createAtributo();
-      case VtdslPackage.CONTENIDO: return createContenido();
       case VtdslPackage.MODULE: return createModule();
       case VtdslPackage.STATEMENT: return createStatement();
       case VtdslPackage.DEFINITION: return createDefinition();
@@ -99,6 +100,28 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     ModelImpl model = new ModelImpl();
     return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entidad createEntidad()
+  {
+    EntidadImpl entidad = new EntidadImpl();
+    return entidad;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Propiedad createPropiedad()
+  {
+    PropiedadImpl propiedad = new PropiedadImpl();
+    return propiedad;
   }
 
   /**
@@ -176,17 +199,6 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     AtributoImpl atributo = new AtributoImpl();
     return atributo;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Contenido createContenido()
-  {
-    ContenidoImpl contenido = new ContenidoImpl();
-    return contenido;
   }
 
   /**

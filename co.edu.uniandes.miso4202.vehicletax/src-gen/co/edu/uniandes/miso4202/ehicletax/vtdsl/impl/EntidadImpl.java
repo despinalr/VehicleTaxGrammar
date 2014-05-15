@@ -2,7 +2,7 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Entidad;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Propiedad;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
@@ -17,46 +17,47 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Objeto</b></em>'.
+ * An implementation of the model object '<em><b>Entidad</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getName <em>Name</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getDescripcion <em>Descripcion</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getPropieades <em>Propieades</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.EntidadImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.EntidadImpl#getDescripcion <em>Descripcion</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.EntidadImpl#getPropiedades <em>Propiedades</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ObjetoImpl extends PropiedadImpl implements Objeto
+public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNombre()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String NOMBRE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNombre()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String nombre = NOMBRE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
@@ -79,21 +80,21 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   protected String descripcion = DESCRIPCION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPropieades() <em>Propieades</em>}' containment reference list.
+   * The cached value of the '{@link #getPropiedades() <em>Propiedades</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPropieades()
+   * @see #getPropiedades()
    * @generated
    * @ordered
    */
-  protected EList<Propiedad> propieades;
+  protected EList<Propiedad> propiedades;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ObjetoImpl()
+  protected EntidadImpl()
   {
     super();
   }
@@ -106,7 +107,7 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   @Override
   protected EClass eStaticClass()
   {
-    return VtdslPackage.Literals.OBJETO;
+    return VtdslPackage.Literals.ENTIDAD;
   }
 
   /**
@@ -114,9 +115,9 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getNombre()
   {
-    return name;
+    return nombre;
   }
 
   /**
@@ -124,12 +125,12 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setNombre(String newNombre)
   {
-    String oldName = name;
-    name = newName;
+    String oldNombre = nombre;
+    nombre = newNombre;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.OBJETO__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ENTIDAD__NOMBRE, oldNombre, nombre));
   }
 
   /**
@@ -152,7 +153,7 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
     String oldDescripcion = descripcion;
     descripcion = newDescripcion;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.OBJETO__DESCRIPCION, oldDescripcion, descripcion));
+      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ENTIDAD__DESCRIPCION, oldDescripcion, descripcion));
   }
 
   /**
@@ -160,13 +161,13 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Propiedad> getPropieades()
+  public EList<Propiedad> getPropiedades()
   {
-    if (propieades == null)
+    if (propiedades == null)
     {
-      propieades = new EObjectContainmentEList<Propiedad>(Propiedad.class, this, VtdslPackage.OBJETO__PROPIEADES);
+      propiedades = new EObjectContainmentEList<Propiedad>(Propiedad.class, this, VtdslPackage.ENTIDAD__PROPIEDADES);
     }
-    return propieades;
+    return propiedades;
   }
 
   /**
@@ -179,8 +180,8 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__PROPIEADES:
-        return ((InternalEList<?>)getPropieades()).basicRemove(otherEnd, msgs);
+      case VtdslPackage.ENTIDAD__PROPIEDADES:
+        return ((InternalEList<?>)getPropiedades()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -195,12 +196,12 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__NAME:
-        return getName();
-      case VtdslPackage.OBJETO__DESCRIPCION:
+      case VtdslPackage.ENTIDAD__NOMBRE:
+        return getNombre();
+      case VtdslPackage.ENTIDAD__DESCRIPCION:
         return getDescripcion();
-      case VtdslPackage.OBJETO__PROPIEADES:
-        return getPropieades();
+      case VtdslPackage.ENTIDAD__PROPIEDADES:
+        return getPropiedades();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -216,15 +217,15 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__NAME:
-        setName((String)newValue);
+      case VtdslPackage.ENTIDAD__NOMBRE:
+        setNombre((String)newValue);
         return;
-      case VtdslPackage.OBJETO__DESCRIPCION:
+      case VtdslPackage.ENTIDAD__DESCRIPCION:
         setDescripcion((String)newValue);
         return;
-      case VtdslPackage.OBJETO__PROPIEADES:
-        getPropieades().clear();
-        getPropieades().addAll((Collection<? extends Propiedad>)newValue);
+      case VtdslPackage.ENTIDAD__PROPIEDADES:
+        getPropiedades().clear();
+        getPropiedades().addAll((Collection<? extends Propiedad>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -240,14 +241,14 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__NAME:
-        setName(NAME_EDEFAULT);
+      case VtdslPackage.ENTIDAD__NOMBRE:
+        setNombre(NOMBRE_EDEFAULT);
         return;
-      case VtdslPackage.OBJETO__DESCRIPCION:
+      case VtdslPackage.ENTIDAD__DESCRIPCION:
         setDescripcion(DESCRIPCION_EDEFAULT);
         return;
-      case VtdslPackage.OBJETO__PROPIEADES:
-        getPropieades().clear();
+      case VtdslPackage.ENTIDAD__PROPIEDADES:
+        getPropiedades().clear();
         return;
     }
     super.eUnset(featureID);
@@ -263,12 +264,12 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case VtdslPackage.OBJETO__DESCRIPCION:
+      case VtdslPackage.ENTIDAD__NOMBRE:
+        return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+      case VtdslPackage.ENTIDAD__DESCRIPCION:
         return DESCRIPCION_EDEFAULT == null ? descripcion != null : !DESCRIPCION_EDEFAULT.equals(descripcion);
-      case VtdslPackage.OBJETO__PROPIEADES:
-        return propieades != null && !propieades.isEmpty();
+      case VtdslPackage.ENTIDAD__PROPIEDADES:
+        return propiedades != null && !propiedades.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -284,12 +285,12 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (nombre: ");
+    result.append(nombre);
     result.append(", descripcion: ");
     result.append(descripcion);
     result.append(')');
     return result.toString();
   }
 
-} //ObjetoImpl
+} //EntidadImpl

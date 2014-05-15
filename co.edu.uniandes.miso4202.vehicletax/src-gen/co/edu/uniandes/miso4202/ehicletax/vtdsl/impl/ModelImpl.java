@@ -2,8 +2,8 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Entidad;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Model;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
 import java.util.Collection;
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ModelImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ModelImpl#getObjetos <em>Objetos</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ModelImpl#getEntidades <em>Entidades</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,14 +59,14 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   protected String nombre = NOMBRE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getObjetos() <em>Objetos</em>}' containment reference list.
+   * The cached value of the '{@link #getEntidades() <em>Entidades</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getObjetos()
+   * @see #getEntidades()
    * @generated
    * @ordered
    */
-  protected EList<Objeto> objetos;
+  protected EList<Entidad> entidades;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,13 +117,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Objeto> getObjetos()
+  public EList<Entidad> getEntidades()
   {
-    if (objetos == null)
+    if (entidades == null)
     {
-      objetos = new EObjectContainmentEList<Objeto>(Objeto.class, this, VtdslPackage.MODEL__OBJETOS);
+      entidades = new EObjectContainmentEList<Entidad>(Entidad.class, this, VtdslPackage.MODEL__ENTIDADES);
     }
-    return objetos;
+    return entidades;
   }
 
   /**
@@ -136,8 +136,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case VtdslPackage.MODEL__OBJETOS:
-        return ((InternalEList<?>)getObjetos()).basicRemove(otherEnd, msgs);
+      case VtdslPackage.MODEL__ENTIDADES:
+        return ((InternalEList<?>)getEntidades()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -154,8 +154,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case VtdslPackage.MODEL__NOMBRE:
         return getNombre();
-      case VtdslPackage.MODEL__OBJETOS:
-        return getObjetos();
+      case VtdslPackage.MODEL__ENTIDADES:
+        return getEntidades();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -174,9 +174,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case VtdslPackage.MODEL__NOMBRE:
         setNombre((String)newValue);
         return;
-      case VtdslPackage.MODEL__OBJETOS:
-        getObjetos().clear();
-        getObjetos().addAll((Collection<? extends Objeto>)newValue);
+      case VtdslPackage.MODEL__ENTIDADES:
+        getEntidades().clear();
+        getEntidades().addAll((Collection<? extends Entidad>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,8 +195,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case VtdslPackage.MODEL__NOMBRE:
         setNombre(NOMBRE_EDEFAULT);
         return;
-      case VtdslPackage.MODEL__OBJETOS:
-        getObjetos().clear();
+      case VtdslPackage.MODEL__ENTIDADES:
+        getEntidades().clear();
         return;
     }
     super.eUnset(featureID);
@@ -214,8 +214,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case VtdslPackage.MODEL__NOMBRE:
         return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-      case VtdslPackage.MODEL__OBJETOS:
-        return objetos != null && !objetos.isEmpty();
+      case VtdslPackage.MODEL__ENTIDADES:
+        return entidades != null && !entidades.isEmpty();
     }
     return super.eIsSet(featureID);
   }

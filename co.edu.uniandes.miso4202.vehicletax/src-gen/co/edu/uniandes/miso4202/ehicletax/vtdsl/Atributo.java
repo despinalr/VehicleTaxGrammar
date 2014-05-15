@@ -19,7 +19,7 @@ package co.edu.uniandes.miso4202.ehicletax.vtdsl;
  * @model
  * @generated
  */
-public interface Atributo extends Contenido
+public interface Atributo extends Propiedad
 {
   /**
    * Returns the value of the '<em><b>Nombre</b></em>' attribute.

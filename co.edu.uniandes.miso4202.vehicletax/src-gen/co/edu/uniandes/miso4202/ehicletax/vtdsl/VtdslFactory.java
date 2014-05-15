@@ -32,6 +32,24 @@ public interface VtdslFactory extends EFactory
   Model createModel();
 
   /**
+   * Returns a new object of class '<em>Entidad</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Entidad</em>'.
+   * @generated
+   */
+  Entidad createEntidad();
+
+  /**
+   * Returns a new object of class '<em>Propiedad</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Propiedad</em>'.
+   * @generated
+   */
+  Propiedad createPropiedad();
+
+  /**
    * Returns a new object of class '<em>Objeto</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -93,15 +111,6 @@ public interface VtdslFactory extends EFactory
    * @generated
    */
   Atributo createAtributo();
-
-  /**
-   * Returns a new object of class '<em>Contenido</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contenido</em>'.
-   * @generated
-   */
-  Contenido createContenido();
 
   /**
    * Returns a new object of class '<em>Module</em>'.

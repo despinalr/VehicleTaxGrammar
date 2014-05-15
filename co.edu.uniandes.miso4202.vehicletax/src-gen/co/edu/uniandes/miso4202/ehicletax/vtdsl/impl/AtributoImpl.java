@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AtributoImpl extends ContenidoImpl implements Atributo
+public class AtributoImpl extends PropiedadImpl implements Atributo
 {
   /**
    * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.

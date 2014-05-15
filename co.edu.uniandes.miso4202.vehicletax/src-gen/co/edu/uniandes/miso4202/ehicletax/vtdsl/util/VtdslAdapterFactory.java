@@ -80,6 +80,16 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter caseEntidad(Entidad object)
+      {
+        return createEntidadAdapter();
+      }
+      @Override
+      public Adapter casePropiedad(Propiedad object)
+      {
+        return createPropiedadAdapter();
+      }
+      @Override
       public Adapter caseObjeto(Objeto object)
       {
         return createObjetoAdapter();
@@ -113,11 +123,6 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAtributo(Atributo object)
       {
         return createAtributoAdapter();
-      }
-      @Override
-      public Adapter caseContenido(Contenido object)
-      {
-        return createContenidoAdapter();
       }
       @Override
       public Adapter caseModule(Module object)
@@ -212,6 +217,36 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Entidad <em>Entidad</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Entidad
+   * @generated
+   */
+  public Adapter createEntidadAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Propiedad <em>Propiedad</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Propiedad
+   * @generated
+   */
+  public Adapter createPropiedadAdapter()
   {
     return null;
   }
@@ -317,21 +352,6 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAtributoAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Contenido <em>Contenido</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Contenido
-   * @generated
-   */
-  public Adapter createContenidoAdapter()
   {
     return null;
   }

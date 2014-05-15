@@ -4,17 +4,25 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate vtdsl "http://www.edu.co/uniandes/miso4202/ehicletax/Vtdsl"
 
 Model:	
-	{Model}
 	nombre=ID '{'
-		(objetos+=Objeto)*
+		(entidades+=Entidad)*
 	'}'
 ;
 
+Entidad:
+	{Entidad}
+	nombre=ID descripcion=STRING '{'
+		propiedades+=Propiedad*
+	'}'
+;
+
+Propiedad:
+	Objeto | Atributo
+;
 
 Objeto:
 	name = ID (descripcion = STRING)? '{'		
-		(atributos += Atributo)*
-		(objetos += Objeto)*
+		propieades+=Propiedad*
 	'}'
 ;
 
@@ -38,10 +46,6 @@ AtributoListaInteger:
 	nombre=(ID | STRING) ':' 'List of Integer' '=' '{' valores+=NUMBER (',' valores+=NUMBER)* '}' ';'
 ;
 
-/*AtributoAsignado:
-	nombre=ID '=' (valor+=Statement)*
-;*/
-
 Formula:
 	{Formula}
 	nombre=ID '=' (expresiones+=Expression)* ';'
@@ -50,14 +54,9 @@ Formula:
 Atributo:
 	AtributoSimple | 
 	AtributoInicializado |
-	//AtributoAsignado |
 	Formula |
 	AtributoListaString |
 	AtributoListaInteger
-;
-
-Contenido returns Contenido:
-	Atributo | Objeto
 ;
 
 

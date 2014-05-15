@@ -9,13 +9,18 @@
       fileExtensions="vtdsl" ecorePackage="Vtdsl.ecore#/">
     <genClasses ecoreClass="Vtdsl.ecore#//Model">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Model/nombre"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Model/objetos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Model/entidades"/>
     </genClasses>
+    <genClasses ecoreClass="Vtdsl.ecore#//Entidad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Entidad/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Entidad/descripcion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Entidad/propiedades"/>
+    </genClasses>
+    <genClasses ecoreClass="Vtdsl.ecore#//Propiedad"/>
     <genClasses ecoreClass="Vtdsl.ecore#//Objeto">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Objeto/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Objeto/descripcion"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Objeto/atributos"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Objeto/objetos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Objeto/propieades"/>
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//AtributoSimple">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoSimple/tipo"/>
@@ -36,7 +41,6 @@
     <genClasses ecoreClass="Vtdsl.ecore#//Atributo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Atributo/nombre"/>
     </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//Contenido"/>
     <genClasses ecoreClass="Vtdsl.ecore#//Module">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Module/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Module/statements"/>

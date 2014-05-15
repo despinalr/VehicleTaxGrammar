@@ -7,6 +7,7 @@ import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoSimple;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Definition;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Div;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Entidad;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Evaluation;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ID;
@@ -44,7 +45,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case VtdslPackage.ATRIBUTO_INICIALIZADO:
 				if(context == grammarAccess.getAtributoRule() ||
 				   context == grammarAccess.getAtributoInicializadoRule() ||
-				   context == grammarAccess.getContenidoRule()) {
+				   context == grammarAccess.getPropiedadRule()) {
 					sequence_AtributoInicializado(context, (AtributoInicializado) semanticObject); 
 					return; 
 				}
@@ -52,7 +53,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case VtdslPackage.ATRIBUTO_LISTA_INTEGER:
 				if(context == grammarAccess.getAtributoRule() ||
 				   context == grammarAccess.getAtributoListaIntegerRule() ||
-				   context == grammarAccess.getContenidoRule()) {
+				   context == grammarAccess.getPropiedadRule()) {
 					sequence_AtributoListaInteger(context, (AtributoListaInteger) semanticObject); 
 					return; 
 				}
@@ -60,7 +61,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case VtdslPackage.ATRIBUTO_LISTA_STRING:
 				if(context == grammarAccess.getAtributoRule() ||
 				   context == grammarAccess.getAtributoListaStringRule() ||
-				   context == grammarAccess.getContenidoRule()) {
+				   context == grammarAccess.getPropiedadRule()) {
 					sequence_AtributoListaString(context, (AtributoListaString) semanticObject); 
 					return; 
 				}
@@ -68,7 +69,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case VtdslPackage.ATRIBUTO_SIMPLE:
 				if(context == grammarAccess.getAtributoRule() ||
 				   context == grammarAccess.getAtributoSimpleRule() ||
-				   context == grammarAccess.getContenidoRule()) {
+				   context == grammarAccess.getPropiedadRule()) {
 					sequence_AtributoSimple(context, (AtributoSimple) semanticObject); 
 					return; 
 				}
@@ -93,6 +94,12 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
+			case VtdslPackage.ENTIDAD:
+				if(context == grammarAccess.getEntidadRule()) {
+					sequence_Entidad(context, (Entidad) semanticObject); 
+					return; 
+				}
+				else break;
 			case VtdslPackage.EVALUATION:
 				if(context == grammarAccess.getEvaluationRule() ||
 				   context == grammarAccess.getStatementRule()) {
@@ -102,8 +109,8 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				else break;
 			case VtdslPackage.FORMULA:
 				if(context == grammarAccess.getAtributoRule() ||
-				   context == grammarAccess.getContenidoRule() ||
-				   context == grammarAccess.getFormulaRule()) {
+				   context == grammarAccess.getFormulaRule() ||
+				   context == grammarAccess.getPropiedadRule()) {
 					sequence_Formula(context, (Formula) semanticObject); 
 					return; 
 				}
@@ -173,8 +180,8 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				}
 				else break;
 			case VtdslPackage.OBJETO:
-				if(context == grammarAccess.getContenidoRule() ||
-				   context == grammarAccess.getObjetoRule()) {
+				if(context == grammarAccess.getObjetoRule() ||
+				   context == grammarAccess.getPropiedadRule()) {
 					sequence_Objeto(context, (Objeto) semanticObject); 
 					return; 
 				}
@@ -301,6 +308,15 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
+	 *     (nombre=ID descripcion=STRING propiedades+=Propiedad*)
+	 */
+	protected void sequence_Entidad(EObject context, Entidad semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     expression=Expression
 	 */
 	protected void sequence_Evaluation(EObject context, Evaluation semanticObject) {
@@ -326,7 +342,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (nombre=ID objetos+=Objeto*)
+	 *     (nombre=ID entidades+=Entidad*)
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -382,7 +398,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID descripcion=STRING? atributos+=Atributo* objetos+=Objeto*)
+	 *     (name=ID descripcion=STRING? propieades+=Propiedad*)
 	 */
 	protected void sequence_Objeto(EObject context, Objeto semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
