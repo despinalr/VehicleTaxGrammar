@@ -59,13 +59,31 @@ public interface VtdslFactory extends EFactory
   AtributoInicializado createAtributoInicializado();
 
   /**
-   * Returns a new object of class '<em>Atributo Asignado</em>'.
+   * Returns a new object of class '<em>Atributo Lista String</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atributo Asignado</em>'.
+   * @return a new object of class '<em>Atributo Lista String</em>'.
    * @generated
    */
-  AtributoAsignado createAtributoAsignado();
+  AtributoListaString createAtributoListaString();
+
+  /**
+   * Returns a new object of class '<em>Atributo Lista Integer</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atributo Lista Integer</em>'.
+   * @generated
+   */
+  AtributoListaInteger createAtributoListaInteger();
+
+  /**
+   * Returns a new object of class '<em>Formula</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Formula</em>'.
+   * @generated
+   */
+  Formula createFormula();
 
   /**
    * Returns a new object of class '<em>Atributo</em>'.
@@ -77,24 +95,6 @@ public interface VtdslFactory extends EFactory
   Atributo createAtributo();
 
   /**
-   * Returns a new object of class '<em>Valor Atributo</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Valor Atributo</em>'.
-   * @generated
-   */
-  ValorAtributo createValorAtributo();
-
-  /**
-   * Returns a new object of class '<em>Valor Completo</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Valor Completo</em>'.
-   * @generated
-   */
-  ValorCompleto createValorCompleto();
-
-  /**
    * Returns a new object of class '<em>Contenido</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -102,33 +102,6 @@ public interface VtdslFactory extends EFactory
    * @generated
    */
   Contenido createContenido();
-
-  /**
-   * Returns a new object of class '<em>Lista Integer</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Lista Integer</em>'.
-   * @generated
-   */
-  ListaInteger createListaInteger();
-
-  /**
-   * Returns a new object of class '<em>Lista String</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Lista String</em>'.
-   * @generated
-   */
-  ListaString createListaString();
-
-  /**
-   * Returns a new object of class '<em>Lista</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Lista</em>'.
-   * @generated
-   */
-  Lista createLista();
 
   /**
    * Returns a new object of class '<em>Module</em>'.

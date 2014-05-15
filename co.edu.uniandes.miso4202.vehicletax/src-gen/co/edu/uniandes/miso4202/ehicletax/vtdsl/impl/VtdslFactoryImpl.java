@@ -68,14 +68,11 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
       case VtdslPackage.OBJETO: return createObjeto();
       case VtdslPackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
       case VtdslPackage.ATRIBUTO_INICIALIZADO: return createAtributoInicializado();
-      case VtdslPackage.ATRIBUTO_ASIGNADO: return createAtributoAsignado();
+      case VtdslPackage.ATRIBUTO_LISTA_STRING: return createAtributoListaString();
+      case VtdslPackage.ATRIBUTO_LISTA_INTEGER: return createAtributoListaInteger();
+      case VtdslPackage.FORMULA: return createFormula();
       case VtdslPackage.ATRIBUTO: return createAtributo();
-      case VtdslPackage.VALOR_ATRIBUTO: return createValorAtributo();
-      case VtdslPackage.VALOR_COMPLETO: return createValorCompleto();
       case VtdslPackage.CONTENIDO: return createContenido();
-      case VtdslPackage.LISTA_INTEGER: return createListaInteger();
-      case VtdslPackage.LISTA_STRING: return createListaString();
-      case VtdslPackage.LISTA: return createLista();
       case VtdslPackage.MODULE: return createModule();
       case VtdslPackage.STATEMENT: return createStatement();
       case VtdslPackage.DEFINITION: return createDefinition();
@@ -142,10 +139,32 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AtributoAsignado createAtributoAsignado()
+  public AtributoListaString createAtributoListaString()
   {
-    AtributoAsignadoImpl atributoAsignado = new AtributoAsignadoImpl();
-    return atributoAsignado;
+    AtributoListaStringImpl atributoListaString = new AtributoListaStringImpl();
+    return atributoListaString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtributoListaInteger createAtributoListaInteger()
+  {
+    AtributoListaIntegerImpl atributoListaInteger = new AtributoListaIntegerImpl();
+    return atributoListaInteger;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Formula createFormula()
+  {
+    FormulaImpl formula = new FormulaImpl();
+    return formula;
   }
 
   /**
@@ -164,65 +183,10 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ValorAtributo createValorAtributo()
-  {
-    ValorAtributoImpl valorAtributo = new ValorAtributoImpl();
-    return valorAtributo;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ValorCompleto createValorCompleto()
-  {
-    ValorCompletoImpl valorCompleto = new ValorCompletoImpl();
-    return valorCompleto;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Contenido createContenido()
   {
     ContenidoImpl contenido = new ContenidoImpl();
     return contenido;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ListaInteger createListaInteger()
-  {
-    ListaIntegerImpl listaInteger = new ListaIntegerImpl();
-    return listaInteger;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ListaString createListaString()
-  {
-    ListaStringImpl listaString = new ListaStringImpl();
-    return listaString;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Lista createLista()
-  {
-    ListaImpl lista = new ListaImpl();
-    return lista;
   }
 
   /**

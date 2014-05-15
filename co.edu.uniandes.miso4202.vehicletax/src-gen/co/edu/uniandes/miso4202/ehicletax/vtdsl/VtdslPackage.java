@@ -175,7 +175,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getAtributo()
    * @generated
    */
-  int ATRIBUTO = 5;
+  int ATRIBUTO = 7;
 
   /**
    * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -261,7 +261,7 @@ public interface VtdslPackage extends EPackage
   int ATRIBUTO_INICIALIZADO__TIPO = ATRIBUTO_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Valor</b></em>' containment reference.
+   * The feature id for the '<em><b>Valor</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -279,14 +279,14 @@ public interface VtdslPackage extends EPackage
   int ATRIBUTO_INICIALIZADO_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoAsignadoImpl <em>Atributo Asignado</em>}' class.
+   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaStringImpl <em>Atributo Lista String</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoAsignadoImpl
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getAtributoAsignado()
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaStringImpl
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getAtributoListaString()
    * @generated
    */
-  int ATRIBUTO_ASIGNADO = 4;
+  int ATRIBUTO_LISTA_STRING = 4;
 
   /**
    * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -295,92 +295,7 @@ public interface VtdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATRIBUTO_ASIGNADO__NOMBRE = ATRIBUTO__NOMBRE;
-
-  /**
-   * The feature id for the '<em><b>Valor</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATRIBUTO_ASIGNADO__VALOR = ATRIBUTO_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Atributo Asignado</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATRIBUTO_ASIGNADO_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ValorCompletoImpl <em>Valor Completo</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ValorCompletoImpl
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getValorCompleto()
-   * @generated
-   */
-  int VALOR_COMPLETO = 7;
-
-  /**
-   * The number of structural features of the '<em>Valor Completo</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VALOR_COMPLETO_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ValorAtributoImpl <em>Valor Atributo</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ValorAtributoImpl
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getValorAtributo()
-   * @generated
-   */
-  int VALOR_ATRIBUTO = 6;
-
-  /**
-   * The number of structural features of the '<em>Valor Atributo</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VALOR_ATRIBUTO_FEATURE_COUNT = VALOR_COMPLETO_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaImpl <em>Lista</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaImpl
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getLista()
-   * @generated
-   */
-  int LISTA = 11;
-
-  /**
-   * The number of structural features of the '<em>Lista</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LISTA_FEATURE_COUNT = VALOR_COMPLETO_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaIntegerImpl <em>Lista Integer</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaIntegerImpl
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getListaInteger()
-   * @generated
-   */
-  int LISTA_INTEGER = 9;
+  int ATRIBUTO_LISTA_STRING__NOMBRE = ATRIBUTO__NOMBRE;
 
   /**
    * The feature id for the '<em><b>Valores</b></em>' attribute list.
@@ -389,26 +304,35 @@ public interface VtdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LISTA_INTEGER__VALORES = LISTA_FEATURE_COUNT + 0;
+  int ATRIBUTO_LISTA_STRING__VALORES = ATRIBUTO_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Lista Integer</em>' class.
+   * The number of structural features of the '<em>Atributo Lista String</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LISTA_INTEGER_FEATURE_COUNT = LISTA_FEATURE_COUNT + 1;
+  int ATRIBUTO_LISTA_STRING_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaStringImpl <em>Lista String</em>}' class.
+   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaIntegerImpl <em>Atributo Lista Integer</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaStringImpl
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getListaString()
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaIntegerImpl
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getAtributoListaInteger()
    * @generated
    */
-  int LISTA_STRING = 10;
+  int ATRIBUTO_LISTA_INTEGER = 5;
+
+  /**
+   * The feature id for the '<em><b>Nombre</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATRIBUTO_LISTA_INTEGER__NOMBRE = ATRIBUTO__NOMBRE;
 
   /**
    * The feature id for the '<em><b>Valores</b></em>' attribute list.
@@ -417,16 +341,53 @@ public interface VtdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LISTA_STRING__VALORES = LISTA_FEATURE_COUNT + 0;
+  int ATRIBUTO_LISTA_INTEGER__VALORES = ATRIBUTO_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Lista String</em>' class.
+   * The number of structural features of the '<em>Atributo Lista Integer</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LISTA_STRING_FEATURE_COUNT = LISTA_FEATURE_COUNT + 1;
+  int ATRIBUTO_LISTA_INTEGER_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.FormulaImpl <em>Formula</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.FormulaImpl
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getFormula()
+   * @generated
+   */
+  int FORMULA = 6;
+
+  /**
+   * The feature id for the '<em><b>Nombre</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORMULA__NOMBRE = ATRIBUTO__NOMBRE;
+
+  /**
+   * The feature id for the '<em><b>Expresiones</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORMULA__EXPRESIONES = ATRIBUTO_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Formula</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORMULA_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ModuleImpl <em>Module</em>}' class.
@@ -436,7 +397,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getModule()
    * @generated
    */
-  int MODULE = 12;
+  int MODULE = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -473,7 +434,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 13;
+  int STATEMENT = 10;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -492,7 +453,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getDefinition()
    * @generated
    */
-  int DEFINITION = 14;
+  int DEFINITION = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -520,7 +481,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getEvaluation()
    * @generated
    */
-  int EVALUATION = 15;
+  int EVALUATION = 12;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -548,7 +509,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 16;
+  int EXPRESSION = 13;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -567,7 +528,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getPlus()
    * @generated
    */
-  int PLUS = 17;
+  int PLUS = 14;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -604,7 +565,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getMinus()
    * @generated
    */
-  int MINUS = 18;
+  int MINUS = 15;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -641,7 +602,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getMulti()
    * @generated
    */
-  int MULTI = 19;
+  int MULTI = 16;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -678,7 +639,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getDiv()
    * @generated
    */
-  int DIV = 20;
+  int DIV = 17;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -715,7 +676,7 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getNumberLiteral()
    * @generated
    */
-  int NUMBER_LITERAL = 21;
+  int NUMBER_LITERAL = 18;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -743,7 +704,16 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getSTRING()
    * @generated
    */
-  int STRING = 22;
+  int STRING = 19;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__VALUE = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>STRING</em>' class.
@@ -752,7 +722,7 @@ public interface VtdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int STRING_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.IDImpl <em>ID</em>}' class.
@@ -762,7 +732,16 @@ public interface VtdslPackage extends EPackage
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getID()
    * @generated
    */
-  int ID = 23;
+  int ID = 20;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ID__VALUE = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>ID</em>' class.
@@ -771,7 +750,7 @@ public interface VtdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ID_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int ID_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 
   /**
@@ -903,36 +882,78 @@ public interface VtdslPackage extends EPackage
   EAttribute getAtributoInicializado_Tipo();
 
   /**
-   * Returns the meta object for the containment reference '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado#getValor <em>Valor</em>}'.
+   * Returns the meta object for the attribute '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado#getValor <em>Valor</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Valor</em>'.
+   * @return the meta object for the attribute '<em>Valor</em>'.
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado#getValor()
    * @see #getAtributoInicializado()
    * @generated
    */
-  EReference getAtributoInicializado_Valor();
+  EAttribute getAtributoInicializado_Valor();
 
   /**
-   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado <em>Atributo Asignado</em>}'.
+   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString <em>Atributo Lista String</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Atributo Asignado</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado
+   * @return the meta object for class '<em>Atributo Lista String</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString
    * @generated
    */
-  EClass getAtributoAsignado();
+  EClass getAtributoListaString();
 
   /**
-   * Returns the meta object for the containment reference list '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado#getValor <em>Valor</em>}'.
+   * Returns the meta object for the attribute list '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString#getValores <em>Valores</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Valor</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado#getValor()
-   * @see #getAtributoAsignado()
+   * @return the meta object for the attribute list '<em>Valores</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString#getValores()
+   * @see #getAtributoListaString()
    * @generated
    */
-  EReference getAtributoAsignado_Valor();
+  EAttribute getAtributoListaString_Valores();
+
+  /**
+   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger <em>Atributo Lista Integer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Atributo Lista Integer</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger
+   * @generated
+   */
+  EClass getAtributoListaInteger();
+
+  /**
+   * Returns the meta object for the attribute list '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger#getValores <em>Valores</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Valores</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger#getValores()
+   * @see #getAtributoListaInteger()
+   * @generated
+   */
+  EAttribute getAtributoListaInteger_Valores();
+
+  /**
+   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula <em>Formula</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Formula</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula
+   * @generated
+   */
+  EClass getFormula();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula#getExpresiones <em>Expresiones</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Expresiones</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula#getExpresiones()
+   * @see #getFormula()
+   * @generated
+   */
+  EReference getFormula_Expresiones();
 
   /**
    * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Atributo <em>Atributo</em>}'.
@@ -956,26 +977,6 @@ public interface VtdslPackage extends EPackage
   EAttribute getAtributo_Nombre();
 
   /**
-   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributo <em>Valor Atributo</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Valor Atributo</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributo
-   * @generated
-   */
-  EClass getValorAtributo();
-
-  /**
-   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto <em>Valor Completo</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Valor Completo</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto
-   * @generated
-   */
-  EClass getValorCompleto();
-
-  /**
    * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Contenido <em>Contenido</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -984,58 +985,6 @@ public interface VtdslPackage extends EPackage
    * @generated
    */
   EClass getContenido();
-
-  /**
-   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger <em>Lista Integer</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Lista Integer</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger
-   * @generated
-   */
-  EClass getListaInteger();
-
-  /**
-   * Returns the meta object for the attribute list '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger#getValores <em>Valores</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Valores</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger#getValores()
-   * @see #getListaInteger()
-   * @generated
-   */
-  EAttribute getListaInteger_Valores();
-
-  /**
-   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString <em>Lista String</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Lista String</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString
-   * @generated
-   */
-  EClass getListaString();
-
-  /**
-   * Returns the meta object for the attribute list '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString#getValores <em>Valores</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Valores</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString#getValores()
-   * @see #getListaString()
-   * @generated
-   */
-  EAttribute getListaString_Valores();
-
-  /**
-   * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Lista <em>Lista</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Lista</em>'.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Lista
-   * @generated
-   */
-  EClass getLista();
 
   /**
    * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Module <em>Module</em>}'.
@@ -1291,6 +1240,17 @@ public interface VtdslPackage extends EPackage
   EClass getSTRING();
 
   /**
+   * Returns the meta object for the attribute '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.STRING#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.STRING#getValue()
+   * @see #getSTRING()
+   * @generated
+   */
+  EAttribute getSTRING_Value();
+
+  /**
    * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ID <em>ID</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1299,6 +1259,17 @@ public interface VtdslPackage extends EPackage
    * @generated
    */
   EClass getID();
+
+  /**
+   * Returns the meta object for the attribute '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ID#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ID#getValue()
+   * @see #getID()
+   * @generated
+   */
+  EAttribute getID_Value();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1428,30 +1399,66 @@ public interface VtdslPackage extends EPackage
     EAttribute ATRIBUTO_INICIALIZADO__TIPO = eINSTANCE.getAtributoInicializado_Tipo();
 
     /**
-     * The meta object literal for the '<em><b>Valor</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ATRIBUTO_INICIALIZADO__VALOR = eINSTANCE.getAtributoInicializado_Valor();
+    EAttribute ATRIBUTO_INICIALIZADO__VALOR = eINSTANCE.getAtributoInicializado_Valor();
 
     /**
-     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoAsignadoImpl <em>Atributo Asignado</em>}' class.
+     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaStringImpl <em>Atributo Lista String</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoAsignadoImpl
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getAtributoAsignado()
+     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaStringImpl
+     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getAtributoListaString()
      * @generated
      */
-    EClass ATRIBUTO_ASIGNADO = eINSTANCE.getAtributoAsignado();
+    EClass ATRIBUTO_LISTA_STRING = eINSTANCE.getAtributoListaString();
 
     /**
-     * The meta object literal for the '<em><b>Valor</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Valores</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ATRIBUTO_ASIGNADO__VALOR = eINSTANCE.getAtributoAsignado_Valor();
+    EAttribute ATRIBUTO_LISTA_STRING__VALORES = eINSTANCE.getAtributoListaString_Valores();
+
+    /**
+     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaIntegerImpl <em>Atributo Lista Integer</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaIntegerImpl
+     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getAtributoListaInteger()
+     * @generated
+     */
+    EClass ATRIBUTO_LISTA_INTEGER = eINSTANCE.getAtributoListaInteger();
+
+    /**
+     * The meta object literal for the '<em><b>Valores</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ATRIBUTO_LISTA_INTEGER__VALORES = eINSTANCE.getAtributoListaInteger_Valores();
+
+    /**
+     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.FormulaImpl <em>Formula</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.FormulaImpl
+     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getFormula()
+     * @generated
+     */
+    EClass FORMULA = eINSTANCE.getFormula();
+
+    /**
+     * The meta object literal for the '<em><b>Expresiones</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FORMULA__EXPRESIONES = eINSTANCE.getFormula_Expresiones();
 
     /**
      * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoImpl <em>Atributo</em>}' class.
@@ -1472,26 +1479,6 @@ public interface VtdslPackage extends EPackage
     EAttribute ATRIBUTO__NOMBRE = eINSTANCE.getAtributo_Nombre();
 
     /**
-     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ValorAtributoImpl <em>Valor Atributo</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ValorAtributoImpl
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getValorAtributo()
-     * @generated
-     */
-    EClass VALOR_ATRIBUTO = eINSTANCE.getValorAtributo();
-
-    /**
-     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ValorCompletoImpl <em>Valor Completo</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ValorCompletoImpl
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getValorCompleto()
-     * @generated
-     */
-    EClass VALOR_COMPLETO = eINSTANCE.getValorCompleto();
-
-    /**
      * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ContenidoImpl <em>Contenido</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1500,52 +1487,6 @@ public interface VtdslPackage extends EPackage
      * @generated
      */
     EClass CONTENIDO = eINSTANCE.getContenido();
-
-    /**
-     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaIntegerImpl <em>Lista Integer</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaIntegerImpl
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getListaInteger()
-     * @generated
-     */
-    EClass LISTA_INTEGER = eINSTANCE.getListaInteger();
-
-    /**
-     * The meta object literal for the '<em><b>Valores</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LISTA_INTEGER__VALORES = eINSTANCE.getListaInteger_Valores();
-
-    /**
-     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaStringImpl <em>Lista String</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaStringImpl
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getListaString()
-     * @generated
-     */
-    EClass LISTA_STRING = eINSTANCE.getListaString();
-
-    /**
-     * The meta object literal for the '<em><b>Valores</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LISTA_STRING__VALORES = eINSTANCE.getListaString_Valores();
-
-    /**
-     * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaImpl <em>Lista</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaImpl
-     * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.VtdslPackageImpl#getLista()
-     * @generated
-     */
-    EClass LISTA = eINSTANCE.getLista();
 
     /**
      * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ModuleImpl <em>Module</em>}' class.
@@ -1762,6 +1703,14 @@ public interface VtdslPackage extends EPackage
     EClass STRING = eINSTANCE.getSTRING();
 
     /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRING__VALUE = eINSTANCE.getSTRING_Value();
+
+    /**
      * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.IDImpl <em>ID</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1770,6 +1719,14 @@ public interface VtdslPackage extends EPackage
      * @generated
      */
     EClass ID = eINSTANCE.getID();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ID__VALUE = eINSTANCE.getID_Value();
 
   }
 

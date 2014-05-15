@@ -3,17 +3,16 @@
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Atributo;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoSimple;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Contenido;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Definition;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Div;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Evaluation;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Expression;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Lista;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Minus;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Model;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Module;
@@ -22,8 +21,6 @@ import co.edu.uniandes.miso4202.ehicletax.vtdsl.NumberLiteral;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Plus;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Statement;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributo;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslFactory;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
@@ -75,7 +72,21 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass atributoAsignadoEClass = null;
+  private EClass atributoListaStringEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atributoListaIntegerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass formulaEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -89,42 +100,7 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass valorAtributoEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass valorCompletoEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass contenidoEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass listaIntegerEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass listaStringEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass listaEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -398,9 +374,9 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAtributoInicializado_Valor()
+  public EAttribute getAtributoInicializado_Valor()
   {
-    return (EReference)atributoInicializadoEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)atributoInicializadoEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -408,9 +384,9 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAtributoAsignado()
+  public EClass getAtributoListaString()
   {
-    return atributoAsignadoEClass;
+    return atributoListaStringEClass;
   }
 
   /**
@@ -418,9 +394,49 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAtributoAsignado_Valor()
+  public EAttribute getAtributoListaString_Valores()
   {
-    return (EReference)atributoAsignadoEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)atributoListaStringEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAtributoListaInteger()
+  {
+    return atributoListaIntegerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtributoListaInteger_Valores()
+  {
+    return (EAttribute)atributoListaIntegerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFormula()
+  {
+    return formulaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFormula_Expresiones()
+  {
+    return (EReference)formulaEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -448,79 +464,9 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getValorAtributo()
-  {
-    return valorAtributoEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getValorCompleto()
-  {
-    return valorCompletoEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getContenido()
   {
     return contenidoEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getListaInteger()
-  {
-    return listaIntegerEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getListaInteger_Valores()
-  {
-    return (EAttribute)listaIntegerEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getListaString()
-  {
-    return listaStringEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getListaString_Valores()
-  {
-    return (EAttribute)listaStringEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLista()
-  {
-    return listaEClass;
   }
 
   /**
@@ -768,9 +714,29 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSTRING_Value()
+  {
+    return (EAttribute)stringEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getID()
   {
     return idEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getID_Value()
+  {
+    return (EAttribute)idEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -818,27 +784,21 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
 
     atributoInicializadoEClass = createEClass(ATRIBUTO_INICIALIZADO);
     createEAttribute(atributoInicializadoEClass, ATRIBUTO_INICIALIZADO__TIPO);
-    createEReference(atributoInicializadoEClass, ATRIBUTO_INICIALIZADO__VALOR);
+    createEAttribute(atributoInicializadoEClass, ATRIBUTO_INICIALIZADO__VALOR);
 
-    atributoAsignadoEClass = createEClass(ATRIBUTO_ASIGNADO);
-    createEReference(atributoAsignadoEClass, ATRIBUTO_ASIGNADO__VALOR);
+    atributoListaStringEClass = createEClass(ATRIBUTO_LISTA_STRING);
+    createEAttribute(atributoListaStringEClass, ATRIBUTO_LISTA_STRING__VALORES);
+
+    atributoListaIntegerEClass = createEClass(ATRIBUTO_LISTA_INTEGER);
+    createEAttribute(atributoListaIntegerEClass, ATRIBUTO_LISTA_INTEGER__VALORES);
+
+    formulaEClass = createEClass(FORMULA);
+    createEReference(formulaEClass, FORMULA__EXPRESIONES);
 
     atributoEClass = createEClass(ATRIBUTO);
     createEAttribute(atributoEClass, ATRIBUTO__NOMBRE);
 
-    valorAtributoEClass = createEClass(VALOR_ATRIBUTO);
-
-    valorCompletoEClass = createEClass(VALOR_COMPLETO);
-
     contenidoEClass = createEClass(CONTENIDO);
-
-    listaIntegerEClass = createEClass(LISTA_INTEGER);
-    createEAttribute(listaIntegerEClass, LISTA_INTEGER__VALORES);
-
-    listaStringEClass = createEClass(LISTA_STRING);
-    createEAttribute(listaStringEClass, LISTA_STRING__VALORES);
-
-    listaEClass = createEClass(LISTA);
 
     moduleEClass = createEClass(MODULE);
     createEAttribute(moduleEClass, MODULE__NAME);
@@ -874,8 +834,10 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     createEAttribute(numberLiteralEClass, NUMBER_LITERAL__VALUE);
 
     stringEClass = createEClass(STRING);
+    createEAttribute(stringEClass, STRING__VALUE);
 
     idEClass = createEClass(ID);
+    createEAttribute(idEClass, ID__VALUE);
   }
 
   /**
@@ -910,12 +872,10 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     objetoEClass.getESuperTypes().add(this.getContenido());
     atributoSimpleEClass.getESuperTypes().add(this.getAtributo());
     atributoInicializadoEClass.getESuperTypes().add(this.getAtributo());
-    atributoAsignadoEClass.getESuperTypes().add(this.getAtributo());
+    atributoListaStringEClass.getESuperTypes().add(this.getAtributo());
+    atributoListaIntegerEClass.getESuperTypes().add(this.getAtributo());
+    formulaEClass.getESuperTypes().add(this.getAtributo());
     atributoEClass.getESuperTypes().add(this.getContenido());
-    valorAtributoEClass.getESuperTypes().add(this.getValorCompleto());
-    listaIntegerEClass.getESuperTypes().add(this.getLista());
-    listaStringEClass.getESuperTypes().add(this.getLista());
-    listaEClass.getESuperTypes().add(this.getValorCompleto());
     definitionEClass.getESuperTypes().add(this.getStatement());
     evaluationEClass.getESuperTypes().add(this.getStatement());
     plusEClass.getESuperTypes().add(this.getExpression());
@@ -942,27 +902,21 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
 
     initEClass(atributoInicializadoEClass, AtributoInicializado.class, "AtributoInicializado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAtributoInicializado_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, AtributoInicializado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAtributoInicializado_Valor(), this.getValorCompleto(), null, "valor", null, 0, 1, AtributoInicializado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAtributoInicializado_Valor(), ecorePackage.getEBigDecimal(), "valor", null, 0, 1, AtributoInicializado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(atributoAsignadoEClass, AtributoAsignado.class, "AtributoAsignado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAtributoAsignado_Valor(), this.getStatement(), null, "valor", null, 0, -1, AtributoAsignado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(atributoListaStringEClass, AtributoListaString.class, "AtributoListaString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtributoListaString_Valores(), ecorePackage.getEString(), "valores", null, 0, -1, AtributoListaString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atributoListaIntegerEClass, AtributoListaInteger.class, "AtributoListaInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtributoListaInteger_Valores(), ecorePackage.getEBigDecimal(), "valores", null, 0, -1, AtributoListaInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(formulaEClass, Formula.class, "Formula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFormula_Expresiones(), this.getExpression(), null, "expresiones", null, 0, -1, Formula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atributoEClass, Atributo.class, "Atributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(valorAtributoEClass, ValorAtributo.class, "ValorAtributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(valorCompletoEClass, ValorCompleto.class, "ValorCompleto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(contenidoEClass, Contenido.class, "Contenido", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(listaIntegerEClass, ListaInteger.class, "ListaInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getListaInteger_Valores(), ecorePackage.getEBigDecimal(), "valores", null, 0, -1, ListaInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(listaStringEClass, ListaString.class, "ListaString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getListaString_Valores(), ecorePackage.getEString(), "valores", null, 0, -1, ListaString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(listaEClass, Lista.class, "Lista", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(moduleEClass, Module.class, "Module", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getModule_Name(), ecorePackage.getEString(), "name", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -998,8 +952,10 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     initEAttribute(getNumberLiteral_Value(), ecorePackage.getEBigDecimal(), "value", null, 0, 1, NumberLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stringEClass, co.edu.uniandes.miso4202.ehicletax.vtdsl.STRING.class, "STRING", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSTRING_Value(), ecorePackage.getEString(), "value", null, 0, 1, co.edu.uniandes.miso4202.ehicletax.vtdsl.STRING.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(idEClass, co.edu.uniandes.miso4202.ehicletax.vtdsl.ID.class, "ID", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getID_Value(), ecorePackage.getEString(), "value", null, 0, 1, co.edu.uniandes.miso4202.ehicletax.vtdsl.ID.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

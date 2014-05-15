@@ -95,9 +95,19 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
         return createAtributoInicializadoAdapter();
       }
       @Override
-      public Adapter caseAtributoAsignado(AtributoAsignado object)
+      public Adapter caseAtributoListaString(AtributoListaString object)
       {
-        return createAtributoAsignadoAdapter();
+        return createAtributoListaStringAdapter();
+      }
+      @Override
+      public Adapter caseAtributoListaInteger(AtributoListaInteger object)
+      {
+        return createAtributoListaIntegerAdapter();
+      }
+      @Override
+      public Adapter caseFormula(Formula object)
+      {
+        return createFormulaAdapter();
       }
       @Override
       public Adapter caseAtributo(Atributo object)
@@ -105,34 +115,9 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
         return createAtributoAdapter();
       }
       @Override
-      public Adapter caseValorAtributo(ValorAtributo object)
-      {
-        return createValorAtributoAdapter();
-      }
-      @Override
-      public Adapter caseValorCompleto(ValorCompleto object)
-      {
-        return createValorCompletoAdapter();
-      }
-      @Override
       public Adapter caseContenido(Contenido object)
       {
         return createContenidoAdapter();
-      }
-      @Override
-      public Adapter caseListaInteger(ListaInteger object)
-      {
-        return createListaIntegerAdapter();
-      }
-      @Override
-      public Adapter caseListaString(ListaString object)
-      {
-        return createListaStringAdapter();
-      }
-      @Override
-      public Adapter caseLista(Lista object)
-      {
-        return createListaAdapter();
       }
       @Override
       public Adapter caseModule(Module object)
@@ -277,16 +262,46 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado <em>Atributo Asignado</em>}'.
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString <em>Atributo Lista String</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString
    * @generated
    */
-  public Adapter createAtributoAsignadoAdapter()
+  public Adapter createAtributoListaStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger <em>Atributo Lista Integer</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger
+   * @generated
+   */
+  public Adapter createAtributoListaIntegerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula <em>Formula</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula
+   * @generated
+   */
+  public Adapter createFormulaAdapter()
   {
     return null;
   }
@@ -307,36 +322,6 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributo <em>Valor Atributo</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributo
-   * @generated
-   */
-  public Adapter createValorAtributoAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto <em>Valor Completo</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto
-   * @generated
-   */
-  public Adapter createValorCompletoAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Contenido <em>Contenido</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -347,51 +332,6 @@ public class VtdslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createContenidoAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger <em>Lista Integer</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger
-   * @generated
-   */
-  public Adapter createListaIntegerAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString <em>Lista String</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString
-   * @generated
-   */
-  public Adapter createListaStringAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Lista <em>Lista</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Lista
-   * @generated
-   */
-  public Adapter createListaAdapter()
   {
     return null;
   }

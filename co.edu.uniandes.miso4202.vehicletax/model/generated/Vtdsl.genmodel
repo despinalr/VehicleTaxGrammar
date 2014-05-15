@@ -22,24 +22,21 @@
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//AtributoInicializado">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoInicializado/tipo"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//AtributoInicializado/valor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoInicializado/valor"/>
     </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//AtributoAsignado">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//AtributoAsignado/valor"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//AtributoListaString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoListaString/valores"/>
+    </genClasses>
+    <genClasses ecoreClass="Vtdsl.ecore#//AtributoListaInteger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//AtributoListaInteger/valores"/>
+    </genClasses>
+    <genClasses ecoreClass="Vtdsl.ecore#//Formula">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Formula/expresiones"/>
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//Atributo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Atributo/nombre"/>
     </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//ValorAtributo"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//ValorCompleto"/>
     <genClasses ecoreClass="Vtdsl.ecore#//Contenido"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//ListaInteger">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//ListaInteger/valores"/>
-    </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//ListaString">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//ListaString/valores"/>
-    </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//Lista"/>
     <genClasses ecoreClass="Vtdsl.ecore#//Module">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Module/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Module/statements"/>
@@ -71,7 +68,11 @@
     <genClasses ecoreClass="Vtdsl.ecore#//NumberLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//NumberLiteral/value"/>
     </genClasses>
-    <genClasses ecoreClass="Vtdsl.ecore#//STRING"/>
-    <genClasses ecoreClass="Vtdsl.ecore#//ID"/>
+    <genClasses ecoreClass="Vtdsl.ecore#//STRING">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//STRING/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Vtdsl.ecore#//ID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//ID/value"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

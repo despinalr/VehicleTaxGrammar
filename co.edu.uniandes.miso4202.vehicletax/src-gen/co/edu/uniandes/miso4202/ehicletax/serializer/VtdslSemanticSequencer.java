@@ -1,15 +1,15 @@
 package co.edu.uniandes.miso4202.ehicletax.serializer;
 
 import co.edu.uniandes.miso4202.ehicletax.services.VtdslGrammarAccess;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoSimple;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Definition;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Div;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Evaluation;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ID;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Minus;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Model;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Module;
@@ -18,7 +18,6 @@ import co.edu.uniandes.miso4202.ehicletax.vtdsl.NumberLiteral;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Plus;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.STRING;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorAtributo;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -42,19 +41,27 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == VtdslPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case VtdslPackage.ATRIBUTO_ASIGNADO:
-				if(context == grammarAccess.getAtributoRule() ||
-				   context == grammarAccess.getAtributoAsignadoRule() ||
-				   context == grammarAccess.getContenidoRule()) {
-					sequence_AtributoAsignado(context, (AtributoAsignado) semanticObject); 
-					return; 
-				}
-				else break;
 			case VtdslPackage.ATRIBUTO_INICIALIZADO:
 				if(context == grammarAccess.getAtributoRule() ||
 				   context == grammarAccess.getAtributoInicializadoRule() ||
 				   context == grammarAccess.getContenidoRule()) {
 					sequence_AtributoInicializado(context, (AtributoInicializado) semanticObject); 
+					return; 
+				}
+				else break;
+			case VtdslPackage.ATRIBUTO_LISTA_INTEGER:
+				if(context == grammarAccess.getAtributoRule() ||
+				   context == grammarAccess.getAtributoListaIntegerRule() ||
+				   context == grammarAccess.getContenidoRule()) {
+					sequence_AtributoListaInteger(context, (AtributoListaInteger) semanticObject); 
+					return; 
+				}
+				else break;
+			case VtdslPackage.ATRIBUTO_LISTA_STRING:
+				if(context == grammarAccess.getAtributoRule() ||
+				   context == grammarAccess.getAtributoListaStringRule() ||
+				   context == grammarAccess.getContenidoRule()) {
+					sequence_AtributoListaString(context, (AtributoListaString) semanticObject); 
 					return; 
 				}
 				else break;
@@ -93,6 +100,14 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
+			case VtdslPackage.FORMULA:
+				if(context == grammarAccess.getAtributoRule() ||
+				   context == grammarAccess.getContenidoRule() ||
+				   context == grammarAccess.getFormulaRule()) {
+					sequence_Formula(context, (Formula) semanticObject); 
+					return; 
+				}
+				else break;
 			case VtdslPackage.ID:
 				if(context == grammarAccess.getAdditionRule() ||
 				   context == grammarAccess.getAdditionAccess().getMinusLeftAction_1_0_1_0() ||
@@ -103,22 +118,6 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				   context == grammarAccess.getMultiplicationAccess().getMultiLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_PrimaryExpression(context, (ID) semanticObject); 
-					return; 
-				}
-				else break;
-			case VtdslPackage.LISTA_INTEGER:
-				if(context == grammarAccess.getListaRule() ||
-				   context == grammarAccess.getListaIntegerRule() ||
-				   context == grammarAccess.getValorCompletoRule()) {
-					sequence_ListaInteger(context, (ListaInteger) semanticObject); 
-					return; 
-				}
-				else break;
-			case VtdslPackage.LISTA_STRING:
-				if(context == grammarAccess.getListaRule() ||
-				   context == grammarAccess.getListaStringRule() ||
-				   context == grammarAccess.getValorCompletoRule()) {
-					sequence_ListaString(context, (ListaString) semanticObject); 
 					return; 
 				}
 				else break;
@@ -206,13 +205,6 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
-			case VtdslPackage.VALOR_ATRIBUTO:
-				if(context == grammarAccess.getValorAtributoRule() ||
-				   context == grammarAccess.getValorCompletoRule()) {
-					sequence_ValorAtributo(context, (ValorAtributo) semanticObject); 
-					return; 
-				}
-				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
@@ -257,18 +249,27 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (nombre=ID valor+=Statement*)
+	 *     ((nombre=ID | nombre=STRING) tipo=DATATYPE valor=NUMBER)
 	 */
-	protected void sequence_AtributoAsignado(EObject context, AtributoAsignado semanticObject) {
+	protected void sequence_AtributoInicializado(EObject context, AtributoInicializado semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((nombre=ID | nombre=STRING) tipo=DATATYPE valor=ValorCompleto)
+	 *     ((nombre=ID | nombre=STRING) valores+=NUMBER valores+=NUMBER*)
 	 */
-	protected void sequence_AtributoInicializado(EObject context, AtributoInicializado semanticObject) {
+	protected void sequence_AtributoListaInteger(EObject context, AtributoListaInteger semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((nombre=ID | nombre=STRING) valores+=STRING valores+=STRING*)
+	 */
+	protected void sequence_AtributoListaString(EObject context, AtributoListaString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -316,18 +317,9 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (valores+=NUMBER valores+=NUMBER*)
+	 *     (nombre=ID expresiones+=Expression*)
 	 */
-	protected void sequence_ListaInteger(EObject context, ListaInteger semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (valores+=STRING valores+=STRING*)
-	 */
-	protected void sequence_ListaString(EObject context, ListaString semanticObject) {
+	protected void sequence_Formula(EObject context, Formula semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -399,10 +391,17 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     {ID}
+	 *     value=ID
 	 */
 	protected void sequence_PrimaryExpression(EObject context, ID semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, VtdslPackage.Literals.ID__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VtdslPackage.Literals.ID__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPrimaryExpressionAccess().getValueIDTerminalRuleCall_3_1_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
@@ -424,18 +423,16 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     {STRING}
+	 *     value=STRING
 	 */
 	protected void sequence_PrimaryExpression(EObject context, STRING semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     {ValorAtributo}
-	 */
-	protected void sequence_ValorAtributo(EObject context, ValorAtributo semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, VtdslPackage.Literals.STRING__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VtdslPackage.Literals.STRING__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPrimaryExpressionAccess().getValueSTRINGTerminalRuleCall_2_1_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 }

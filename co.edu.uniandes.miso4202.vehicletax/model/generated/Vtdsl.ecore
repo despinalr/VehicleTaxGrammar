@@ -20,28 +20,24 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoInicializado" eSuperTypes="#//Atributo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="valor" eType="#//ValorCompleto"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AtributoAsignado" eSuperTypes="#//Atributo">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="valor" upperBound="-1"
-        eType="#//Statement" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoListaString" eSuperTypes="#//Atributo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoListaInteger" eSuperTypes="#//Atributo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Formula" eSuperTypes="#//Atributo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expresiones" upperBound="-1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo" eSuperTypes="#//Contenido">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ValorAtributo" eSuperTypes="#//ValorCompleto"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ValorCompleto"/>
   <eClassifiers xsi:type="ecore:EClass" name="Contenido"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ListaInteger" eSuperTypes="#//Lista">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ListaString" eSuperTypes="#//Lista">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Lista" eSuperTypes="#//ValorCompleto"/>
   <eClassifiers xsi:type="ecore:EClass" name="Module">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
@@ -83,6 +79,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="NumberLiteral" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="STRING" eSuperTypes="#//Expression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ID" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="STRING" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ID" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

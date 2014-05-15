@@ -3,14 +3,13 @@
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ValorCompleto;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
+import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -51,14 +50,24 @@ public class AtributoInicializadoImpl extends AtributoImpl implements AtributoIn
   protected String tipo = TIPO_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getValor() <em>Valor</em>}' containment reference.
+   * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getValor()
    * @generated
    * @ordered
    */
-  protected ValorCompleto valor;
+  protected static final BigDecimal VALOR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValor() <em>Valor</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValor()
+   * @generated
+   * @ordered
+   */
+  protected BigDecimal valor = VALOR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -109,7 +118,7 @@ public class AtributoInicializadoImpl extends AtributoImpl implements AtributoIn
    * <!-- end-user-doc -->
    * @generated
    */
-  public ValorCompleto getValor()
+  public BigDecimal getValor()
   {
     return valor;
   }
@@ -119,53 +128,12 @@ public class AtributoInicializadoImpl extends AtributoImpl implements AtributoIn
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValor(ValorCompleto newValor, NotificationChain msgs)
+  public void setValor(BigDecimal newValor)
   {
-    ValorCompleto oldValor = valor;
+    BigDecimal oldValor = valor;
     valor = newValor;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, oldValor, newValor);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setValor(ValorCompleto newValor)
-  {
-    if (newValor != valor)
-    {
-      NotificationChain msgs = null;
-      if (valor != null)
-        msgs = ((InternalEObject)valor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, null, msgs);
-      if (newValor != null)
-        msgs = ((InternalEObject)newValor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, null, msgs);
-      msgs = basicSetValor(newValor, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, newValor, newValor));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
-        return basicSetValor(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR, oldValor, valor));
   }
 
   /**
@@ -200,7 +168,7 @@ public class AtributoInicializadoImpl extends AtributoImpl implements AtributoIn
         setTipo((String)newValue);
         return;
       case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
-        setValor((ValorCompleto)newValue);
+        setValor((BigDecimal)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -220,7 +188,7 @@ public class AtributoInicializadoImpl extends AtributoImpl implements AtributoIn
         setTipo(TIPO_EDEFAULT);
         return;
       case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
-        setValor((ValorCompleto)null);
+        setValor(VALOR_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -239,7 +207,7 @@ public class AtributoInicializadoImpl extends AtributoImpl implements AtributoIn
       case VtdslPackage.ATRIBUTO_INICIALIZADO__TIPO:
         return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
       case VtdslPackage.ATRIBUTO_INICIALIZADO__VALOR:
-        return valor != null;
+        return VALOR_EDEFAULT == null ? valor != null : !VALOR_EDEFAULT.equals(valor);
     }
     return super.eIsSet(featureID);
   }
@@ -257,6 +225,8 @@ public class AtributoInicializadoImpl extends AtributoImpl implements AtributoIn
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (tipo: ");
     result.append(tipo);
+    result.append(", valor: ");
+    result.append(valor);
     result.append(')');
     return result.toString();
   }

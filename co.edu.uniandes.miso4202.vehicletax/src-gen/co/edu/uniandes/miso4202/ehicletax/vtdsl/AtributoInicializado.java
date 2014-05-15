@@ -2,6 +2,7 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl;
 
+import java.math.BigDecimal;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,29 +50,29 @@ public interface AtributoInicializado extends Atributo
   void setTipo(String value);
 
   /**
-   * Returns the value of the '<em><b>Valor</b></em>' containment reference.
+   * Returns the value of the '<em><b>Valor</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Valor</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Valor</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Valor</em>' containment reference.
-   * @see #setValor(ValorCompleto)
+   * @return the value of the '<em>Valor</em>' attribute.
+   * @see #setValor(BigDecimal)
    * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getAtributoInicializado_Valor()
-   * @model containment="true"
+   * @model
    * @generated
    */
-  ValorCompleto getValor();
+  BigDecimal getValor();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado#getValor <em>Valor</em>}' containment reference.
+   * Sets the value of the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado#getValor <em>Valor</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Valor</em>' containment reference.
+   * @param value the new value of the '<em>Valor</em>' attribute.
    * @see #getValor()
    * @generated
    */
-  void setValor(ValorCompleto value);
+  void setValor(BigDecimal value);
 
 } // AtributoInicializado

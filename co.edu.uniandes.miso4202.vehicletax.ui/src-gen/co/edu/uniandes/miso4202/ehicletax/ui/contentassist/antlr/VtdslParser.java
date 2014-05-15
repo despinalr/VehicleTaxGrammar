@@ -39,11 +39,10 @@ public class VtdslParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getAtributoSimpleAccess().getNombreAlternatives_1_0(), "rule__AtributoSimple__NombreAlternatives_1_0");
 					put(grammarAccess.getAtributoInicializadoAccess().getNombreAlternatives_1_0(), "rule__AtributoInicializado__NombreAlternatives_1_0");
+					put(grammarAccess.getAtributoListaStringAccess().getNombreAlternatives_1_0(), "rule__AtributoListaString__NombreAlternatives_1_0");
+					put(grammarAccess.getAtributoListaIntegerAccess().getNombreAlternatives_1_0(), "rule__AtributoListaInteger__NombreAlternatives_1_0");
 					put(grammarAccess.getAtributoAccess().getAlternatives(), "rule__Atributo__Alternatives");
-					put(grammarAccess.getValorAtributoAccess().getAlternatives_1(), "rule__ValorAtributo__Alternatives_1");
-					put(grammarAccess.getValorCompletoAccess().getAlternatives(), "rule__ValorCompleto__Alternatives");
 					put(grammarAccess.getContenidoAccess().getAlternatives(), "rule__Contenido__Alternatives");
-					put(grammarAccess.getListaAccess().getAlternatives(), "rule__Lista__Alternatives");
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getAdditionAccess().getAlternatives_1_0(), "rule__Addition__Alternatives_1_0");
 					put(grammarAccess.getMultiplicationAccess().getAlternatives_1_0(), "rule__Multiplication__Alternatives_1_0");
@@ -52,12 +51,11 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getObjetoAccess().getGroup(), "rule__Objeto__Group__0");
 					put(grammarAccess.getAtributoSimpleAccess().getGroup(), "rule__AtributoSimple__Group__0");
 					put(grammarAccess.getAtributoInicializadoAccess().getGroup(), "rule__AtributoInicializado__Group__0");
-					put(grammarAccess.getAtributoAsignadoAccess().getGroup(), "rule__AtributoAsignado__Group__0");
-					put(grammarAccess.getValorAtributoAccess().getGroup(), "rule__ValorAtributo__Group__0");
-					put(grammarAccess.getListaIntegerAccess().getGroup(), "rule__ListaInteger__Group__0");
-					put(grammarAccess.getListaIntegerAccess().getGroup_3(), "rule__ListaInteger__Group_3__0");
-					put(grammarAccess.getListaStringAccess().getGroup(), "rule__ListaString__Group__0");
-					put(grammarAccess.getListaStringAccess().getGroup_3(), "rule__ListaString__Group_3__0");
+					put(grammarAccess.getAtributoListaStringAccess().getGroup(), "rule__AtributoListaString__Group__0");
+					put(grammarAccess.getAtributoListaStringAccess().getGroup_7(), "rule__AtributoListaString__Group_7__0");
+					put(grammarAccess.getAtributoListaIntegerAccess().getGroup(), "rule__AtributoListaInteger__Group__0");
+					put(grammarAccess.getAtributoListaIntegerAccess().getGroup_7(), "rule__AtributoListaInteger__Group_7__0");
+					put(grammarAccess.getFormulaAccess().getGroup(), "rule__Formula__Group__0");
 					put(grammarAccess.getModuleAccess().getGroup(), "rule__Module__Group__0");
 					put(grammarAccess.getDefinitionAccess().getGroup(), "rule__Definition__Group__0");
 					put(grammarAccess.getEvaluationAccess().getGroup(), "rule__Evaluation__Group__0");
@@ -84,12 +82,14 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtributoInicializadoAccess().getNombreAssignment_1(), "rule__AtributoInicializado__NombreAssignment_1");
 					put(grammarAccess.getAtributoInicializadoAccess().getTipoAssignment_3(), "rule__AtributoInicializado__TipoAssignment_3");
 					put(grammarAccess.getAtributoInicializadoAccess().getValorAssignment_5(), "rule__AtributoInicializado__ValorAssignment_5");
-					put(grammarAccess.getAtributoAsignadoAccess().getNombreAssignment_0(), "rule__AtributoAsignado__NombreAssignment_0");
-					put(grammarAccess.getAtributoAsignadoAccess().getValorAssignment_2(), "rule__AtributoAsignado__ValorAssignment_2");
-					put(grammarAccess.getListaIntegerAccess().getValoresAssignment_2(), "rule__ListaInteger__ValoresAssignment_2");
-					put(grammarAccess.getListaIntegerAccess().getValoresAssignment_3_1(), "rule__ListaInteger__ValoresAssignment_3_1");
-					put(grammarAccess.getListaStringAccess().getValoresAssignment_2(), "rule__ListaString__ValoresAssignment_2");
-					put(grammarAccess.getListaStringAccess().getValoresAssignment_3_1(), "rule__ListaString__ValoresAssignment_3_1");
+					put(grammarAccess.getAtributoListaStringAccess().getNombreAssignment_1(), "rule__AtributoListaString__NombreAssignment_1");
+					put(grammarAccess.getAtributoListaStringAccess().getValoresAssignment_6(), "rule__AtributoListaString__ValoresAssignment_6");
+					put(grammarAccess.getAtributoListaStringAccess().getValoresAssignment_7_1(), "rule__AtributoListaString__ValoresAssignment_7_1");
+					put(grammarAccess.getAtributoListaIntegerAccess().getNombreAssignment_1(), "rule__AtributoListaInteger__NombreAssignment_1");
+					put(grammarAccess.getAtributoListaIntegerAccess().getValoresAssignment_6(), "rule__AtributoListaInteger__ValoresAssignment_6");
+					put(grammarAccess.getAtributoListaIntegerAccess().getValoresAssignment_7_1(), "rule__AtributoListaInteger__ValoresAssignment_7_1");
+					put(grammarAccess.getFormulaAccess().getNombreAssignment_1(), "rule__Formula__NombreAssignment_1");
+					put(grammarAccess.getFormulaAccess().getExpresionesAssignment_3(), "rule__Formula__ExpresionesAssignment_3");
 					put(grammarAccess.getModuleAccess().getNameAssignment_1(), "rule__Module__NameAssignment_1");
 					put(grammarAccess.getModuleAccess().getStatementsAssignment_2(), "rule__Module__StatementsAssignment_2");
 					put(grammarAccess.getDefinitionAccess().getNameAssignment_1(), "rule__Definition__NameAssignment_1");
@@ -97,6 +97,8 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAdditionAccess().getRightAssignment_1_1(), "rule__Addition__RightAssignment_1_1");
 					put(grammarAccess.getMultiplicationAccess().getRightAssignment_1_1(), "rule__Multiplication__RightAssignment_1_1");
 					put(grammarAccess.getPrimaryExpressionAccess().getValueAssignment_1_1(), "rule__PrimaryExpression__ValueAssignment_1_1");
+					put(grammarAccess.getPrimaryExpressionAccess().getValueAssignment_2_1(), "rule__PrimaryExpression__ValueAssignment_2_1");
+					put(grammarAccess.getPrimaryExpressionAccess().getValueAssignment_3_1(), "rule__PrimaryExpression__ValueAssignment_3_1");
 				}
 			};
 		}

@@ -2,7 +2,7 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaString;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
 import java.util.Collection;
@@ -15,18 +15,18 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Lista String</b></em>'.
+ * An implementation of the model object '<em><b>Atributo Lista String</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaStringImpl#getValores <em>Valores</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaStringImpl#getValores <em>Valores</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ListaStringImpl extends ListaImpl implements ListaString
+public class AtributoListaStringImpl extends AtributoImpl implements AtributoListaString
 {
   /**
    * The cached value of the '{@link #getValores() <em>Valores</em>}' attribute list.
@@ -43,7 +43,7 @@ public class ListaStringImpl extends ListaImpl implements ListaString
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ListaStringImpl()
+  protected AtributoListaStringImpl()
   {
     super();
   }
@@ -56,7 +56,7 @@ public class ListaStringImpl extends ListaImpl implements ListaString
   @Override
   protected EClass eStaticClass()
   {
-    return VtdslPackage.Literals.LISTA_STRING;
+    return VtdslPackage.Literals.ATRIBUTO_LISTA_STRING;
   }
 
   /**
@@ -68,7 +68,7 @@ public class ListaStringImpl extends ListaImpl implements ListaString
   {
     if (valores == null)
     {
-      valores = new EDataTypeEList<String>(String.class, this, VtdslPackage.LISTA_STRING__VALORES);
+      valores = new EDataTypeEList<String>(String.class, this, VtdslPackage.ATRIBUTO_LISTA_STRING__VALORES);
     }
     return valores;
   }
@@ -83,7 +83,7 @@ public class ListaStringImpl extends ListaImpl implements ListaString
   {
     switch (featureID)
     {
-      case VtdslPackage.LISTA_STRING__VALORES:
+      case VtdslPackage.ATRIBUTO_LISTA_STRING__VALORES:
         return getValores();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -100,7 +100,7 @@ public class ListaStringImpl extends ListaImpl implements ListaString
   {
     switch (featureID)
     {
-      case VtdslPackage.LISTA_STRING__VALORES:
+      case VtdslPackage.ATRIBUTO_LISTA_STRING__VALORES:
         getValores().clear();
         getValores().addAll((Collection<? extends String>)newValue);
         return;
@@ -118,7 +118,7 @@ public class ListaStringImpl extends ListaImpl implements ListaString
   {
     switch (featureID)
     {
-      case VtdslPackage.LISTA_STRING__VALORES:
+      case VtdslPackage.ATRIBUTO_LISTA_STRING__VALORES:
         getValores().clear();
         return;
     }
@@ -135,7 +135,7 @@ public class ListaStringImpl extends ListaImpl implements ListaString
   {
     switch (featureID)
     {
-      case VtdslPackage.LISTA_STRING__VALORES:
+      case VtdslPackage.ATRIBUTO_LISTA_STRING__VALORES:
         return valores != null && !valores.isEmpty();
     }
     return super.eIsSet(featureID);
@@ -158,4 +158,4 @@ public class ListaStringImpl extends ListaImpl implements ListaString
     return result.toString();
   }
 
-} //ListaStringImpl
+} //AtributoListaStringImpl

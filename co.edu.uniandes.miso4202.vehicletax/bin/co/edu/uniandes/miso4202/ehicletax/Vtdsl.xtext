@@ -25,53 +25,41 @@ AtributoSimple:
 
 AtributoInicializado:
 	{AtributoInicializado}
-	nombre=(ID | STRING) ':' tipo=DATATYPE '=' valor=ValorCompleto ';'
+	nombre=(ID | STRING) ':' tipo=DATATYPE '=' valor=NUMBER ';'
 ;
 
-AtributoAsignado:
+AtributoListaString:
+	{AtributoListaString}
+	nombre=(ID | STRING) ':' 'List of String' '=' '{' valores+=STRING (',' valores+=STRING)* '}' ';'
+;
+
+AtributoListaInteger:
+	{AtributoListaInteger}
+	nombre=(ID | STRING) ':' 'List of Integer' '=' '{' valores+=NUMBER (',' valores+=NUMBER)* '}' ';'
+;
+
+/*AtributoAsignado:
 	nombre=ID '=' (valor+=Statement)*
+;*/
+
+Formula:
+	{Formula}
+	nombre=ID '=' (expresiones+=Expression)* ';'
 ;
 
 Atributo:
 	AtributoSimple | 
 	AtributoInicializado |
-	AtributoAsignado
-;
-
-
-ValorAtributo:
-	{ValorAtributo}
-	(ID | STRING | NUMBER)
-;
-
-ValorCompleto:
-	ValorAtributo | Lista
+	//AtributoAsignado |
+	Formula |
+	AtributoListaString |
+	AtributoListaInteger
 ;
 
 Contenido returns Contenido:
 	Atributo | Objeto
 ;
 
-
-
-ListaInteger:
-	{ListaInteger}
-	'{'
-	  	valores+=NUMBER (',' valores+=NUMBER)*
-	'}'
-;
-
-ListaString:
-	{ListaString}
-	'{' 
-		valores+=STRING (',' valores+=STRING)* 
-	'}'
-;
-
-Lista:		
-	ListaInteger | 
-	ListaString
-;
 
 
 /* ##################### Gramatica de expresiones ##################### */
@@ -102,8 +90,8 @@ PrimaryExpression returns Expression:
 	'(' Expression ')' |
 	{NumberLiteral} value=NUMBER |
 	/*{DefinitionLiteral} def=[Definition] |*/
-	{STRING} STRING |
-	{ID} ID
+	{STRING} value=STRING |
+	{ID} value=ID
 	;
 
 terminal NUMBER returns ecore::EBigDecimal:

@@ -2,7 +2,7 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.ListaInteger;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
 import java.math.BigDecimal;
@@ -17,18 +17,18 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Lista Integer</b></em>'.
+ * An implementation of the model object '<em><b>Atributo Lista Integer</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ListaIntegerImpl#getValores <em>Valores</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoListaIntegerImpl#getValores <em>Valores</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ListaIntegerImpl extends ListaImpl implements ListaInteger
+public class AtributoListaIntegerImpl extends AtributoImpl implements AtributoListaInteger
 {
   /**
    * The cached value of the '{@link #getValores() <em>Valores</em>}' attribute list.
@@ -45,7 +45,7 @@ public class ListaIntegerImpl extends ListaImpl implements ListaInteger
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ListaIntegerImpl()
+  protected AtributoListaIntegerImpl()
   {
     super();
   }
@@ -58,7 +58,7 @@ public class ListaIntegerImpl extends ListaImpl implements ListaInteger
   @Override
   protected EClass eStaticClass()
   {
-    return VtdslPackage.Literals.LISTA_INTEGER;
+    return VtdslPackage.Literals.ATRIBUTO_LISTA_INTEGER;
   }
 
   /**
@@ -70,7 +70,7 @@ public class ListaIntegerImpl extends ListaImpl implements ListaInteger
   {
     if (valores == null)
     {
-      valores = new EDataTypeEList<BigDecimal>(BigDecimal.class, this, VtdslPackage.LISTA_INTEGER__VALORES);
+      valores = new EDataTypeEList<BigDecimal>(BigDecimal.class, this, VtdslPackage.ATRIBUTO_LISTA_INTEGER__VALORES);
     }
     return valores;
   }
@@ -85,7 +85,7 @@ public class ListaIntegerImpl extends ListaImpl implements ListaInteger
   {
     switch (featureID)
     {
-      case VtdslPackage.LISTA_INTEGER__VALORES:
+      case VtdslPackage.ATRIBUTO_LISTA_INTEGER__VALORES:
         return getValores();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -102,7 +102,7 @@ public class ListaIntegerImpl extends ListaImpl implements ListaInteger
   {
     switch (featureID)
     {
-      case VtdslPackage.LISTA_INTEGER__VALORES:
+      case VtdslPackage.ATRIBUTO_LISTA_INTEGER__VALORES:
         getValores().clear();
         getValores().addAll((Collection<? extends BigDecimal>)newValue);
         return;
@@ -120,7 +120,7 @@ public class ListaIntegerImpl extends ListaImpl implements ListaInteger
   {
     switch (featureID)
     {
-      case VtdslPackage.LISTA_INTEGER__VALORES:
+      case VtdslPackage.ATRIBUTO_LISTA_INTEGER__VALORES:
         getValores().clear();
         return;
     }
@@ -137,7 +137,7 @@ public class ListaIntegerImpl extends ListaImpl implements ListaInteger
   {
     switch (featureID)
     {
-      case VtdslPackage.LISTA_INTEGER__VALORES:
+      case VtdslPackage.ATRIBUTO_LISTA_INTEGER__VALORES:
         return valores != null && !valores.isEmpty();
     }
     return super.eIsSet(featureID);
@@ -160,4 +160,4 @@ public class ListaIntegerImpl extends ListaImpl implements ListaInteger
     return result.toString();
   }
 
-} //ListaIntegerImpl
+} //AtributoListaIntegerImpl

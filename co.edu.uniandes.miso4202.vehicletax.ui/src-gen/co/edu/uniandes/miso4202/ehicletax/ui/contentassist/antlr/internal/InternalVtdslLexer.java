@@ -13,6 +13,8 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalVtdslLexer extends Lexer {
     public static final int RULE_ID=4;
+    public static final int T__27=27;
+    public static final int T__26=26;
     public static final int T__25=25;
     public static final int T__24=24;
     public static final int T__23=23;
@@ -28,9 +30,9 @@ public class InternalVtdslLexer extends Lexer {
     public static final int T__16=16;
     public static final int T__15=15;
     public static final int T__18=18;
-    public static final int RULE_DATATYPE=7;
+    public static final int RULE_DATATYPE=6;
     public static final int T__17=17;
-    public static final int RULE_NUMBER=6;
+    public static final int RULE_NUMBER=7;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_INT=8;
@@ -154,10 +156,11 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:16:7: ( ',' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:16:9: ','
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:16:7: ( 'List of String' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:16:9: 'List of String'
             {
-            match(','); 
+            match("List of String"); 
+
 
             }
 
@@ -174,11 +177,10 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:17:7: ( 'def' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:17:9: 'def'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:17:7: ( ',' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:17:9: ','
             {
-            match("def"); 
-
+            match(','); 
 
             }
 
@@ -195,10 +197,11 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:18:7: ( '+' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:18:9: '+'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:18:7: ( 'List of Integer' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:18:9: 'List of Integer'
             {
-            match('+'); 
+            match("List of Integer"); 
+
 
             }
 
@@ -215,10 +218,11 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:19:7: ( '-' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:19:9: '-'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:19:7: ( 'def' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:19:9: 'def'
             {
-            match('-'); 
+            match("def"); 
+
 
             }
 
@@ -235,10 +239,10 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:20:7: ( '*' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:20:9: '*'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:20:7: ( '+' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:20:9: '+'
             {
-            match('*'); 
+            match('+'); 
 
             }
 
@@ -255,10 +259,10 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:21:7: ( '/' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:21:9: '/'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:21:7: ( '-' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:21:9: '-'
             {
-            match('/'); 
+            match('-'); 
 
             }
 
@@ -275,10 +279,10 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:22:7: ( '(' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:22:9: '('
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:22:7: ( '*' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:22:9: '*'
             {
-            match('('); 
+            match('*'); 
 
             }
 
@@ -295,10 +299,10 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:23:7: ( ')' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:23:9: ')'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:23:7: ( '/' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:23:9: '/'
             {
-            match(')'); 
+            match('/'); 
 
             }
 
@@ -310,15 +314,55 @@ public class InternalVtdslLexer extends Lexer {
     }
     // $ANTLR end "T__25"
 
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:24:7: ( '(' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:24:9: '('
+            {
+            match('('); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:25:7: ( ')' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:25:9: ')'
+            {
+            match(')'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
     // $ANTLR start "RULE_NUMBER"
     public final void mRULE_NUMBER() throws RecognitionException {
         try {
             int _type = RULE_NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3403:13: ( ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3403:15: ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )?
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3694:13: ( ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3694:15: ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )?
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3403:15: ( '0' .. '9' )*
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3694:15: ( '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -331,7 +375,7 @@ public class InternalVtdslLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3403:16: '0' .. '9'
+            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3694:16: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -343,7 +387,7 @@ public class InternalVtdslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3403:27: ( '.' ( '0' .. '9' )+ )?
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3694:27: ( '.' ( '0' .. '9' )+ )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -352,10 +396,10 @@ public class InternalVtdslLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3403:28: '.' ( '0' .. '9' )+
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3694:28: '.' ( '0' .. '9' )+
                     {
                     match('.'); 
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3403:32: ( '0' .. '9' )+
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3694:32: ( '0' .. '9' )+
                     int cnt2=0;
                     loop2:
                     do {
@@ -369,7 +413,7 @@ public class InternalVtdslLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3403:33: '0' .. '9'
+                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3694:33: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -407,8 +451,8 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3405:10: ( 'this one has been deactivated' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3405:12: 'this one has been deactivated'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3696:10: ( 'this one has been deactivated' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3696:12: 'this one has been deactivated'
             {
             match("this one has been deactivated"); 
 
@@ -428,15 +472,15 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = RULE_DATATYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3407:15: ( ( 'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3407:17: ( 'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3698:15: ( ( 'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3698:17: ( 'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3407:17: ( 'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3698:17: ( 'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String' )
             int alt4=5;
             alt4 = dfa4.predict(input);
             switch (alt4) {
                 case 1 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3407:18: 'Real'
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3698:18: 'Real'
                     {
                     match("Real"); 
 
@@ -444,7 +488,7 @@ public class InternalVtdslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3407:25: 'Int'
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3698:25: 'Int'
                     {
                     match("Int"); 
 
@@ -452,7 +496,7 @@ public class InternalVtdslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3407:31: 'String'
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3698:31: 'String'
                     {
                     match("String"); 
 
@@ -460,7 +504,7 @@ public class InternalVtdslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3407:40: 'List of Integer'
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3698:40: 'List of Integer'
                     {
                     match("List of Integer"); 
 
@@ -468,7 +512,7 @@ public class InternalVtdslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3407:58: 'List of String'
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3698:58: 'List of String'
                     {
                     match("List of String"); 
 
@@ -494,10 +538,10 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3409:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3409:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3700:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3700:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3409:11: ( '^' )?
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3700:11: ( '^' )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -506,7 +550,7 @@ public class InternalVtdslLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3409:11: '^'
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3700:11: '^'
                     {
                     match('^'); 
 
@@ -524,7 +568,7 @@ public class InternalVtdslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3409:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3700:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop6:
             do {
                 int alt6=2;
@@ -573,10 +617,10 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -594,10 +638,10 @@ public class InternalVtdslLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -613,7 +657,7 @@ public class InternalVtdslLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -629,7 +673,7 @@ public class InternalVtdslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -654,10 +698,10 @@ public class InternalVtdslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -673,7 +717,7 @@ public class InternalVtdslLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -689,7 +733,7 @@ public class InternalVtdslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3411:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3702:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -732,12 +776,12 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3413:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3413:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3704:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3704:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3413:24: ( options {greedy=false; } : . )*
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3704:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -762,7 +806,7 @@ public class InternalVtdslLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3413:52: .
+            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3704:52: .
             	    {
             	    matchAny(); 
 
@@ -792,12 +836,12 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3415:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3415:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3706:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3706:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3415:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3706:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -810,7 +854,7 @@ public class InternalVtdslLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3415:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3706:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -830,7 +874,7 @@ public class InternalVtdslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3415:40: ( ( '\\r' )? '\\n' )?
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3706:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -839,9 +883,9 @@ public class InternalVtdslLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3415:41: ( '\\r' )? '\\n'
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3706:41: ( '\\r' )? '\\n'
                     {
-                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3415:41: ( '\\r' )?
+                    // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3706:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -850,7 +894,7 @@ public class InternalVtdslLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3415:41: '\\r'
+                            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3706:41: '\\r'
                             {
                             match('\r'); 
 
@@ -882,10 +926,10 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3417:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3417:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3708:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3708:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3417:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3708:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -939,8 +983,8 @@ public class InternalVtdslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3419:16: ( . )
-            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3419:18: .
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3710:16: ( . )
+            // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:3710:18: .
             {
             matchAny(); 
 
@@ -955,8 +999,8 @@ public class InternalVtdslLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | RULE_NUMBER | RULE_INT | RULE_DATATYPE | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt15=22;
+        // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_NUMBER | RULE_INT | RULE_DATATYPE | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt15=24;
         alt15 = dfa15.predict(input);
         switch (alt15) {
             case 1 :
@@ -1051,63 +1095,77 @@ public class InternalVtdslLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:88: RULE_NUMBER
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:88: T__26
+                {
+                mT__26(); 
+
+                }
+                break;
+            case 15 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:94: T__27
+                {
+                mT__27(); 
+
+                }
+                break;
+            case 16 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:100: RULE_NUMBER
                 {
                 mRULE_NUMBER(); 
 
                 }
                 break;
-            case 15 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:100: RULE_INT
+            case 17 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:112: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 16 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:109: RULE_DATATYPE
+            case 18 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:121: RULE_DATATYPE
                 {
                 mRULE_DATATYPE(); 
 
                 }
                 break;
-            case 17 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:123: RULE_ID
+            case 19 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:135: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 18 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:131: RULE_STRING
+            case 20 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:143: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 19 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:143: RULE_ML_COMMENT
+            case 21 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:155: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 20 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:159: RULE_SL_COMMENT
+            case 22 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:171: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 21 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:175: RULE_WS
+            case 23 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:187: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 22 :
-                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:183: RULE_ANY_OTHER
+            case 24 :
+                // ../co.edu.uniandes.miso4202.vehicletax.ui/src-gen/co/edu/uniandes/miso4202/ehicletax/ui/contentassist/antlr/internal/InternalVtdsl.g:1:195: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1182,65 +1240,68 @@ public class InternalVtdslLexer extends Lexer {
             this.transition = DFA4_transition;
         }
         public String getDescription() {
-            return "3407:17: ( 'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String' )";
+            return "3698:17: ( 'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String' )";
         }
     }
     static final String DFA15_eotS =
-        "\1\20\6\uffff\1\43\3\uffff\1\51\3\uffff\1\33\1\uffff\5\43\1\33"+
-        "\1\uffff\2\33\10\uffff\1\43\11\uffff\5\43\2\uffff\1\71\2\43\1\74"+
-        "\2\43\1\uffff\1\43\1\74\1\uffff\2\43\1\uffff\1\43\1\74";
+        "\1\21\5\uffff\1\42\1\uffff\1\42\3\uffff\1\52\3\uffff\1\33\1\uffff"+
+        "\4\42\1\33\1\uffff\2\33\7\uffff\1\42\2\uffff\1\42\10\uffff\4\42"+
+        "\2\uffff\1\42\1\72\2\42\1\75\2\42\1\uffff\1\42\1\75\1\uffff\1\42"+
+        "\2\uffff\1\42\1\uffff\1\75\21\uffff";
     static final String DFA15_eofS =
-        "\102\uffff";
+        "\125\uffff";
     static final String DFA15_minS =
-        "\1\0\6\uffff\1\145\3\uffff\1\52\3\uffff\1\60\1\uffff\1\150\1\145"+
-        "\1\156\1\164\1\151\1\101\1\uffff\2\0\10\uffff\1\146\11\uffff\1\151"+
-        "\1\141\1\164\1\162\1\163\2\uffff\1\60\1\163\1\154\1\60\1\151\1\164"+
-        "\1\uffff\1\40\1\60\1\uffff\1\156\1\40\1\uffff\1\147\1\60";
+        "\1\0\5\uffff\1\151\1\uffff\1\145\3\uffff\1\52\3\uffff\1\60\1\uffff"+
+        "\1\150\1\145\1\156\1\164\1\101\1\uffff\2\0\7\uffff\1\163\2\uffff"+
+        "\1\146\10\uffff\1\151\1\141\1\164\1\162\2\uffff\1\164\1\60\1\163"+
+        "\1\154\1\60\1\151\1\40\1\uffff\1\40\1\60\1\uffff\1\156\1\157\1\uffff"+
+        "\1\147\1\146\1\60\1\40\1\111\1\164\1\156\1\162\1\164\1\151\1\145"+
+        "\1\156\2\147\1\145\1\uffff\1\162\3\uffff";
     static final String DFA15_maxS =
-        "\1\uffff\6\uffff\1\145\3\uffff\1\57\3\uffff\1\71\1\uffff\1\150"+
-        "\1\145\1\156\1\164\1\151\1\172\1\uffff\2\uffff\10\uffff\1\146\11"+
-        "\uffff\1\151\1\141\1\164\1\162\1\163\2\uffff\1\172\1\163\1\154\1"+
-        "\172\1\151\1\164\1\uffff\1\40\1\172\1\uffff\1\156\1\40\1\uffff\1"+
-        "\147\1\172";
+        "\1\uffff\5\uffff\1\151\1\uffff\1\145\3\uffff\1\57\3\uffff\1\71"+
+        "\1\uffff\1\150\1\145\1\156\1\164\1\172\1\uffff\2\uffff\7\uffff\1"+
+        "\163\2\uffff\1\146\10\uffff\1\151\1\141\1\164\1\162\2\uffff\1\164"+
+        "\1\172\1\163\1\154\1\172\1\151\1\40\1\uffff\1\40\1\172\1\uffff\1"+
+        "\156\1\157\1\uffff\1\147\1\146\1\172\1\40\1\123\1\164\1\156\1\162"+
+        "\1\164\1\151\1\145\1\156\2\147\1\145\1\uffff\1\162\3\uffff";
     static final String DFA15_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\uffff\1\10\1\11\1\12\1\uffff"+
-        "\1\14\1\15\1\16\1\uffff\1\16\6\uffff\1\21\2\uffff\1\25\1\26\1\1"+
-        "\1\2\1\3\1\4\1\5\1\6\1\uffff\1\21\1\10\1\11\1\12\1\23\1\24\1\13"+
-        "\1\14\1\15\5\uffff\1\22\1\25\6\uffff\1\7\2\uffff\1\20\2\uffff\1"+
-        "\17\2\uffff";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\uffff\1\7\1\uffff\1\12\1\13\1\14"+
+        "\1\uffff\1\16\1\17\1\20\1\uffff\1\20\5\uffff\1\23\2\uffff\1\27\1"+
+        "\30\1\1\1\2\1\3\1\4\1\5\1\uffff\1\23\1\7\1\uffff\1\12\1\13\1\14"+
+        "\1\25\1\26\1\15\1\16\1\17\4\uffff\1\24\1\27\7\uffff\1\11\2\uffff"+
+        "\1\22\2\uffff\1\21\17\uffff\1\6\1\uffff\1\6\2\10";
     static final String DFA15_specialS =
-        "\1\1\27\uffff\1\2\1\0\50\uffff}>";
+        "\1\0\27\uffff\1\1\1\2\73\uffff}>";
     static final String[] DFA15_transitionS = {
-            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\30\4\33\1\31\1\14\1"+
-            "\15\1\12\1\10\1\6\1\11\1\17\1\13\12\16\1\3\1\4\1\33\1\5\3\33"+
-            "\10\27\1\23\2\27\1\25\5\27\1\22\1\24\7\27\3\33\1\26\1\27\1\33"+
-            "\3\27\1\7\17\27\1\21\6\27\1\1\1\33\1\2\uff82\33",
+            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\30\4\33\1\31\1\15\1"+
+            "\16\1\13\1\11\1\7\1\12\1\20\1\14\12\17\1\3\1\4\1\33\1\5\3\33"+
+            "\10\27\1\24\2\27\1\6\5\27\1\23\1\25\7\27\3\33\1\26\1\27\1\33"+
+            "\3\27\1\10\17\27\1\22\6\27\1\1\1\33\1\2\uff82\33",
             "",
             "",
             "",
             "",
             "",
+            "\1\41",
             "",
-            "\1\42",
-            "",
-            "",
-            "",
-            "\1\47\4\uffff\1\50",
+            "\1\44",
             "",
             "",
             "",
-            "\12\20",
+            "\1\50\4\uffff\1\51",
             "",
-            "\1\54",
+            "",
+            "",
+            "\12\21",
+            "",
             "\1\55",
             "\1\56",
             "\1\57",
             "\1\60",
-            "\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
             "\0\61",
             "\0\61",
-            "",
             "",
             "",
             "",
@@ -1251,35 +1312,55 @@ public class InternalVtdslLexer extends Lexer {
             "\1\63",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\64",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\65",
             "\1\66",
             "\1\67",
             "\1\70",
             "",
             "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\72",
+            "\1\71",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\73",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\75",
+            "\1\74",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\76",
-            "",
             "\1\77",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
             "",
             "\1\100",
-            "\1\74",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
             "\1\101",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43"
+            "\1\102",
+            "",
+            "\1\103",
+            "\1\104",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\105",
+            "\1\107\11\uffff\1\106",
+            "\1\110",
+            "\1\111",
+            "\1\112",
+            "\1\113",
+            "\1\114",
+            "\1\115",
+            "\1\116",
+            "\1\117",
+            "\1\120",
+            "\1\121",
+            "",
+            "\1\123",
+            "",
+            "",
+            ""
     };
 
     static final short[] DFA15_eot = DFA.unpackEncodedString(DFA15_eotS);
@@ -1312,23 +1393,13 @@ public class InternalVtdslLexer extends Lexer {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | RULE_NUMBER | RULE_INT | RULE_DATATYPE | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_NUMBER | RULE_INT | RULE_DATATYPE | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA15_25 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_25>='\u0000' && LA15_25<='\uFFFF')) ) {s = 49;}
-
-                        else s = 27;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA15_0 = input.LA(1);
 
                         s = -1;
@@ -1342,35 +1413,35 @@ public class InternalVtdslLexer extends Lexer {
 
                         else if ( (LA15_0=='=') ) {s = 5;}
 
-                        else if ( (LA15_0==',') ) {s = 6;}
+                        else if ( (LA15_0=='L') ) {s = 6;}
 
-                        else if ( (LA15_0=='d') ) {s = 7;}
+                        else if ( (LA15_0==',') ) {s = 7;}
 
-                        else if ( (LA15_0=='+') ) {s = 8;}
+                        else if ( (LA15_0=='d') ) {s = 8;}
 
-                        else if ( (LA15_0=='-') ) {s = 9;}
+                        else if ( (LA15_0=='+') ) {s = 9;}
 
-                        else if ( (LA15_0=='*') ) {s = 10;}
+                        else if ( (LA15_0=='-') ) {s = 10;}
 
-                        else if ( (LA15_0=='/') ) {s = 11;}
+                        else if ( (LA15_0=='*') ) {s = 11;}
 
-                        else if ( (LA15_0=='(') ) {s = 12;}
+                        else if ( (LA15_0=='/') ) {s = 12;}
 
-                        else if ( (LA15_0==')') ) {s = 13;}
+                        else if ( (LA15_0=='(') ) {s = 13;}
 
-                        else if ( ((LA15_0>='0' && LA15_0<='9')) ) {s = 14;}
+                        else if ( (LA15_0==')') ) {s = 14;}
 
-                        else if ( (LA15_0=='.') ) {s = 15;}
+                        else if ( ((LA15_0>='0' && LA15_0<='9')) ) {s = 15;}
 
-                        else if ( (LA15_0=='t') ) {s = 17;}
+                        else if ( (LA15_0=='.') ) {s = 16;}
 
-                        else if ( (LA15_0=='R') ) {s = 18;}
+                        else if ( (LA15_0=='t') ) {s = 18;}
 
-                        else if ( (LA15_0=='I') ) {s = 19;}
+                        else if ( (LA15_0=='R') ) {s = 19;}
 
-                        else if ( (LA15_0=='S') ) {s = 20;}
+                        else if ( (LA15_0=='I') ) {s = 20;}
 
-                        else if ( (LA15_0=='L') ) {s = 21;}
+                        else if ( (LA15_0=='S') ) {s = 21;}
 
                         else if ( (LA15_0=='^') ) {s = 22;}
 
@@ -1384,15 +1455,25 @@ public class InternalVtdslLexer extends Lexer {
 
                         else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||LA15_0=='!'||(LA15_0>='#' && LA15_0<='&')||LA15_0=='<'||(LA15_0>='>' && LA15_0<='@')||(LA15_0>='[' && LA15_0<=']')||LA15_0=='`'||LA15_0=='|'||(LA15_0>='~' && LA15_0<='\uFFFF')) ) {s = 27;}
 
-                        else s = 16;
+                        else s = 17;
 
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
+                    case 1 : 
                         int LA15_24 = input.LA(1);
 
                         s = -1;
                         if ( ((LA15_24>='\u0000' && LA15_24<='\uFFFF')) ) {s = 49;}
+
+                        else s = 27;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA15_25 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_25>='\u0000' && LA15_25<='\uFFFF')) ) {s = 49;}
 
                         else s = 27;
 

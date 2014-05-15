@@ -2,8 +2,8 @@
  */
 package co.edu.uniandes.miso4202.ehicletax.vtdsl.impl;
 
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoAsignado;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Statement;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Expression;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 
 import java.util.Collection;
@@ -20,35 +20,35 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Atributo Asignado</b></em>'.
+ * An implementation of the model object '<em><b>Formula</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.AtributoAsignadoImpl#getValor <em>Valor</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.FormulaImpl#getExpresiones <em>Expresiones</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsignado
+public class FormulaImpl extends AtributoImpl implements Formula
 {
   /**
-   * The cached value of the '{@link #getValor() <em>Valor</em>}' containment reference list.
+   * The cached value of the '{@link #getExpresiones() <em>Expresiones</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValor()
+   * @see #getExpresiones()
    * @generated
    * @ordered
    */
-  protected EList<Statement> valor;
+  protected EList<Expression> expresiones;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AtributoAsignadoImpl()
+  protected FormulaImpl()
   {
     super();
   }
@@ -61,7 +61,7 @@ public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsigna
   @Override
   protected EClass eStaticClass()
   {
-    return VtdslPackage.Literals.ATRIBUTO_ASIGNADO;
+    return VtdslPackage.Literals.FORMULA;
   }
 
   /**
@@ -69,13 +69,13 @@ public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsigna
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Statement> getValor()
+  public EList<Expression> getExpresiones()
   {
-    if (valor == null)
+    if (expresiones == null)
     {
-      valor = new EObjectContainmentEList<Statement>(Statement.class, this, VtdslPackage.ATRIBUTO_ASIGNADO__VALOR);
+      expresiones = new EObjectContainmentEList<Expression>(Expression.class, this, VtdslPackage.FORMULA__EXPRESIONES);
     }
-    return valor;
+    return expresiones;
   }
 
   /**
@@ -88,8 +88,8 @@ public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsigna
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
-        return ((InternalEList<?>)getValor()).basicRemove(otherEnd, msgs);
+      case VtdslPackage.FORMULA__EXPRESIONES:
+        return ((InternalEList<?>)getExpresiones()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -104,8 +104,8 @@ public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsigna
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
-        return getValor();
+      case VtdslPackage.FORMULA__EXPRESIONES:
+        return getExpresiones();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,9 +121,9 @@ public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsigna
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
-        getValor().clear();
-        getValor().addAll((Collection<? extends Statement>)newValue);
+      case VtdslPackage.FORMULA__EXPRESIONES:
+        getExpresiones().clear();
+        getExpresiones().addAll((Collection<? extends Expression>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,8 +139,8 @@ public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsigna
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
-        getValor().clear();
+      case VtdslPackage.FORMULA__EXPRESIONES:
+        getExpresiones().clear();
         return;
     }
     super.eUnset(featureID);
@@ -156,10 +156,10 @@ public class AtributoAsignadoImpl extends AtributoImpl implements AtributoAsigna
   {
     switch (featureID)
     {
-      case VtdslPackage.ATRIBUTO_ASIGNADO__VALOR:
-        return valor != null && !valor.isEmpty();
+      case VtdslPackage.FORMULA__EXPRESIONES:
+        return expresiones != null && !expresiones.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //AtributoAsignadoImpl
+} //FormulaImpl
