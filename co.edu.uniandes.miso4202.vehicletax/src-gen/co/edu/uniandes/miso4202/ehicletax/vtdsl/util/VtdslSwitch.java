@@ -86,6 +86,30 @@ public class VtdslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VtdslPackage.REGISTRO:
+      {
+        Registro registro = (Registro)theEObject;
+        T result = caseRegistro(registro);
+        if (result == null) result = caseEntidad(registro);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VtdslPackage.CONTACTO:
+      {
+        Contacto contacto = (Contacto)theEObject;
+        T result = caseContacto(contacto);
+        if (result == null) result = caseEntidad(contacto);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VtdslPackage.PAGO:
+      {
+        Pago pago = (Pago)theEObject;
+        T result = casePago(pago);
+        if (result == null) result = caseEntidad(pago);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VtdslPackage.PROPIEDAD:
       {
         Propiedad propiedad = (Propiedad)theEObject;
@@ -123,6 +147,7 @@ public class VtdslSwitch<T> extends Switch<T>
       {
         AtributoListaString atributoListaString = (AtributoListaString)theEObject;
         T result = caseAtributoListaString(atributoListaString);
+        if (result == null) result = caseAtributoLista(atributoListaString);
         if (result == null) result = caseAtributo(atributoListaString);
         if (result == null) result = casePropiedad(atributoListaString);
         if (result == null) result = defaultCase(theEObject);
@@ -132,8 +157,18 @@ public class VtdslSwitch<T> extends Switch<T>
       {
         AtributoListaInteger atributoListaInteger = (AtributoListaInteger)theEObject;
         T result = caseAtributoListaInteger(atributoListaInteger);
+        if (result == null) result = caseAtributoLista(atributoListaInteger);
         if (result == null) result = caseAtributo(atributoListaInteger);
         if (result == null) result = casePropiedad(atributoListaInteger);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VtdslPackage.ATRIBUTO_LISTA:
+      {
+        AtributoLista atributoLista = (AtributoLista)theEObject;
+        T result = caseAtributoLista(atributoLista);
+        if (result == null) result = caseAtributo(atributoLista);
+        if (result == null) result = casePropiedad(atributoLista);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -284,6 +319,54 @@ public class VtdslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Registro</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Registro</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRegistro(Registro object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Contacto</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Contacto</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContacto(Contacto object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pago</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pago</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePago(Pago object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Propiedad</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -375,6 +458,22 @@ public class VtdslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAtributoListaInteger(AtributoListaInteger object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Atributo Lista</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atributo Lista</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtributoLista(AtributoLista object)
   {
     return null;
   }

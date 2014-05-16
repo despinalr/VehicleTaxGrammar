@@ -12,9 +12,8 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getName <em>Name</em>}</li>
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getDescripcion <em>Descripcion</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getPropieades <em>Propieades</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getPropiedades <em>Propiedades</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,32 +23,6 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Objeto extends Propiedad
 {
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getObjeto_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
   /**
    * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -77,19 +50,19 @@ public interface Objeto extends Propiedad
   void setDescripcion(String value);
 
   /**
-   * Returns the value of the '<em><b>Propieades</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Propiedades</b></em>' containment reference list.
    * The list contents are of type {@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Propiedad}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Propieades</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Propiedades</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Propieades</em>' containment reference list.
-   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getObjeto_Propieades()
+   * @return the value of the '<em>Propiedades</em>' containment reference list.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getObjeto_Propiedades()
    * @model containment="true"
    * @generated
    */
-  EList<Propiedad> getPropieades();
+  EList<Propiedad> getPropiedades();
 
 } // Objeto

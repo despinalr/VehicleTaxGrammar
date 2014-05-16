@@ -28,9 +28,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getName <em>Name</em>}</li>
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getDescripcion <em>Descripcion</em>}</li>
- *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getPropieades <em>Propieades</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ObjetoImpl#getPropiedades <em>Propiedades</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,26 +37,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ObjetoImpl extends PropiedadImpl implements Objeto
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The default value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -79,14 +58,14 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   protected String descripcion = DESCRIPCION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPropieades() <em>Propieades</em>}' containment reference list.
+   * The cached value of the '{@link #getPropiedades() <em>Propiedades</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPropieades()
+   * @see #getPropiedades()
    * @generated
    * @ordered
    */
-  protected EList<Propiedad> propieades;
+  protected EList<Propiedad> propiedades;
 
   /**
    * <!-- begin-user-doc -->
@@ -107,29 +86,6 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   protected EClass eStaticClass()
   {
     return VtdslPackage.Literals.OBJETO;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VtdslPackage.OBJETO__NAME, oldName, name));
   }
 
   /**
@@ -160,13 +116,13 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Propiedad> getPropieades()
+  public EList<Propiedad> getPropiedades()
   {
-    if (propieades == null)
+    if (propiedades == null)
     {
-      propieades = new EObjectContainmentEList<Propiedad>(Propiedad.class, this, VtdslPackage.OBJETO__PROPIEADES);
+      propiedades = new EObjectContainmentEList<Propiedad>(Propiedad.class, this, VtdslPackage.OBJETO__PROPIEDADES);
     }
-    return propieades;
+    return propiedades;
   }
 
   /**
@@ -179,8 +135,8 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__PROPIEADES:
-        return ((InternalEList<?>)getPropieades()).basicRemove(otherEnd, msgs);
+      case VtdslPackage.OBJETO__PROPIEDADES:
+        return ((InternalEList<?>)getPropiedades()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -195,12 +151,10 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__NAME:
-        return getName();
       case VtdslPackage.OBJETO__DESCRIPCION:
         return getDescripcion();
-      case VtdslPackage.OBJETO__PROPIEADES:
-        return getPropieades();
+      case VtdslPackage.OBJETO__PROPIEDADES:
+        return getPropiedades();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -216,15 +170,12 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__NAME:
-        setName((String)newValue);
-        return;
       case VtdslPackage.OBJETO__DESCRIPCION:
         setDescripcion((String)newValue);
         return;
-      case VtdslPackage.OBJETO__PROPIEADES:
-        getPropieades().clear();
-        getPropieades().addAll((Collection<? extends Propiedad>)newValue);
+      case VtdslPackage.OBJETO__PROPIEDADES:
+        getPropiedades().clear();
+        getPropiedades().addAll((Collection<? extends Propiedad>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -240,14 +191,11 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case VtdslPackage.OBJETO__DESCRIPCION:
         setDescripcion(DESCRIPCION_EDEFAULT);
         return;
-      case VtdslPackage.OBJETO__PROPIEADES:
-        getPropieades().clear();
+      case VtdslPackage.OBJETO__PROPIEDADES:
+        getPropiedades().clear();
         return;
     }
     super.eUnset(featureID);
@@ -263,12 +211,10 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
   {
     switch (featureID)
     {
-      case VtdslPackage.OBJETO__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case VtdslPackage.OBJETO__DESCRIPCION:
         return DESCRIPCION_EDEFAULT == null ? descripcion != null : !DESCRIPCION_EDEFAULT.equals(descripcion);
-      case VtdslPackage.OBJETO__PROPIEADES:
-        return propieades != null && !propieades.isEmpty();
+      case VtdslPackage.OBJETO__PROPIEDADES:
+        return propiedades != null && !propiedades.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -284,9 +230,7 @@ public class ObjetoImpl extends PropiedadImpl implements Objeto
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", descripcion: ");
+    result.append(" (descripcion: ");
     result.append(descripcion);
     result.append(')');
     return result.toString();

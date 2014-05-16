@@ -66,12 +66,16 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
     {
       case VtdslPackage.MODEL: return createModel();
       case VtdslPackage.ENTIDAD: return createEntidad();
+      case VtdslPackage.REGISTRO: return createRegistro();
+      case VtdslPackage.CONTACTO: return createContacto();
+      case VtdslPackage.PAGO: return createPago();
       case VtdslPackage.PROPIEDAD: return createPropiedad();
       case VtdslPackage.OBJETO: return createObjeto();
       case VtdslPackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
       case VtdslPackage.ATRIBUTO_INICIALIZADO: return createAtributoInicializado();
       case VtdslPackage.ATRIBUTO_LISTA_STRING: return createAtributoListaString();
       case VtdslPackage.ATRIBUTO_LISTA_INTEGER: return createAtributoListaInteger();
+      case VtdslPackage.ATRIBUTO_LISTA: return createAtributoLista();
       case VtdslPackage.FORMULA: return createFormula();
       case VtdslPackage.ATRIBUTO: return createAtributo();
       case VtdslPackage.MODULE: return createModule();
@@ -111,6 +115,39 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     EntidadImpl entidad = new EntidadImpl();
     return entidad;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Registro createRegistro()
+  {
+    RegistroImpl registro = new RegistroImpl();
+    return registro;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Contacto createContacto()
+  {
+    ContactoImpl contacto = new ContactoImpl();
+    return contacto;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Pago createPago()
+  {
+    PagoImpl pago = new PagoImpl();
+    return pago;
   }
 
   /**
@@ -177,6 +214,17 @@ public class VtdslFactoryImpl extends EFactoryImpl implements VtdslFactory
   {
     AtributoListaIntegerImpl atributoListaInteger = new AtributoListaIntegerImpl();
     return atributoListaInteger;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtributoLista createAtributoLista()
+  {
+    AtributoListaImpl atributoLista = new AtributoListaImpl();
+    return atributoLista;
   }
 
   /**

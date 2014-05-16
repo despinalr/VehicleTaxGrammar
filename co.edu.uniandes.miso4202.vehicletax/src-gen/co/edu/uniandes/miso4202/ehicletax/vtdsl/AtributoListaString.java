@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface AtributoListaString extends Atributo
+public interface AtributoListaString extends AtributoLista
 {
   /**
    * Returns the value of the '<em><b>Valores</b></em>' attribute list.

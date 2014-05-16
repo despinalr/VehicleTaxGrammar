@@ -5,9 +5,9 @@ import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoInicializado;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaInteger;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoListaString;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.AtributoSimple;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Contacto;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Definition;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Div;
-import co.edu.uniandes.miso4202.ehicletax.vtdsl.Entidad;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Evaluation;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.ID;
@@ -17,7 +17,9 @@ import co.edu.uniandes.miso4202.ehicletax.vtdsl.Module;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Multi;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.NumberLiteral;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Objeto;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Pago;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.Plus;
+import co.edu.uniandes.miso4202.ehicletax.vtdsl.Registro;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.STRING;
 import co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage;
 import com.google.inject.Inject;
@@ -52,6 +54,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				else break;
 			case VtdslPackage.ATRIBUTO_LISTA_INTEGER:
 				if(context == grammarAccess.getAtributoRule() ||
+				   context == grammarAccess.getAtributoListaRule() ||
 				   context == grammarAccess.getAtributoListaIntegerRule() ||
 				   context == grammarAccess.getPropiedadRule()) {
 					sequence_AtributoListaInteger(context, (AtributoListaInteger) semanticObject); 
@@ -60,6 +63,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				else break;
 			case VtdslPackage.ATRIBUTO_LISTA_STRING:
 				if(context == grammarAccess.getAtributoRule() ||
+				   context == grammarAccess.getAtributoListaRule() ||
 				   context == grammarAccess.getAtributoListaStringRule() ||
 				   context == grammarAccess.getPropiedadRule()) {
 					sequence_AtributoListaString(context, (AtributoListaString) semanticObject); 
@@ -71,6 +75,13 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				   context == grammarAccess.getAtributoSimpleRule() ||
 				   context == grammarAccess.getPropiedadRule()) {
 					sequence_AtributoSimple(context, (AtributoSimple) semanticObject); 
+					return; 
+				}
+				else break;
+			case VtdslPackage.CONTACTO:
+				if(context == grammarAccess.getContactoRule() ||
+				   context == grammarAccess.getEntidadRule()) {
+					sequence_Contacto(context, (Contacto) semanticObject); 
 					return; 
 				}
 				else break;
@@ -91,12 +102,6 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				   context == grammarAccess.getMultiplicationAccess().getMultiLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_Multiplication(context, (Div) semanticObject); 
-					return; 
-				}
-				else break;
-			case VtdslPackage.ENTIDAD:
-				if(context == grammarAccess.getEntidadRule()) {
-					sequence_Entidad(context, (Entidad) semanticObject); 
 					return; 
 				}
 				else break;
@@ -186,6 +191,13 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
+			case VtdslPackage.PAGO:
+				if(context == grammarAccess.getEntidadRule() ||
+				   context == grammarAccess.getPagoRule()) {
+					sequence_Pago(context, (Pago) semanticObject); 
+					return; 
+				}
+				else break;
 			case VtdslPackage.PLUS:
 				if(context == grammarAccess.getAdditionRule() ||
 				   context == grammarAccess.getAdditionAccess().getMinusLeftAction_1_0_1_0() ||
@@ -196,6 +208,13 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				   context == grammarAccess.getMultiplicationAccess().getMultiLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_Addition(context, (Plus) semanticObject); 
+					return; 
+				}
+				else break;
+			case VtdslPackage.REGISTRO:
+				if(context == grammarAccess.getEntidadRule() ||
+				   context == grammarAccess.getRegistroRule()) {
+					sequence_Registro(context, (Registro) semanticObject); 
 					return; 
 				}
 				else break;
@@ -292,6 +311,15 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
+	 *     (nombre=STRING propiedades+=Atributo*)
+	 */
+	protected void sequence_Contacto(EObject context, Contacto semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     name=ID
 	 */
 	protected void sequence_Definition(EObject context, Definition semanticObject) {
@@ -303,15 +331,6 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getDefinitionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (nombre=ID descripcion=STRING propiedades+=Propiedad*)
-	 */
-	protected void sequence_Entidad(EObject context, Entidad semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -398,9 +417,18 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID descripcion=STRING? propieades+=Propiedad*)
+	 *     (nombre=ID descripcion=STRING? propiedades+=Propiedad*)
 	 */
 	protected void sequence_Objeto(EObject context, Objeto semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (nombre=STRING propiedades+=Atributo*)
+	 */
+	protected void sequence_Pago(EObject context, Pago semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -450,5 +478,14 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getPrimaryExpressionAccess().getValueSTRINGTerminalRuleCall_2_1_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (nombre=STRING propiedades+=Objeto*)
+	 */
+	protected void sequence_Registro(EObject context, Registro semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 }

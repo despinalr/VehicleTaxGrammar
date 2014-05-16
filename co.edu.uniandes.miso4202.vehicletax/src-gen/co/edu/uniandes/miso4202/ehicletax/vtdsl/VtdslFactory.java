@@ -41,6 +41,33 @@ public interface VtdslFactory extends EFactory
   Entidad createEntidad();
 
   /**
+   * Returns a new object of class '<em>Registro</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Registro</em>'.
+   * @generated
+   */
+  Registro createRegistro();
+
+  /**
+   * Returns a new object of class '<em>Contacto</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Contacto</em>'.
+   * @generated
+   */
+  Contacto createContacto();
+
+  /**
+   * Returns a new object of class '<em>Pago</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pago</em>'.
+   * @generated
+   */
+  Pago createPago();
+
+  /**
    * Returns a new object of class '<em>Propiedad</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -93,6 +120,15 @@ public interface VtdslFactory extends EFactory
    * @generated
    */
   AtributoListaInteger createAtributoListaInteger();
+
+  /**
+   * Returns a new object of class '<em>Atributo Lista</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atributo Lista</em>'.
+   * @generated
+   */
+  AtributoLista createAtributoLista();
 
   /**
    * Returns a new object of class '<em>Formula</em>'.

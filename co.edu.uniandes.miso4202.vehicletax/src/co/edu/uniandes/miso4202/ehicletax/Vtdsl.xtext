@@ -10,9 +10,29 @@ Model:
 ;
 
 Entidad:
-	{Entidad}
-	nombre=ID descripcion=STRING '{'
-		propiedades+=Propiedad*
+	Registro |
+	Contacto |
+	Pago
+;
+
+Registro:
+	{Registro}
+	'Registro' nombre=STRING '{'
+		propiedades+=Objeto* 
+	'}'
+;
+
+Contacto:
+	{Contacto}
+	'Contacto' nombre=STRING '{'
+		propiedades+=Atributo*
+	'}'
+;
+
+Pago:
+	{Pago}
+	'Pago' nombre=STRING '{'
+		propiedades+=Atributo*
 	'}'
 ;
 
@@ -21,8 +41,9 @@ Propiedad:
 ;
 
 Objeto:
-	name = ID (descripcion = STRING)? '{'		
-		propieades+=Propiedad*
+	{Objeto}
+	nombre=ID (descripcion = STRING)? '{'		
+		propiedades+=Propiedad*
 	'}'
 ;
 
@@ -46,6 +67,11 @@ AtributoListaInteger:
 	nombre=(ID | STRING) ':' 'List of Integer' '=' '{' valores+=NUMBER (',' valores+=NUMBER)* '}' ';'
 ;
 
+AtributoLista:
+	AtributoListaString |
+	AtributoListaInteger
+;
+
 Formula:
 	{Formula}
 	nombre=ID '=' (expresiones+=Expression)* ';'
@@ -55,8 +81,7 @@ Atributo:
 	AtributoSimple | 
 	AtributoInicializado |
 	Formula |
-	AtributoListaString |
-	AtributoListaInteger
+	AtributoLista
 ;
 
 

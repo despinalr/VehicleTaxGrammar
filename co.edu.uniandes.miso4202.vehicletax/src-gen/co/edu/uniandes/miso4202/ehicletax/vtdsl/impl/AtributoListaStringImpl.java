@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class AtributoListaStringImpl extends AtributoImpl implements AtributoListaString
+public class AtributoListaStringImpl extends AtributoListaImpl implements AtributoListaString
 {
   /**
    * The cached value of the '{@link #getValores() <em>Valores</em>}' attribute list.
