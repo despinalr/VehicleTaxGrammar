@@ -80,6 +80,7 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getEntidadesAssignment_2(), "rule__Model__EntidadesAssignment_2");
 					put(grammarAccess.getRegistroAccess().getNombreAssignment_2(), "rule__Registro__NombreAssignment_2");
 					put(grammarAccess.getRegistroAccess().getPropiedadesAssignment_4(), "rule__Registro__PropiedadesAssignment_4");
+					put(grammarAccess.getRegistroAccess().getFormulaAssignment_5(), "rule__Registro__FormulaAssignment_5");
 					put(grammarAccess.getContactoAccess().getNombreAssignment_2(), "rule__Contacto__NombreAssignment_2");
 					put(grammarAccess.getContactoAccess().getPropiedadesAssignment_4(), "rule__Contacto__PropiedadesAssignment_4");
 					put(grammarAccess.getPagoAccess().getNombreAssignment_2(), "rule__Pago__NombreAssignment_2");
@@ -98,8 +99,8 @@ public class VtdslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtributoListaIntegerAccess().getNombreAssignment_1(), "rule__AtributoListaInteger__NombreAssignment_1");
 					put(grammarAccess.getAtributoListaIntegerAccess().getValoresAssignment_6(), "rule__AtributoListaInteger__ValoresAssignment_6");
 					put(grammarAccess.getAtributoListaIntegerAccess().getValoresAssignment_7_1(), "rule__AtributoListaInteger__ValoresAssignment_7_1");
-					put(grammarAccess.getFormulaAccess().getNombreAssignment_1(), "rule__Formula__NombreAssignment_1");
-					put(grammarAccess.getFormulaAccess().getExpresionesAssignment_3(), "rule__Formula__ExpresionesAssignment_3");
+					put(grammarAccess.getFormulaAccess().getNombreAssignment_3(), "rule__Formula__NombreAssignment_3");
+					put(grammarAccess.getFormulaAccess().getExpresionesAssignment_5(), "rule__Formula__ExpresionesAssignment_5");
 					put(grammarAccess.getModuleAccess().getNameAssignment_1(), "rule__Module__NameAssignment_1");
 					put(grammarAccess.getModuleAccess().getStatementsAssignment_2(), "rule__Module__StatementsAssignment_2");
 					put(grammarAccess.getDefinitionAccess().getNameAssignment_1(), "rule__Definition__NameAssignment_1");

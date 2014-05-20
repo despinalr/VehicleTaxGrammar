@@ -242,9 +242,27 @@ ruleRegistro returns [EObject current=null]
 	    }
 
 )
-)*	otherlv_5='}' 
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getRegistroAccess().getFormulaFormulaParserRuleCall_5_0()); 
+	    }
+		lv_formula_5_0=ruleFormula		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRegistroRule());
+	        }
+       		set(
+       			$current, 
+       			"formula",
+        		lv_formula_5_0, 
+        		"Formula");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_6='}' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getRegistroAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_6, grammarAccess.getRegistroAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;
@@ -1046,11 +1064,19 @@ ruleFormula returns [EObject current=null]
             grammarAccess.getFormulaAccess().getFormulaAction_0(),
             $current);
     }
-)(
+)	otherlv_1='Formula' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getFormulaAccess().getFormulaKeyword_1());
+    }
+	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getFormulaAccess().getLeftCurlyBracketKeyword_2());
+    }
 (
-		lv_nombre_1_0=RULE_ID
+(
+		lv_nombre_3_0=RULE_ID
 		{
-			newLeafNode(lv_nombre_1_0, grammarAccess.getFormulaAccess().getNombreIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_nombre_3_0, grammarAccess.getFormulaAccess().getNombreIDTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1059,36 +1085,40 @@ ruleFormula returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"nombre",
-        		lv_nombre_1_0, 
+        		lv_nombre_3_0, 
         		"ID");
 	    }
 
 )
-)	otherlv_2='=' 
+)	otherlv_4='=' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getFormulaAccess().getEqualsSignKeyword_2());
+    	newLeafNode(otherlv_4, grammarAccess.getFormulaAccess().getEqualsSignKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getFormulaAccess().getExpresionesExpressionParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getFormulaAccess().getExpresionesExpressionParserRuleCall_5_0()); 
 	    }
-		lv_expresiones_3_0=ruleExpression		{
+		lv_expresiones_5_0=ruleExpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getFormulaRule());
 	        }
        		add(
        			$current, 
        			"expresiones",
-        		lv_expresiones_3_0, 
+        		lv_expresiones_5_0, 
         		"Expression");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_4=';' 
+)*	otherlv_6=';' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getFormulaAccess().getSemicolonKeyword_4());
+    	newLeafNode(otherlv_6, grammarAccess.getFormulaAccess().getSemicolonKeyword_6());
+    }
+	otherlv_7='}' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getFormulaAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;
@@ -1133,21 +1163,11 @@ ruleAtributo returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getAtributoAccess().getFormulaParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getAtributoAccess().getAtributoListaParserRuleCall_2()); 
     }
-    this_Formula_2=ruleFormula
+    this_AtributoLista_2=ruleAtributoLista
     { 
-        $current = $this_Formula_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getAtributoAccess().getAtributoListaParserRuleCall_3()); 
-    }
-    this_AtributoLista_3=ruleAtributoLista
-    { 
-        $current = $this_AtributoLista_3.current; 
+        $current = $this_AtributoLista_2.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -1570,7 +1590,7 @@ RULE_NUMBER : ('0'..'9')* ('.' ('0'..'9')+)?;
 
 RULE_INT : 'this one has been deactivated';
 
-RULE_DATATYPE : ('Real'|'Int'|'String'|'List of Integer'|'List of String');
+RULE_DATATYPE : ('Real'|'int'|'String'|'List of Integer'|'List of String');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

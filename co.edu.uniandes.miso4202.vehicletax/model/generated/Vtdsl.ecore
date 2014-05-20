@@ -13,6 +13,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Registro" eSuperTypes="#//Entidad">
     <eStructuralFeatures xsi:type="ecore:EReference" name="propiedades" upperBound="-1"
         eType="#//Objeto" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formula" eType="#//Formula"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Contacto" eSuperTypes="#//Entidad">
     <eStructuralFeatures xsi:type="ecore:EReference" name="propiedades" upperBound="-1"
@@ -46,7 +48,8 @@
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoLista" eSuperTypes="#//Atributo"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Formula" eSuperTypes="#//Atributo">
+  <eClassifiers xsi:type="ecore:EClass" name="Formula">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresiones" upperBound="-1"
         eType="#//Expression" containment="true"/>
   </eClassifiers>

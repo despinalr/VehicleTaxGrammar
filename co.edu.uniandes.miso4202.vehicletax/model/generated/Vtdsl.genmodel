@@ -16,6 +16,7 @@
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//Registro">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Registro/propiedades"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Registro/formula"/>
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//Contacto">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Contacto/propiedades"/>
@@ -45,6 +46,7 @@
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//AtributoLista"/>
     <genClasses ecoreClass="Vtdsl.ecore#//Formula">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Vtdsl.ecore#//Formula/nombre"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Vtdsl.ecore#//Formula/expresiones"/>
     </genClasses>
     <genClasses ecoreClass="Vtdsl.ecore#//Atributo"/>

@@ -176,8 +176,6 @@ public class VtdslSwitch<T> extends Switch<T>
       {
         Formula formula = (Formula)theEObject;
         T result = caseFormula(formula);
-        if (result == null) result = caseAtributo(formula);
-        if (result == null) result = casePropiedad(formula);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

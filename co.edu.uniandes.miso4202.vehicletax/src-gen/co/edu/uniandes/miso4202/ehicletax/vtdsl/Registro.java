@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Registro#getPropiedades <em>Propiedades</em>}</li>
+ *   <li>{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Registro#getFormula <em>Formula</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,5 +38,31 @@ public interface Registro extends Entidad
    * @generated
    */
   EList<Objeto> getPropiedades();
+
+  /**
+   * Returns the value of the '<em><b>Formula</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Formula</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Formula</em>' containment reference.
+   * @see #setFormula(Formula)
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.VtdslPackage#getRegistro_Formula()
+   * @model containment="true"
+   * @generated
+   */
+  Formula getFormula();
+
+  /**
+   * Sets the value of the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Registro#getFormula <em>Formula</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Formula</em>' containment reference.
+   * @see #getFormula()
+   * @generated
+   */
+  void setFormula(Formula value);
 
 } // Registro

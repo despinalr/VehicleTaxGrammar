@@ -113,9 +113,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				}
 				else break;
 			case VtdslPackage.FORMULA:
-				if(context == grammarAccess.getAtributoRule() ||
-				   context == grammarAccess.getFormulaRule() ||
-				   context == grammarAccess.getPropiedadRule()) {
+				if(context == grammarAccess.getFormulaRule()) {
 					sequence_Formula(context, (Formula) semanticObject); 
 					return; 
 				}
@@ -483,7 +481,7 @@ public class VtdslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (nombre=STRING propiedades+=Objeto*)
+	 *     (nombre=STRING propiedades+=Objeto* formula=Formula)
 	 */
 	protected void sequence_Registro(EObject context, Registro semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

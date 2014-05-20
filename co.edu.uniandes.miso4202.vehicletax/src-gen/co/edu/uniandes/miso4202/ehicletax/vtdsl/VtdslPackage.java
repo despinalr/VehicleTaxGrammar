@@ -150,13 +150,22 @@ public interface VtdslPackage extends EPackage
   int REGISTRO__PROPIEDADES = ENTIDAD_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Formula</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REGISTRO__FORMULA = ENTIDAD_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Registro</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REGISTRO_FEATURE_COUNT = ENTIDAD_FEATURE_COUNT + 1;
+  int REGISTRO_FEATURE_COUNT = ENTIDAD_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ContactoImpl <em>Contacto</em>}' class.
@@ -536,7 +545,7 @@ public interface VtdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FORMULA__NOMBRE = ATRIBUTO__NOMBRE;
+  int FORMULA__NOMBRE = 0;
 
   /**
    * The feature id for the '<em><b>Expresiones</b></em>' containment reference list.
@@ -545,7 +554,7 @@ public interface VtdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FORMULA__EXPRESIONES = ATRIBUTO_FEATURE_COUNT + 0;
+  int FORMULA__EXPRESIONES = 1;
 
   /**
    * The number of structural features of the '<em>Formula</em>' class.
@@ -554,7 +563,7 @@ public interface VtdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FORMULA_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 1;
+  int FORMULA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ModuleImpl <em>Module</em>}' class.
@@ -995,6 +1004,17 @@ public interface VtdslPackage extends EPackage
   EReference getRegistro_Propiedades();
 
   /**
+   * Returns the meta object for the containment reference '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Registro#getFormula <em>Formula</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Formula</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Registro#getFormula()
+   * @see #getRegistro()
+   * @generated
+   */
+  EReference getRegistro_Formula();
+
+  /**
    * Returns the meta object for class '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Contacto <em>Contacto</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1203,6 +1223,17 @@ public interface VtdslPackage extends EPackage
    * @generated
    */
   EClass getFormula();
+
+  /**
+   * Returns the meta object for the attribute '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula#getNombre <em>Nombre</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Nombre</em>'.
+   * @see co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula#getNombre()
+   * @see #getFormula()
+   * @generated
+   */
+  EAttribute getFormula_Nombre();
 
   /**
    * Returns the meta object for the containment reference list '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.Formula#getExpresiones <em>Expresiones</em>}'.
@@ -1596,6 +1627,14 @@ public interface VtdslPackage extends EPackage
     EReference REGISTRO__PROPIEDADES = eINSTANCE.getRegistro_Propiedades();
 
     /**
+     * The meta object literal for the '<em><b>Formula</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REGISTRO__FORMULA = eINSTANCE.getRegistro_Formula();
+
+    /**
      * The meta object literal for the '{@link co.edu.uniandes.miso4202.ehicletax.vtdsl.impl.ContactoImpl <em>Contacto</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1774,6 +1813,14 @@ public interface VtdslPackage extends EPackage
      * @generated
      */
     EClass FORMULA = eINSTANCE.getFormula();
+
+    /**
+     * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FORMULA__NOMBRE = eINSTANCE.getFormula_Nombre();
 
     /**
      * The meta object literal for the '<em><b>Expresiones</b></em>' containment reference list feature.

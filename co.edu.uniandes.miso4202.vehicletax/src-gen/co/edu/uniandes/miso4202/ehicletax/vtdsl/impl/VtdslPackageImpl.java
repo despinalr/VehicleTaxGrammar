@@ -364,6 +364,16 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getRegistro_Formula()
+  {
+    return (EReference)registroEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getContacto()
   {
     return contactoEClass;
@@ -564,9 +574,19 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getFormula_Nombre()
+  {
+    return (EAttribute)formulaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getFormula_Expresiones()
   {
-    return (EReference)formulaEClass.getEStructuralFeatures().get(0);
+    return (EReference)formulaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -888,6 +908,7 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
 
     registroEClass = createEClass(REGISTRO);
     createEReference(registroEClass, REGISTRO__PROPIEDADES);
+    createEReference(registroEClass, REGISTRO__FORMULA);
 
     contactoEClass = createEClass(CONTACTO);
     createEReference(contactoEClass, CONTACTO__PROPIEDADES);
@@ -918,6 +939,7 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     atributoListaEClass = createEClass(ATRIBUTO_LISTA);
 
     formulaEClass = createEClass(FORMULA);
+    createEAttribute(formulaEClass, FORMULA__NOMBRE);
     createEReference(formulaEClass, FORMULA__EXPRESIONES);
 
     atributoEClass = createEClass(ATRIBUTO);
@@ -1000,7 +1022,6 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     atributoListaStringEClass.getESuperTypes().add(this.getAtributoLista());
     atributoListaIntegerEClass.getESuperTypes().add(this.getAtributoLista());
     atributoListaEClass.getESuperTypes().add(this.getAtributo());
-    formulaEClass.getESuperTypes().add(this.getAtributo());
     atributoEClass.getESuperTypes().add(this.getPropiedad());
     definitionEClass.getESuperTypes().add(this.getStatement());
     evaluationEClass.getESuperTypes().add(this.getStatement());
@@ -1022,6 +1043,7 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
 
     initEClass(registroEClass, Registro.class, "Registro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRegistro_Propiedades(), this.getObjeto(), null, "propiedades", null, 0, -1, Registro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRegistro_Formula(), this.getFormula(), null, "formula", null, 0, 1, Registro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contactoEClass, Contacto.class, "Contacto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getContacto_Propiedades(), this.getAtributo(), null, "propiedades", null, 0, -1, Contacto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1052,6 +1074,7 @@ public class VtdslPackageImpl extends EPackageImpl implements VtdslPackage
     initEClass(atributoListaEClass, AtributoLista.class, "AtributoLista", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(formulaEClass, Formula.class, "Formula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFormula_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Formula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFormula_Expresiones(), this.getExpression(), null, "expresiones", null, 0, -1, Formula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atributoEClass, Atributo.class, "Atributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

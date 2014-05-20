@@ -18,7 +18,8 @@ Entidad:
 Registro:
 	{Registro}
 	'Registro' nombre=STRING '{'
-		propiedades+=Objeto* 
+		(propiedades+=Objeto)*
+		formula=Formula	
 	'}'
 ;
 
@@ -74,13 +75,15 @@ AtributoLista:
 
 Formula:
 	{Formula}
-	nombre=ID '=' (expresiones+=Expression)* ';'
+	'Formula' '{'
+		nombre=ID '=' (expresiones+=Expression)* ';'
+	'}'
 ;
 
 Atributo:
 	AtributoSimple | 
 	AtributoInicializado |
-	Formula |
+	/*Formula | */
 	AtributoLista
 ;
 
@@ -125,5 +128,5 @@ terminal INT returns ecore::EInt:
 	'this one has been deactivated';
 	
 terminal DATATYPE:
-	'Real' | 'Int' | 'String' | 'List of Integer' | 'List of String'
+	'Real' | 'int' | 'String' | 'List of Integer' | 'List of String'
 ;
